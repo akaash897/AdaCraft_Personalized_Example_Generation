@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_05",
+  "lang": "ar",
+  "lang_name": "Arabic",
+  "topic": "Cognitive Bias",
+  "topic_str": "التحيز المعرفي",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, profession, and location, and uses a clinical context relevant to a nurse in Cairo, aligning well with her profile. The complexity appears appropriate, discussing cognitive biases with clinical examples that are neither overly simplistic nor too advanced for a professional nurse, matching her medium complexity level. The factual content about cognitive biases and their effects on medical interpretation is accurate and well-explained, demonstrating good conceptual accuracy. The structure is clear, with a logical flow from defining biases to illustrating their impact, making it pedagogically effective. The analogies and framing are appropriate for the medical domain, using clinical equipment and scenarios familiar to a nurse, which enhances domain appropriateness.\n\n[PF] PERSONALIZATION FIDELITY — The example uses the user's name, profession, and location, and frames the scenario within a clinical setting relevant to her role, which indicates a high level of personalization.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The discussion of biases and their clinical implications is at a medium complexity level, suitable for a professional nurse, with enough detail without being overly technical.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The content correctly describes cognitive biases and their influence on medical interpretation, with no factual errors apparent.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from concept to examples, and the key points are memorable and easy to follow.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are entirely appropriate for a medical professional, using clinical scenarios and equipment relevant to nursing practice.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "ar",
+    "detected_name": "Arabic",
+    "expected_lang": "ar",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "ar",
+    "detected_name": "Arabic",
+    "expected_lang": "ar",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a healthcare context to a clinical decision-making scenario involving a nurse, which is more relevant to the user's professional field. It provides a detailed, realistic example of cognitive bias in a medical setting, directly addressing the critique about relevance. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "أفهم بشكل أفضل عندما تُستخدم أمثلة من المعدات الطبية لشرح الأفكار المجردة.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes the importance of using examples from medical equipment to clarify abstract concepts, which the regenerated example successfully incorporates by discussing how biases can affect interpretation of vital signs, imaging, and lab results. This directly addresses the feedback by providing concrete, equipment-related scenarios to illustrate cognitive biases.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "**المفهوم:** التحيز المعرفي\n\n**المثال:**\nفاطمة، الممرضة في القاهرة، تقوم بتقييم حالة مريض جديد يعاني من ألم في الصدر.  \nلاحظت أن آخر ثلاثة مرضى دخلوا الطوارئ بألم في الصدر كان تشخيصهم هو حرقة في المعدة.  \nبسبب هذا، قد تميل فاطمة تلقائيًا إلى افتراض أن هذا المريض الجديد يعاني أيضًا من حرقة في المعدة، حتى قبل أن تكمل الفحص الدقيق أو تطلب تخطيطًا للقلب.\n\n**ما يحدث هنا:**\n- هذا مثال على تحيز \"التوافر\" المعرفي: حيث تعطي عقولنا وزنًا أكبر للأمثلة التي تتبادر إلى الذهن بسهولة (الحالات الثلاثة الأخيرة) عند اتخاذ القرار.\n- النتيجة المحتملة: قد يؤدي هذا التحيز إلى إغفال تشخيص أكثر خطورة، مثل النوبة القلبية، إذا لم تكن فاطمة واعية لهذا الميل الطبيعي في التفكير.\n\n**التعمق أكثر:**\nيمكن أن يتداخل هذا التحيز مع تحيزات أخرى، مثل \"التثبيت\" (التمسك بالانطباع الأول) أو \"تأثير الإطار\" (حيث تتغير القرارات حسب طريقة عرض المعلومات). المفتاح للممارس الصحي هو وضع إجراءات منهجية (مثل قوائم المراجعة التشخيصية) لمواجهة هذه التحيزات التلقائية.\n\n**الفكرة الرئيسية:**\nالتحيزات المعرفية هي اختصارات عقلية تلقائية ومفيدة في كثير من الأحيان، ولكنها قد تؤدي إلى أخطاء في الحكم. الوعي بها هو الخطوة الأولى نحو اتخاذ قرارات أكثر دقة وموضوعية، خاصة في المجالات الحساسة مثل الرعاية الصحية.",
+    "final_example": "المفهوم: التحيز المعرفي\n\nالمثال:\nفاطمة، الممرضة في مستشفى بالقاهرة، تستخدم جهاز مراقبة العلامات الحيوية لمراقبة حالة مريض. قد تؤثر التحيزات المعرفية على تفسيرها للقراءات.\n\nسيناريو سريري:\nبعد نوبة قلبية، يظهر المريض قراءة طبيعية لضغط الدم على الشاشة، لكن معدل ضربات القلب مرتفع قليلاً. فاطمة لاحظت أن المريض يبدو قلقاً.\n\nكيف يمكن للتحيز أن يظهر:\n1. **تحيز التأكيد**: قد تركز فاطمة فقط على قراءة معدل ضربات القلب المرتفعة (التي تؤكد قلقها) وتتجاهل ضغط الدم الطبيعي والقراءات الأخرى المستقرة.\n2. **تحيز التوفر**: إذا كانت قد تعاملت مؤخراً مع حالة لمريض تدهورت حالته بسرعة، فقد تبالغ في تفسير هذه القراءة البسيطة كعلامة خطر.\n3. **تحيز الإطار**: إذا قدم الطبيب الحالة بأنها \"خطيرة ولكن مستقرة\"، فقد تركز فاطمة أكثر على كلمة \"خطيرة\" وتقلل من أهمية \"مستقرة\" عند قراءة البيانات.\n\nتأثير على المعدات الطبية:\n- **جهاز الأشعة السينية**: قد يدفعها تحيز التوقع (من تشخيص سابق) إلى رؤية ظل غير واضح كورم بينما هو في الحقيقة قطعة أثرية في الصورة.\n- **معدات التشخيص المخبرية**: قد تفسر نتيجة حدية على أنها إيجابية إذا كانت تتوقع المرض، أو سلبية إذا كانت تتوقع الشفاء.\n\nالرؤية الأساسية:\nالتحيز المعرفي هو ميل عقلي غير واعٍ يمكن أن يشوه تفسير البيانات الموضوعية من المعدات الطبية، مما قد يؤدي إلى تشخيص أو قرار علاجي غير دقيق. الوعي بهذه التحيزات هو الخطوة الأولى لتقليل تأثيرها.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**المفهوم:** التحيز المعرفي\n\n**المثال:**\nفاطمة، الممرضة في القاهرة، تقوم بتقييم حالة مريض جديد يعاني من ألم في الصدر.  \nلاحظت أن آخر ثلاثة مرضى دخلوا الطوارئ بألم في الصدر كان تشخيصهم هو حرقة في المعدة.  \nبسبب هذا، قد تميل فاطمة تلقائيًا إلى افتراض أن هذا المريض الجديد يعاني أيضًا من حرقة في المعدة، حتى قبل أن تكمل الفحص الدقيق أو تطلب تخطيطًا للقلب.\n\n**ما يحدث هنا:**\n- هذا مثال على تحيز \"التوافر\" المعرفي: حيث تعطي عقولنا وزنًا أكبر للأمثلة التي تتبادر إلى الذهن بسهولة (الحالات الثلاثة الأخيرة) عند اتخاذ القرار.\n- النتيجة المحتملة: قد يؤدي هذا التحيز إلى إغفال تشخيص أكثر خطورة، مثل النوبة القلبية، إذا لم تكن فاطمة واعية لهذا الميل الطبيعي في التفكير.\n\n**التعمق أكثر:**\nيمكن أن يتداخل هذا التحيز مع تحيزات أخرى، مثل \"التثبيت\" (التمسك بالانطباع الأول) أو \"تأثير الإطار\" (حيث تتغير القرارات حسب طريقة عرض المعلومات). المفتاح للممارس الصحي هو وضع إجراءات منهجية (مثل قوائم المراجعة التشخيصية) لمواجهة هذه التحيزات التلقائية.\n\n**الفكرة الرئيسية:**\nالتحيزات المعرفية هي اختصارات عقلية تلقائية ومفيدة في كثير من الأحيان، ولكنها قد تؤدي إلى أخطاء في الحكم. الوعي بها هو الخطوة الأولى نحو اتخاذ قرارات أكثر دقة وموضوعية، خاصة في المجالات الحساسة مثل الرعاية الصحية.",
+        "example_id": "ex_7e864841bf624bb5",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**المفهوم:** التحيز المعرفي (التحيز المعرفي)\n\n**المثال:**\nتتذكر الممرضة فاطمة، أثناء نوبتها الليلية في مستشفى بالقاهرة، حالة مريض شاب عانى مؤخرًا من رد فعل تحسسي شديد (تأق) بعد تناول دواء البنسلين. لقد كانت الحالة مقلقة وتركت انطباعًا قويًا لديها.\n\nفي اليوم التالي، أثناء تقييمها لمريض جديد يعاني من التهاب في الحلق وتظهر عليه علامات العدوى البكتيرية، يقترح الطبيب وصف مضاد حيوي. أحد الخيارات المناسبة هو البنسلين. على الرغم من أن المريض الجديد ليس لديه تاريخ معروف للحساسية من الأدوية، فإن فاطمة تشعر فورًا بتوتر وتردد شديدين. إنها تقدم توصية قوية للطبيب باستخدام مضاد حيوي بديل وأكثر تكلفة، لأن صورة المريض السابق الذي عانى من التأق \"متاحة\" بسهولة في ذهنها وتطغى على البيانات الإحصائية الأوسع.\n\n**البيانات الواقعية:**\n-   معدل حدوث حساسية البنسلين الحقيقية في عموم السكان منخفض جدًا (حوالي 0.03%).\n-   المضادات الحيوية البديلة قد تكون أقل فعالية لهذه السلالة البكتيرية المحددة أو يكون لها آثار جانبية أخرى.\n-   البروتوكول القياسي هو فحص تاريخ الحساسية أولاً، وإذا لم يكن موجودًا، يمكن استخدام البنسلين مع المراقبة الروتينية.\n\n**النتيجة:**\nقد يؤدي تحيز التوافر هذا إلى:\n1.  حرمان المريض الجديد من العلاج الأكثر فعالية والأقل تكلفة.\n2.  زيادة العبء المالي على نظام الرعاية الصحية.\n3.  المساهمة في مقاومة المضادات الحيوية بسبب الإفراط في استخدام البدائل.\n\n**الفكرة الرئيسية:**\nيحرف تحيز التوافر الأحكام السريرية من خلال جعل القرارات تستند بسهولة أكبر إلى أمثلة حديثة أو عاطفية تتذكرها الممرضة، بدلاً من الاعتماد على البروتوكولات القائمة على الأدلة والاحتمالات الإحصائية الأوسع. الوعي بهذا التحيز هو الخطوة الأولى نحو اتخاذ قرارات أكثر موضوعية.",
+        "example_id": "ex_0ef6954516e44b1d"
+      },
+      {
+        "round": 2,
+        "feedback_given": "هذا رائع! المثال ساعدني حقاً على فهم المفهوم.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "أفهم بشكل أفضل عندما تُستخدم أمثلة من المعدات الطبية لشرح الأفكار المجردة.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "المفهوم: التحيز المعرفي\n\nالمثال:\nفاطمة، الممرضة في مستشفى بالقاهرة، تستخدم جهاز مراقبة العلامات الحيوية لمراقبة حالة مريض. قد تؤثر التحيزات المعرفية على تفسيرها للقراءات.\n\nسيناريو سريري:\nبعد نوبة قلبية، يظهر المريض قراءة طبيعية لضغط الدم على الشاشة، لكن معدل ضربات القلب مرتفع قليلاً. فاطمة لاحظت أن المريض يبدو قلقاً.\n\nكيف يمكن للتحيز أن يظهر:\n1. **تحيز التأكيد**: قد تركز فاطمة فقط على قراءة معدل ضربات القلب المرتفعة (التي تؤكد قلقها) وتتجاهل ضغط الدم الطبيعي والقراءات الأخرى المستقرة.\n2. **تحيز التوفر**: إذا كانت قد تعاملت مؤخراً مع حالة لمريض تدهورت حالته بسرعة، فقد تبالغ في تفسير هذه القراءة البسيطة كعلامة خطر.\n3. **تحيز الإطار**: إذا قدم الطبيب الحالة بأنها \"خطيرة ولكن مستقرة\"، فقد تركز فاطمة أكثر على كلمة \"خطيرة\" وتقلل من أهمية \"مستقرة\" عند قراءة البيانات.\n\nتأثير على المعدات الطبية:\n- **جهاز الأشعة السينية**: قد يدفعها تحيز التوقع (من تشخيص سابق) إلى رؤية ظل غير واضح كورم بينما هو في الحقيقة قطعة أثرية في الصورة.\n- **معدات التشخيص المخبرية**: قد تفسر نتيجة حدية على أنها إيجابية إذا كانت تتوقع المرض، أو سلبية إذا كانت تتوقع الشفاء.\n\nالرؤية الأساسية:\nالتحيز المعرفي هو ميل عقلي غير واعٍ يمكن أن يشوه تفسير البيانات الموضوعية من المعدات الطبية، مما قد يؤدي إلى تشخيص أو قرار علاجي غير دقيق. الوعي بهذه التحيزات هو الخطوة الأولى لتقليل تأثيرها.",
+        "example_id": "ex_a73f454d111e491a"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T18:36:12.990940"
+}

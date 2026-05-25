@@ -1,0 +1,33 @@
+{
+  "annotator_id": "A5",
+  "scores": [
+    {
+      "example_id": "EX09",
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4,
+      "FC": 4,
+      "IS": 4,
+      "IP": "T3",
+      "EU": 5,
+      "WU": 5,
+      "BF": 5
+    },
+    {
+      "example_id": "EX10",
+      "PF": 4,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4,
+      "FC": 4,
+      "IS": 5,
+      "IP": "T3",
+      "EU": 4,
+      "WU": 4,
+      "BF": 5
+    }
+  ]
+}

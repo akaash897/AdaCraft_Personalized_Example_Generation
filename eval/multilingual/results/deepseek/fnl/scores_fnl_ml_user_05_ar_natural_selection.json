@@ -1,0 +1,116 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_05",
+  "lang": "ar",
+  "lang_name": "Arabic",
+  "topic": "Natural Selection",
+  "topic_str": "الانتقاء الطبيعي",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by involving Fatima directly, referencing her location in Cairo and her role as a nurse, which aligns well with her profile. The complexity level appears appropriate, providing a detailed explanation of natural selection with relevant biological processes, suitable for a medium complexity learner. The scientific content is accurate, correctly describing the mechanisms of antibiotic resistance and natural selection without errors. The structure is clear, with a logical flow from scenario to concept, making it pedagogically effective. The analogies and framing are appropriate for the biological topic, using medical and microbiological contexts familiar to a nurse, which enhances domain relevance.\n\nPF: The example is highly personalized, integrating Fatima’s name, location, and profession, and uses domain-specific analogies related to microbiology and healthcare.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation matches a medium complexity level, with detailed biological processes and terminology suitable for a professional learner.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing the process of natural selection and antibiotic resistance without inaccuracies.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from scenario to concept, and the main idea is explicitly highlighted, aiding learning.  \nAXIS_SCORE: 5\n\nDA: The framing and analogies are highly appropriate for the domain of biology and healthcare, using familiar concepts like bacteria, antibiotics, and resistance.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "ar",
+    "detected_name": "Arabic",
+    "expected_lang": "ar",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "ar",
+    "detected_name": "Arabic",
+    "expected_lang": "ar",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example incorporates a healthcare setting relevant to the user's professional field, providing a concrete and familiar context for the concept of natural selection. It also expands on the scenario with detailed steps and related examples, directly addressing the critique about relevance. \n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "**المفهوم:** الانتقاء الطبيعي\n\n**المثال:**\nتخيل أن فاطمة، الممرضة في القاهرة، تتعامل مع انتشار البكتيريا المقاومة للمضادات الحيوية في المستشفى. هذا مثال حي على الانتقاء الطبيعي في العمل.\n\n**السيناريو:**\n- في البداية، يوجد مجتمع من البكتيريا داخل مريض، معظمها حساس للمضاد الحيوي، ولكن قلة منها لديها طفرة جينية تجعلها مقاومة بشكل طبيعي.\n- عندما يُعطى المريض المضاد الحيوي، تموت الغالبية العظمى من البكتيريا الحساسة.\n- البكتيريا القليلة المقاومة تنجو وتتكاثر، لأنها لم تتأثر بالدواء.\n- في الجيل التالي، غالبية البكتيريا الجديدة ترث مقاومة المضاد الحيوي.\n- مع تكرار العلاج، تصبح السلالة المقاومة هي السائدة.\n\n**العناصر الرئيسية:**\n1.  **التنوع:** وجود اختلافات وراثية (مثل المقاومة مقابل الحساسية).\n2.  **الضغط الانتقائي:** عامل في البيئة يفضل صفة على أخرى (هنا، المضاد الحيوي يقتل الحساس ويترك المقاوم).\n3.  **الوراثة:** الصفة المفضلة (المقاومة) تنتقل إلى النسل.\n4.  **التكيف:** على مدى أجيال، تصبح المجموعة السائدة أكثر ملاءمة للبيئة الجديدة (بيئة بها مضاد حيوي).\n\n**النتيجة:**\nلم \"تتعلم\" البكتيريا أن تقاوم. بدلاً من ذلك، البيئة (المضاد الحيوي) قامت \"باختيار\" الأفراد الذين كانوا بالفعل يحملون سمة المقاومة وسمحت لهم بالتكاثر أكثر من غيرهم.\n\n**الفكرة الرئيسية:**\nالانتقاء الطبيعي هو عملية تلقائية حيث تزداد تكرارات الصفات المفيدة في مجموعة الكائنات الحية عبر الأجيال، لأن حاملي هذه الصفات يكونون أكثر نجاحًا في البقاء والتكاثر في بيئتهم المحددة.",
+    "final_example": "**المفهوم:** الانتقاء الطبيعي\n\n**المثال:**\nتخيلي، فاطمة، أنكِ في جناح العناية المركزة بالمستشفى في القاهرة. هناك نوعان من البكتيريا المسببة للعدوى: بعضها حساس للمضاد الحيوي \"أموكسيسيلين\"، والبعض الآخر طور مقاومة وراثية طبيعية له.\n\n**السيناريو:**\n1.  **الضغط الانتقائي:** يبدأ الطاقم الطبي، بما في ذلك الممرضات، في علاج المرضى المصابين بهذه البكتيريا باستخدام \"أموكسيسيلين\" بشكل روتيني.\n2.  **النتيجة:** البكتيريا الحساسة للمضاد تُقتل وتُزال من البيئة (المريض). البكتيريا المقاومة فقط هي التي تنجو وتستمر في التكاثر.\n3.  **التكاثر والتوريث:** البكتيريا المقاومة المتبقية تتكاثر بسرعة. لأن المقاومة صفة وراثية، فإن نسلها الجديد يرث هذه المقاومة أيضًا.\n4.  **التطور:** بعد عدة أسابيع من هذا البروتوكول العلاجي، تصبح معظم حالات العدوى في الجناح ناجمة عن السلالة المقاومة من البكتيريا. لقد \"انتُقيت\" هذه السلالة بشكل طبيعي لأن البيئة (التي تشمل العلاج بالمضادات الحيوية) منحت البكتيريا المقاومة فرصة أفضل للبقاء والتكاثر.\n\n**التعمق:**\nيمكن رؤية هذه العملية أيضًا في تطور مقاومة المطهرات. عند استخدام معقم يدوي أساسه الكحول بشكل مستمر في العيادة، فإن أي جراثيم لديها طفرة جينية تسمح لها بتحمل الكحول بشكل أفضل ستبقى على الأسطح وتتكاثر، مما قد يؤدي في النهاية إلى ظهور سلالات أقل تأثراً بالمطهرات الشائعة.\n\n**الفكرة الرئيسية:**\nالانتقاء الطبيعي لا يخلق الصفات الجديدة (مثل مقاومة المضادات)، ولكنه يعمل كمنخل يرشح ويفضل الأفراد الحاملين لصفات موجودة مسبقاً تتناسب مع ظروف البيئة، مما يزيد من انتشار هذه الصفات في الأجيال اللاحقة. في التمريض، يبرز هذا المفهوم أهمية الاستخدام الحكيم للمضادات الحيوتية والمطهرات لمنع \"انتقاء\" الميكروبات المقاومة.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**المفهوم:** الانتقاء الطبيعي\n\n**المثال:**\nتخيل أن فاطمة، الممرضة في القاهرة، تتعامل مع انتشار البكتيريا المقاومة للمضادات الحيوية في المستشفى. هذا مثال حي على الانتقاء الطبيعي في العمل.\n\n**السيناريو:**\n- في البداية، يوجد مجتمع من البكتيريا داخل مريض، معظمها حساس للمضاد الحيوي، ولكن قلة منها لديها طفرة جينية تجعلها مقاومة بشكل طبيعي.\n- عندما يُعطى المريض المضاد الحيوي، تموت الغالبية العظمى من البكتيريا الحساسة.\n- البكتيريا القليلة المقاومة تنجو وتتكاثر، لأنها لم تتأثر بالدواء.\n- في الجيل التالي، غالبية البكتيريا الجديدة ترث مقاومة المضاد الحيوي.\n- مع تكرار العلاج، تصبح السلالة المقاومة هي السائدة.\n\n**العناصر الرئيسية:**\n1.  **التنوع:** وجود اختلافات وراثية (مثل المقاومة مقابل الحساسية).\n2.  **الضغط الانتقائي:** عامل في البيئة يفضل صفة على أخرى (هنا، المضاد الحيوي يقتل الحساس ويترك المقاوم).\n3.  **الوراثة:** الصفة المفضلة (المقاومة) تنتقل إلى النسل.\n4.  **التكيف:** على مدى أجيال، تصبح المجموعة السائدة أكثر ملاءمة للبيئة الجديدة (بيئة بها مضاد حيوي).\n\n**النتيجة:**\nلم \"تتعلم\" البكتيريا أن تقاوم. بدلاً من ذلك، البيئة (المضاد الحيوي) قامت \"باختيار\" الأفراد الذين كانوا بالفعل يحملون سمة المقاومة وسمحت لهم بالتكاثر أكثر من غيرهم.\n\n**الفكرة الرئيسية:**\nالانتقاء الطبيعي هو عملية تلقائية حيث تزداد تكرارات الصفات المفيدة في مجموعة الكائنات الحية عبر الأجيال، لأن حاملي هذه الصفات يكونون أكثر نجاحًا في البقاء والتكاثر في بيئتهم المحددة.",
+        "example_id": "ex_b299042c88764228",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**المفهوم:** الانتقاء الطبيعي\n\n**المثال:**\nتخيلي، فاطمة، أنكِ في جناح العناية المركزة بالمستشفى في القاهرة. هناك نوعان من البكتيريا المسببة للعدوى: بعضها حساس للمضاد الحيوي \"أموكسيسيلين\"، والبعض الآخر طور مقاومة وراثية طبيعية له.\n\n**السيناريو:**\n1.  **الضغط الانتقائي:** يبدأ الطاقم الطبي، بما في ذلك الممرضات، في علاج المرضى المصابين بهذه البكتيريا باستخدام \"أموكسيسيلين\" بشكل روتيني.\n2.  **النتيجة:** البكتيريا الحساسة للمضاد تُقتل وتُزال من البيئة (المريض). البكتيريا المقاومة فقط هي التي تنجو وتستمر في التكاثر.\n3.  **التكاثر والتوريث:** البكتيريا المقاومة المتبقية تتكاثر بسرعة. لأن المقاومة صفة وراثية، فإن نسلها الجديد يرث هذه المقاومة أيضًا.\n4.  **التطور:** بعد عدة أسابيع من هذا البروتوكول العلاجي، تصبح معظم حالات العدوى في الجناح ناجمة عن السلالة المقاومة من البكتيريا. لقد \"انتُقيت\" هذه السلالة بشكل طبيعي لأن البيئة (التي تشمل العلاج بالمضادات الحيوية) منحت البكتيريا المقاومة فرصة أفضل للبقاء والتكاثر.\n\n**التعمق:**\nيمكن رؤية هذه العملية أيضًا في تطور مقاومة المطهرات. عند استخدام معقم يدوي أساسه الكحول بشكل مستمر في العيادة، فإن أي جراثيم لديها طفرة جينية تسمح لها بتحمل الكحول بشكل أفضل ستبقى على الأسطح وتتكاثر، مما قد يؤدي في النهاية إلى ظهور سلالات أقل تأثراً بالمطهرات الشائعة.\n\n**الفكرة الرئيسية:**\nالانتقاء الطبيعي لا يخلق الصفات الجديدة (مثل مقاومة المضادات)، ولكنه يعمل كمنخل يرشح ويفضل الأفراد الحاملين لصفات موجودة مسبقاً تتناسب مع ظروف البيئة، مما يزيد من انتشار هذه الصفات في الأجيال اللاحقة. في التمريض، يبرز هذا المفهوم أهمية الاستخدام الحكيم للمضادات الحيوتية والمطهرات لمنع \"انتقاء\" الميكروبات المقاومة.",
+        "example_id": "ex_d22d3cbb59004cc0"
+      },
+      {
+        "round": 2,
+        "feedback_given": "هذا رائع! المثال ساعدني حقاً على فهم المفهوم.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "أفهم بشكل أفضل عندما تُستخدم أمثلة من المعدات الطبية لشرح الأفكار المجردة.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T18:33:13.601291"
+}

@@ -1,0 +1,127 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including Priya’s name, location, and profession, and it aligns well with her learning style by using a relatable, real-world example. The depth of explanation about the availability heuristic is appropriate for a high school student, making the complexity suitable. The factual content about the bias appears accurate, and the structure clearly guides the learner from concept to example to reflection, which enhances pedagogical clarity. The analogy of daily train delays is appropriate for the domain of cognitive biases, especially for a student familiar with Mumbai’s local trains.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Priya’s name, location, and profession, and the scenario is highly relatable for her context, matching her learning style with a real-world, everyday example.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation of the availability heuristic is at a suitable depth for a high school student, avoiding overly technical language while still providing meaningful insight.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and its effects are factually correct, with no inaccuracies or misleading statements.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from concept to scenario to reflection, and the key insight is explicitly highlighted, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of train delays and delays on Mumbai’s local train network is highly appropriate for illustrating cognitive bias in a real-world, familiar context for Priya.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example shifts from a specific, culturally contextual scenario in Mumbai to a more general, less culturally specific one, which may better suit the user's critique. It also clearly explains the concept of availability heuristic with a relevant, everyday example, addressing the user's concern about relevance. However, it could be more explicit about the user's domain or context if specified, but overall it improves the relevance and clarity.\n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes the importance of relatable, everyday examples for better understanding. The regenerated example effectively connects to daily Mumbai train commutes, making it more relatable and addressing the critique well. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Cognitive Bias - The Availability Heuristic\n\nExample:\nImagine you're at Crawford Market in Mumbai with your friend, Priya.\nYour friend tells you about a tourist who was just pickpocketed nearby. It was a stressful story.\n\nSuddenly, you feel very nervous. Every time you see a crowded aisle, you picture pickpockets. You start clutching your wallet tightly.\n\n**Question 1:** Why are you suddenly so worried about pickpockets, even though you've been to this market many times before?\n\n**Question 2:** Is a pickpocketing incident more common or less common than, say, slipping on a wet floor? Which one feels scarier and more 'available' in your mind right now?\n\n**Question 3:** How is this feeling changing your behavior? Are you now avoiding the market altogether?\n\nYour brain is using the availability heuristic. The dramatic story is 'available' in your memory, so you overestimate the risk of it happening to you. The more common, less dramatic risks (like slipping) don't feel as threatening because you don't have a vivid story about them.\n\nKey Insight:\nOur brains use recent or dramatic stories as shortcuts to judge danger, which can make us fear rare events (like pickpocketing) more than common, less memorable ones (like slipping on a wet floor).",
+    "final_example": "Concept: Cognitive Bias (specifically, the Availability Heuristic)\n\nExample:\nPriya, a student in Mumbai, is getting ready for her daily commute on the local train. Yesterday, she heard on the news about a major signal failure on the Western line that caused huge delays. She also saw a viral video on Instagram of a packed, chaotic platform.\n\nScenario:\nEven though her train has been on time for the past month, Priya becomes convinced that her train will be late today. She spends the entire journey anxiously checking the arrival display and worrying about missing her class.\n\nThe Bias in Action:\nPriya's judgment is being skewed by the Availability Heuristic. This is a mental shortcut where we overestimate how likely something is to happen if it's easier to recall an example. The recent news report and the viral video are vivid and recent in her mind, making the idea of a delayed train feel much more probable than it actually is.\n\nYour Turn:\nHow does the Availability Heuristic influence Priya's expectations and emotional state during her commute, even though there is no current evidence of a problem?\n\nKey Insight:\nWe judge the likelihood of events based on how easily we can remember similar examples, which can lead us to overestimate the risk of dramatic or recent events.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias - The Availability Heuristic\n\nExample:\nImagine you're at Crawford Market in Mumbai with your friend, Priya.\nYour friend tells you about a tourist who was just pickpocketed nearby. It was a stressful story.\n\nSuddenly, you feel very nervous. Every time you see a crowded aisle, you picture pickpockets. You start clutching your wallet tightly.\n\n**Question 1:** Why are you suddenly so worried about pickpockets, even though you've been to this market many times before?\n\n**Question 2:** Is a pickpocketing incident more common or less common than, say, slipping on a wet floor? Which one feels scarier and more 'available' in your mind right now?\n\n**Question 3:** How is this feeling changing your behavior? Are you now avoiding the market altogether?\n\nYour brain is using the availability heuristic. The dramatic story is 'available' in your memory, so you overestimate the risk of it happening to you. The more common, less dramatic risks (like slipping) don't feel as threatening because you don't have a vivid story about them.\n\nKey Insight:\nOur brains use recent or dramatic stories as shortcuts to judge danger, which can make us fear rare events (like pickpocketing) more than common, less memorable ones (like slipping on a wet floor).",
+        "example_id": "ex_4daccbaae35042a3",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\nA cognitive bias is a systematic error in thinking that affects our decisions and judgments. It's a mental shortcut our brain uses to process information quickly, but it can lead us to draw incorrect conclusions.\n\nConcept: Availability Heuristic\nThis is a specific type of cognitive bias where we overestimate how likely something is to happen based on how easily we can recall an example. Vivid, recent, or emotionally charged events feel more common than they actually are.\n\nExample:\nPriya, a student in Mumbai, is at Andheri station waiting for her train home. She just saw a dramatic news report about a fire on a BEST bus that happened earlier that day.\n\nSuddenly, she feels very anxious about her train journey. She thinks, \"What if there's a fire on the train too? The news makes it seem like this happens all the time. Maybe I should just take a rickshaw instead, even though it's more expensive and will take longer.\"\n\nHer friend, who is with her, points out that train fires are extremely rare, and millions of Mumbaikars commute safely every single day. The single bus fire was an isolated incident that just happened to be on the news.\n\nLet's pause and think about this:\n1.  What specific event is making Priya anxious about her train journey?\n2.  Is the bus fire a common or rare event in Mumbai?\n3.  How is the *ease of recalling* the news story affecting her judgment about the safety of her daily commute?\n\nKey Insight:\nWe judge the frequency and risk of an event by how easily we can bring an example to mind. A recent, vivid news story can make a rare risk feel common, causing us to make overly cautious or fearful decisions.",
+        "example_id": "ex_c671fbd30013485b"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias (specifically, the Availability Heuristic)\n\nExample:\nPriya, a student in Mumbai, is getting ready for her daily commute on the local train. Yesterday, she heard on the news about a major signal failure on the Western line that caused huge delays. She also saw a viral video on Instagram of a packed, chaotic platform.\n\nScenario:\nEven though her train has been on time for the past month, Priya becomes convinced that her train will be late today. She spends the entire journey anxiously checking the arrival display and worrying about missing her class.\n\nThe Bias in Action:\nPriya's judgment is being skewed by the Availability Heuristic. This is a mental shortcut where we overestimate how likely something is to happen if it's easier to recall an example. The recent news report and the viral video are vivid and recent in her mind, making the idea of a delayed train feel much more probable than it actually is.\n\nYour Turn:\nHow does the Availability Heuristic influence Priya's expectations and emotional state during her commute, even though there is no current evidence of a problem?\n\nKey Insight:\nWe judge the likelihood of events based on how easily we can remember similar examples, which can lead us to overestimate the risk of dramatic or recent events.",
+        "example_id": "ex_890f33ffec4344bf"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:39:50.357353"
+}

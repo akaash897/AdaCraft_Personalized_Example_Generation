@@ -26,6 +26,7 @@ from core.example_history import ExampleHistory
 from core.feedback_store import load_learning_patterns, load_accept_insights
 from core.context_manager_agent import resolve_topic_tags, invoke_context_manager_agent
 from core.llm_provider import LLMProviderFactory
+from core.language_utils import detect_language
 from config.settings import DEFAULT_LLM_PROVIDER, LLM_API_KEYS
 
 
@@ -46,6 +47,7 @@ def node_load_profile(state: PersonalizedGenerationState) -> PersonalizedGenerat
         state["user_profile"] = {}
         state["profile_summary"] = "No profile available."
         state["error_occurred"] = False
+        _, state["response_language"] = detect_language(state.get("topic", ""))
         return state
 
     user_id = state["user_id"]
@@ -59,6 +61,9 @@ def node_load_profile(state: PersonalizedGenerationState) -> PersonalizedGenerat
         state["profile_summary"] = "Profile unavailable."
         state["error_occurred"] = True
         state["error_message"] = f"node_load_profile error: {e}"
+
+    # Detect language from topic — sets the expected output language for the whole thread
+    _, state["response_language"] = detect_language(state.get("topic", ""))
     return state
 
 
@@ -341,6 +346,7 @@ def node_generate(state: PersonalizedGenerationState) -> PersonalizedGenerationS
              "STUDENT PROFILE:\n{user_profile}\n\n"
              "{learning_context_block}"
              "{regeneration_override}"
+             "{language_override}"
              "Now generate a structured example for the topic below.\n"
              "Match the complexity level stated in the profile exactly.\n"
              "Adapt field labels to suit the topic — do not copy example fields blindly.\n"
@@ -364,11 +370,24 @@ def node_generate(state: PersonalizedGenerationState) -> PersonalizedGenerationS
         else:
             regeneration_override = ""
 
+        # Language instruction — injected when topic or feedback is non-English
+        response_language = state.get("response_language", "English")
+        if response_language and response_language.lower() != "english":
+            language_override = (
+                f"LANGUAGE REQUIREMENT (mandatory — overrides all other formatting rules):\n"
+                f"Write your entire response in {response_language}. "
+                f"All text — including section labels like 'Concept:', 'Example:', 'Key Insight:' — "
+                f"must be in {response_language}. Do not mix languages.\n\n"
+            )
+        else:
+            language_override = ""
+
         chain = prompt | llm
         result = chain.invoke({
             "user_profile": profile_summary,
             "learning_context_block": learning_context_block,
             "regeneration_override": regeneration_override,
+            "language_override": language_override,
             "topic": topic
         })
 

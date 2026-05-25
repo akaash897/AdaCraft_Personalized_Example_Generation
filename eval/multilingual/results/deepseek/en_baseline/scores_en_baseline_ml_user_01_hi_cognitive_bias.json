@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "topic": "Cognitive Bias",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Priya's location (Mumbai) and her role as a student, aligning with her profile. It uses a relatable academic context, which suits her learning style of example-based instruction, and the scenario is tailored to her experience as a high school student preparing for exams. \n\nThe complexity level appears appropriate, focusing on the planning fallacy with clear, accessible language and a straightforward example that matches a medium complexity understanding. The content is factually accurate, correctly describing the planning fallacy and its psychological underpinnings without errors. The structure is logical, starting with a scenario, explaining the bias, and concluding with insights, making it pedagogically clear. The analogy and framing are appropriate for the domain of cognitive psychology, using a common student experience to illustrate the bias.\n\n---\n\n**PF:** The example is well-tailored to Priya's profile, incorporating her location, role, and learning style, making it highly relevant and engaging.  \nAXIS_SCORE: 5\n\n**CC:** The depth and language used are suitable for a high school student, with no overly complex terminology or concepts.  \nAXIS_SCORE: 4\n\n**CA:** The explanation of the planning fallacy is factually correct, with accurate descriptions of the bias and its effects.  \nAXIS_SCORE: 5\n\n**PC:** The example is well-structured, with a clear scenario, explanation, and takeaway, facilitating learning and retention.  \nAXIS_SCORE: 5\n\n**DA:** The analogy of a student planning study time is highly appropriate for the domain of cognitive biases, making the framing relevant and effective.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nPriya, as a student in Mumbai, you're studying for your exams. You've been using a particular study method for years because it worked well for your older cousin, who is now a successful engineer. You believe it's the best way to prepare, even though your friends suggest newer techniques. This is an example of the **Confirmation Bias**.\n\nWhat's happening:\n- You have an existing belief: \"My study method is the best.\"\n- You actively seek and remember information that supports this belief (your cousin's success).\n- You tend to ignore or downplay information that contradicts it (your friends' suggestions or newer research on learning).\n\nA simple numeric illustration:\nImagine you have 10 pieces of information about study methods.\n- 7 pieces suggest other methods might be more effective.\n- 3 pieces support your current method.\nDue to Confirmation Bias, you might:\n  - Give extra weight to those 3 supportive pieces.\n  - Dismiss or forget most of the 7 contradictory pieces.\n  - Conclude your method is strongly supported, even though the evidence is mixed.\n\nKey Insight:\nCognitive biases like Confirmation Bias are mental shortcuts that can lead us to make decisions based on what we already believe, rather than on all the available evidence. Being aware of them helps you question your own assumptions and make more balanced judgments.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nPriya, as a student in Mumbai, you're preparing for your university semester-end exams. You've been studying for weeks, but you notice a pattern in how you approach your revision.\n\nScenario: The Planning Fallacy\nYou allocate two hours to review a difficult chapter in Economics, believing you can cover it thoroughly in that time. Based on past experience, similar chapters have taken you three to four hours, but you ignore that data and stick to your optimistic two-hour plan. As a result, you rush through the material, don't fully understand key graphs, and feel stressed when the time runs out.\n\nWhy it happens:\n- **Overconfidence**: You remember the one time you finished quickly and forget the many times you took longer.\n- **Focus on the ideal**: You picture the best-case scenario (smooth, uninterrupted studying) instead of the realistic one (distractions, complex concepts needing re-reading).\n- **Neglect of base rates**: You don't adjust your plan using your actual historical study times.\n\nConsequence: This bias leads to poor time management, last-minute cramming, and lower exam performance because topics aren't mastered.\n\nKey Insight:\nCognitive biases like the planning fallacy cause you to make predictable errors in judgment by relying on mental shortcuts, often leading you to repeat mistakes despite having evidence that should guide you to better decisions. Recognizing these patterns in your student life is the first step to developing more effective study habits.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nPriya, as a student in Mumbai, you're studying for your exams. You've been using a particular study method for years because it worked well for your older cousin, who is now a successful engineer. You believe it's the best way to prepare, even though your friends suggest newer techniques. This is an example of the **Confirmation Bias**.\n\nWhat's happening:\n- You have an existing belief: \"My study method is the best.\"\n- You actively seek and remember information that supports this belief (your cousin's success).\n- You tend to ignore or downplay information that contradicts it (your friends' suggestions or newer research on learning).\n\nA simple numeric illustration:\nImagine you have 10 pieces of information about study methods.\n- 7 pieces suggest other methods might be more effective.\n- 3 pieces support your current method.\nDue to Confirmation Bias, you might:\n  - Give extra weight to those 3 supportive pieces.\n  - Dismiss or forget most of the 7 contradictory pieces.\n  - Conclude your method is strongly supported, even though the evidence is mixed.\n\nKey Insight:\nCognitive biases like Confirmation Bias are mental shortcuts that can lead us to make decisions based on what we already believe, rather than on all the available evidence. Being aware of them helps you question your own assumptions and make more balanced judgments.",
+        "example_id": "ex_e9a23d421fe446b1",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Confirmation Bias\n\nExample:\nPriya, as a student in Mumbai preparing for her engineering entrance exams, is deciding between two study methods: self-study using online resources versus attending a coaching institute. She initially believes self-study is more effective because it's flexible and cheaper.\n\nHow confirmation bias plays out:\n- Priya actively seeks out success stories of students who cracked the exam through self-study, while dismissing articles about coaching institute results as \"marketing.\"\n- When her friend mentions struggling with self-study, Priya attributes it to her friend's lack of discipline rather than considering limitations of the method.\n- She interprets her own practice test scores selectively—focusing on subjects where she did well with self-study while explaining away poor performance in other subjects as \"bad test days.\"\n\nThe bias becomes evident when Priya's cousin, who attended coaching, scores significantly higher on mock tests. Priya initially dismisses this as \"the tests were easier\" before reluctantly reconsidering her approach.\n\nKey Insight:\nConfirmation bias causes us to seek, interpret, and remember information that confirms our existing beliefs while ignoring contradictory evidence. In academic decisions, this can lead students to stick with ineffective study methods longer than they should.",
+        "example_id": "ex_5db05ae789e24170"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nPriya, as a student in Mumbai, you're preparing for your university semester-end exams. You've been studying for weeks, but you notice a pattern in how you approach your revision.\n\nScenario: The Planning Fallacy\nYou allocate two hours to review a difficult chapter in Economics, believing you can cover it thoroughly in that time. Based on past experience, similar chapters have taken you three to four hours, but you ignore that data and stick to your optimistic two-hour plan. As a result, you rush through the material, don't fully understand key graphs, and feel stressed when the time runs out.\n\nWhy it happens:\n- **Overconfidence**: You remember the one time you finished quickly and forget the many times you took longer.\n- **Focus on the ideal**: You picture the best-case scenario (smooth, uninterrupted studying) instead of the realistic one (distractions, complex concepts needing re-reading).\n- **Neglect of base rates**: You don't adjust your plan using your actual historical study times.\n\nConsequence: This bias leads to poor time management, last-minute cramming, and lower exam performance because topics aren't mastered.\n\nKey Insight:\nCognitive biases like the planning fallacy cause you to make predictable errors in judgment by relying on mental shortcuts, often leading you to repeat mistakes despite having evidence that should guide you to better decisions. Recognizing these patterns in your student life is the first step to developing more effective study habits.",
+        "example_id": "ex_cef204134bc04c58"
+      }
+    ]
+  },
+  "timestamp": "2026-04-13T19:51:09.061130"
+}

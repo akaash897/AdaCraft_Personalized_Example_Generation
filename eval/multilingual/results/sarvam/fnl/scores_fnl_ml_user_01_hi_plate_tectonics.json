@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Plate Tectonics",
+  "topic_str": "प्लेट विवर्तनिकी",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by mentioning Mumbai and Priya, aligning with her profile. The depth of explanation is appropriate for a high school student, using simple analogies like pushing a table, which are accessible and relatable. The factual content about plate tectonics and earthquakes appears accurate, with correct descriptions of plate movements and their consequences. The structure is clear, starting with an analogy, then explaining the Earth's plates, followed by a specific example and key insight, which facilitates understanding. The analogies used are appropriate for the domain of geology, employing everyday scenarios to illustrate complex processes.\n\n[PF] PERSONALIZATION FIDELITY — The example references Mumbai, Priya's location, and her role as a student, making it quite tailored to her profile. The analogy is domain-specific but simple enough for her learning style.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation matches a medium complexity level suitable for a high school student, avoiding overly technical language or formulas.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content about plate tectonics, pressure buildup, and earthquakes is correct and well-explained.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from analogy to explanation to insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are appropriate for geology, using everyday objects and scenarios relevant to Earth's processes.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts focus to engineering applications and the impact of plate tectonics on Mumbai's infrastructure, which aligns more closely with the user's domain and concerns. It provides context relevant to an engineer student and emphasizes practical implications, effectively addressing the critique.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example connects the concept of plate tectonics to everyday life by using the analogy of building sandcastles on the beach, which is more relatable than the original example's engineering focus. This directly addresses the user's critique about examples being linked to daily life, making the explanation more accessible and engaging.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: प्लेट विवर्तनिकी\n\nExample:\nमुंबई की धरती को एक विशाल पहेली की तरह समझें जिसमें कई टुकड़े (प्लेट्स) हैं। ये टुकड़े लगातार बहुत धीमी गति से चलते रहते हैं, जैसे कि कोई बड़ा जहाज धीरे-धीरे चल रहा हो।\n\nमुंबई का उदाहरण:\n- मुंबई की तटरेखा लाखों सालों से बदल रही है।\n- जैसे-जैसे ये प्लेटें खिसकती हैं, समुद्र का स्तर बदलता है और तटरेखा आगे बढ़ती या पीछे हटती है।\n- अगर आप मुंबई के अंडरग्राउंड मेट्रो लाइन्स को देखें, तो लाखों सालों में उन्हें भी अपनी दिशा बदलनी पड़ेगी क्योंकि धरती की परतें खिसक रही हैं।\n\nमुख्य शब्द:\n- प्लेट्स: धरती की बाहरी परत के बड़े टुकड़े\n- विवर्तनिकी: प्लेट्स की हलचल और उनके प्रभाव का अध्ययन\n- सबडक्शन: जब एक प्लेट दूसरी के नीचे चली जाती है\n\nKey Insight:\nप्लेट विवर्तनिकी यह बताती है कि धरती की सतह पर पहाड़, भूकंप और ज्वालामुखी क्यों आते हैं - क्योंकि ये प्लेटें लगातार खिसकती रहती हैं।",
+    "final_example": "अवधारणा: प्लेट विवर्तनिकी\n\nउदाहरण:\nमुंबई में प्रिया के घर के पास समुद्र तट पर रेत से महल बनाते समय, वह देखती है कि एक दिन रेत का ढेर अचानक खिसक जाता है और उसका आकार बदल जाता है।\n\nपृथ्वी भी इसी तरह काम करती है। पृथ्वी की सतह पर 'प्लेट्स' (पट्टिकाएँ) होती हैं जो लगातार धीमी गति से चल रही हैं।\n\nमुंबई में भूकंप क्यों आते हैं?\n- भारतीय प्लेट यूरेशियाई प्लेट से टकरा रही है\n- यह टकराव दबाव बनाता है\n- जब दबाव अचानक मुक्त होता है, तो भूकंप आता है\n\nएक उदाहरण:\nसोचो कि दो लोग एक भारी मेज को धक्का दे रहे हैं।\nएक धीरे और एक तेजी से।\nजब दोनों एक साथ धक्का देते हैं, तो मेज अचानक एक तरफ खिसक जाती है।\nपृथ्वी की प्लेटें भी यही करती हैं - धीरे-धीरे दबाव बनाकर अचानक छोड़ देती हैं।\n\nमुख्य अंतर्दृष्टि:\nपृथ्वी की सतह पर होने वाले भूकंप और ज्वालामुखी इस प्लेटों की हलचल का परिणाम हैं।\nमुंबई जैसे तटीय शहरों में भूकंप का खतरा इसलिए अधिक है क्योंकि यहाँ प्लेटें सक्रिय हैं।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: प्लेट विवर्तनिकी\n\nExample:\nमुंबई की धरती को एक विशाल पहेली की तरह समझें जिसमें कई टुकड़े (प्लेट्स) हैं। ये टुकड़े लगातार बहुत धीमी गति से चलते रहते हैं, जैसे कि कोई बड़ा जहाज धीरे-धीरे चल रहा हो।\n\nमुंबई का उदाहरण:\n- मुंबई की तटरेखा लाखों सालों से बदल रही है।\n- जैसे-जैसे ये प्लेटें खिसकती हैं, समुद्र का स्तर बदलता है और तटरेखा आगे बढ़ती या पीछे हटती है।\n- अगर आप मुंबई के अंडरग्राउंड मेट्रो लाइन्स को देखें, तो लाखों सालों में उन्हें भी अपनी दिशा बदलनी पड़ेगी क्योंकि धरती की परतें खिसक रही हैं।\n\nमुख्य शब्द:\n- प्लेट्स: धरती की बाहरी परत के बड़े टुकड़े\n- विवर्तनिकी: प्लेट्स की हलचल और उनके प्रभाव का अध्ययन\n- सबडक्शन: जब एक प्लेट दूसरी के नीचे चली जाती है\n\nKey Insight:\nप्लेट विवर्तनिकी यह बताती है कि धरती की सतह पर पहाड़, भूकंप और ज्वालामुखी क्यों आते हैं - क्योंकि ये प्लेटें लगातार खिसकती रहती हैं।",
+        "example_id": "ex_8274a7430d314535",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "अवधारणा: प्लेट विवर्तनिकी\n\nउदाहरण:\nमुंबई के एक इंजीनियर छात्र के रूप में, प्लेट विवर्तनिकी को समझना आपके लिए अत्यंत महत्वपूर्ण है क्योंकि मुंबई एक भूकंपीय क्षेत्र (seismic zone) में स्थित है।\n\nसोचिए कि पृथ्वी की सतह बड़ी-बड़ी पट्टियों (plates) से बनी है जो एक-दूसरे के ऊपर तैरती रहती हैं। मुंबई की स्थिति ऐसी है कि यह भारतीय प्लेट (Indian Plate) पर स्थित है, जो उत्तर की ओर बढ़ती रहती है।\n\nदैनिक जीवन से जुड़ा उदाहरण:\nजब आप मुंबई में ऊंची इमारतें बनाते हैं, तो आपको यह ध्यान रखना होता है कि जमीन कितनी स्थिर है। प्लेट विवर्तनिकी के कारण:\n- मुंबई में भूकंप का खतरा रहता है\n- जमीन का स्तर धीरे-धीरे बदलता है\n- समुद्र का स्तर भी प्रभावित होता है\n\nइंजीनियरिंग में अनुप्रयोग:\n- बिल्डिंग कोड (building codes) में भूकंप प्रतिरोधी डिजाइन अनिवार्य है\n- मेट्रो और रेलवे लाइनों की योजना बनाते समय मिट्टी की हलचल का ध्यान रखना पड़ता है\n- तटीय क्षेत्रों में निर्माण के लिए विशेष सावधानी बरतनी पड़ती है\n\nमुख्य अंतर्दृष्टि:\nप्लेट विवर्तनिकी केवल एक भौगोलिक घटना नहीं है, बल्कि यह मुंबई जैसे शहरों में इंजीनियरिंग और निर्माण के हर पहलू को प्रभावित करती है।",
+        "example_id": "ex_868193b5b61d49df"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "अवधारणा: प्लेट विवर्तनिकी\n\nउदाहरण:\nमुंबई में प्रिया के घर के पास समुद्र तट पर रेत से महल बनाते समय, वह देखती है कि एक दिन रेत का ढेर अचानक खिसक जाता है और उसका आकार बदल जाता है।\n\nपृथ्वी भी इसी तरह काम करती है। पृथ्वी की सतह पर 'प्लेट्स' (पट्टिकाएँ) होती हैं जो लगातार धीमी गति से चल रही हैं।\n\nमुंबई में भूकंप क्यों आते हैं?\n- भारतीय प्लेट यूरेशियाई प्लेट से टकरा रही है\n- यह टकराव दबाव बनाता है\n- जब दबाव अचानक मुक्त होता है, तो भूकंप आता है\n\nएक उदाहरण:\nसोचो कि दो लोग एक भारी मेज को धक्का दे रहे हैं।\nएक धीरे और एक तेजी से।\nजब दोनों एक साथ धक्का देते हैं, तो मेज अचानक एक तरफ खिसक जाती है।\nपृथ्वी की प्लेटें भी यही करती हैं - धीरे-धीरे दबाव बनाकर अचानक छोड़ देती हैं।\n\nमुख्य अंतर्दृष्टि:\nपृथ्वी की सतह पर होने वाले भूकंप और ज्वालामुखी इस प्लेटों की हलचल का परिणाम हैं।\nमुंबई जैसे तटीय शहरों में भूकंप का खतरा इसलिए अधिक है क्योंकि यहाँ प्लेटें सक्रिय हैं।",
+        "example_id": "ex_ea4dad21d43d44d5"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:19:20.282308"
+}

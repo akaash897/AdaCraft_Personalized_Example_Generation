@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Cognitive Bias",
+  "topic_str": "संज्ञानात्मक पूर्वाग्रह",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by involving Priya, a student from Mumbai, and uses a relatable context of shopping at a local market, aligning with her profile and learning style. The complexity level appears appropriate for a high school student, explaining the concept of anchoring bias with a simple, real-world example without overly technical language. The factual content about anchoring bias is accurate, correctly illustrating how initial information influences decision-making. The structure is clear, with a logical flow from the scenario to the concept and insight, making it pedagogically effective. The analogy of bargaining at a market is highly domain-appropriate, fitting well within the context of everyday decision-making in India.\n\n[PF] PERSONALIZATION FIDELITY — The example is well tailored, incorporating Priya's name, location, and cultural context, and uses a familiar shopping scenario that matches her learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation is straightforward, suitable for a high school level, with no overly complex terminology or concepts.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The description of anchoring bias is factually correct, accurately depicting how initial information influences subsequent judgments.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario leading into the concept and a concise summary, facilitating understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The shopping scenario and bargaining analogy are highly appropriate for illustrating cognitive bias in a real-world, culturally relevant context.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique was that the original example did not seem related to their domain, implying a need for a domain-specific example. The regenerated example shifts to an educational context involving a student and exam preparation, which is more aligned with a typical domain of learning and decision-making, thus addressing the critique effectively. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that examples should be connected to everyday life for better understanding. The regenerated example uses a relatable scenario involving shopping at a market, which aligns well with daily experiences, thus addressing the critique effectively. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "अवधारणा: संज्ञानात्मक पूर्वाग्रह (Cognitive Bias)\n\nउदाहरण:\nमुंबई में प्रिया Crawford Market सब्जी खरीदने जाती है। पिछले साल उसने एक दुकान से टमाटर खरीदे थे जो बहुत महंगे थे और स्वाद में भी खराब थे। उसे लगा था कि Crawford Market के सभी टमाटर महंगे और खराब होते हैं। आज जब वह बाजार में जाती है, तो एक नए दुकानदार के टमाटर देखती है। दुकानदार कहता है, 'Madam, ये बहुत अच्छे और ताजे हैं।' प्रिया तुरंत सोचती है, 'नहीं, ये भी महंगे और खराब ही होंगे।' वह दुकानदार के टमाटर नहीं देखती और जल्दी से चली जाती है। यह उसका संज्ञानात्मक पूर्वाग्रह है। उसका एक पुराना अनुभव (एक खराब टमाटर) उसके आज के फैसले को प्रभावित कर रहा है। वह सिर्फ उसी जानकारी को देख रही है जो उसके पुराने विश्वास को सही साबित करती है ('Market के टमाटर खराब हैं'), और नई जानकारी ('ये टमाटर ताजे हैं') को नज़रअंदाज़ कर रही है।\n\nमुख्य अंतर्दृष्टि:\nहमारा दिमाग शॉर्टकट (heuristics) का इस्तेमाल करता है, लेकिन ये शॉर्टकट गलत निर्णयों की ओर ले जा सकते हैं। संज्ञानात्मक पूर्वाग्रह तब होता है जब हम नई जानकारी को अपने पुराने विश्वासों के हिसाब से देखते हैं, न कि उसके अपने आधार पर।",
+    "final_example": "अवधारणा: संज्ञानात्मक पूर्वाग्रह (Cognitive Bias)\n\nउदाहरण:\nमुंबई की एक छात्रा प्रिया, एक स्थानीय बाज़ार में एक पुरानी लैंप खरीदने जाती है। दुकानदार उसे लैंप दिखाकर कहता है, \"मैडम, यह बहुत दुर्लभ है, सिर्फ 5,000 रुपये।\"\n\nयह 5,000 रुपये का भाव मन में एक 'एंकर' (आधार) बन जाता है। जब प्रिया मोलभाव करती है और 2,000 रुपये देने की बात करती है, तो उसे लगता है कि वह बहुत अच्छा सौदा कर रही है क्योंकि 2,000 तो 5,000 से बहुत कम है। लेकिन अगर उस लैंप की असल कीमत 1,500 रुपये थी, तो भी वह ज़्यादा भुगतान कर रही है। पहले बताए गए ऊँचे भाव ने उसके फैसले को प्रभावित किया और उसे यह सोचने पर मजबूर कर दिया कि उसे छूट मिल रही है, जबकि वह ज़रूरत से ज़्यादा भुगतान कर रही थी।\n\nपूर्वाग्रह का नाम: एंकरिंग बायस (Anchoring Bias)\n\nमुख्य अंतर्दृष्टि:\nपहले सुनी गई जानकारी, चाहे वह कितनी भी ज़्यादा क्यों न हो, हमारे दिमाग में एक 'एंकर' बना देती है और उसके आधार पर ही हम आगे के फैसले लेते हैं।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "अवधारणा: संज्ञानात्मक पूर्वाग्रह (Cognitive Bias)\n\nउदाहरण:\nमुंबई में प्रिया Crawford Market सब्जी खरीदने जाती है। पिछले साल उसने एक दुकान से टमाटर खरीदे थे जो बहुत महंगे थे और स्वाद में भी खराब थे। उसे लगा था कि Crawford Market के सभी टमाटर महंगे और खराब होते हैं। आज जब वह बाजार में जाती है, तो एक नए दुकानदार के टमाटर देखती है। दुकानदार कहता है, 'Madam, ये बहुत अच्छे और ताजे हैं।' प्रिया तुरंत सोचती है, 'नहीं, ये भी महंगे और खराब ही होंगे।' वह दुकानदार के टमाटर नहीं देखती और जल्दी से चली जाती है। यह उसका संज्ञानात्मक पूर्वाग्रह है। उसका एक पुराना अनुभव (एक खराब टमाटर) उसके आज के फैसले को प्रभावित कर रहा है। वह सिर्फ उसी जानकारी को देख रही है जो उसके पुराने विश्वास को सही साबित करती है ('Market के टमाटर खराब हैं'), और नई जानकारी ('ये टमाटर ताजे हैं') को नज़रअंदाज़ कर रही है।\n\nमुख्य अंतर्दृष्टि:\nहमारा दिमाग शॉर्टकट (heuristics) का इस्तेमाल करता है, लेकिन ये शॉर्टकट गलत निर्णयों की ओर ले जा सकते हैं। संज्ञानात्मक पूर्वाग्रह तब होता है जब हम नई जानकारी को अपने पुराने विश्वासों के हिसाब से देखते हैं, न कि उसके अपने आधार पर।",
+        "example_id": "ex_9307e46058d94af2",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**अवधारणा:** संज्ञानात्मक पूर्वाग्रह\n\n**उदाहरण:**\nप्रिया, जो मुंबई की एक छात्रा है, अपनी गणित की परीक्षा की तैयारी कर रही है। वह एक कठिन अध्याय में फंसी हुई है। उसने पहले ही इस अध्याय पर 3 घंटे बिता दिए हैं, लेकिन उसे कुछ समझ नहीं आ रहा। फिर भी, वह उसी अध्याय को पढ़ने में और समय बिताती है, यह सोचकर कि \"मैंने इतना समय पहले ही लगा दिया है, अब बीच में नहीं छोड़ सकती।\"\n\nयह **संक कॉस्ट फैलेसी (Sunk Cost Fallacy)** का एक उदाहरण है। प्रिया उस समय के बारे में सोच रही है जो वह पहले ही \"डूबा\" (sunk) चुकी है, बजाय इसके कि वर्तमान में उसके लिए सबसे अच्छा क्या है। बेहतर निर्णय यह हो सकता था कि वह इस कठिन अध्याय को छोड़कर किसी आसान अध्याय पर ध्यान दे और बाद में वापस आती।\n\n**मुख्य अंतर्दृष्टि:**\nयह पूर्वाग्रह हमें पिछले निवेशों के आधार पर निर्णय लेने पर मजबूर करता है, जिससे हम वर्तमान और भविष्य के लिए सबसे उपयुक्त विकल्प चुनने से चूक जाते हैं।",
+        "example_id": "ex_e7b7de65acf3462d"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "अवधारणा: संज्ञानात्मक पूर्वाग्रह (Cognitive Bias)\n\nउदाहरण:\nमुंबई की एक छात्रा प्रिया, एक स्थानीय बाज़ार में एक पुरानी लैंप खरीदने जाती है। दुकानदार उसे लैंप दिखाकर कहता है, \"मैडम, यह बहुत दुर्लभ है, सिर्फ 5,000 रुपये।\"\n\nयह 5,000 रुपये का भाव मन में एक 'एंकर' (आधार) बन जाता है। जब प्रिया मोलभाव करती है और 2,000 रुपये देने की बात करती है, तो उसे लगता है कि वह बहुत अच्छा सौदा कर रही है क्योंकि 2,000 तो 5,000 से बहुत कम है। लेकिन अगर उस लैंप की असल कीमत 1,500 रुपये थी, तो भी वह ज़्यादा भुगतान कर रही है। पहले बताए गए ऊँचे भाव ने उसके फैसले को प्रभावित किया और उसे यह सोचने पर मजबूर कर दिया कि उसे छूट मिल रही है, जबकि वह ज़रूरत से ज़्यादा भुगतान कर रही थी।\n\nपूर्वाग्रह का नाम: एंकरिंग बायस (Anchoring Bias)\n\nमुख्य अंतर्दृष्टि:\nपहले सुनी गई जानकारी, चाहे वह कितनी भी ज़्यादा क्यों न हो, हमारे दिमाग में एक 'एंकर' बना देती है और उसके आधार पर ही हम आगे के फैसले लेते हैं।",
+        "example_id": "ex_f557df0956ab4fd8"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:14:54.420615"
+}

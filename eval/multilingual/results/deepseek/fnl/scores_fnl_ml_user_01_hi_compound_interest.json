@@ -1,0 +1,116 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Compound Interest",
+  "topic_str": "चक्रवृद्धि ब्याज",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and it uses a relatable financial context relevant to a high school student in Mumbai. The depth of explanation covers the basic concept of compound interest, including calculations and formulas, which aligns well with a medium complexity level. The factual content appears accurate, with correct formulas and calculations, and the structure is clear, guiding the learner through the example step-by-step. The analogies and framing are appropriate for the domain of personal finance and mathematics, making the example domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates the user's name, location, and profession, and relates the concept to everyday financial decisions, which enhances relevance. The learning style preference (example-based) is well addressed through step-by-step calculations.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes detailed calculations, formulas, and a discussion of long-term effects, which is suitable for a high school student with medium complexity understanding. It balances depth without being overly advanced.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The content correctly explains compound interest, provides accurate formulas, and demonstrates proper calculations, with no factual errors detected.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from initial principal to calculations, formulas, and implications, making it easy to follow and memorable. The bridge between concept and example is explicit.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing uses financial concepts and terminology appropriate for the topic of compound interest, with relevant real-world applications, making it domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example shifts the context from a personal profile to a small startup investment in Mumbai, which aligns better with the user's request for domain relevance. It also introduces practical applications like small business investments and financial planning, making it more relatable to the user's domain. However, it still uses a generic example of investment growth without specific domain-related scenarios, but overall, it addresses the critique effectively.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "संकल्पना: चक्रवृद्धि ब्याज\n\nउदाहरण:\nप्रिया, आप ₹10,000 की एक छोटी निवेश को एक बैंक में रखती हैं जो 5% वार्षिक चक्रवृद्धि ब्याज देता है। चक्रवृद्धि ब्याज का मतलब है कि आपका ब्याज न केवल आपके मूल राशि पर, बल्कि पहले से जमा हुए ब्याज पर भी कमाया जाता है।\n\nपहले वर्ष के अंत में:\n- मूल राशि: ₹10,000\n- ब्याज (5%): ₹500\n- कुल राशि: ₹10,500\n\nदूसरे वर्ष के अंत में:\n- मूल राशि: ₹10,500 (पिछले वर्ष का कुल)\n- ब्याज (₹10,500 का 5%): ₹525\n- कुल राशि: ₹10,525 + ₹500 = ₹11,025? नहीं, गलती है। सही गणना: ₹10,500 + ₹525 = ₹11,025\n\nतीसरे वर्ष के अंत में:\n- मूल राशि: ₹11,025\n- ब्याज (₹11,025 का 5%): ₹551.25\n- कुल राशि: ₹11,025 + ₹551.25 = ₹11,576.25\n\nआप देख सकती हैं कि प्रत्येक वर्ष ब्याज की राशि बढ़ती जाती है (₹500, ₹525, ₹551.25) क्योंकि यह एक बढ़ती हुई \"मूल राशि\" पर कमाया जाता है।\n\nसूत्र (मध्यम स्तर के लिए):\nA = P × (1 + r)^n\nजहाँ:\nA = n वर्षों के बाद कुल राशि\nP = मूल राशि (₹10,000)\nr = वार्षिक ब्याज दर (5% या 0.05)\nn = वर्षों की संख्या (3)\n\nहमारे उदाहरण के लिए:\nA = 10,000 × (1 + 0.05)^3\nA = 10,000 × (1.05)^3\nA = 10,000 × 1.157625\nA = ₹11,576.25\n\nमुख्य सार:\nचक्रवृद्धि ब्याज आपके निवेश को \"स्नोबॉल\" की तरह बढ़ाता है - प्रत्येक वर्ष ब्याज पिछले ब्याज पर भी कमाया जाता है, जिससे लंबी अवधि में वृद्धि तेज हो जाती है। यह साधारण ब्याज से अलग है, जहाँ ब्याज हर वर्ष मूल राशि पर ही कमाया जाता है।",
+    "final_example": "संकल्पना: चक्रवृद्धि ब्याज\n\nउदाहरण:\nप्रिया, मुम्बई में एक छात्र हैं। आप एक छोटी स्टार्टअप योजना के लिए ₹10,000 की निवेश करती हैं, जो 10% प्रति वर्ष की दर से चक्रवृद्धि ब्याज देता है। आप यह देखना चाहती हैं कि 3 वर्षों में यह निवेश कैसे बढ़ता है।\n\nवर्ष 1:\n  प्रारंभिक राशि: ₹10,000\n  ब्याज (10%): ₹10,000 × 0.10 = ₹1,000\n  वर्ष के अंत में कुल: ₹11,000\n\nवर्ष 2:\n  प्रारंभिक राशि: ₹11,000 (पिछले वर्ष का कुल)\n  ब्याज (10%): ₹11,000 × 0.10 = ₹1,100\n  वर्ष के अंत में कुल: ₹12,100\n\nवर्ष 3:\n  प्रारंभिक राशि: ₹12,100\n  ब्याज (10%): ₹12,100 × 0.10 = ₹1,210\n  वर्ष के अंत में कुल: ₹13,310\n\nसूत्र:\n  A = P (1 + r)^n\n  जहाँ:\n    A = भविष्य की राशि\n    P = प्रारंभिक राशि (₹10,000)\n    r = ब्याज दर (0.10)\n    n = समय अवधि (3 वर्ष)\n  A = 10000 × (1 + 0.10)^3 = 10000 × (1.331) = ₹13,310\n\nमुम्बई में प्रासंगिकता:\n  यह उदाहरण छोटे व्यवसाय निवेश, शिक्षा ऋण की भविष्य की लागत, या एक सावधि जमा की वृद्धि को दर्शाता है — जो आपके दैनिक वित्तीय निर्णयों से जुड़े हैं।\n\nगहराई में जाना:\n  चक्रवृद्धि ब्याज का प्रभाव समय के साथ तेजी से बढ़ता है। 30 वर्षों में, उसी ₹10,000 निवेश (10% दर) ₹174,494 हो जाएगा। यह दीर्घकालिक वित्तीय योजना (जैसे रिटायरमेंट) की शक्ति को दर्शाता है, जहाँ शुरुआती निवेश और समय सबसे महत्वपूर्ण कारक हैं।\n\nमुख्य सार:\n  चक्रवृद्धि ब्याज में, आप प्रत्येक वर्ष पिछले वर्ष के कुल राशि पर ब्याज प्राप्त करते हैं, जिससे राशि तेजी से बढ़ती है। यह एकमुश्त ब्याज से अधिक शक्तिशाली है और दीर्घकालिक निवेश की कुंजी है।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "संकल्पना: चक्रवृद्धि ब्याज\n\nउदाहरण:\nप्रिया, आप ₹10,000 की एक छोटी निवेश को एक बैंक में रखती हैं जो 5% वार्षिक चक्रवृद्धि ब्याज देता है। चक्रवृद्धि ब्याज का मतलब है कि आपका ब्याज न केवल आपके मूल राशि पर, बल्कि पहले से जमा हुए ब्याज पर भी कमाया जाता है।\n\nपहले वर्ष के अंत में:\n- मूल राशि: ₹10,000\n- ब्याज (5%): ₹500\n- कुल राशि: ₹10,500\n\nदूसरे वर्ष के अंत में:\n- मूल राशि: ₹10,500 (पिछले वर्ष का कुल)\n- ब्याज (₹10,500 का 5%): ₹525\n- कुल राशि: ₹10,525 + ₹500 = ₹11,025? नहीं, गलती है। सही गणना: ₹10,500 + ₹525 = ₹11,025\n\nतीसरे वर्ष के अंत में:\n- मूल राशि: ₹11,025\n- ब्याज (₹11,025 का 5%): ₹551.25\n- कुल राशि: ₹11,025 + ₹551.25 = ₹11,576.25\n\nआप देख सकती हैं कि प्रत्येक वर्ष ब्याज की राशि बढ़ती जाती है (₹500, ₹525, ₹551.25) क्योंकि यह एक बढ़ती हुई \"मूल राशि\" पर कमाया जाता है।\n\nसूत्र (मध्यम स्तर के लिए):\nA = P × (1 + r)^n\nजहाँ:\nA = n वर्षों के बाद कुल राशि\nP = मूल राशि (₹10,000)\nr = वार्षिक ब्याज दर (5% या 0.05)\nn = वर्षों की संख्या (3)\n\nहमारे उदाहरण के लिए:\nA = 10,000 × (1 + 0.05)^3\nA = 10,000 × (1.05)^3\nA = 10,000 × 1.157625\nA = ₹11,576.25\n\nमुख्य सार:\nचक्रवृद्धि ब्याज आपके निवेश को \"स्नोबॉल\" की तरह बढ़ाता है - प्रत्येक वर्ष ब्याज पिछले ब्याज पर भी कमाया जाता है, जिससे लंबी अवधि में वृद्धि तेज हो जाती है। यह साधारण ब्याज से अलग है, जहाँ ब्याज हर वर्ष मूल राशि पर ही कमाया जाता है।",
+        "example_id": "ex_c5bec4515b3c48a0",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "संकल्पना: चक्रवृद्धि ब्याज\n\nउदाहरण:\nप्रिया, मुम्बई में एक छात्र हैं। आप एक छोटी स्टार्टअप योजना के लिए ₹10,000 की निवेश करती हैं, जो 10% प्रति वर्ष की दर से चक्रवृद्धि ब्याज देता है। आप यह देखना चाहती हैं कि 3 वर्षों में यह निवेश कैसे बढ़ता है।\n\nवर्ष 1:\n  प्रारंभिक राशि: ₹10,000\n  ब्याज (10%): ₹10,000 × 0.10 = ₹1,000\n  वर्ष के अंत में कुल: ₹11,000\n\nवर्ष 2:\n  प्रारंभिक राशि: ₹11,000 (पिछले वर्ष का कुल)\n  ब्याज (10%): ₹11,000 × 0.10 = ₹1,100\n  वर्ष के अंत में कुल: ₹12,100\n\nवर्ष 3:\n  प्रारंभिक राशि: ₹12,100\n  ब्याज (10%): ₹12,100 × 0.10 = ₹1,210\n  वर्ष के अंत में कुल: ₹13,310\n\nसूत्र:\n  A = P (1 + r)^n\n  जहाँ:\n    A = भविष्य की राशि\n    P = प्रारंभिक राशि (₹10,000)\n    r = ब्याज दर (0.10)\n    n = समय अवधि (3 वर्ष)\n  A = 10000 × (1 + 0.10)^3 = 10000 × (1.331) = ₹13,310\n\nमुम्बई में प्रासंगिकता:\n  यह उदाहरण छोटे व्यवसाय निवेश, शिक्षा ऋण की भविष्य की लागत, या एक सावधि जमा की वृद्धि को दर्शाता है — जो आपके दैनिक वित्तीय निर्णयों से जुड़े हैं।\n\nगहराई में जाना:\n  चक्रवृद्धि ब्याज का प्रभाव समय के साथ तेजी से बढ़ता है। 30 वर्षों में, उसी ₹10,000 निवेश (10% दर) ₹174,494 हो जाएगा। यह दीर्घकालिक वित्तीय योजना (जैसे रिटायरमेंट) की शक्ति को दर्शाता है, जहाँ शुरुआती निवेश और समय सबसे महत्वपूर्ण कारक हैं।\n\nमुख्य सार:\n  चक्रवृद्धि ब्याज में, आप प्रत्येक वर्ष पिछले वर्ष के कुल राशि पर ब्याज प्राप्त करते हैं, जिससे राशि तेजी से बढ़ती है। यह एकमुश्त ब्याज से अधिक शक्तिशाली है और दीर्घकालिक निवेश की कुंजी है।",
+        "example_id": "ex_967ef006f0ce4943"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T17:26:07.871115"
+}

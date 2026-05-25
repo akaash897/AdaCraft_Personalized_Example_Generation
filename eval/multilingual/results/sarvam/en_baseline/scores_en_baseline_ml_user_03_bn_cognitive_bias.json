@@ -1,0 +1,73 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "topic": "Cognitive Bias",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by referencing Arjun's profession as a software engineer and uses a relatable debugging analogy, aligning well with his profile and learning style. The depth of the example introduces a concrete coding scenario, which matches the medium complexity level expected for an undergraduate engineer, and explains the concept of confirmation bias through a familiar programming context, making it accessible and memorable. The analogy is domain-appropriate, using programming and debugging metaphors that resonate with Arjun's background, and the structure clearly guides the learner from concept to example, emphasizing the insight about faulty conditional logic in the brain. Overall, the example is well-crafted for pedagogical clarity and domain relevance.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Arjun's role, profession, and learning style, and uses a programming analogy that aligns with his background, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The example balances technical detail with accessible language, suitable for an undergraduate software engineer, matching the medium complexity level.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation correctly describes confirmation bias and uses accurate programming logic to illustrate it, with no factual errors.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, starting with analogy, then code example, followed by key insight, facilitating understanding and retention.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy is entirely within the programming domain, appropriate for a software engineer, and uses relevant vocabulary.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 5.0,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example is clearly tailored to the user's profile, using the name \"Arjun\" and profession \"software engineer\", and matching the learning style of \"example-based\" with a relevant analogy from the domain of software engineering. This level of personalization effectively engages the learner by making the example directly relatable to their own experiences and interests.\n\nPF_SCORE: 5\n\nFor the axis of Complexity Calibration (CC), the example's depth and complexity seem to match the user's stated complexity level of \"medium\", as it involves a conceptual understanding of cognitive biases and a simple coding analogy that is not overly complex but still requires some thought to fully grasp. The language and concepts used are accessible and aligned with what would be expected for an undergraduate student.\n\nCC_SCORE: 5\n\nFor the axis of Conceptual Accuracy (CA), the factual content regarding cognitive biases, specifically Confirmation Bias, is correct and accurately represented through the coding analogy. The example effectively conveys how cognitive biases can lead to systematic errors in judgment by filtering out contradictory evidence, which aligns with psychological definitions and explanations of these biases.\n\nCA_SCORE: 5\n\nFor the axis of Pedagogical Clarity (PC), the example is structured for learning with a clear introduction to the concept, a well-developed analogy that bridges the concept to a tangible example, and a memorable takeaway or key insight that summarizes the importance of recognizing cognitive biases. The use of a coding example to explain a psychological concept is innovative and likely to be memorable for a software engineer.\n\nPC_SCORE: 5\n\nFor the axis of Domain Appropriateness (DA), the analogies and framing used in the example are perfectly appropriate for the topic of cognitive biases, utilizing a software engineering context to explain psychological concepts. This approach not only makes the topic more engaging for someone with a software engineering background but also effectively communicates the idea that cognitive biases are akin to systematic errors in thinking, much like bugs in code.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nThink of your brain as a program that uses shortcuts, called heuristics, to make fast decisions. Cognitive biases are like bugs in this program's logic—systematic errors that cause you to misinterpret information and make irrational choices.\n\nThe Analogy: Confirmation Bias\nA common bias is Confirmation Bias. This is the tendency to search for, interpret, and recall information in a way that confirms one's pre-existing beliefs.\n\nIn software terms, it's like writing a faulty conditional statement that only looks for evidence that supports your initial assumption.\n\nThe Code\nImagine you're building a feature to review user feedback. You believe a new feature is a success. Your code might look like this:\n\n```python\n# Your belief: the feature is successful\nis_successful = True\n\n# List of all user feedback comments\nfeedback = [\n    \"I love the new dashboard, it's so fast!\",\n    \"The new feature is buggy and crashes my app.\",\n    \"Great work on the update, very intuitive.\",\n    \"I can't find the old settings anymore.\"\n]\n\n# A biased function that only shows positive comments\ndef show_supporting_feedback(comments, belief):\n    if belief:\n        return [comment for comment in comments if \"love\" in comment.lower() or \"great\" in comment.lower()]\n    else:\n        return []\n\n# What you end up seeing\npositive_reviews = show_supporting_feedback(feedback, is_successful)\nprint(positive_reviews)\n# Output: ['I love the new dashboard, it's so fast!', 'Great work on the update, very intuitive.']\n```\n\nWhat It Shows\nThe function `show_supporting_feedback` is designed to only return data that confirms the `is_successful` belief. It actively ignores the negative feedback (\"buggy,\" \"crashes,\" \"can't find\") because it doesn't match the expected outcome. This is how confirmation bias works: you subconsciously filter out contradictory evidence, leading to an incomplete and flawed conclusion.\n\nKey Insight:\nCognitive biases are not character flaws; they are predictable bugs in our mental operating system that we can learn to recognize and account for in our decision-making process.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nThink of a cognitive bias as a bug in your brain's code—a systematic error in your thinking logic. A classic example is Confirmation Bias, where you only look for evidence that supports your existing belief.\n\nImagine you're a software engineer, Arjun, debugging a feature. You're certain the bug is in the database query. This is your `hypothesis`.\n\nYour brain runs a faulty conditional check every time you see a log message:\n\n```python\n# Arjun's mental code\nhypothesis = \"The bug is in the database\"\nlog_entry = \"Query timed out\"\n\nif log_entry.supports(hypothesis):\n    print(\"Confirmed! Bug is in the database. Investigate there.\")\n    # This is the path Arjun takes, reinforcing his belief.\nelse:\n    # This path is ignored, even if it contains the real clue.\n    print(\"Hmm, this doesn't fit. Maybe look elsewhere?\") \n```\n\nWhen Arjun sees the \"Query timed out\" message, his `if` condition is met, and he feels confident. He spends hours optimizing the database. He misses the other log entry from 10 minutes earlier: `API_RESPONSE_CODE = 500`. This log contradicted his hypothesis, but his mental `if` statement filtered it out, so the `else` block never ran. The real bug was in the API, not the database.\n\nKey Insight:\nCognitive biases are like faulty conditional statements in your brain's code. They cause you to execute the 'if true' block (confirming your beliefs) while skipping the 'else' block (contradictory evidence), leading to systematic errors in judgment.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nThink of your brain as a program that uses shortcuts, called heuristics, to make fast decisions. Cognitive biases are like bugs in this program's logic—systematic errors that cause you to misinterpret information and make irrational choices.\n\nThe Analogy: Confirmation Bias\nA common bias is Confirmation Bias. This is the tendency to search for, interpret, and recall information in a way that confirms one's pre-existing beliefs.\n\nIn software terms, it's like writing a faulty conditional statement that only looks for evidence that supports your initial assumption.\n\nThe Code\nImagine you're building a feature to review user feedback. You believe a new feature is a success. Your code might look like this:\n\n```python\n# Your belief: the feature is successful\nis_successful = True\n\n# List of all user feedback comments\nfeedback = [\n    \"I love the new dashboard, it's so fast!\",\n    \"The new feature is buggy and crashes my app.\",\n    \"Great work on the update, very intuitive.\",\n    \"I can't find the old settings anymore.\"\n]\n\n# A biased function that only shows positive comments\ndef show_supporting_feedback(comments, belief):\n    if belief:\n        return [comment for comment in comments if \"love\" in comment.lower() or \"great\" in comment.lower()]\n    else:\n        return []\n\n# What you end up seeing\npositive_reviews = show_supporting_feedback(feedback, is_successful)\nprint(positive_reviews)\n# Output: ['I love the new dashboard, it's so fast!', 'Great work on the update, very intuitive.']\n```\n\nWhat It Shows\nThe function `show_supporting_feedback` is designed to only return data that confirms the `is_successful` belief. It actively ignores the negative feedback (\"buggy,\" \"crashes,\" \"can't find\") because it doesn't match the expected outcome. This is how confirmation bias works: you subconsciously filter out contradictory evidence, leading to an incomplete and flawed conclusion.\n\nKey Insight:\nCognitive biases are not character flaws; they are predictable bugs in our mental operating system that we can learn to recognize and account for in our decision-making process.",
+        "example_id": "ex_c03d17568ad24d4e",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nThink of a cognitive bias as a bug in your brain's code—a systematic error in your thinking logic. A classic example is Confirmation Bias, where you only look for evidence that supports your existing belief.\n\nImagine you're a software engineer, Arjun, debugging a feature. You're certain the bug is in the database query. This is your `hypothesis`.\n\nYour brain runs a faulty conditional check every time you see a log message:\n\n```python\n# Arjun's mental code\nhypothesis = \"The bug is in the database\"\nlog_entry = \"Query timed out\"\n\nif log_entry.supports(hypothesis):\n    print(\"Confirmed! Bug is in the database. Investigate there.\")\n    # This is the path Arjun takes, reinforcing his belief.\nelse:\n    # This path is ignored, even if it contains the real clue.\n    print(\"Hmm, this doesn't fit. Maybe look elsewhere?\") \n```\n\nWhen Arjun sees the \"Query timed out\" message, his `if` condition is met, and he feels confident. He spends hours optimizing the database. He misses the other log entry from 10 minutes earlier: `API_RESPONSE_CODE = 500`. This log contradicted his hypothesis, but his mental `if` statement filtered it out, so the `else` block never ran. The real bug was in the API, not the database.\n\nKey Insight:\nCognitive biases are like faulty conditional statements in your brain's code. They cause you to execute the 'if true' block (confirming your beliefs) while skipping the 'else' block (contradictory evidence), leading to systematic errors in judgment.",
+        "example_id": "ex_4e033a19e18c41b6"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:24:58.827818"
+}

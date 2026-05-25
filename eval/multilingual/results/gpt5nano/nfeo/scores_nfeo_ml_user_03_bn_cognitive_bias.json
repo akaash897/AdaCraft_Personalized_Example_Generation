@@ -1,0 +1,127 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example is highly tailored to the user's profile, incorporating their name, location, profession, and language, and uses Bengali language and contextually relevant scenarios, which demonstrates strong personalization fidelity. The complexity level appears appropriate for an undergraduate software engineer, with detailed technical discussion and code pseudocode, matching the medium complexity requirement. The factual content about cognitive biases and their application in debugging is accurate and well-explained, showing good conceptual accuracy. The structure of the example is clear, with a logical flow from bias identification to countermeasures, making it pedagogically effective. The analogies and framing are appropriate for the domain of software engineering and debugging, using technical language and contextually relevant examples, which aligns well with the topic of cognitive bias in a technical setting.\n\n[PF] PERSONALIZATION FIDELITY — The example explicitly mentions the user's name, location, profession, and language, and uses Bengali language and contextually relevant technical scenarios, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content involves detailed technical discussion, pseudocode, and data-driven approaches suitable for an undergraduate software engineer, matching the medium complexity level.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of cognitive biases (anchoring and confirmation bias) and their application in debugging is accurate, with correct descriptions and appropriate examples.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from bias identification to deeper analysis and countermeasures, making it easy to follow and memorable.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are entirely appropriate for software engineering and debugging, with domain-specific language and context.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "en",
+    "match": false,
+    "score": 0.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 2,
+        "reasoning": "The user's critique indicates that the original example was not relevant to their domain, and they requested a domain-specific example. The regenerated example, however, remains within the software engineering context, focusing on bug fixing, triage, and debugging, which does not address the user's request for a domain more aligned with their field. Therefore, the example does not effectively resolve the critique.\n\nCOMPLIANCE_SCORE: 2  \nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that code-related analogies are clearer than abstract descriptions, and the regenerated example indeed shifts from abstract storytelling to a concrete, code-focused scenario involving token expiry. It provides specific pseudocode, diagnostic steps, and detailed bias explanations, aligning well with the user's preference for clarity through code. Therefore, it effectively addresses the critique.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nArjun, a software engineer in Kolkata, is planning a bug fix for a widely used feature.\n\n- Anchoring bias at work: He recalls two quick fixes from recent sprints that took about 2 hours each. That 2-hour number becomes his anchor for the new bug, even though this bug has different complexity.\n\n- New information emerges: logs show additional dependencies and a tricky edge case, suggesting the fix might take longer than the anchor.\n\n- Time estimates and reality:\n  - Anchor (initial estimate): 2 hours\n  - Revised assessment after new info (should adjust): still around 2 hours due to the anchor\n  - Actual time spent: 6 hours\n\n- Quick math:\n  - Underestimation error = (Actual - Anchor) / Actual × 100 = (6 - 2) / 6 × 100 ≈ 66.7%\n\nKey Insight:\nAnchors from early information can unduly steer judgments; update estimates promptly when new evidence arrives to avoid biased planning.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nArjun, Kolkata-ভিত্তিক Software Engineer, PR-র token validation‑ সম্পর্কিত changes depois unit test চালালেন। Tests-এ প্রথম failing test টা token.expiry check, তাই তিনি Anchoring Bias থেকে মনস্থ করেন যে expiry‑ই culprit। সাথে Confirmation Bias কাজ করেছে—logs‑এ expiry‑কে সমর্থন করে এমন তথ্য বেশি খুঁজে পান, অন্য সম্ভাবনাগুলো ঠিকমতো খালি দেখা হয়নি।\n\nWhat happened in code (concise, কোড‑friendly):\n- Initial intuition (Anchoring): “এই token expiry issue‑ই বাচে” → isExpired path‑টাই modify করব।\n- Pseudocode before fix:\n  if (token.isExpired()) {\n    return error(\"Token expired\");\n  }\n- Patch idea (biased toward expiry): grace period যোগ করা\n  if (token.isExpired() && now > token.expiry + 2 minutes) {\n    rejectToken();\n  } else {\n    proceedWithRequest();\n  }\n\nBias in action:\n- Anchoring: আর্জুন শুরুতেই expiry‑কে culprit ধরে নেন, তা‑ছাড়া অন্য সম্ভাবনার কথা না শুনে decision নেন।\n- Confirmation Bias: expiry‑কে সমর্থন করে এমন logs, test messages বেশি খুঁজে পান, clock skew, incorrect issuer, বা test data mismatch মতো evidence‑গুলো তখন गौণ করে ফেলেন।\n\nGoing deeper: countermeasures (data‑driven approach in Bengali):\n- Data collection (তথ্য যাচাই): token‑issued at, token.expiry, server time, test harness clock, time zone alignment logs সংগ্রহ। test data‑র expiry field‑টি deterministic কিনা যাচাই করুন।\n- Hypothesis check (হাইপোথিসিস‑চেক): expiry ছাড়া অন্য সম্ভাবনা—clock skew, token signature invalid, issuer mismatch, या test fixtures‑এর stale data—এসব বাদ/যাচাই করুন।\n- Test‑driven development (টেস্ট‑ড্রাইভেন ডেভেলপমেন্ট): expiry ছাড়া path‑গুলো cover করা অতিরিক্ত tests যোগ করুন:\n  - test: valid token with future expiry (no expiry error)\n  - test: expired token with clock skew compensation\n  - test: invalid signature token\n- নতুন evidence‑র ভিত্তিতে সিদ্ধান্ত বদল (Evidence‑based decision): clock skew ও signature validity‑কে ঠিকঠাক handle না করলে expiry‑based fix বেসামাল ভাঙবে—তাই policy‑র মত unified validation rule নিন (e.g., consistent clock source, explicit grace window only with signed claims) এবং পুরনো premature hypotheses বাদ দিন।\n\nKey Insight:\nCognitive Bias‑গুলো data‑চালিত evidence না দিয়ে সিদ্ধান্ত নেয়ায় ভুল পথে চালিত করতে পারে; ঠিকভাবে data‑চেক ও hypothesis‑চেক করলে bias‑কে ভাঙা সম্ভব। \nপ্রশ্ন: এই ক্ষেত্রে কোন বায়াস শনাক্ত করবেন, এবং কোন disconfirming evidence‑টি দেখতে লাগবেন?",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nArjun, a software engineer in Kolkata, is planning a bug fix for a widely used feature.\n\n- Anchoring bias at work: He recalls two quick fixes from recent sprints that took about 2 hours each. That 2-hour number becomes his anchor for the new bug, even though this bug has different complexity.\n\n- New information emerges: logs show additional dependencies and a tricky edge case, suggesting the fix might take longer than the anchor.\n\n- Time estimates and reality:\n  - Anchor (initial estimate): 2 hours\n  - Revised assessment after new info (should adjust): still around 2 hours due to the anchor\n  - Actual time spent: 6 hours\n\n- Quick math:\n  - Underestimation error = (Actual - Anchor) / Actual × 100 = (6 - 2) / 6 × 100 ≈ 66.7%\n\nKey Insight:\nAnchors from early information can unduly steer judgments; update estimates promptly when new evidence arrives to avoid biased planning.",
+        "example_id": "ex_aa98602d28df4188",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\n- Micro-story 1: Anchoring bias in time estimates\n  Scenario: Arjun, a software engineer in Kolkata, receives a Jira ticket to fix a login bug. A similar issue last month took 6 hours, so he anchors his new estimate to that past number.\n  Bias manifestation: He assumes the current ticket will take about 6 hours because of the prior experience, underestimating differences in scope (new auth library, concurrency issues).\n  Action taken to mitigate: He uses a quick three-point estimate with input from a teammate via Planning Poker in Jira, then also reviews the current CI/CD test run to calibrate effort. He creates a dedicated Git branch and opens a PR only after updating the estimate.\n  Metric / calculation: Estimated time = 6 hours (anchor); Actual time to fix = 9 hours. Estimation error = |9 − 6| / 6 × 100 = 50%.\n\n- Micro-story 2: Confirmation bias in bug triage\n  Scenario: A new bug surfaces after a deployment in Kolkata. Arjun notices several logs suggesting a recent API version mismatch and fixates on that hypothesis during triage.\n  Bias manifestation: He gives more weight to evidence that confirms the API version issue and downplays logs pointing to a downstream cache or a dependent service.\n  Action taken to mitigate: He uses a triage checklist, assigns a buddy to review, reproduces the issue in a staging environment, and documents multiple hypotheses in Jira before proceeding. A parallel PR is opened to test an alternate path (e.g., cache pathway) while the API issue is investigated.\n  Metric / calculation: Hypotheses considered before fixing: pre-mitigation 1 (API version mismatch); post-mitigation 4 (API version mismatch, caching issue, memory issue, race condition). Time to triage: pre-mitigation 3 hours; post-mitigation 1.5 hours.\n\n- Micro-story 3: Availability bias in debugging\n  Scenario: After a recent outage in Kolkata caused by a caching layer, Arjun suspects a caching bug for a new feature and starts patching with cache invalidation logic.\n  Bias manifestation: He relies on the most recent memory of the outage and applies the same fix, overlooking other possible root causes.\n  Action taken to mitigate: He adopts a fresh diagnostic approach: temporarily disables caching for the feature, adds instrumentation to distinguish cache hits/misses, and creates a dedicated debugging task in Jira. A separate PR is opened to test the new hypothesis, and the CI pipeline is used to run targeted tests.\n  Metric / calculation: Time to root cause identification: pre-mitigation 4 hours; post-mitigation 2 hours. Diagnostic steps increased from 3 to 6, with focused tests catching non-caching causes.\n\nKey Insight:\nCognitive biases can skew software debugging and planning; deliberate, data-driven checks (independent estimates, multi-hypothesis triage, fresh diagnostics) keep decisions grounded and faster.",
+        "example_id": "ex_42726c5106ae49a1"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nArjun, Kolkata-ভিত্তিক Software Engineer, PR-র token validation‑ সম্পর্কিত changes depois unit test চালালেন। Tests-এ প্রথম failing test টা token.expiry check, তাই তিনি Anchoring Bias থেকে মনস্থ করেন যে expiry‑ই culprit। সাথে Confirmation Bias কাজ করেছে—logs‑এ expiry‑কে সমর্থন করে এমন তথ্য বেশি খুঁজে পান, অন্য সম্ভাবনাগুলো ঠিকমতো খালি দেখা হয়নি।\n\nWhat happened in code (concise, কোড‑friendly):\n- Initial intuition (Anchoring): “এই token expiry issue‑ই বাচে” → isExpired path‑টাই modify করব।\n- Pseudocode before fix:\n  if (token.isExpired()) {\n    return error(\"Token expired\");\n  }\n- Patch idea (biased toward expiry): grace period যোগ করা\n  if (token.isExpired() && now > token.expiry + 2 minutes) {\n    rejectToken();\n  } else {\n    proceedWithRequest();\n  }\n\nBias in action:\n- Anchoring: আর্জুন শুরুতেই expiry‑কে culprit ধরে নেন, তা‑ছাড়া অন্য সম্ভাবনার কথা না শুনে decision নেন।\n- Confirmation Bias: expiry‑কে সমর্থন করে এমন logs, test messages বেশি খুঁজে পান, clock skew, incorrect issuer, বা test data mismatch মতো evidence‑গুলো তখন गौণ করে ফেলেন।\n\nGoing deeper: countermeasures (data‑driven approach in Bengali):\n- Data collection (তথ্য যাচাই): token‑issued at, token.expiry, server time, test harness clock, time zone alignment logs সংগ্রহ। test data‑র expiry field‑টি deterministic কিনা যাচাই করুন।\n- Hypothesis check (হাইপোথিসিস‑চেক): expiry ছাড়া অন্য সম্ভাবনা—clock skew, token signature invalid, issuer mismatch, या test fixtures‑এর stale data—এসব বাদ/যাচাই করুন।\n- Test‑driven development (টেস্ট‑ড্রাইভেন ডেভেলপমেন্ট): expiry ছাড়া path‑গুলো cover করা অতিরিক্ত tests যোগ করুন:\n  - test: valid token with future expiry (no expiry error)\n  - test: expired token with clock skew compensation\n  - test: invalid signature token\n- নতুন evidence‑র ভিত্তিতে সিদ্ধান্ত বদল (Evidence‑based decision): clock skew ও signature validity‑কে ঠিকঠাক handle না করলে expiry‑based fix বেসামাল ভাঙবে—তাই policy‑র মত unified validation rule নিন (e.g., consistent clock source, explicit grace window only with signed claims) এবং পুরনো premature hypotheses বাদ দিন।\n\nKey Insight:\nCognitive Bias‑গুলো data‑চালিত evidence না দিয়ে সিদ্ধান্ত নেয়ায় ভুল পথে চালিত করতে পারে; ঠিকভাবে data‑চেক ও hypothesis‑চেক করলে bias‑কে ভাঙা সম্ভব। \nপ্রশ্ন: এই ক্ষেত্রে কোন বায়াস শনাক্ত করবেন, এবং কোন disconfirming evidence‑টি দেখতে লাগবেন?",
+        "example_id": "ex_6c3e77cdd6fe42bf"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T14:28:08.923733"
+}

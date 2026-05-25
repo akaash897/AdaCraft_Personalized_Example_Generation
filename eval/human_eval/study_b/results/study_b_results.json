@@ -1,0 +1,246 @@
+{
+  "n_examples": 30,
+  "n_annotators": 10,
+  "per_axis_icc": {
+    "PF": {
+      "icc": 0.692,
+      "F": 27.362,
+      "df1": 29,
+      "df2": 261,
+      "p": 5.287563993901122e-63,
+      "ci_lower": 0.6117,
+      "ci_upper": 0.8318,
+      "interpretation": "Moderate"
+    },
+    "CC": {
+      "icc": 0.5956,
+      "F": 16.666,
+      "df1": 29,
+      "df2": 261,
+      "p": 4.099515018661449e-44,
+      "ci_lower": 0.4793,
+      "ci_upper": 0.7483,
+      "interpretation": "Moderate"
+    },
+    "CA": {
+      "icc": 0.4729,
+      "F": 10.035,
+      "df1": 29,
+      "df2": 261,
+      "p": 2.2254886711031406e-28,
+      "ci_lower": 0.3397,
+      "ci_upper": 0.6365,
+      "interpretation": "Fair"
+    },
+    "PC": {
+      "icc": 0.5398,
+      "F": 16.962,
+      "df1": 29,
+      "df2": 261,
+      "p": 9.976812133028758e-45,
+      "ci_lower": 0.4841,
+      "ci_upper": 0.7518,
+      "interpretation": "Moderate"
+    },
+    "DA": {
+      "icc": 0.4646,
+      "F": 10.784,
+      "df1": 29,
+      "df2": 261,
+      "p": 2.251934848934535e-30,
+      "ci_lower": 0.3591,
+      "ci_upper": 0.6538,
+      "interpretation": "Fair"
+    },
+    "FC": {
+      "icc": 0.5662,
+      "F": 19.014,
+      "df1": 29,
+      "df2": 261,
+      "p": 8.095005783524555e-49,
+      "ci_lower": 0.5155,
+      "ci_upper": 0.7731,
+      "interpretation": "Moderate"
+    },
+    "IS": {
+      "icc": 0.6835,
+      "F": 27.931,
+      "df1": 29,
+      "df2": 261,
+      "p": 7.461162282422164e-64,
+      "ci_lower": 0.6169,
+      "ci_upper": 0.8347,
+      "interpretation": "Moderate"
+    }
+  },
+  "per_axis_pearson_llm": {
+    "PF": {
+      "r": 0.8202,
+      "p": 2.8919032905417862e-08,
+      "n": 30
+    },
+    "CC": {
+      "r": 0.7275,
+      "p": 5.249487237091464e-06,
+      "n": 30
+    },
+    "CA": {
+      "r": NaN,
+      "p": NaN,
+      "n": 30
+    },
+    "PC": {
+      "r": 0.6963,
+      "p": 1.927837807624147e-05,
+      "n": 30
+    },
+    "DA": {
+      "r": 0.025,
+      "p": 0.8956769864149292,
+      "n": 30
+    }
+  },
+  "composite_pearson": {
+    "r": 0.6289,
+    "p": 0.00019709944785091524,
+    "n": 30,
+    "interpretation": "Moderate"
+  },
+  "fc_pearson_fcr": {
+    "r": 0.7479,
+    "p": 2.0318714134502894e-06,
+    "n": 30
+  },
+  "informed_preference": {
+    "n_examples": 30,
+    "t3_wins": 26,
+    "t0_wins": 4,
+    "p_value": 2.9738061130046848e-05,
+    "significant": true,
+    "threshold_22_30": true,
+    "mean_t3_vote_share": 0.853,
+    "individual_t3_rate": 0.853
+  },
+  "is_analysis": {
+    "n": 30,
+    "mean_IS": 4.107,
+    "sd_IS": 0.671,
+    "t_stat": 9.036,
+    "df": 29,
+    "p_value": 6.243899980876651e-10,
+    "significant": true,
+    "direction": "above null"
+  },
+  "cold_warm_breakdown": {
+    "PF": {
+      "cold": {
+        "n": 16,
+        "mean": 3.531,
+        "sd": 0.857
+      },
+      "warm": {
+        "n": 14,
+        "mean": 3.757,
+        "sd": 0.469
+      },
+      "warm_minus_cold": 0.226
+    },
+    "IS": {
+      "cold": {
+        "n": 16,
+        "mean": 3.894,
+        "sd": 0.844
+      },
+      "warm": {
+        "n": 14,
+        "mean": 4.35,
+        "sd": 0.247
+      },
+      "warm_minus_cold": 0.456
+    }
+  },
+  "profile_breakdown": {
+    "engineer": {
+      "n": 7,
+      "mean_PF": 4.057,
+      "sd_PF": 0.597
+    },
+    "humanities_researcher": {
+      "n": 7,
+      "mean_PF": 3.457,
+      "sd_PF": 1.061
+    },
+    "nurse": {
+      "n": 8,
+      "mean_PF": 3.375,
+      "sd_PF": 0.337
+    },
+    "student": {
+      "n": 8,
+      "mean_PF": 3.688,
+      "sd_PF": 0.601
+    }
+  },
+  "kappa_mean_by_axis": {
+    "PF": 0.5343,
+    "CC": 0.4613,
+    "CA": 0.4121,
+    "PC": 0.392,
+    "DA": 0.4049,
+    "FC": 0.4235,
+    "IS": 0.4986
+  },
+  "pct_exact_agree": {
+    "PF": 0.623,
+    "CC": 0.607,
+    "CA": 0.653,
+    "PC": 0.546,
+    "DA": 0.702,
+    "FC": 0.564,
+    "IS": 0.616
+  },
+  "descriptive": {
+    "PF": {
+      "mean": 3.637,
+      "sd": 0.701,
+      "min": 1.6,
+      "max": 4.7
+    },
+    "CC": {
+      "mean": 3.867,
+      "sd": 0.582,
+      "min": 2.4,
+      "max": 5.0
+    },
+    "CA": {
+      "mean": 4.313,
+      "sd": 0.444,
+      "min": 3.4,
+      "max": 5.0
+    },
+    "PC": {
+      "mean": 3.94,
+      "sd": 0.564,
+      "min": 2.6,
+      "max": 5.0
+    },
+    "DA": {
+      "mean": 4.197,
+      "sd": 0.395,
+      "min": 3.6,
+      "max": 5.0
+    },
+    "FC": {
+      "mean": 3.707,
+      "sd": 0.578,
+      "min": 2.4,
+      "max": 4.6
+    },
+    "IS": {
+      "mean": 4.107,
+      "sd": 0.671,
+      "min": 1.8,
+      "max": 4.9
+    }
+  }
+}

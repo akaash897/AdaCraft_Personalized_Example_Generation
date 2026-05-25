@@ -53,10 +53,12 @@ DEFAULT_LLM_PROVIDER = os.getenv('DEFAULT_LLM_PROVIDER', 'openai')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')          # DeepSeek generator
 OPENROUTER_JUDGE_API_KEY = os.getenv('OPENROUTER_JUDGE_API_KEY')  # Llama 3.3 70B secondary judge
+SARVAM_API_KEY = os.getenv('SARVAM_API_KEY')                  # Sarvam 105B (free, Indic-optimized)
 
 # Provider-specific Models
 OPENAI_DEFAULT_MODEL = os.getenv('OPENAI_MODEL', 'gpt-4o-mini')
 OPENROUTER_DEFAULT_MODEL = os.getenv('OPENROUTER_MODEL', 'deepseek/deepseek-v3.2')
+SARVAM_DEFAULT_MODEL = os.getenv('SARVAM_MODEL', 'sarvam-105b')
 
 # Shared LLM Settings
 LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', '0.3'))
@@ -66,6 +68,7 @@ LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS', '2048'))
 LLM_API_KEYS = {
     'openai':      OPENAI_API_KEY,
     'openrouter':  OPENROUTER_API_KEY,
+    'sarvam':      SARVAM_API_KEY,
 }
 
 # File Storage

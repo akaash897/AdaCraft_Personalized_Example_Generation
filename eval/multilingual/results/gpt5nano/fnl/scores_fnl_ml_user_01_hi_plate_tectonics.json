@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Plate Tectonics",
+  "topic_str": "प्लेट विवर्तनिकी",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example demonstrates a detailed, multi-step explanation of plate tectonics with specific references to Mumbai, integrating local geography and natural phenomena, which aligns well with the user's profile and learning preferences. The content is structured clearly, with definitions, diagrams, and real-world examples, making it pedagogically effective. The analogies used (e.g., Mumbai beaches, local trains, mountain ranges) are appropriate for a high school student in Mumbai, and the language is accessible, matching the medium complexity level. The scientific facts appear accurate, and the framing is consistent with the domain of geology, using domain-specific vocabulary and concepts.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Mumbai-specific examples and local geography, aligning with the user's location and learning style, and uses familiar analogies. It also mentions the user's profile details explicitly, making it well-tailored.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical terms with accessible language, suitable for a high school student with medium complexity understanding. It avoids overly technical formulas or overly simplified descriptions.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content, including definitions of lithosphere, asthenosphere, and boundary types, is accurate and consistent with geological science.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, with clear steps, diagrams, and real-world examples that facilitate understanding. The flow from basic concepts to specific boundary types is smooth and memorable.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are entirely appropriate for geology and plate tectonics, with local Mumbai examples enhancing relevance without straying into unrelated domains.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example shifts focus from a general explanation of plate tectonics to a highly localized, urban planning perspective centered on Mumbai, reservoir-induced seismicity, and infrastructure considerations, which aligns with the user's critique about relevance to their domain. It introduces specific regional issues and practical implications, making it more domain-specific and relevant. \n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 2,
+        "reasoning": "The regenerated example shifts from a city-specific, relatable context to a more general, geophysical explanation with simplified diagrams and examples, which does not directly incorporate the user's preference for examples connected to everyday life or local, familiar scenarios. Therefore, it does not effectively address the user's critique about relating concepts to daily experiences.\n\nCOMPLIANCE_SCORE: 2  \nCOMPLIANT: NO",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "संकल्पना: प्लेट विवर्तनिकी\n\nपृथ्वी की ऊपरी चादर ( lithosphere ) कई बड़े-छोटे टुकड़ों में बँटी है—प्लेट्स। ये प्लेट्स बहुत धीरे-धीरे एक-दूसरे के साथ स्लाइड, टकराव और नीचे धंसने ( subnetcion/ subduction ) जैसे व्यवहार करते हैं। इनकेBoundary पर अगर एक प्‍लेट दूसरी के ऊपर से नीचे धँक जाती है या दूसरी को धक्का देती है, तो पहाड़, भूकंप, और ज्वालामुखी जैसी घटनाएं होती हैं।\n\nउदाहरण: क्षेत्रीय प्रभाव के साथ समझ\n\n- मुंबई से नज़दीक संदर्भ: भारत की प्लेट सतह से धीरे-धीरे उत्तर-पूर्व की ओर बढ़ती है। औसतन वह लगभग 5 सेंटीमीटर प्रति वर्ष की दर से गति करती है। यह गति बहुत बड़ी दूरी के लिए हजारों वर्षों में जमा होती है।\n\n- हिमालय कैसे बना: भारतीय प्लेट और यूरेशियन प्लेट की टकराहट से हिमालय पर्वत श्रृंखला बनी। यह टकराहट लाखों वर्षों से चलती आ रही है और अभी भी जारी है, क्योंकि दोनों प्लेट्स लगातार थोड़ा-थोड़ा आगे बढ़ती रहती हैं।\n\n- अंडमान उपसरण क्षेत्र: पूर्व-पूर्व में इंडो-ऑस्ट्रेलियन प्लेट नीचे सुसरूप रूप से पड़ते हुए बर्मा माइक्रो-प्लेट के नीचे धंसती है, जिससे अंडमान द्वीपसमूह बनते हैं और भूकंप/ज्वालामुखी गतिविधियाँ होती हैं।\n\n- सरल चित्रण/अन analogy: जैसे कपड़े की चादर में दो टुकड़े हैं जो धीरे-धीरे एक-दूसरे के ऊपर धक्का देते हैं या एक-दूसरे के नीचे दबते हैं, वैसे ही पृथ्वी की प्लेट्स धीरे-धीरे गति करती हैं और उनके संवाद से ऊँचे पहाड़, गहरे दुष्य, और जमीन भीतर-भीतर हिलती-डुलती रहती है।\n\nसमझने की जाँच (हिंदी में):\n- यदि भारतीय प्लेट हर साल लगभग 5 सेंटीमीटर उत्तर-पूर्व की ओर बढ़ती है, तो एक मिलियन वर्षों में वह कितनी दूरी तय कर चुकी होगी? विकल्प: \n  a) 5 किलोमीटर\n  b) 50 किलोमीटर\n  c) 500 किलोमीटर\nसही उत्तर: b) 50 किलोमीटर\nविस्तार: 5 cm/year × 1,000,000 years ≈ 50,000,000 cm = 50 km.\n\nमुख्य विचार:\nपृथ्वी की सतह स्थिर नहीं रहती; प्लेट्स धीमी गति से चलते-चलते आपसी टकराव से ऊँचे पर्वत और भूकंप जैसी घटनाओं को जन्म देती हैं।",
+    "final_example": "Concept: प्लेट विवर्तनिकी\n\nExample:\nStep 1 अवधारणा\n- लिथोस्फ़ेयर (Lithosphere) क्या है? यह पृथ्वी की ठोस बाहरी परत है—क्रस्ट और ऊपरी मण्डल का कठोर भाग, जो अलग-अलग प्लेटों की तरह आराम से तैरता है।\n- एस्थेनोस्फ़ेयर (Asthenosphere) क्या है? यह पृथ्वी के भीतर का मुलायम, थोड़ा पिघला हुआ हिस्सा है जिस पर लिथोस्फ़ेयर प्लेटें धीरे-धीरे धीरे-धीरे आैर सरकती हैं।\n- प्लेट विवर्तनिकी का मतलब क्या है? ऊपर की ये ठंडी, कठोर प्लेटें (Lithosphere) नीचे के मुलायम भाग (Asthenosphere) पर बैठकर, convection currents के कारण धीरे-धीरे स्थानांतरित होती हैं; इन आंदोलनों से भूगतिक घटनाएँ होती हैं।\n\nआरेख (सरल आरेख):\nAsthenosphere\n  ~~~~~~~~~~~\nLithosphere plates on top:\n[ Plate A ] ←→ [ Plate B ]\nयह दर्शाता है कि प्लेटें कैसे एक-दूसरे के साथ स्पर्श कर सकती हैं (transform), एक-दूसरे से दूर जा सकती हैं (divergent), या एक-दूसरे से टकरा सकती हैं (convergent)।\n\nStep 2 सीमाएं (Divergent, Convergent, Transform) – मुंबई-आधारित दृश्य\n- Divergent boundary (Divergent सीमाएँ)\n  दृश्य: दो लोकल लाइनों की तरह, एक ही समय में साथ चलती हैं पर बीच में दूरी बढ़ जाती है; कल्पना में प्लेटें अलग हो रही हैं और बीच में नई क्रस्ट बनती है।\n  मुंबई-आधार दृश्य: monsoon के बीच Versova–Marve Beach पर रेत के नए धब्बे बनते-जिनसे तटीय धारा बदलती दिखती है—यही अलगाव की सरल तस्वीर जैसा समझाएँ।\n\n- Convergent boundary (Convergent सीमाएँ)\n  दृश्य: दो पहाड़ एक-दूसरे से टकराते हैं।\n  मुंबई-आधार दृश्य: Western Ghats और Deccan Traps के क्षेत्रों में भू-संरचना एकजुट होकर ऊँचे क्षेत्र बनाती है; हिमालय जैसे विशाल पहाड़ों के निर्माण का बहुवर्षीय चुनाव इसके पीछे Indian Plate की Eurasian Plate से टकराहट का परिणाम है (यह एक वैश्विक/प्राकृतिक उदाहरण है, Mumbai के पास इन टकरावों का प्रत्यक्ष_daily-जीवन प्रभाव कम लेकिन पृथ्वी-विज्ञान को समझाने के लिए उपयोगी है)।\n\n- Transform boundary (Transform सीमाएँ)\n  दृश्य: दो लाइनों के समानांतर एक-दूसरे के पास से फिसलते हुए।\n  मुंबई-आधार दृश्य: लोकल ट्रेनों की parallel tracks के जैसे, कभी-कभी ठहराव या हल्का झटका महसूस होता है; Maharashtra के Koyna क्षेत्र जैसे स्थानों में भूकम्प का खतरा इस तरह के पटल-फिसलन से जुड़ा होता है।\n\nStep 3 भू-गतिक परिणाम (Geologic consequences) – Mumbai-निर्भर उदाहरणों के साथ\n- Divergent boundary:\n  परिणाम: नई क्रस्ट बनना, पृथ्वी की सतह पर छोटे-छोटे भूकम्प आना, समंदर के किनारे नया जलमार्ग या घाटी-सा क्षेत्र बनना।\n  Mumbai-सेक्शन: तटीय रेत-धाराओं में बदलाव के सरल रूपक के तौर पर समझें; वास्तविकOceanic spreading दूर से होता है, पर Explanation के लिए एक आसान छवि दें।\n\n- Convergent boundary:\n  परिणाम: पर्वत-माला बनना या बड़े भूकम्प, कभी-कभी समुद्री तट पर सुनामी का जोखिम। Deccan Traps जैसे दीर्घकालीन पर्वतीय-गठन और basaltic lava flows का इतिहास भी इससे जुड़ा है (भारत-Plate के विरुद्ध Eurasian Plate की टक्कर से Himalayas बना)।\n  Mumbai-context: पहाड़-जंगल और तटीय भू-संरचना के कारण क्षेत्रीय तनाव बढ़ सकता है, और बड़े भू-आकृति-परिवर्तनों का प्रभाव दूर-दूर तक महसूस हो सकता है।\n\n- Transform boundary:\n  परिणाम: सतह पर slips और भूकम्प—कई बार छोटे, कभी-कभी moderate-strong। महाराष्ट्र के Koyna क्षेत्र में ऐतिहासिक भूकम्प इस प्रकार की प्लेट-फिसलन से जुड़े मानते हैं।\n  Mumbai-context: शहर-राज्य में गैस-तैलीय लाइनों जैसे बुनियादी ढांचे पर हल्के सेModerate jolts आ सकते हैं; चोट-चोटी से बचाव के लिए जागरूकता ज़रूरी है।\n\nQuick checks (समझ की जाँच)\n1) लिथोस्फ़ेयर और एस्थेनोस्फ़ेयर के बीच मूल अंतर क्या है?\n2) अगर दो प्लेटें एक-दूसरे की दिशा में आकर टकराती हैं, तो boundary type कौन सा है और उसका सामान्य प्रभाव क्या हो सकता है?\n\nKey Insight:\nप्लेट विवर्तनिकी बताती है कि पृथ्वी की सतह के बड़े भाग हल्के-फुल्के चलते रहते हैं; Boundary type के अनुसार भूकम्प, पर्वत-निर्माण और नई क्रस्ट के निर्माण जैसे भू-गतिक परिवर्तन होते हैं — और इन घटनाओं के संकेत Mumbai जैसे शहरों के आस-पास भी मिल सकते हैं।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "संकल्पना: प्लेट विवर्तनिकी\n\nपृथ्वी की ऊपरी चादर ( lithosphere ) कई बड़े-छोटे टुकड़ों में बँटी है—प्लेट्स। ये प्लेट्स बहुत धीरे-धीरे एक-दूसरे के साथ स्लाइड, टकराव और नीचे धंसने ( subnetcion/ subduction ) जैसे व्यवहार करते हैं। इनकेBoundary पर अगर एक प्‍लेट दूसरी के ऊपर से नीचे धँक जाती है या दूसरी को धक्का देती है, तो पहाड़, भूकंप, और ज्वालामुखी जैसी घटनाएं होती हैं।\n\nउदाहरण: क्षेत्रीय प्रभाव के साथ समझ\n\n- मुंबई से नज़दीक संदर्भ: भारत की प्लेट सतह से धीरे-धीरे उत्तर-पूर्व की ओर बढ़ती है। औसतन वह लगभग 5 सेंटीमीटर प्रति वर्ष की दर से गति करती है। यह गति बहुत बड़ी दूरी के लिए हजारों वर्षों में जमा होती है।\n\n- हिमालय कैसे बना: भारतीय प्लेट और यूरेशियन प्लेट की टकराहट से हिमालय पर्वत श्रृंखला बनी। यह टकराहट लाखों वर्षों से चलती आ रही है और अभी भी जारी है, क्योंकि दोनों प्लेट्स लगातार थोड़ा-थोड़ा आगे बढ़ती रहती हैं।\n\n- अंडमान उपसरण क्षेत्र: पूर्व-पूर्व में इंडो-ऑस्ट्रेलियन प्लेट नीचे सुसरूप रूप से पड़ते हुए बर्मा माइक्रो-प्लेट के नीचे धंसती है, जिससे अंडमान द्वीपसमूह बनते हैं और भूकंप/ज्वालामुखी गतिविधियाँ होती हैं।\n\n- सरल चित्रण/अन analogy: जैसे कपड़े की चादर में दो टुकड़े हैं जो धीरे-धीरे एक-दूसरे के ऊपर धक्का देते हैं या एक-दूसरे के नीचे दबते हैं, वैसे ही पृथ्वी की प्लेट्स धीरे-धीरे गति करती हैं और उनके संवाद से ऊँचे पहाड़, गहरे दुष्य, और जमीन भीतर-भीतर हिलती-डुलती रहती है।\n\nसमझने की जाँच (हिंदी में):\n- यदि भारतीय प्लेट हर साल लगभग 5 सेंटीमीटर उत्तर-पूर्व की ओर बढ़ती है, तो एक मिलियन वर्षों में वह कितनी दूरी तय कर चुकी होगी? विकल्प: \n  a) 5 किलोमीटर\n  b) 50 किलोमीटर\n  c) 500 किलोमीटर\nसही उत्तर: b) 50 किलोमीटर\nविस्तार: 5 cm/year × 1,000,000 years ≈ 50,000,000 cm = 50 km.\n\nमुख्य विचार:\nपृथ्वी की सतह स्थिर नहीं रहती; प्लेट्स धीमी गति से चलते-चलते आपसी टकराव से ऊँचे पर्वत और भूकंप जैसी घटनाओं को जन्म देती हैं।",
+        "example_id": "ex_1e3311f404a24d96",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: प्लेट विवर्तनिकी\n\nपृथ्वी की ठोस परतें (लिथोस्फीयर) कई बड़े-छोटे टुकड़ों में बंटी होती हैं जिन्हें प्लेटें कहा जाता है. ये प्लेटें बहुत धीरे-धीरे एक-दूसरे के ऊपर, साथ या एक-दूसरे के नीचे सरकती हैं. उनके टकराने, दूर जाती, या एक-दूसरे के साथ फिसलने से पहाड़ बनते हैं, भूकंप आते हैं, और नई जमीन-यात्रा बनती है. भारत के पास इंडो-यूरेशियन प्लेट और अन्य छोटी प्लेटें हैं; इनकी गति Himalayas के उभार और आसपास के क्षेत्रों के earthquakes को प्रभावित करती है.\n\nExample:\nपहचान-योग्य मुंबई-केंद्रित तीन छोटे-भरपूर दृश्य\n\n1) koyna dam और Reservoir-induced seismicity: मुंबई के लिए पानी-आपूर्ति और बिजली-निर्माण के संदर्भ में संभावित लिंक\n- कहानि: 1967 में कोयना जलाशय के पास एक बड़ा भूकंप आया जिसे reservoir-induced seismicity कहा गया. यह दिखाता है कि बड़े जलाशयों के कारण क्षेत्रीय तनाव कैसे बढ़ सकता है.\n- Mumbai-क्या प्रभावित हो सकता है: अगर ऐसे भारी भूकंम्प मुंबई क्षेत्र में आता, तो पानी-आपूर्ति के बुनियादी ढांचे (नदियों/जल-प्रवाह से जुड़ी आपूर्ति) और विद्युत-उत्पादन/ग्रिड संरचनाओं पर असर पड़ सकता है; हाई-राइज़ इमारतों और डैम-आधा-निर्भर बुनियादी सुविधाओं के लिए सुरक्षा-मानक जरूरी होते हैं.\n- सरल उदाहरण-वाक्य: बड़े डैम lokal तनाव बनाते हैं; ऐसे तनाव से आस-पास की संरचनाओं को मजबूत बनाना जरूरी होता है ताकि शहर की पानी और बिजली व्यवस्था सुरक्षित रही.\n\n2) Deccan Traps और Mumbai क्षेत्र पर प्रभाव: इमारतों के सुरक्षा-मानक\n- क्या है Deccan Traps: पश्चिमी भारत में फैला विशाल बेसाल्ट-स्तर, जो मुंबई के आस-पास भी मौजूद है. यह जमीन की पकड़ और ठोस-नींव बनने में भूमिका निभाता है.\n- Mumbai-पर असर: बेसाल्ट-स्तर मजबूत-नींव देता है, लेकिन आबादी-रहित reclaimed क्षेत्रों (तटीय द्वीप) में ऊपर-नीचे होने वाले जल-भराव और सतह-जनित असमानताओं के कारण सही-जमीन-उन्नयन और जल-स्तर नियंत्रण जरूरी रहता है.\n- सुरक्षा-मानक का अर्थ: ऐसी भू-स्थिति में इमारतों के लिए सही गहराई-की नींव, पानी-निकास की सिस्टम-योजना और seismic design (भूकंपीय डिज़ाइन) अपनाना आवश्यक है ताकि भूकंप के समय संरचना टिक सके.\n\n3) Mumbai मार्ग-योजना और ऊँचे-इमारतों में plate-tectonics का स्थानीय-योजना दृष्टिकोण\n- Mumbai की सतत वृद्धि में मेट्रो-पास-रेखाएं और ऊँची इमारतें बनती हैं; plate-टेकिनिक्स के दृष्टिकोण से प्रमुख खतरे Fault-zones और जमीन-स्थिरता हैं.\n- क्या करे नियोजन: भूकंपीय जोखिम-मानचित्रों के आधार पर लाइन-निर्णय करें, ऐसे Fault-prone क्षेत्र से दूरी बनाकर डिज़ाइन करें, और IS/यथार्थ सुरक्षा-मानकों के अनुसार seismic-resistance अपनाएं.\n- दैनिक-जीवन-उदाहरण: मेट्रो-लाइन अनुदिष्ट हो सके ताकि कंपन से बच सके; ऊँची इमारतें flexible संरचना, ऊर्जा-घटाने वाले डैम्पर शामिल करें; coastline के लिए उचित जल-विसर्जन और грун-स्तर-समझ जरूरी.\n\nComprehension Check (हिंदी):\n- प्लेट क्या हैं और वे कैसे चलते हैं? सूचीबद्ध करें कि ये Mumbai जैसी शहर-योजनाओं को कैसे प्रभावित कर सकते हैं.\n- कोयना डैम के reservoir-induced seismicity से Mumbai के पानी-आपूर्ति/बिजली-निर्माण पर क्या संकेत मिलते हैं?\n- Deccan Traps Mumbai पर कैसे असर डालते हैं और सुरक्षा-मानक के दृष्टिकोण से इमारतों को क्या खास ध्यान देना चाहिए?\n- Plate-tectonics के आधार पर Mumbai में आप मेट्रो और हाई-राइज़ इमारतों की योजना कैसे बनाते, ताकि भूकंप-जोखिम कम हो?\n\nKey Insight:\nप्लेट विवर्तनिकी पृथ्वी की सतह पर हो रहे छोटे-छोटे पैटर्न बनाती है, और राजधानी/शहरों जैसे मुंबई के लिए ये पैटर्न सीधे-सीधे संरचना-डिज़ाइन, पानी-आपूर्ति और शहर-योजना में निर्णयों को निर्देशित करते हैं.",
+        "example_id": "ex_81da0f72fd8144ae"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: प्लेट विवर्तनिकी\n\nExample:\nStep 1 अवधारणा\n- लिथोस्फ़ेयर (Lithosphere) क्या है? यह पृथ्वी की ठोस बाहरी परत है—क्रस्ट और ऊपरी मण्डल का कठोर भाग, जो अलग-अलग प्लेटों की तरह आराम से तैरता है।\n- एस्थेनोस्फ़ेयर (Asthenosphere) क्या है? यह पृथ्वी के भीतर का मुलायम, थोड़ा पिघला हुआ हिस्सा है जिस पर लिथोस्फ़ेयर प्लेटें धीरे-धीरे धीरे-धीरे आैर सरकती हैं।\n- प्लेट विवर्तनिकी का मतलब क्या है? ऊपर की ये ठंडी, कठोर प्लेटें (Lithosphere) नीचे के मुलायम भाग (Asthenosphere) पर बैठकर, convection currents के कारण धीरे-धीरे स्थानांतरित होती हैं; इन आंदोलनों से भूगतिक घटनाएँ होती हैं।\n\nआरेख (सरल आरेख):\nAsthenosphere\n  ~~~~~~~~~~~\nLithosphere plates on top:\n[ Plate A ] ←→ [ Plate B ]\nयह दर्शाता है कि प्लेटें कैसे एक-दूसरे के साथ स्पर्श कर सकती हैं (transform), एक-दूसरे से दूर जा सकती हैं (divergent), या एक-दूसरे से टकरा सकती हैं (convergent)।\n\nStep 2 सीमाएं (Divergent, Convergent, Transform) – मुंबई-आधारित दृश्य\n- Divergent boundary (Divergent सीमाएँ)\n  दृश्य: दो लोकल लाइनों की तरह, एक ही समय में साथ चलती हैं पर बीच में दूरी बढ़ जाती है; कल्पना में प्लेटें अलग हो रही हैं और बीच में नई क्रस्ट बनती है।\n  मुंबई-आधार दृश्य: monsoon के बीच Versova–Marve Beach पर रेत के नए धब्बे बनते-जिनसे तटीय धारा बदलती दिखती है—यही अलगाव की सरल तस्वीर जैसा समझाएँ।\n\n- Convergent boundary (Convergent सीमाएँ)\n  दृश्य: दो पहाड़ एक-दूसरे से टकराते हैं।\n  मुंबई-आधार दृश्य: Western Ghats और Deccan Traps के क्षेत्रों में भू-संरचना एकजुट होकर ऊँचे क्षेत्र बनाती है; हिमालय जैसे विशाल पहाड़ों के निर्माण का बहुवर्षीय चुनाव इसके पीछे Indian Plate की Eurasian Plate से टकराहट का परिणाम है (यह एक वैश्विक/प्राकृतिक उदाहरण है, Mumbai के पास इन टकरावों का प्रत्यक्ष_daily-जीवन प्रभाव कम लेकिन पृथ्वी-विज्ञान को समझाने के लिए उपयोगी है)।\n\n- Transform boundary (Transform सीमाएँ)\n  दृश्य: दो लाइनों के समानांतर एक-दूसरे के पास से फिसलते हुए।\n  मुंबई-आधार दृश्य: लोकल ट्रेनों की parallel tracks के जैसे, कभी-कभी ठहराव या हल्का झटका महसूस होता है; Maharashtra के Koyna क्षेत्र जैसे स्थानों में भूकम्प का खतरा इस तरह के पटल-फिसलन से जुड़ा होता है।\n\nStep 3 भू-गतिक परिणाम (Geologic consequences) – Mumbai-निर्भर उदाहरणों के साथ\n- Divergent boundary:\n  परिणाम: नई क्रस्ट बनना, पृथ्वी की सतह पर छोटे-छोटे भूकम्प आना, समंदर के किनारे नया जलमार्ग या घाटी-सा क्षेत्र बनना।\n  Mumbai-सेक्शन: तटीय रेत-धाराओं में बदलाव के सरल रूपक के तौर पर समझें; वास्तविकOceanic spreading दूर से होता है, पर Explanation के लिए एक आसान छवि दें।\n\n- Convergent boundary:\n  परिणाम: पर्वत-माला बनना या बड़े भूकम्प, कभी-कभी समुद्री तट पर सुनामी का जोखिम। Deccan Traps जैसे दीर्घकालीन पर्वतीय-गठन और basaltic lava flows का इतिहास भी इससे जुड़ा है (भारत-Plate के विरुद्ध Eurasian Plate की टक्कर से Himalayas बना)।\n  Mumbai-context: पहाड़-जंगल और तटीय भू-संरचना के कारण क्षेत्रीय तनाव बढ़ सकता है, और बड़े भू-आकृति-परिवर्तनों का प्रभाव दूर-दूर तक महसूस हो सकता है।\n\n- Transform boundary:\n  परिणाम: सतह पर slips और भूकम्प—कई बार छोटे, कभी-कभी moderate-strong। महाराष्ट्र के Koyna क्षेत्र में ऐतिहासिक भूकम्प इस प्रकार की प्लेट-फिसलन से जुड़े मानते हैं।\n  Mumbai-context: शहर-राज्य में गैस-तैलीय लाइनों जैसे बुनियादी ढांचे पर हल्के सेModerate jolts आ सकते हैं; चोट-चोटी से बचाव के लिए जागरूकता ज़रूरी है।\n\nQuick checks (समझ की जाँच)\n1) लिथोस्फ़ेयर और एस्थेनोस्फ़ेयर के बीच मूल अंतर क्या है?\n2) अगर दो प्लेटें एक-दूसरे की दिशा में आकर टकराती हैं, तो boundary type कौन सा है और उसका सामान्य प्रभाव क्या हो सकता है?\n\nKey Insight:\nप्लेट विवर्तनिकी बताती है कि पृथ्वी की सतह के बड़े भाग हल्के-फुल्के चलते रहते हैं; Boundary type के अनुसार भूकम्प, पर्वत-निर्माण और नई क्रस्ट के निर्माण जैसे भू-गतिक परिवर्तन होते हैं — और इन घटनाओं के संकेत Mumbai जैसे शहरों के आस-पास भी मिल सकते हैं।",
+        "example_id": "ex_09300fb6567b4ff8"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:24:14.521189"
+}

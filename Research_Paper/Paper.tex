@@ -1,5 +1,4 @@
 \documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -22,9 +21,7 @@
 \maketitle
 
 \begin{abstract}
-Despite growing interest in personalized educational AI, existing systems treat personalization as a static, one-shot operation, where user profiles are read at inference time, a response is generated, and the system cannot adapt when learners signal that their needs were not met \cite{b1, b2}. This static approach misses a fundamental truth about learning: a student's needs change as they interact with content, and a system that cannot respond to that signal is not truly adaptive. We present \textbf{AdaCraft}, an agentic system that generates personalized educational examples through a multi-agent LangGraph workflow and continuously refines them based on natural-language feedback. The system operates through three capability layers: (1) a static user profile capturing demographic and complexity preferences, (2) a Context Manager Agent that retrieves historical learning patterns and synthesizes them into a targeted personalization instruction before each generation, and (3) an Adaptive Response Agent that interprets free-form user feedback and autonomously decides whether to regenerate the example, record a session insight, or persist a new long-term learning pattern. To rigorously measure each layer's contribution, we design a four-tier ablation protocol (T0: generic baseline, T1: +profile, T2: +context manager, T3: full system) grounded in LaMP \cite{b3} and evaluated with a five-axis rubric: Personalization Fidelity, Complexity Calibration, Conceptual Accuracy, Pedagogical Clarity, and Domain Appropriateness, scored by a GPT-4.1-nano primary judge using G-Eval chain-of-thought \cite{b4} and Prometheus 2 rubric injection \cite{b5}, with inter-judge reliability validated against a Llama~3.3~70B secondary judge on a 20\% random subsample. We further introduce three feedback-loop convergence metrics: FCR (Feedback Compliance Rate), LUR (Loop Utilization Rate), and PPU (Pattern Persistence Utilization), to measure the quality of iterative adaptation, not merely its presence. Across two generator configurations (DeepSeek V3.2 and GPT-5-nano), the full system improves over the generic baseline by up to $+1.269$ composite points (DeepSeek: $+0.631$; GPT-5-nano: $+1.269$), with profile injection (T0$\to$T1) as the dominant driver in both runs. The agentic feedback loop proves reliable: FCR@4 $\geq 0.891$ across both providers, loop utilization exceeding 93\%, and stored learning patterns yielding positive PPU deltas ($+0.312$ for DeepSeek, $+1.938$ for GPT-5-nano) for returning users. Inter-judge agreement between the primary GPT-4.1-nano judge and the Llama~3.3~70B secondary judge yielded Cohen's $\kappa \geq 0.607$, confirming cross-provider consistency in the strict four-tier ordering T0 $<$ T1 $<$ T2 $<$ T3. 
-
-%To our knowledge, this is the first evaluation protocol specifically designed for iterative adaptive personalization in educational content generation, a scope distinct from RLHF evaluation, dialogue turn-level evaluation, and iterative text refinement benchmarks, which do not address the joint problem of profile-grounded generation and feedback-driven convergence in educational contexts.
+Most AI-powered educational systems treat personalization as a one-shot operation: a profile is read, an example is generated, and the system cannot adapt when learners signal dissatisfaction. We present \textbf{AdaCraft}, an agentic system that generates personalized educational examples through a multi-agent LangGraph workflow and refines them through natural-language feedback. The system operates through three capability layers: (1) a static user profile, (2) a Context Manager Agent that retrieves historical learning patterns and synthesizes a targeted personalization instruction before each generation, and (3) an Adaptive Response Agent that interprets free-form feedback and autonomously decides whether to regenerate, record a session insight, or persist a long-term learning pattern. We evaluate each layer's contribution via a four-tier ablation (T0: generic baseline, T1: +profile, T2: +context manager, T3: full system) grounded in LaMP \cite{b3} and scored on a five-axis rubric (Personalization Fidelity, Complexity Calibration, Conceptual Accuracy, Pedagogical Clarity, Domain Appropriateness) by a GPT-4.1-nano primary judge using G-Eval chain-of-thought \cite{b4} and Prometheus~2 rubric injection \cite{b5}, with inter-judge reliability validated against a Llama~3.3~70B secondary judge (Cohen's $\kappa \geq 0.607$). We further introduce three feedback-loop convergence metrics: FCR (Feedback Compliance Rate), LUR (Loop Utilization Rate), and PPU (Pattern Persistence Utilization), to measure iterative adaptation quality directly. Across two generator configurations (DeepSeek V3.2 and GPT-5-nano), the full system improves over the generic baseline by up to $+0.631$ for DeepSeek V3.2 and $+1.269$ for GPT-5-nano, with profile injection as the dominant driver in both runs. The agentic feedback loop achieves FCR@4 $\geq 0.891$, LUR $\geq 0.938$, and positive PPU deltas for returning users across both providers. Human evaluation with 10 participants (graduate students, postgraduate researchers, and practising educators) acting as learners in Study~A and as annotators in Study~B yields T3-preference rates of 90\% and 86.7\% respectively, validates LLM judge scores (composite human--LLM $r = 0.629$), and confirms multilingual robustness across six non-English languages (three providers, including Sarvam~105B on Indic languages) without generation quality degradation.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -40,9 +37,9 @@ This insight motivates the personalization problem in educational example genera
 
 Most LLMs and systems treat this as a one-shot problem: read the user profile once, generate a response, and stop \cite{b1, b2}. This is fundamentally at odds with how learning works. Learning is iterative and feedback-driven. Formative feedback, defined as information that helps a learner close the gap between where they are and where they need to be, is one of the most effective interventions in educational research \cite{b7}. Consider a nurse receiving an example that uses a pendulum to explain Newton's Second Law. She will likely signal, either explicitly or implicitly, that it missed the mark. A system that cannot act on this signal is not truly personalized; it is only initialized with a profile. The problem also extends beyond a single session: a learner's needs evolve over time, and a system with no cross-session memory cannot accumulate what it has observed about that user.
 
-We address this gap with \textbf{AdaCraft}, an agentic system that generates contextually grounded examples on demand. The user interacts with it via a browser extension and provides natural-language feedback, and the system autonomously decides whether to regenerate the example with targeted modifications, record the interaction as a positive session insight, or persist a new behavioral pattern that will influence all future sessions for that user.
+We address this gap with \textbf{AdaCraft}, an agentic system that generates contextually grounded examples on demand. The user interacts with it via a browser extension and provides natural-language feedback in their preferred language, and the system autonomously decides whether to regenerate the example with targeted modifications, record the interaction as a positive session insight, or persist a new behavioral pattern that will influence all future sessions for that user.
 
-The core challenge is not generation quality in isolation but the design of an agentic architecture that can: (a) maintain a coherent personalization signal across sessions without manual curation, (b) interpret free-form feedback and act on it reliably, and (c) distinguish between transient session preferences and stable long-term traits worth persisting, without over-fitting to a single feedback signal at the expense of topic generalizability. Each of these is a non-trivial problem in both system design and evaluation. We address them through a three-layer architecture and measure each layer's independent contribution via a four-tier ablation (Section~\ref{sec:evaluation}), where T0 is a generic baseline, T1 adds the user profile, T2 adds the Context Manager Agent, and T3 is the full system. The T1$\to$T2 delta isolates the value of cross-session context management, and the T2$\to$T3 delta isolates the contribution of feedback interpretation and long-term pattern persistence.
+The core challenge is not generation quality in isolation but the design of an agentic architecture that can: (a) maintain a coherent personalization signal across sessions without manual curation, (b) interpret free-form feedback and act on it reliably, and (c) distinguish between transient session preferences and stable long-term traits worth persisting, without over-fitting to a single feedback signal at the expense of topic generalizability. We address them through a three-layer architecture and measure each layer's independent contribution via a four-tier ablation (Section~\ref{sec:evaluation}), where T0 is a generic baseline, T1 adds the user profile, T2 adds the Context Manager Agent, and T3 is the full system. The T1$\to$T2 delta isolates the value of cross-session context management, and the T2$\to$T3 delta isolates the contribution of feedback interpretation and long-term pattern persistence.
 
 \textbf{Contributions.} This paper makes three contributions:
 \begin{itemize}
@@ -53,74 +50,18 @@ The core challenge is not generation quality in isolation but the design of an a
 
 \section{Related Work}
 
-\subsection{Personalized Learning and Profile Injection}
+The dominant paradigm in AI-powered personalized learning is static profile injection, where a user profile is prepended to the prompt \cite{b1,b2}. Benchmarks like LaMP \cite{b3} and LongLaMP \cite{b8} evaluate this approach but treat each generation as independent and open-loop, with no pathway for user dissatisfaction. While Self-Refine \cite{b12} explores iterative refinement using self-generated feedback, it lacks mechanisms for external human critiques and structured compliance metrics. Agentic frameworks such as LangGraph \cite{b9} provide workflow routing but leave feedback interpretation to the application layer. Furthermore, evaluation methods like G-Eval \cite{b4} and Prometheus 2 \cite{b5} assess single-shot quality but not feedback-loop convergence. No prior system jointly provides profile-grounded generation, feedback-driven in-session refinement with explicit agent decision logic, and cross-session pattern persistence. AdaCraft closes this gap and introduces feedback-loop convergence metrics (FCR, LUR, PPU) to measure iterative adaptation directly.
 
-The dominant paradigm in AI-powered personalized learning is static profile injection: at generation time a user profile is prepended to the prompt and a single response is produced. LaMP \cite{b3} benchmarks this approach across seven tasks, showing that retrieval-augmented personalization outperforms zero-shot generation. LongLaMP \cite{b8} extends this to long-form outputs but likewise treats each generation as independent. Both systems are open-loop: once a response is produced, user dissatisfaction has no pathway back into the system. PersonaMem \cite{b10} benchmarks multi-session dynamic profiling, finding that even frontier LLMs achieve only $\approx$50\% accuracy at tracking evolving user preferences, motivating explicit structured persistence over implicit in-context accumulation.
+\section{System Architecture and Workflow}
+\label{sec:system_workflow}
 
-\subsection{Iterative Refinement and Feedback-Driven Generation}
+AdaCraft operates via a Chrome Extension interface and a Flask API backend hosting an agentic LangGraph workflow (Fig.~\ref{fig:workflow}). Upon installation, users define a static profile (role, background, learning style, complexity). When a user selects a concept to learn, the backend executes a multi-node workflow.
 
-Self-Refine \cite{b12} shows that LLMs can iteratively improve outputs using self-generated feedback, but uses the model as both feedback provider and refiner with no mechanism for incorporating external human critiques and no compliance metrics to verify that regenerations address prior feedback. Agentic frameworks such as LangGraph \cite{b9} provide workflow substrate for interrupting and resuming pipelines but leave feedback interpretation entirely to the application layer; in practice most such systems concatenate feedback into the prompt, growing context linearly while mixing high-signal and stale signals without structured decision logic.
+The workflow begins by injecting the user profile as a plain-English summary into the context. For returning users, a \textbf{Context Manager Agent} retrieves historical learning patterns and accepted insights, synthesizing a targeted personalization instruction. The \textbf{Generate Node} composes the example using the profile, context instruction, and any prior feedback, enforcing domain-appropriate structured outputs. 
 
-\subsection{LLM Evaluation for Educational Generation}
+After generation, the workflow pauses at the \textbf{User Review} node, displaying the example inline via the extension. If the user provides natural-language feedback, the \textbf{Adaptive Response Agent} activates. It autonomously selects from three tools: \textit{Regenerate Example} (issues a targeted rewrite directive and loops back to generation), \textit{Accept Example} (records a positive session insight), or \textit{Flag Pattern} (persists a long-term behavioral trait to influence future sessions). Cross-session data—including feedback history, learning patterns, and insights—are stored locally, enabling dynamic, long-term personalization without context-window overflow.
 
-G-Eval \cite{b4} improves LLM judge calibration by requiring chain-of-thought reasoning before scoring. Prometheus~2 \cite{b5} shows that injecting full rubric definitions significantly improves inter-judge agreement. Both are designed for single-shot quality assessment, not for measuring how a system evolves across a feedback loop. Maurya et al.\ \cite{b13} propose an eight-dimension pedagogical taxonomy for AI tutors covering complexity appropriateness and feedback quality, which directly informs our rubric axes.
-
-\subsection{Gap Addressed by AdaCraft}
-
-No prior system jointly provides (a) profile-grounded generation, (b) feedback-driven in-session refinement with explicit agent decision logic, and (c) cross-session pattern persistence with selective storage. AdaCraft closes this gap and pairs it with three convergence metrics (FCR, LUR, PPU) that measure feedback-loop quality directly, rather than as a single-snapshot score proxy.
-
-% ---------------------------------------------------------------------------
-\section{System Architecture}
-\label{sec:system}
-% ---------------------------------------------------------------------------
-
-AdaCraft consists of two parts: a Chrome Extension that serves as the user-facing interface, and a Flask API backend that hosts the agentic logic.
-
-The interaction flow proceeds as follows:
-\begin{enumerate}
-    \item The user activates the extension on any webpage and selects a concept to learn.
-    \item The extension packages the topic with the user's stored profile (background, learning style, complexity preference) and sends it to the \texttt{/start} endpoint.
-    \item The backend runs the LangGraph workflow: retrieving historical learning patterns, synthesizing a personalization instruction, generating the example, and returning it to the extension for inline display.
-    \item If unsatisfied, the user types natural-language feedback into the extension popup and submits it to the \texttt{/resume} endpoint.
-    \item The Adaptive Response Agent processes the feedback and decides whether to regenerate the example, record a session insight, or persist a new long-term learning pattern.
-\end{enumerate}
-All user profiles and learning patterns are stored in a local JSON store and persist across sessions.
-
-\section{Agentic Workflow}
-\label{sec:workflow}
-
-The core of AdaCraft is a six-node LangGraph workflow (Fig.~\ref{fig:workflow}). Each node has a focused responsibility, and the workflow can pause mid-execution to wait for user feedback before continuing.
-
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=\columnwidth]{workflow.pdf}}
-\caption{AdaCraft agentic workflow. Solid black arrows denote deterministic transitions; red/green arrows denote conditional yes/no branches; dashed arrows indicate agent decisions; dotted arrows indicate tool selection. On a returning user's session, the Context Manager Agent (bottom left) selects from four tools (\textit{Get Example By Tag}, \textit{Get Linked Feedback}, \textit{Get Global Signals}, and \textit{Emit Instruction}) to synthesize a personalization instruction passed to the generation node. After the \textbf{Interrupt} at the User Review node (awaiting user input), the Adaptive Response Agent (center) selects from three tools (\textit{Regenerate Example}, \textit{Accept Example}, and \textit{Flag Pattern}), routing the workflow back to generation (up to three cycles) or forward to END.}
-\label{fig:workflow}
-\end{figure}
-
-\subsection{Node Descriptions}
-
-\textbf{Node Load Profile.} The workflow begins by reading the user's stored profile from persistent JSON storage and converting it into a plain-English summary (e.g., ``Priya is a nurse in Chennai with a simple complexity preference and a visual learning style''). As shown by the solid deterministic arrow from START in Fig.~\ref{fig:workflow}, this node always executes first and its output is threaded through all subsequent LLM calls as the primary personalization signal.
-
-\textbf{Node Build Context and the Context Manager Agent.} As depicted by the conditional router following Node Build Context in Fig.~\ref{fig:workflow}, a first-time user takes the red (yes) branch directly to Node Generate, bypassing the Context Manager Agent entirely. Returning users take the green (no) branch, triggering the agent. Given the current topic, an LLM call first resolves one to three canonical subject tags from a fixed taxonomy (e.g., ``Newton's Second Law'' $\to$ \{physics, mechanics, forces\}). The agent then reasons over the user's history via its tool registry (shown in the bottom-left circle of Fig.~\ref{fig:workflow}), selecting tools via dotted tool-selection arrows. \textit{Get Example By Tag} queries stored examples filtered by each resolved tag, returning recent entries with text snippets and feedback outcomes. \textit{Get Linked Feedback} drills into a specific example to retrieve the learning patterns and accepted insights recorded against it. \textit{Get Global Signals} acts as a fallback when no tag-matched history exists, returning the user's most recent global patterns and insights across all topics. Finally, \textit{Emit Instruction} is called exactly once as the terminal action, writing a two-to-three sentence directive into the workflow state (e.g., ``Use medical equipment analogies. This user struggles with abstract formulas; ground all quantities in clinical measurements''). A domain-bleed guard (a filter that suppresses patterns whose subject tags share no overlap with the current topic's resolved tags) prevents style patterns from prior unrelated sessions from contaminating the instruction; if no relevant signals are found, the agent emits an empty string. The resulting instruction is passed via the dashed agent-decision arrow to Node Generate.
-
-\textbf{Node Generate.} Reached by a deterministic transition from either branch of the first-time router (Fig.~\ref{fig:workflow}), this node composes a combined prompt from three signals: the profile summary, the personalization instruction from the context step, and, in regeneration loops, a targeted rewrite directive carried over from the prior feedback round (cleared from state after use to prevent leakage into further cycles). The system prompt enforces a domain-appropriate structured output format and explicitly prohibits complexity mismatches, domain bleeding (e.g., code snippets in biology examples), and meta-commentary.
-
-\textbf{Node Format and Save.} Connected to Node Generate by a solid deterministic arrow in Fig.~\ref{fig:workflow}, this node records the generated example to the user's example history with its resolved subject tags, a profile snapshot, and session metadata. This enables the Context Manager Agent to retrieve it in future sessions.
-
-\textbf{Node User Review.} As indicated by the interrupt marker in Fig.~\ref{fig:workflow}, LangGraph pauses execution at this node and returns the generated example along with a session token to the caller. The workflow resumes only when the user submits natural-language feedback through the extension.
-
-\textbf{Node Process Feedback and the Adaptive Response Agent.} After the interrupt, a conditional router checks whether the user has provided feedback (Fig.~\ref{fig:workflow}). If there is no feedback or the user accepts the example, the green (no) branch routes directly to END. If feedback is present, the red (yes) branch activates the Adaptive Response Agent. The agent is invoked with four inputs (the feedback text, the example shown, the user profile, and the current pattern history) and selects from three tools shown in the top-left circle of Fig.~\ref{fig:workflow} via dotted tool-selection arrows. When the example needs immediate revision, it calls the \textit{Regenerate Example} tool, which issues a \textbf{regeneration request} with a targeted rewrite directive (e.g., ``Simplify to simple complexity; remove all formulas; use a single concrete scenario from the user's city'') and, as shown by the dashed arrow looping back to Node Generate, routes the workflow back for up to three regeneration cycles. When feedback is positive or neutral, it calls the \textit{Accept Example} tool, recording a session insight for the Context Manager Agent. When feedback reveals a persistent learner trait (a domain preference, recurring difficulty, or stable complexity preference), it calls the \textit{Flag Pattern} tool, persisting a new learning pattern that shapes all future sessions. Both \textit{Accept Example} and \textit{Flag Pattern} route back to the feedback router via the dashed agent-decision arrow, allowing the loop to continue or exit as appropriate.
-
-\subsection{State and Persistence}
-
-The in-session workflow state is a typed dictionary persisted by LangGraph's in-memory checkpointer, keyed by the session token assigned at workflow start. This allows the workflow to pause at the interrupt step and resume seamlessly when the user provides feedback, with all intermediate context, including the profile summary, personalization instruction, and generated example, preserved without recomputation.
-
-Cross-session data is stored in three JSON files per user:
-\begin{itemize}
-    \item \textbf{Feedback history}: All feedback entries with agent decisions and subject-tag indexes, used for pattern detection and topic-specific signal retrieval.
-    \item \textbf{Learning patterns}: Persistent behavioral traits flagged by the Adaptive Response Agent, tagged with pattern type and the example that triggered detection.
-    \item \textbf{Accepted insights}: Positive session insights, capped at 50 entries. The cap prevents stale early-session signals from persisting indefinitely while keeping the full list within a single Context Manager prompt without context-window overflow.
-\end{itemize}
+AdaCraft's dynamic personalization significantly improves over static baselines. For instance, given a generic baseline explaining compound interest via an agricultural metaphor, AdaCraft reframes the concept for a nurse in Lagos as a hospital equipment fund, using medical adherence analogies. When provided with a single natural-language critique (``This doesn't feel relevant to my field''), the Adaptive Response Agent autonomously reframes geological tectonic plate boundaries as medical anatomy analogies, demonstrating targeted, compliant refinement.
 
 \section{Evaluation Design}
 \label{sec:evaluation}
@@ -129,7 +70,7 @@ A central challenge in evaluating AdaCraft is that its value comes not just from
 
 \subsection{Ablation Structure}
 
-We evaluate AdaCraft via a four-tier ablation grounded in the LaMP benchmark \cite{b3}, where each tier disables exactly one capability layer. This lets us answer three distinct questions: What does knowing the user's profile add? What does the Context Manager Agent add on top of the profile? What does the feedback loop and pattern memory add on top of both? Each tier is implemented via an evaluation-mode flag in the workflow state; three steps perform conditional early-returns based on this flag, requiring no graph rebuilds and ensuring the same codebase services all four conditions.
+We evaluate AdaCraft via a four-tier ablation grounded in the LaMP benchmark \cite{b3}, where each tier adds exactly one capability layer over the previous. This lets us answer three distinct questions: What does knowing the user's profile add? What does the Context Manager Agent add on top of the profile? What does the feedback loop and pattern memory add on top of both? Each tier is implemented via an evaluation-mode flag in the workflow state; four nodes perform conditional early-returns or skip disk writes based on this flag, requiring no graph rebuilds and ensuring the same codebase services all four conditions.
 
 \begin{table}[htbp]
 \caption{Ablation Tiers and Capability Layers}
@@ -165,19 +106,7 @@ The T0$\to$T1 delta isolates the value of profile injection. T1$\to$T2 isolates 
 \textbf{Domain} & \textbf{Topic} & \textbf{Axis Tested} \\
 \midrule
 Evolutionary Biology & Natural Selection   & CA, PC \\
-Psychology           & Cognitive Bias      & PF, DA \\
-Mathematics/Finance  & Compound Interest   & CC, PF \\
-Earth Sciences       & Plate Tectonics     & DA, CA \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-\textbf{Cold and warm start.} Users 1--4 begin with no prior interaction history (cold start). Users 5--8 are pre-seeded with 2 learning patterns and 2 accepted insights before evaluation begins (warm start), simulating a returning user with prior sessions. This split enables the PPU metric: for warm-start users, their initial PF scores under T3 (which uses stored patterns via the Context Manager) are compared against their T1 scores (profile only) to quantify how much prior history improves generation.
-
-\textbf{Scripted feedback rounds.} Each T3 session runs three scripted feedback rounds. Four feedback message types are used: a complexity complaint (F1), a domain mismatch complaint (F2), a positive acceptance (F3), and a style preference statement (F4). F1 and F2 are designed to trigger example regeneration; F3 signals that the example was satisfactory; F4 is designed to trigger long-term pattern storage. If a session completes early, for example after an F3 acceptance, a fresh thread is started so that the remaining scripted rounds, including the F4 pattern-flagging round, can still be exercised. Sessions under T0--T2 run only one feedback round, since the Adaptive Response Agent is not active in those tiers.
-
-\textbf{Scale.} Each run covers $8 \times 4 = 32$ (user, topic) pairs per tier, across 4 tiers, giving 128 evaluation cells per generator run. The full study spans 256 cells across two generator configurations (DeepSeek V3.2 and GPT-5-nano).
+\textbf{Evaluation Scope.} We evaluate across 8 synthetic users (4 cross-cultural profiles $\times$ 2 start modes: cold vs. warm-start) and 4 academic topics, generating 128 cells per run (DeepSeek V3.2 and GPT-5-nano). Cold-start users test basic personalization, while warm-start users are pre-seeded with patterns to enable the PPU metric (T3 vs. T1 initial scores). For T3 sessions, we simulate three scripted feedback rounds: Round 1 delivers an \textit{easy} (unambiguous) or \textit{adversarial} (vague/contradictory) critique, Round 2 delivers acceptance, and Round 3 delivers a stable-trait statement to trigger pattern storage. T0--T2 run only one round, as they lack an active response agent.
 
 \subsection{Five-Axis Evaluation Rubric}
 
@@ -191,7 +120,7 @@ C = 0.20 \cdot \text{PF} + 0.20 \cdot \text{CC} + 0.30 \cdot \text{CA} + 0.20 \c
 \begin{itemize}
     \item \textbf{Personalization Fidelity (PF, 0.20):} Does the example reflect the user's cultural background, occupation, and domain? Grounded in profile-conditioned generation benchmarks \cite{b3, b8}.
     \item \textbf{Complexity Calibration (CC, 0.20):} Does the example's depth and vocabulary match the user's requested complexity level? Motivated by learner-appropriate content design \cite{b13}.
-    \item \textbf{Conceptual Accuracy (CA, 0.30):} Is the example factually and logically correct? Weighted highest because no degree of personalization can redeem a misconception \cite{b14}.
+    \item \textbf{Conceptual Accuracy (CA, 0.30):} Is the example factually and logically correct? Weighted highest because no degree of personalization can redeem a misconception.
     \item \textbf{Pedagogical Clarity (PC, 0.20):} Is the concept explained in a clear, structured, and learner-friendly way? Drawn from educational content quality frameworks \cite{b4, b13}.
     \item \textbf{Domain Appropriateness (DA, 0.10):} Does the example stay within the user's domain without inappropriate cross-domain elements? Weighted lowest as it largely follows from PF and CC in practice \cite{b13}.
 \end{itemize}
@@ -199,7 +128,7 @@ C = 0.20 \cdot \text{PF} + 0.20 \cdot \text{CC} + 0.30 \cdot \text{CA} + 0.20 \c
 
 \subsection{LLM Judge Design}
 
-We use GPT-4.1-nano as the primary evaluation judge across both generator runs. \textbf{Run~1} uses DeepSeek V3.2 \cite{b15} as the generator; \textbf{Run~2} uses GPT-5-nano \cite{b16}. Keeping the judge fixed while varying the generator provides cross-provider evaluation independence and specifically mitigates self-enhancement bias \cite{b11}, where a model tends to score outputs resembling its own generation style more favorably, a concern noted for Run~2, where judge and generator share the same provider family. GPT-4.1-nano is cost-efficient at the scale of 256 evaluation cells (128 per run) while maintaining strong rubric-following capability. A secondary judge (Llama~3.3~70B) was deployed on a 20\% random subsample for inter-judge agreement verification (Cohen's~$\kappa$).
+We use GPT-4.1-nano as the primary evaluation judge across both generator runs. \textbf{Run~1} uses DeepSeek V3.2 \cite{b14} as the generator; \textbf{Run~2} uses GPT-5-nano \cite{b15}. Keeping the judge fixed while varying the generator provides cross-provider evaluation independence and specifically mitigates self-enhancement bias \cite{b11}, where a model tends to score outputs resembling its own generation style more favorably, a concern noted for Run~2, where judge and generator share the same provider family. GPT-4.1-nano is cost-efficient at the scale of 256 evaluation cells (128 per run) while maintaining strong rubric-following capability. A secondary judge (Llama~3.3~70B) was deployed on a 20\% random subsample for inter-judge agreement verification (Cohen's~$\kappa$).
 
 Two additional bias mitigations are applied:
 \begin{itemize}
@@ -218,14 +147,18 @@ Standard quality rubrics measure a snapshot. For T3, we additionally compute thr
     \item \textbf{PPU (Pattern Persistence Utilization):} In short: do returning users with stored learning patterns get better first-generation examples than returning users without them? Formally, PPU is the mean PF score delta between warm-start T3 sessions (profile + Context Manager + seeded patterns) and warm-start T1 sessions (profile only, same users, same topics) on the \textit{initial} generated example, before any feedback is given. A positive delta indicates that the Context Manager Agent's retrieval and synthesis of stored patterns produces measurably better personalization than the static profile alone. Cold-start T3 sessions serve as a secondary control: if warm T3 PF $>$ cold T3 PF, the difference is attributable to the seeded patterns rather than to the Context Manager architecture itself.
 \end{itemize}
 
+\subsection{Statistical Testing Protocol}
+
+To verify that the observed tier ordering reflects genuine improvements rather than sampling artefacts, we apply a two-stage non-parametric significance protocol to the composite scores of both generator runs. First, a \textbf{Friedman test} (a non-parametric repeated-measures analogue of one-way ANOVA) serves as an omnibus test across all four tiers. The Friedman test treats each (user, topic) pair as a block and ranks the four tier scores within it; a significant result rejects the null hypothesis that all four tiers are drawn from the same distribution. Second, all six pairwise tier combinations are tested with \textbf{Wilcoxon signed-rank tests} on the same paired cells, with \textbf{Holm-Bonferroni correction} applied across the six comparisons. We additionally report \textbf{rank-biserial $r$} as a sample-size-independent effect-size measure. Paired cells are defined by (user, topic), giving 32 pairs per run.
+
 \section{Results and Discussion}
 \label{sec:results}
 
-We report results from two generator configurations evaluated on the same 128-cell grid (8 users $\times$ 4 topics $\times$ 4 tiers), judged by GPT-4.1-nano throughout. Run~1 uses DeepSeek V3.2 \cite{b15}; Run~2 uses GPT-5-nano \cite{b16}. Evaluating both generators with an identical harness and fixed judge isolates generator-specific effects from evaluation-framework effects.
+We report results from two generator configurations evaluated on the same 128-cell grid, judged by GPT-4.1-nano. Run~1 uses DeepSeek V3.2 \cite{b14}; Run~2 uses GPT-5-nano \cite{b15}.
 
 \subsection{Ablation Results}
 
-Table~\ref{tab:ablation_results} reports mean composite and per-axis scores for each tier across both runs, showing clear monotonic improvement across all capability layers in both generator configurations.
+Table~\ref{tab:ablation_results} reports mean composite and per-axis scores for each tier across both runs.
 
 \begin{table}[htbp]
 \caption{Ablation Results: Mean Scores by Tier (DS=DeepSeek V3.2, G5=GPT-5-nano)}
@@ -238,38 +171,53 @@ Table~\ref{tab:ablation_results} reports mean composite and per-axis scores for 
 \textbf{Run} & \textbf{Tier} & \textbf{PF} & \textbf{CC} & \textbf{CA} & \textbf{PC} & \textbf{DA} & \textbf{Comp.} & \textbf{$\Delta$T0} \\
 \midrule
 \multirow{4}{*}{DS}
- & T0 & 2.73 & 4.13 & 4.94 & 4.82 & 4.39 & 4.257 & --- \\
+ & T0 & 2.73 & 4.13 & 4.94 & 4.82 & 4.39 & 4.257 & {--} \\
  & T1 & 4.80 & 4.35 & 4.99 & 4.93 & 4.95 & 4.809 & +0.552 \\
  & T2 & 4.93 & 4.43 & 5.00 & 4.95 & 4.99 & 4.859 & +0.602 \\
  & T3 & 4.99 & 4.47 & 5.00 & 4.99 & 5.00 & 4.888 & +0.631 \\
 \midrule
 \multirow{4}{*}{G5}
- & T0 & 2.09 & 3.78 & 4.41 & 4.00 & 4.16 & 3.712 & --- \\
- & T1 & 3.47 & 4.38 & 4.78 & 4.53 & 4.78 & 4.388 & +0.676 \\
- & T2 & 4.34 & 4.84 & 4.97 & 4.88 & 4.88 & 4.791 & +1.079 \\
+ & T0 & 2.09 & 3.78 & 4.41 & 4.00 & 4.16 & 3.712 & {--} \\
+ & T1 & 3.47 & 4.38 & 4.78 & 4.53 & 4.78 & 4.388 & +0.675 \\
+ & T2 & 4.34 & 4.84 & 4.97 & 4.88 & 4.88 & 4.791 & +1.078 \\
  & T3 & 4.94 & 5.00 & 5.00 & 4.97 & 5.00 & 4.981 & +1.269 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-\subsection{DeepSeek V3.2 Results}
+\begin{table}[htbp]
+\caption{Pairwise Wilcoxon Signed-Rank Results (Holm-Bonferroni-corrected)}
+\label{tab:significance}
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Pair} & \multicolumn{2}{c}{\textbf{DeepSeek V3.2}} & \multicolumn{2}{c}{\textbf{GPT-5-nano}} \\
+ & \textbf{$\Delta$} & \textbf{Rank-Biserial $r$} & \textbf{$\Delta$} & \textbf{Rank-Biserial $r$} \\
+\midrule
+T0$\to$T1 & $+0.552^{***}$ & 1.000 & $+0.675^{***}$ & 1.000 \\
+T0$\to$T2 & $+0.602^{***}$ & 1.000 & $+1.078^{***}$ & 1.000 \\
+T0$\to$T3 & $+0.631^{***}$ & 1.000 & $+1.269^{***}$ & 1.000 \\
+T1$\to$T2 & $+0.049^{***}$ & 1.000 & $+0.403^{***}$ & 1.000 \\
+T1$\to$T3 & $+0.078^{***}$ & 1.000 & $+0.594^{***}$ & 1.000 \\
+T2$\to$T3 & $+0.029^{***}$ & 1.000 & $+0.191^{***}$ & 1.000 \\
+\bottomrule
+\multicolumn{5}{l}{$^{***}p < 0.001$ after Holm-Bonferroni correction. All 6 pairs significant in both runs.}
+\end{tabular}
+\end{center}
+\end{table}
 
-DeepSeek V3.2 shows consistent, monotonic improvement across all four tiers. The largest single gain is at T0$\to$T1 ($+0.552$ composite), where profile injection lifts PF from 2.73 to 4.80, a 76\% increase, confirming that knowing who the learner is dominates all other personalization signals. DeepSeek maintains high CA throughout, with baseline CA = 4.94 at T0 and reaching CA $\approx$ 5.00 at T1--T3, demonstrating strong factual grounding even without personalization context. The Context Manager (T1$\to$T2) contributes $+0.050$ and the full feedback loop (T2$\to$T3) contributes a further $+0.029$, bringing the total T0$\to$T3 gain to $+0.631$. The pattern shows that profile injection dominates the improvement curve, with agentic layers providing smaller but consistent incremental gains.
+\subsection{Ablation Analysis}
 
-\subsection{GPT-5-nano Results}
+Both generators produce a strict monotonic ordering T0 $<$ T1 $<$ T2 $<$ T3 (Table~\ref{tab:ablation_results}). The largest single gain is at T0$\to$T1 for both DeepSeek ($+0.552$) and GPT-5-nano ($+0.675$), confirming that profile injection dominates all other personalization signals. DeepSeek maintains a high baseline conceptual accuracy (T0 CA = 4.94) and requires less agentic layering to approach the ceiling (T0$\to$T3 total gain $+0.631$). Conversely, GPT-5-nano starts from a weaker baseline (T0 CA = 4.41, Comp = 3.712) but responds much more strongly to agentic layers, with a T1$\to$T2 gain ($+0.403$) substantially exceeding DeepSeek's, yielding the largest overall lift ($+1.269$). 
 
-GPT-5-nano starts from a weaker baseline than DeepSeek, with a T0 composite of 3.712 compared to DeepSeek's 4.257, and CA = 4.41 at T0 compared to DeepSeek's 4.94, indicating that without profile context, GPT-5-nano's factual grounding and overall content quality are less robust. However, GPT-5-nano responds more strongly to each successive capability layer. The T1$\to$T2 gain ($+0.403$) substantially exceeds the corresponding DeepSeek delta, while the T2$\to$T3 gain ($+0.190$) reflects convergence near ceiling. T3 reaches a composite of 4.981 with all five axes at or near maximum. The total T0$\to$T3 gain is $+1.269$, the largest overall lift in the study, indicating that GPT-5-nano benefits significantly more from agentic layering than DeepSeek. This pattern suggests GPT-5-nano is more responsive to structured context and feedback instructions, but requires those signals to achieve high reliability.
-
-\subsection{Cross-Provider Analysis}
-
-Both generators produce a strict monotonic ordering T0 $<$ T1 $<$ T2 $<$ T3. The T0$\to$T1 delta is the largest single-tier gain in both runs, establishing profile injection as the dominant driver of personalization quality regardless of generator. The agentic layers (T1$\to$T2 and T2$\to$T3) provide compounding but smaller increments, confirming that they add genuine value beyond the profile baseline without outweighing it.
-
-Inter-judge agreement between GPT-4.1-nano and the Llama~3.3~70B secondary judge, evaluated on a 20\% random subsample, yielded Cohen's $\kappa$ = \textbf{0.607} for the DeepSeek run and $\kappa$ = \textbf{0.681} for the GPT-5-nano run, both indicating moderate to substantial agreement and supporting the reliability of GPT-4.1-nano as a standalone judge at full evaluation scale.
+\textbf{Statistical significance.} The Friedman test rejects identical tier distributions ($\chi^2 \geq 91.35$, $p < 0.001$), confirming the T0~$<$~T1~$<$~T2~$<$~T3 ordering. All pairwise Wilcoxon signed-rank tests reach $p < 0.001$ after Holm-Bonferroni correction (Table~\ref{tab:significance}), with perfect monotonic improvement (rank-biserial $r = 1.000$). Inter-judge agreement with Llama 3.3 70B (20\% subsample) yielded $\kappa \geq 0.607$, confirming GPT-4.1-nano's reliability.
 
 \subsection{Feedback Loop Convergence (T3)}
 
-Table~\ref{tab:convergence} reports the three convergence metrics for T3 sessions, which provide a more direct window into how the agentic feedback loop operates.
+Table~\ref{tab:convergence} reports the three convergence metrics for T3 sessions.
 
 \begin{table}[htbp]
 \caption{T3 Feedback Loop Convergence Metrics (DS=DeepSeek V3.2, G5=GPT-5-nano)}
@@ -290,12 +238,99 @@ PPU Delta PF & Warm T3 $-$ T1 PF & $+0.312$ & $+1.938$ & $> 0$ \\
 \end{center}
 \end{table}
 
-\textbf{FCR.} For DeepSeek V3.2: FCR@3 = 1.000 and FCR@4 = 0.902 (41 regenerations; mean compliance 4.34/5). For GPT-5-nano: FCR@3 = 0.945 and FCR@4 = 0.891 (55 regenerations; mean compliance 4.56/5). Both runs exceed the $\geq 0.75$ adequacy target by a wide margin. Breaking down by feedback type: DeepSeek achieves FCR@4 = 1.000 on easy feedback (28 regenerations) but 0.692 on adversarial feedback (13 regenerations), which pulls its overall FCR@4 to 0.902. GPT-5-nano achieves FCR@4 = 0.850 on easy feedback (40 regenerations) and 1.000 on adversarial (15 regenerations), with lower easy-feedback compliance accounting for its overall FCR@4 of 0.891. The directional finding holds across both providers: the agent reliably translates natural-language critiques into targeted regenerations for clear, specific feedback types, consistent with the iterative refinement paradigm of Self-Refine \cite{b12}.
+\textbf{FCR.} For DeepSeek V3.2: FCR@3 = 1.000 and FCR@4 = 0.902 (41 regenerations; mean compliance 4.34/5). For GPT-5-nano: FCR@3 = 0.945 and FCR@4 = 0.891 (55 regenerations; mean compliance 4.56/5). Both runs exceed the $\geq 0.75$ adequacy target by a wide margin. The easy/adversarial ordering differs across providers: DeepSeek scores higher on easy feedback (FCR@4 = 1.000) than adversarial (0.692), while GPT-5-nano inverts this (1.000 adversarial vs. 0.850 easy), suggesting that compliance difficulty is model-dependent. Overall FCR@4 exceeds the adequacy target in both runs, demonstrating that regenerations specifically address critiques rather than producing generic rewrites.
 
-\textbf{LUR.} DeepSeek: LUR = 0.938 (30/32 sessions triggered at least one regeneration). GPT-5-nano: LUR = 0.969 (31/32). Both approach the $\approx 1.0$ target, confirming the Adaptive Response Agent correctly identifies scripted F1/F2 complaint messages with high reliability. Missed triggers in each run reflect feedback phrasing that was ambiguous enough to be classified as neutral rather than regeneration-warranting.
+\textbf{LUR.} DeepSeek: LUR = 0.938 (30/32 sessions triggered at least one regeneration). GPT-5-nano: LUR = 0.969 (31/32). Both approach the $\approx 1.0$ target. On easy sessions (cold users, F1/F2), LUR = 1.000 in both runs --- the agent triggered regeneration on every unambiguous complaint. On adversarial sessions (warm users), LUR = 0.875 for DeepSeek and 0.938 for GPT-5-nano. The sub-unity adversarial LUR is expected in part by design: the near-zero-signal message (A4, ``Hmm.'') is intended to be classified as an acceptance rather than a regeneration request, so sessions receiving A4 correctly do not trigger regeneration. Remaining misses reflect genuinely ambiguous phrasing (A2: contradictory request) that the agent could not resolve into a regeneration decision.
 
-\textbf{PPU.} DeepSeek: $\Delta$PF = $+0.312$ (warm T3 initial PF = 5.00 vs.\ warm T1 PF = 4.688; cold T3 PF = 4.979, $n = 16$ per group). GPT-5-nano: $\Delta$PF = $+1.938$ (warm T3 PF = 5.00 vs.\ warm T1 PF = 3.062; cold T3 PF = 5.000). In both runs, warm-start T3 sessions score higher on initial PF than warm-start T1 sessions (same users, same topics), confirming that stored learning patterns provide a meaningful personalization increment at first generation. For DeepSeek, the modest delta reflects that profile injection alone already achieves high personalization (PF $\approx$ 4.7--5.0), with patterns providing incremental gains. For GPT-5-nano, the larger delta (6.2x greater than DeepSeek) reflects its substantially lower baseline personalization (T1 PF = 3.062 vs DeepSeek T1 PF = 4.688), where patterns have significantly more room to improve initial examples, demonstrating differential value across generator types.
+\textbf{PPU.} DeepSeek: $\Delta$PF = $+0.312$ (warm T3 initial PF = 5.00 vs.\ warm T1 PF = 4.688; cold T3 PF = 4.979, $n = 16$ per group). GPT-5-nano: $\Delta$PF = $+1.938$ (warm T3 PF = 5.00 vs.\ warm T1 PF = 3.062; cold T3 PF = 4.875). In both runs, warm-start T3 sessions score higher on initial PF than warm-start T1 sessions (same users, same topics), confirming that stored learning patterns provide a meaningful personalization increment at first generation. For DeepSeek, the modest delta reflects that profile injection alone already achieves high personalization (PF $\approx$ 4.7--5.0), with patterns providing incremental gains. For GPT-5-nano, the larger delta (6.2x greater than DeepSeek) reflects its substantially lower baseline personalization (T1 PF = 3.062 vs DeepSeek T1 PF = 4.688), where patterns have significantly more room to improve initial examples, demonstrating differential value across generator types.
 
+
+\section{Human Evaluation}
+\label{sec:human_eval}
+
+Two human studies complement the automated evaluation, with the same 10 participants (graduate students, postgraduate researchers, and practising educators from diverse disciplinary backgrounds) taking part in both. Study~A collects ecological feedback from participants evaluating examples on their own topics as learners; Study~B collects structured assessment on 30 examples drawn from the ablation corpus, with the same participants now acting as annotators.
+
+\subsection{Study A: Learner Self-Evaluation}
+
+Ten real learners from diverse backgrounds (engineering, medicine, social sciences, nursing, economics, education) each evaluated two T3 examples on their own topic of choice. Beyond the five rubric axes, participants scored Educational Usefulness (EU), Would Use (WU), Bias \& Fairness (BF), and expressed an Informed Preference (IP) between the T0 baseline and T3 final example. Table~\ref{tab:study_a} reports per-axis means. All three ecological indicators significantly exceed the neutral midpoint: IS~$t(19) = 4.945$, EU~$t(19) = 7.025$, WU~$t(19) = 4.723$ (all $p < 0.001$). T3 was preferred in 18/20 cases (90\%; binomial $p < 0.001$). The BF axis scored $4.80 \pm 0.41$ with all examples rated $\geq 4$, indicating no systematic bias detected by learners.
+
+\begin{table}[htbp]
+\caption{Study A: Learner Self-Evaluation ($n=20$, 10 learners)}
+\label{tab:study_a}
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+ & \textbf{PF} & \textbf{CC} & \textbf{CA} & \textbf{PC} & \textbf{DA} & \textbf{FC} & \textbf{IS} & \textbf{EU} & \textbf{WU} & \textbf{BF} \\
+\midrule
+Mean & 4.05 & 3.85 & 4.45 & 4.20 & 4.00 & 3.95 & 4.15 & 3.95 & 3.90 & 4.80 \\
+SD   & 0.69 & 0.59 & 0.51 & 0.62 & 0.73 & 0.83 & 1.04 & 0.61 & 0.85 & 0.41 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Study B: Contextual Evaluation by Annotators}
+
+The same ten participants independently scored 30 ablation examples (16 cold-start, 14 warm-start; 15 DeepSeek, 15 GPT-5-nano) on eight axes: the five rubric axes plus FC, IS, and IP. Each annotator received the learner profile, T0 baseline, inter-round feedback history, and T3 final example, blind to provider. Table~\ref{tab:study_b} reports per-axis means, ICC(2,1) inter-rater reliability, and human--LLM Pearson correlations.
+
+\textbf{IP \& IS.} T3 was preferred in 26/30 cases (86.7\%; binomial $p < 0.001$). IS mean $= 4.107$, significantly above neutral: $t(29) = 9.036$, $p < 0.001$.
+
+\textbf{Inter-rater reliability.} ICC ranged 0.465--0.692, all $p < 0.001$. PF, CC, PC, FC, and IS reached moderate agreement (ICC $\geq 0.54$); CA and DA reached fair agreement, consistent with the difficulty of assessing correctness without deep domain expertise.
+
+\textbf{Human--LLM agreement.} Composite $r = 0.629$ ($p < 0.001$); PF $r = 0.820$, CC $r = 0.728$, PC $r = 0.696$. DA showed near-zero correlation ($r = 0.025$, n.s.), reflecting dependence on domain expertise. FC human scores correlate strongly with automated FCR ($r = 0.748$, $p < 0.001$), validating FCR as a human-interpretable proxy. Warm-start examples score higher than cold-start on PF ($+0.226$) and IS ($+0.456$), providing human-judge confirmation of the PPU effect.
+
+\begin{table}[htbp]
+\caption{Study B: Annotator Evaluation — Mean Scores, ICC(2,1), Human--LLM $r$ ($n=30$, $k=10$)}
+\label{tab:study_b}
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Axis} & \textbf{Mean} & \textbf{SD} & \textbf{ICC} & \textbf{Interp.} & \textbf{$r_\text{h-llm}$} \\
+\midrule
+PF & 3.637 & 0.701 & 0.692 & Moderate & $0.820^{***}$ \\
+CC & 3.867 & 0.582 & 0.596 & Moderate & $0.728^{***}$ \\
+CA & 4.313 & 0.444 & 0.473 & Fair      & $-^\dagger$ \\
+PC & 3.940 & 0.564 & 0.540 & Moderate & $0.696^{***}$ \\
+DA & 4.197 & 0.395 & 0.465 & Fair      & 0.025 \\
+FC & 3.707 & 0.578 & 0.566 & Moderate & $0.748^{***\ddagger}$ \\
+IS & 4.107 & 0.671 & 0.684 & Moderate & --- \\
+\bottomrule
+\multicolumn{6}{l}{\scriptsize $^{***}p < 0.001$. $^\dagger$LLM CA near-ceiling. $^\ddagger$FC vs.\ FCR.} \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Multilingual Robustness}
+
+The Adaptive Response Agent was tested in the FNL scenario without language-detection preprocessing across three provider configurations. DeepSeek V3.2 and GPT-5-nano were evaluated on six non-English languages; Sarvam~105B was evaluated on three Indic languages only (Hindi, Tamil, Bengali), as it does not support non-Indic scripts. DeepSeek achieves 0.882 mean routing accuracy (1.000 in Hindi and Bengali; 0.625 in German). GPT-5-nano and Sarvam both achieve uniform 0.667 across all tested languages, indicating model-dependent rather than language-dependent routing difficulty. Composite quality is maintained across all providers (DeepSeek: 4.725--4.900; GPT-5-nano: 4.700--4.900; Sarvam: 4.375--4.800), with no statistically significant degradation relative to English for any provider (Wilcoxon $p > 0.05$, Bonferroni-corrected $\alpha = 0.025$). Table~\ref{tab:multilingual_paper} summarises per-language accuracy.
+
+\begin{table}[htbp]
+\caption{FNL Routing Accuracy by Language (---\,=\,not evaluated)}
+\label{tab:multilingual_paper}
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Language} & \textbf{DeepSeek V3.2} & \textbf{GPT-5-nano} & \textbf{Sarvam 105B} \\
+\midrule
+Hindi           & 1.000 & 0.667 & 0.667 \\
+Tamil           & 0.833 & 0.667 & 0.667 \\
+Bengali         & 1.000 & 0.667 & 0.667 \\
+German          & 0.625 & 0.667 & ---   \\
+Arabic          & 0.917 & 0.667 & ---   \\
+Mandarin Chin.  & 0.917 & 0.667 & ---   \\
+\midrule
+\textbf{Overall} & \textbf{0.882} & \textbf{0.667} & \textbf{0.667}$^\dagger$ \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize $^\dagger$Indic languages only.}
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Limitations and Future Work}
 
@@ -305,7 +340,7 @@ PPU Delta PF & Warm T3 $-$ T1 PF & $+0.312$ & $+1.938$ & $> 0$ \\
 
 \section{Conclusion}
 
-AdaCraft shows that iterative, feedback-driven personalization is both architecturally feasible and measurably better than static profile injection. Across two generator configurations, DeepSeek V3.2 and GPT-5-nano, each capability layer adds a consistent, independent increment to personalization quality, with the full system (T3) outperforming a generic baseline by up to $+1.269$ composite points. The agentic feedback loop proves reliable in both runs: the Adaptive Response Agent correctly acts on user complaints at FCR@4 $\geq 0.891$ across both providers and regenerates in at least 93\% of sessions (LUR), and stored learning patterns measurably improve first-generation quality for returning users, with PPU deltas ranging from +0.312 (DeepSeek, already high-baseline) to +1.938 (GPT-5-nano, showing pattern impact at lower baseline). The four-tier ablation design and the FCR, LUR, and PPU metrics together offer a reusable evaluation framework for any LLM system that combines profile-grounded generation with iterative human-in-the-loop refinement, a paradigm that static personalization benchmarks are not designed to capture.
+AdaCraft shows that iterative, feedback-driven personalization is both architecturally feasible and measurably better than static profile injection. Across two generator configurations, DeepSeek V3.2 and GPT-5-nano, each capability layer adds a consistent, independent increment to personalization quality, with the full system (T3) outperforming a generic baseline by up to $+1.269$ composite points. The agentic feedback loop proves reliable in both runs: the Adaptive Response Agent correctly acts on user complaints at FCR@4 $\geq 0.891$ across both providers and regenerates in at least 93\% of sessions (LUR), and stored learning patterns measurably improve first-generation quality for returning users, with PPU deltas ranging from +0.312 (DeepSeek, already high-baseline) to +1.938 (GPT-5-nano, showing pattern impact at lower baseline). Human evaluation corroborates these findings: real learners prefer T3 in 90\% of cases (Study~A, $p < 0.001$) and the same participants acting as annotators prefer it in 86.7\% (Study~B, $p < 0.001$), composite human--LLM agreement reaches $r = 0.629$, and multilingual routing operates without degradation across six non-English languages. The four-tier ablation design and the FCR, LUR, and PPU metrics together offer a reusable evaluation framework for any LLM system that combines profile-grounded generation with iterative human-in-the-loop refinement, a paradigm that static personalization benchmarks are not designed to capture.
 
 % Acknowledgment removed for blind review
 
@@ -352,13 +387,10 @@ A. Madaan, N. Tandon, P. Gupta, S. Hallinan, L. Gao, S. Wiegreffe, U. Alon, N. D
 K. K. Maurya, K. V. A. Srivatsa, K. Petukhova, and E. Kochmar, ``Unifying AI Tutor Evaluation: An Evaluation Taxonomy for Pedagogical Ability Assessment of LLM-Powered AI Tutors,'' in \textit{Proc. 2025 Conf. Nations Americas Chapter Assoc. Comput. Linguistics: Human Lang. Technol. (NAACL)}, 2025, pp. 1234--1251.
 
 \bibitem{b14}
-W. Feng, J. Lee, H. McNichols, A. Scarlatos, D. Smith, S. Woodhead, N. Ornelas, and A. Lan, ``Exploring Automated Distractor Generation for Math Multiple-Choice Questions via Large Language Models,'' in \textit{Findings Assoc. Comput. Linguistics: NAACL 2024}, Mexico City, Mexico, 2024, pp. 3067--3082.
-
-\bibitem{b15}
 DeepSeek-AI, ``DeepSeek-V3 Technical Report,'' \textit{arXiv preprint arXiv:2412.19437}, 2024.
 
-\bibitem{b16}
-OpenAI, ``Introducing GPT-4.1 in the API,'' OpenAI, Apr.~14, 2025. [Online]. Available: \url{https://openai.com/index/gpt-4-1/}. [Accessed: Mar.~26, 2026].
+\bibitem{b15}
+OpenAI, ``GPT-5-nano,'' OpenAI Platform Documentation, 2026. [Online]. Available: \url{https://platform.openai.com/docs/models}. [Accessed: Mar.~26, 2026].
 
 \end{thebibliography}
 

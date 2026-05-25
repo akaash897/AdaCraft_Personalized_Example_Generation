@@ -1,0 +1,116 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Natural Selection",
+  "topic_str": "Natural Selection",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the concept of natural selection by using Priya's context in Mumbai and her familiarity with local vendors, aligning with her learning style of example-based teaching. The scenario is culturally relevant and specific, which enhances engagement. The depth of explanation covers the basic principles of natural selection, including variation, selection pressure, adaptation, and evolution, matching a medium complexity level suitable for a high school student. The factual content about how market dynamics mirror biological evolution is accurate and well-explained. The structure is clear, with a logical flow from scenario to insight, making it pedagogically effective. The analogy of vendors and customer preferences is appropriate for biology and familiar to Priya, making the framing domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Priya's name, location, and local context, and aligns with her learning style, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation covers core concepts of natural selection at a level suitable for high school, avoiding overly technical language or overly simplistic ideas.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The biological principles are correctly represented, with accurate descriptions of adaptation, selection pressure, and evolution.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to insight, facilitating understanding and retention.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of vendors and customer preferences is appropriate and effectively illustrates biological concepts within a familiar domain.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The user's critique is that the original example is not related to their domain, which I interpret as their field of expertise or interest. The regenerated example shifts from a biological context to a business/market scenario, which may be more relevant to someone interested in economics or entrepreneurship, thus addressing the critique by providing a domain more aligned with the user's background. \n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Natural Selection\n\nExample:\nPriya, imagine you are observing a population of moths in a Mumbai park. The moths rest on tree bark. Originally, most moths are light grey, which camouflages them well against the light-colored, lichen-covered trees. A few moths are darker due to random genetic variation.\n\nEnvironmental Change:\nOver time, industrial pollution in the area darkens the tree bark with soot. The light grey moths now stand out clearly against the dark trees, while the rare dark moths become much harder for birds to see.\n\nSelection Pressure:\nBirds that eat the moths can easily spot and catch the light grey ones. The dark moths are more likely to survive because they are better camouflaged.\n\nResult Over Generations:\nThe dark moths that survive are more likely to reproduce and pass on their genes for dark coloration. After many generations, the population in the polluted area shifts from being mostly light grey to being mostly dark. This is a classic example of natural selection, often called industrial melanism.\n\nKey Insight:\nNatural selection is not random; it is the process where individuals with traits better suited to their environment are more likely to survive and pass those traits on, causing the population to change over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nPriya, as a student in Mumbai, consider the local street vendors selling chai. Over time, you'll notice that the most successful vendors adapt to the demands of their customers.\n\nInitial Scenario:\nA new vendor starts selling only traditional, hot chai. Nearby, another vendor offers both hot chai and iced chai, especially during Mumbai's hot summers.\n\nSelection Pressure:\nThe intense summer heat creates a strong demand for cooler beverages. Customers naturally choose the vendor who provides iced chai.\n\nAdaptation and Reproduction:\nThe vendor selling only hot chai sees fewer sales. To survive, he adapts by adding iced chai to his menu. Meanwhile, the successful vendor expands, opening another stall in a different part of the city, \"reproducing\" his successful business model.\n\nResult Over Time:\nThe market becomes dominated by vendors who offer both hot and iced chai. The trait of \"offering varied beverages based on season\" becomes common, while vendors who fail to adapt may disappear.\n\nKey Insight:\nNatural selection in this urban context is driven by customer demand (environmental pressure), favoring business traits that increase survival (sales) and reproduction (expansion), shaping the commercial landscape over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nPriya, imagine you are observing a population of moths in a Mumbai park. The moths rest on tree bark. Originally, most moths are light grey, which camouflages them well against the light-colored, lichen-covered trees. A few moths are darker due to random genetic variation.\n\nEnvironmental Change:\nOver time, industrial pollution in the area darkens the tree bark with soot. The light grey moths now stand out clearly against the dark trees, while the rare dark moths become much harder for birds to see.\n\nSelection Pressure:\nBirds that eat the moths can easily spot and catch the light grey ones. The dark moths are more likely to survive because they are better camouflaged.\n\nResult Over Generations:\nThe dark moths that survive are more likely to reproduce and pass on their genes for dark coloration. After many generations, the population in the polluted area shifts from being mostly light grey to being mostly dark. This is a classic example of natural selection, often called industrial melanism.\n\nKey Insight:\nNatural selection is not random; it is the process where individuals with traits better suited to their environment are more likely to survive and pass those traits on, causing the population to change over time.",
+        "example_id": "ex_70b3bb6bc1d8417e",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nPriya, as a student in Mumbai, consider the local street vendors selling chai. Over time, you'll notice that the most successful vendors adapt to the demands of their customers.\n\nInitial Scenario:\nA new vendor starts selling only traditional, hot chai. Nearby, another vendor offers both hot chai and iced chai, especially during Mumbai's hot summers.\n\nSelection Pressure:\nThe intense summer heat creates a strong demand for cooler beverages. Customers naturally choose the vendor who provides iced chai.\n\nAdaptation and Reproduction:\nThe vendor selling only hot chai sees fewer sales. To survive, he adapts by adding iced chai to his menu. Meanwhile, the successful vendor expands, opening another stall in a different part of the city, \"reproducing\" his successful business model.\n\nResult Over Time:\nThe market becomes dominated by vendors who offer both hot and iced chai. The trait of \"offering varied beverages based on season\" becomes common, while vendors who fail to adapt may disappear.\n\nKey Insight:\nNatural selection in this urban context is driven by customer demand (environmental pressure), favoring business traits that increase survival (sales) and reproduction (expansion), shaping the commercial landscape over time.",
+        "example_id": "ex_1371aa6811894c49"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T18:59:37.841577"
+}

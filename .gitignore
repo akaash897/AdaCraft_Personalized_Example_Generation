@@ -27,7 +27,6 @@ user_profiles/*.json
 learning_contexts/*.json
 
 
-
 # IDE / tools
 .claude/
 .vscode/
@@ -38,5 +37,9 @@ Testing/
 
 # Docs (local only)
 DOCS/
-CHANGES.md
-CLAUDE.md
+
+# Ignore all markdown files except README.md
+*.md
+!README.md
+
+Research_Paper/

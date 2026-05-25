@@ -1,0 +1,116 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_05",
+  "lang": "ar",
+  "lang_name": "Arabic",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using Fatima's name, profession, and location, and it aligns with her learning style by providing a concrete, real-world nursing example. The depth of explanation about the bias and its correction appears appropriate for a medium complexity level, with clear, structured steps that facilitate understanding. The content is factually accurate regarding cognitive bias and its application in clinical decision-making, and the example is well-structured pedagogically, with a clear concept-to-example flow and a memorable key insight. The framing and analogies are appropriate for the medical/nursing domain, making the example domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Fatima's role as a nurse in Cairo, Egypt, and uses her name, making it highly personalized. It also matches her learning style by providing a concrete, example-based scenario relevant to her profession.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical details about cognitive bias with clinical context, suitable for a professional with medium complexity understanding. It avoids overly technical jargon, matching the user's specified level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of availability bias and its correction is accurate, with correct references to clinical assessment and decision-making processes. There are no factual inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from scenario to bias explanation to correction, making it easy to follow and memorable. The key insight effectively summarizes the lesson.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for a medical/nursing context, using clinical decision-making to illustrate cognitive bias.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example shifts from a general patient scenario to a clinical decision-making context involving a nurse, which is more relevant to a healthcare professional's experience. It also incorporates recent cases influencing judgment, directly addressing the user's critique about relevance to their field. However, it could be more explicit about the user's specific profession or area of expertise for full alignment. Overall, it effectively resolves the main concern about relevance.\n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nFatima, as a nurse in Cairo, you might encounter a patient who insists they have a rare disease because they read about it online, even though their symptoms are common and mild. This is an example of a cognitive bias called \"availability bias.\"\n\nWhat happens:\n- The patient recently read a vivid, memorable story about the rare disease.\n- That story is now easily \"available\" in their mind, making it seem more likely or relevant.\n- They overlook the statistical reality: their symptoms are far more likely to be caused by a common condition.\n\nHow it works:\nAvailability bias causes people to judge the probability of an event based on how easily examples come to mind, not on actual data. Dramatic or recent information feels more true.\n\nA numeric illustration:\nImagine 100 patients with these symptoms.\n- 95 have the common condition (95% probability).\n- 5 have the rare disease (5% probability).\nThe patient's mind, influenced by the vivid story, might estimate the chance of the rare disease as 50% or higher, vastly overestimating the true risk.\n\nKey Insight:\nOur minds often use shortcuts that rely on what's memorable, not what's factual. In healthcare, this bias can lead patients—and sometimes clinicians—to overestimate risks or misdiagnose based on recent, striking cases rather than evidence.",
+    "final_example": "Concept: Cognitive Bias — Availability Bias\n\nExample:\nFatima, a nurse in a Cairo hospital, is assessing a patient who presents with chest pain and shortness of breath. Last week, she cared for three patients with similar symptoms who were all diagnosed with severe pneumonia. Because these recent cases are fresh in her mind, she initially leans toward a pneumonia diagnosis, making it mentally \"available\" as the most likely cause.\n\nHowever, she follows protocol and conducts a full assessment. The patient's EKG shows subtle abnormalities, and blood tests reveal elevated cardiac enzymes. This points toward a possible heart attack, a condition she hasn't seen in several months.\n\nThe Bias in Action:\n- **Mental Shortcut:** Fatima's brain gives more weight to the vivid, recent pneumonia cases.\n- **Potential Error:** This could delay considering other critical, but less recently recalled, conditions like a cardiac event.\n- **Corrective Action:** By relying on objective data (tests, protocols) rather than just recent memory, she avoids the bias and correctly identifies the need for a cardiology consult.\n\nKey Insight:\nAvailability bias occurs when we overestimate the likelihood of events based on how easily examples come to mind, often influenced by recency or emotional impact. In nursing, countering this bias requires deliberate use of clinical guidelines and diagnostic data to ensure patient safety.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nFatima, as a nurse in Cairo, you might encounter a patient who insists they have a rare disease because they read about it online, even though their symptoms are common and mild. This is an example of a cognitive bias called \"availability bias.\"\n\nWhat happens:\n- The patient recently read a vivid, memorable story about the rare disease.\n- That story is now easily \"available\" in their mind, making it seem more likely or relevant.\n- They overlook the statistical reality: their symptoms are far more likely to be caused by a common condition.\n\nHow it works:\nAvailability bias causes people to judge the probability of an event based on how easily examples come to mind, not on actual data. Dramatic or recent information feels more true.\n\nA numeric illustration:\nImagine 100 patients with these symptoms.\n- 95 have the common condition (95% probability).\n- 5 have the rare disease (5% probability).\nThe patient's mind, influenced by the vivid story, might estimate the chance of the rare disease as 50% or higher, vastly overestimating the true risk.\n\nKey Insight:\nOur minds often use shortcuts that rely on what's memorable, not what's factual. In healthcare, this bias can lead patients—and sometimes clinicians—to overestimate risks or misdiagnose based on recent, striking cases rather than evidence.",
+        "example_id": "ex_d2cb75a8e704436a",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias — Availability Bias\n\nExample:\nFatima, a nurse in a Cairo hospital, is assessing a patient who presents with chest pain and shortness of breath. Last week, she cared for three patients with similar symptoms who were all diagnosed with severe pneumonia. Because these recent cases are fresh in her mind, she initially leans toward a pneumonia diagnosis, making it mentally \"available\" as the most likely cause.\n\nHowever, she follows protocol and conducts a full assessment. The patient's EKG shows subtle abnormalities, and blood tests reveal elevated cardiac enzymes. This points toward a possible heart attack, a condition she hasn't seen in several months.\n\nThe Bias in Action:\n- **Mental Shortcut:** Fatima's brain gives more weight to the vivid, recent pneumonia cases.\n- **Potential Error:** This could delay considering other critical, but less recently recalled, conditions like a cardiac event.\n- **Corrective Action:** By relying on objective data (tests, protocols) rather than just recent memory, she avoids the bias and correctly identifies the need for a cardiology consult.\n\nKey Insight:\nAvailability bias occurs when we overestimate the likelihood of events based on how easily examples come to mind, often influenced by recency or emotional impact. In nursing, countering this bias requires deliberate use of clinical guidelines and diagnostic data to ensure patient safety.",
+        "example_id": "ex_fa6e9e03c4794409"
+      },
+      {
+        "round": 2,
+        "feedback_given": "هذا رائع! المثال ساعدني حقاً على فهم المفهوم.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "أفهم بشكل أفضل عندما تُستخدم أمثلة من المعدات الطبية لشرح الأفكار المجردة.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T20:10:34.127354"
+}

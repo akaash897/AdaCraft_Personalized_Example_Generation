@@ -1,0 +1,116 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes Priya’s profile by including her name, location, and role as a student, and it uses a relatable scenario set in Mumbai, which aligns with her background. The learning style (example-based) is well incorporated through a clear, illustrative story.  \nPF_SCORE: 5\n\nThe complexity level is medium, and the example presents a straightforward explanation of anchoring bias with a simple, real-world scenario suitable for a high school student, avoiding overly technical language.  \nCC_SCORE: 4\n\nThe factual content about anchoring bias is accurate, correctly describing how initial information influences decision-making without any errors or misconceptions.  \nCA_SCORE: 5\n\nThe structure is clear, with a logical flow from the scenario to the key insight, making it easy to follow and memorable for learners. The example bridges the concept and the illustration effectively.  \nPC_SCORE: 5\n\nThe analogy and framing are appropriate for the domain of psychology and cognitive biases, using a relatable student scenario without any off-topic or domain-inappropriate elements.  \nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique was that the original example did not relate to their domain, and the regenerated example shifts from a shopping scenario to an academic context, which may or may not align with the user's domain. Since the user did not specify their domain, but the critique suggests a desire for domain relevance, the new example improves by providing a different context, but it may not fully address the need for domain-specific relevance if the user's field is different. Therefore, it partially addresses the critique but may not fully satisfy the user's expectation for domain alignment.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nPriya is shopping for a new phone at a market in Mumbai. She sees two identical models at different stalls. The first stall lists the phone at ₹25,000. The second stall has a sign that says \"Special Offer: Was ₹30,000, Now ₹25,000!\"\n\nEven though the final price is the same, Priya feels a strong urge to buy from the second stall. This is due to the **Anchoring Bias**. Her mind is anchored to the initial, higher \"was\" price of ₹30,000, making the ₹25,000 price feel like a significant gain or a better deal, even though no real savings exist.\n\nKey Insight:\nA cognitive bias is a mental shortcut that can lead to systematic errors in judgment. In this case, the initial piece of information (the anchor) disproportionately influences Priya's perception of value, leading her to prefer an objectively identical offer.",
+    "final_example": "**Concept:** Cognitive Bias – Anchoring Bias  \n**Example:**  \nPriya is a student in Mumbai preparing for her semester exams. She needs to decide how many hours to study for her upcoming Economics paper.  \n\n**The Anchor:**  \nHer friend Rohan mentions he studied 40 hours for the same exam last semester and scored an A. This number—40 hours—becomes Priya’s mental anchor.  \n\n**How the Bias Plays Out:**  \n- Priya starts planning her study schedule around 40 hours, even though her own preparation level, grasp of the subject, and available time are different.  \n- She dismisses the idea of studying 20 hours (which might be sufficient for her) as “too little” because it’s far from the anchor.  \n- She also feels 50 hours is “reasonable” because it’s close to the anchor, even if it means sacrificing sleep and other subjects.  \n\n**Result:**  \nPriya’s final decision is heavily influenced by the initial 40-hour figure, not by a realistic assessment of what she personally needs. She might over-study, under-study, or misallocate her time—all because her judgment was “anchored” to someone else’s experience.  \n\n**Key Insight:**  \nAnchoring bias occurs when an initial piece of information (the anchor) disproportionately influences subsequent decisions, even when that information is irrelevant or arbitrary. In Priya’s case, a friend’s study hours shaped her own plan, ignoring her individual context.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nPriya is shopping for a new phone at a market in Mumbai. She sees two identical models at different stalls. The first stall lists the phone at ₹25,000. The second stall has a sign that says \"Special Offer: Was ₹30,000, Now ₹25,000!\"\n\nEven though the final price is the same, Priya feels a strong urge to buy from the second stall. This is due to the **Anchoring Bias**. Her mind is anchored to the initial, higher \"was\" price of ₹30,000, making the ₹25,000 price feel like a significant gain or a better deal, even though no real savings exist.\n\nKey Insight:\nA cognitive bias is a mental shortcut that can lead to systematic errors in judgment. In this case, the initial piece of information (the anchor) disproportionately influences Priya's perception of value, leading her to prefer an objectively identical offer.",
+        "example_id": "ex_a65d3855d88b4e08",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**Concept:** Cognitive Bias – Anchoring Bias  \n**Example:**  \nPriya is a student in Mumbai preparing for her semester exams. She needs to decide how many hours to study for her upcoming Economics paper.  \n\n**The Anchor:**  \nHer friend Rohan mentions he studied 40 hours for the same exam last semester and scored an A. This number—40 hours—becomes Priya’s mental anchor.  \n\n**How the Bias Plays Out:**  \n- Priya starts planning her study schedule around 40 hours, even though her own preparation level, grasp of the subject, and available time are different.  \n- She dismisses the idea of studying 20 hours (which might be sufficient for her) as “too little” because it’s far from the anchor.  \n- She also feels 50 hours is “reasonable” because it’s close to the anchor, even if it means sacrificing sleep and other subjects.  \n\n**Result:**  \nPriya’s final decision is heavily influenced by the initial 40-hour figure, not by a realistic assessment of what she personally needs. She might over-study, under-study, or misallocate her time—all because her judgment was “anchored” to someone else’s experience.  \n\n**Key Insight:**  \nAnchoring bias occurs when an initial piece of information (the anchor) disproportionately influences subsequent decisions, even when that information is irrelevant or arbitrary. In Priya’s case, a friend’s study hours shaped her own plan, ignoring her individual context.",
+        "example_id": "ex_03432197848942f9"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T19:02:12.338896"
+}

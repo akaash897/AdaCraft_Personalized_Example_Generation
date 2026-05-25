@@ -1,0 +1,62 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_02",
+  "lang": "ta",
+  "topic": "Cognitive Bias",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively incorporates the user's profile by mentioning Meena's role as a nurse in Chennai, making the scenario relevant to her profession and location. The complexity level appears appropriate, with a clear explanation of the bias and its implications without overly technical language. The factual content about availability bias is accurate and well-explained, aligning with psychological principles. The structure is logical, starting from the scenario to the insight, facilitating understanding. The analogies and framing are appropriate for the medical domain, using clinical examples that resonate with a nurse's experience.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Meena's role, location, and profession, making it highly tailored to her profile. The scenario is realistic and domain-specific, which aligns well with her background as a nurse.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances detail and clarity, matching a medium complexity level suitable for a professional with some familiarity with clinical decision-making. It avoids overly technical jargon, making it accessible yet informative.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of availability bias is accurate, correctly illustrating how recent vivid memories influence judgment, and the potential consequences in a clinical setting.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to insight, making the concept memorable and easy to grasp. The key insight is explicitly linked to the example, aiding learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing uses clinical and medical terminology appropriate for a healthcare professional, with no off-domain analogies or framing.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nMeena, a nurse in Chennai, is on duty when a patient arrives with a bee sting. The patient has mild itching and a small hive on their arm. Just last week, Meena managed a critical case where a patient with a similar sting rapidly went into anaphylactic shock and required emergency treatment. That case is very vivid and fresh in her memory.\n\nBecause the severe outcome is so \"available\" in her mind, Meena overestimates the risk for this new patient. She immediately assumes the worst and administers an emergency dose of epinephrine, even though the patient's current symptoms don't yet warrant such a strong intervention.\n\n**Prompt for you:**\n1.  What specific cognitive bias is Meena exhibiting?\n2.  How did this bias impact her decision-making and the potential outcome for the patient?\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to errors in judgment. Availability bias causes us to overestimate the likelihood of events that are recent, vivid, or emotionally charged, leading to disproportionate reactions to new situations.",
+    "final_example": "Concept: Cognitive Bias (Availability Bias)\n\nExample:\nScenario: Meena, a nurse at a busy hospital in Chennai, just managed a difficult case. A patient with a rare, aggressive infection (sepsis) deteriorated rapidly over a few hours despite aggressive treatment. The case was stressful and memorable.\n\nThe Situation: The next day, a new patient, Mr. Kumar, is admitted. His initial vital signs show a slight fever and a drop in blood pressure. These are common, non-specific symptoms.\n\nThe Bias at Play: Because the recent, dramatic case of sepsis is so vivid in Meena's mind, she experiences *availability bias*. She immediately assumes Mr. Kumar might have the same rare condition. The memory of the first case is \"more available\" than the statistical reality that such a rare infection is unlikely.\n\nImpact on Decision-Making: Instead of following the standard protocol for less severe symptoms, Meena might immediately alert the senior doctor, request a full battery of specialized tests for the rare infection, and start preparing for a critical care admission. This could lead to unnecessary anxiety for the patient and family, and divert resources from other patients who might need them more urgently. The more likely, common cause of Mr. Kumar's symptoms might be overlooked.\n\nKey Insight:\nOur brains rely on recent, memorable events to make quick judgments, which can be useful but also leads to systematic errors. In a clinical setting, this bias can cause us to over-diagnose rare conditions we've recently seen and under-diagnose common ones.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nMeena, a nurse in Chennai, is on duty when a patient arrives with a bee sting. The patient has mild itching and a small hive on their arm. Just last week, Meena managed a critical case where a patient with a similar sting rapidly went into anaphylactic shock and required emergency treatment. That case is very vivid and fresh in her memory.\n\nBecause the severe outcome is so \"available\" in her mind, Meena overestimates the risk for this new patient. She immediately assumes the worst and administers an emergency dose of epinephrine, even though the patient's current symptoms don't yet warrant such a strong intervention.\n\n**Prompt for you:**\n1.  What specific cognitive bias is Meena exhibiting?\n2.  How did this bias impact her decision-making and the potential outcome for the patient?\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to errors in judgment. Availability bias causes us to overestimate the likelihood of events that are recent, vivid, or emotionally charged, leading to disproportionate reactions to new situations.",
+        "example_id": "ex_ceb1ed44a48e4ba3",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias (Availability Bias)\n\nExample:\nScenario: Meena, a nurse at a busy hospital in Chennai, just managed a difficult case. A patient with a rare, aggressive infection (sepsis) deteriorated rapidly over a few hours despite aggressive treatment. The case was stressful and memorable.\n\nThe Situation: The next day, a new patient, Mr. Kumar, is admitted. His initial vital signs show a slight fever and a drop in blood pressure. These are common, non-specific symptoms.\n\nThe Bias at Play: Because the recent, dramatic case of sepsis is so vivid in Meena's mind, she experiences *availability bias*. She immediately assumes Mr. Kumar might have the same rare condition. The memory of the first case is \"more available\" than the statistical reality that such a rare infection is unlikely.\n\nImpact on Decision-Making: Instead of following the standard protocol for less severe symptoms, Meena might immediately alert the senior doctor, request a full battery of specialized tests for the rare infection, and start preparing for a critical care admission. This could lead to unnecessary anxiety for the patient and family, and divert resources from other patients who might need them more urgently. The more likely, common cause of Mr. Kumar's symptoms might be overlooked.\n\nKey Insight:\nOur brains rely on recent, memorable events to make quick judgments, which can be useful but also leads to systematic errors. In a clinical setting, this bias can cause us to over-diagnose rare conditions we've recently seen and under-diagnose common ones.",
+        "example_id": "ex_e87be2f626414e41"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:16:30.480606"
+}

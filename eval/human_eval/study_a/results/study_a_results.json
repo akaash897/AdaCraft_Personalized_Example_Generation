@@ -1,0 +1,172 @@
+{
+  "n_examples": 20,
+  "n_participants": 10,
+  "examples_per_participant": 2,
+  "start_mode": "cold",
+  "descriptive": {
+    "PF": {
+      "mean": 4.05,
+      "sd": 0.686,
+      "min": 2,
+      "max": 5
+    },
+    "CC": {
+      "mean": 3.85,
+      "sd": 0.587,
+      "min": 3,
+      "max": 5
+    },
+    "CA": {
+      "mean": 4.45,
+      "sd": 0.51,
+      "min": 4,
+      "max": 5
+    },
+    "PC": {
+      "mean": 4.2,
+      "sd": 0.616,
+      "min": 3,
+      "max": 5
+    },
+    "DA": {
+      "mean": 4.0,
+      "sd": 0.725,
+      "min": 3,
+      "max": 5
+    },
+    "FC": {
+      "mean": 3.95,
+      "sd": 0.826,
+      "min": 2,
+      "max": 5
+    },
+    "IS": {
+      "mean": 4.15,
+      "sd": 1.04,
+      "min": 2,
+      "max": 5
+    },
+    "EU": {
+      "mean": 3.95,
+      "sd": 0.605,
+      "min": 3,
+      "max": 5
+    },
+    "WU": {
+      "mean": 3.9,
+      "sd": 0.852,
+      "min": 2,
+      "max": 5
+    },
+    "BF": {
+      "mean": 4.8,
+      "sd": 0.41,
+      "min": 4,
+      "max": 5
+    }
+  },
+  "is_analysis": {
+    "n": 20,
+    "mean_IS": 4.15,
+    "sd_IS": 1.04,
+    "t_stat": 4.945,
+    "df": 19,
+    "p_value": 8.985999602059484e-05,
+    "null": 3.0,
+    "significant": true,
+    "direction": "above null"
+  },
+  "eu_analysis": {
+    "n": 20,
+    "mean_EU": 3.95,
+    "sd_EU": 0.605,
+    "t_stat": 7.025,
+    "df": 19,
+    "p_value": 1.092320980883408e-06,
+    "null": 3.0,
+    "significant": true,
+    "direction": "above null"
+  },
+  "wu_analysis": {
+    "n": 20,
+    "mean_WU": 3.9,
+    "sd_WU": 0.852,
+    "t_stat": 4.723,
+    "df": 19,
+    "p_value": 0.000148122151615693,
+    "null": 3.0,
+    "significant": true
+  },
+  "informed_preference": {
+    "n_examples": 20,
+    "t3_wins": 18,
+    "t0_wins": 2,
+    "mean_t3_vote_share": 0.9,
+    "p_value": 0.00020122528076171875,
+    "significant": true,
+    "t0_examples": [
+      "EX08",
+      "EX17"
+    ]
+  },
+  "bf_analysis": {
+    "mean_BF": 4.8,
+    "sd_BF": 0.41,
+    "pct_scored_4_or_5": 1.0,
+    "min_BF": 4,
+    "interpretation": "No systematic bias detected"
+  },
+  "cross_study_pf": {
+    "study_a_pf_mean": 4.05,
+    "study_b_pf_mean": 3.637,
+    "delta": 0.413,
+    "interpretation": "Learner-reported PF exceeds expert-rated PF \u2014 personalization more legible to recipients"
+  },
+  "role_breakdown": {
+    "economics_student": {
+      "n": 2,
+      "mean_PF": 4.5,
+      "mean_EU": 4.0
+    },
+    "education_student": {
+      "n": 2,
+      "mean_PF": 3.0,
+      "mean_EU": 3.0
+    },
+    "educator": {
+      "n": 4,
+      "mean_PF": 4.0,
+      "mean_EU": 4.25
+    },
+    "engineering_student": {
+      "n": 2,
+      "mean_PF": 4.5,
+      "mean_EU": 4.0
+    },
+    "mathematics_student": {
+      "n": 2,
+      "mean_PF": 4.5,
+      "mean_EU": 4.5
+    },
+    "medical_student": {
+      "n": 2,
+      "mean_PF": 4.5,
+      "mean_EU": 4.5
+    },
+    "nursing_student": {
+      "n": 2,
+      "mean_PF": 4.0,
+      "mean_EU": 4.0
+    },
+    "social_sciences_student": {
+      "n": 2,
+      "mean_PF": 4.0,
+      "mean_EU": 4.0
+    },
+    "undergraduate_student": {
+      "n": 2,
+      "mean_PF": 3.5,
+      "mean_EU": 3.0
+    }
+  }
+}

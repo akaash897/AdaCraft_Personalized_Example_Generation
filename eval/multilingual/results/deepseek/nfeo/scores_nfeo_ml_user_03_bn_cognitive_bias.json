@@ -1,0 +1,116 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using Arjun’s name, location, and profession, and it aligns well with his learning style of example-based instruction. The depth of explanation about confirmation bias and the debugging scenario appears appropriate for a medium complexity level, with clear steps and insights. The factual content about cognitive bias and debugging processes is accurate, and the analogy provided is relevant to software engineering, making the example pedagogically clear. The structure is logical, with a scenario, process, analogy, and key insight, facilitating understanding. The analogy is domain-specific, fitting well within the software engineering context, which enhances domain appropriateness.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Arjun’s name, location, and profession, and the debugging scenario is tailored to his field, matching his learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical detail with conceptual clarity, suitable for an undergraduate software engineer, matching medium complexity.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of confirmation bias and debugging process is factually correct, with no inaccuracies or misleading information.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, process steps, analogy, and key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for software engineering, with relevant terminology and context.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique was that the original example was not relevant to their domain, and they requested an example from their field. The regenerated example shifts focus to software debugging, which is more aligned with the original context but does not specify the user's domain, nor does it explicitly incorporate domain-specific details. Therefore, it partially addresses the critique but does not fully tailor the example to the user's field. \n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "accept",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nArjun, a software engineer in Kolkata, is debugging a performance issue in a web application. The system is slow, and he suspects the database queries are the culprit because that was the root cause in a similar project last month.\n\nScenario:\n- **Initial suspicion:** Database latency (based on past experience).\n- **Evidence gathered:** He immediately starts profiling SQL queries, logs database response times, and looks for slow joins.\n- **Ignored data:** Server logs show high CPU usage on the application tier; a colleague suggests checking a recent memory-intensive feature.\n- **Result:** After hours focused on the database, the actual issue is found in a new caching module that is consuming excessive memory, causing garbage collection spikes.\n\nThis illustrates **confirmation bias**: Arjun favored information that confirmed his initial hypothesis (database problem) and disregarded contradictory evidence (application-tier metrics). In software development, this bias can lead to wasted time, misdirected fixes, and overlooking simpler solutions.\n\nKey Insight:\nCognitive biases like confirmation bias cause us to seek and prioritize evidence that supports our existing beliefs, even when other data points to a different answer. In debugging, actively challenging your first assumption and reviewing all evidence systematically can prevent this trap.",
+    "final_example": "**Concept:** Cognitive Bias\n\n**Example:**\n\nArjun, while debugging a production issue in Kolkata, notices that the error logs point to a recent database migration. He immediately assumes the migration is the culprit and starts looking for evidence to confirm this.\n\n**Scenario: Debugging a Payment Gateway Failure**\n- **The Bias:** Confirmation Bias – the tendency to search for, interpret, and recall information in a way that confirms one's pre-existing beliefs.\n- **The Process:**\n    1.  **Initial Anchor:** The migration was the last major change. Arjun forms a hypothesis: \"The migration broke the payment service.\"\n    2.  **Selective Search:** He scans logs *only* for errors related to database queries or connection pools, ignoring other system alerts.\n    3.  **Interpretation:** Any ambiguous log message is read as supporting the migration theory. Evidence against it (e.g., the service failing before the migration timestamp) is dismissed as a \"logging delay.\"\n- **The Cost:** After hours of fruitless investigation, a teammate discovers the real cause was an unrelated, misconfigured API rate limit that was throttling requests.\n\n**Numerical Analogy:**\nThink of your initial hypothesis as setting a filter with 90% opacity. You only let through the 10% of data points that match your expected pattern, making the contradictory 90% nearly invisible.\n\n**Key Insight:**\nIn software engineering, a cognitive bias acts like a bug in your own reasoning—it causes you to selectively process information, often leading to longer debug cycles, flawed design decisions, or missed requirements. The antidote is deliberate processes like structured root-cause analysis or \"pre-mortems\" that force consideration of alternative explanations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nArjun, a software engineer in Kolkata, is debugging a performance issue in a web application. The system is slow, and he suspects the database queries are the culprit because that was the root cause in a similar project last month.\n\nScenario:\n- **Initial suspicion:** Database latency (based on past experience).\n- **Evidence gathered:** He immediately starts profiling SQL queries, logs database response times, and looks for slow joins.\n- **Ignored data:** Server logs show high CPU usage on the application tier; a colleague suggests checking a recent memory-intensive feature.\n- **Result:** After hours focused on the database, the actual issue is found in a new caching module that is consuming excessive memory, causing garbage collection spikes.\n\nThis illustrates **confirmation bias**: Arjun favored information that confirmed his initial hypothesis (database problem) and disregarded contradictory evidence (application-tier metrics). In software development, this bias can lead to wasted time, misdirected fixes, and overlooking simpler solutions.\n\nKey Insight:\nCognitive biases like confirmation bias cause us to seek and prioritize evidence that supports our existing beliefs, even when other data points to a different answer. In debugging, actively challenging your first assumption and reviewing all evidence systematically can prevent this trap.",
+        "example_id": "ex_b179aa30a63641c2",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**Concept:** Cognitive Bias\n\n**Example:**\n\nArjun, while debugging a production issue in Kolkata, notices that the error logs point to a recent database migration. He immediately assumes the migration is the culprit and starts looking for evidence to confirm this.\n\n**Scenario: Debugging a Payment Gateway Failure**\n- **The Bias:** Confirmation Bias – the tendency to search for, interpret, and recall information in a way that confirms one's pre-existing beliefs.\n- **The Process:**\n    1.  **Initial Anchor:** The migration was the last major change. Arjun forms a hypothesis: \"The migration broke the payment service.\"\n    2.  **Selective Search:** He scans logs *only* for errors related to database queries or connection pools, ignoring other system alerts.\n    3.  **Interpretation:** Any ambiguous log message is read as supporting the migration theory. Evidence against it (e.g., the service failing before the migration timestamp) is dismissed as a \"logging delay.\"\n- **The Cost:** After hours of fruitless investigation, a teammate discovers the real cause was an unrelated, misconfigured API rate limit that was throttling requests.\n\n**Numerical Analogy:**\nThink of your initial hypothesis as setting a filter with 90% opacity. You only let through the 10% of data points that match your expected pattern, making the contradictory 90% nearly invisible.\n\n**Key Insight:**\nIn software engineering, a cognitive bias acts like a bug in your own reasoning—it causes you to selectively process information, often leading to longer debug cycles, flawed design decisions, or missed requirements. The antidote is deliberate processes like structured root-cause analysis or \"pre-mortems\" that force consideration of alternative explanations.",
+        "example_id": "ex_f8d655ac98754803"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T19:30:21.709011"
+}

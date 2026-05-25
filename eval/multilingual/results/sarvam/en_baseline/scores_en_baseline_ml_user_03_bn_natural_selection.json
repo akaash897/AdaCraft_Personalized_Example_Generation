@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "topic": "Natural Selection",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example uses a programming analogy to explain natural selection, which aligns well with the user's background as a software engineer and their preference for example-based learning. It incorporates specific coding scenarios and terminology, making it domain-appropriate and engaging for the user. The structure is clear, with a logical flow from variation to selection and retention, facilitating understanding. However, the analogy, while appropriate for a technically inclined learner, might be slightly abstract for someone unfamiliar with coding, but given the user's profile, this is suitable. The complexity level appears to be medium, matching the user's stated preference, and the factual content about natural selection is accurate.\n\n[PF] PERSONALIZATION FIDELITY — The example is tailored to the user's profession and learning style, using a coding analogy that resonates with an engineer. It also subtly considers the user's language preference by providing a clear, structured explanation.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The example balances technical detail with conceptual clarity, matching a medium complexity level suitable for an undergraduate engineer. It avoids overly technical jargon or overly simplistic explanations.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The biological concepts of natural selection are accurately represented through the analogy, correctly describing variation, selection pressure, and retention. The code examples are correct and illustrative.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, with a clear progression from analogy to insight, making the concept memorable. The analogy is well-developed, and the key insight is explicitly stated, aiding understanding.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy is highly appropriate for the biological concept, using software development as a domain-specific framing that aligns with the user's background.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of beetles living on dark tree bark. Most beetles are green, but due to random **variation** in their DNA, a few beetles are brown. This brown coloration is a **heritable** trait, meaning it can be passed down to their offspring.\n\nOne day, a new predator arrives that hunts by sight. On the dark bark, the green beetles are easily spotted and eaten by the predator. The brown beetles, however, are well-camouflaged and survive at a much higher rate.\n\nThis is **selection pressure**—the environment (the predator and the dark bark) is \"selecting\" for the brown trait. The surviving brown beetles reproduce, passing on their brown coloration genes. Over many generations, the beetle population shifts from mostly green to mostly brown, because the brown beetles were better adapted to survive in that specific environment.\n\nLet's add a simple number: If a predator eats 90% of the green beetles but only 10% of the brown beetles, the brown beetles will contribute significantly more offspring to the next generation, changing the population's traits over time.\n\nKey Insight:\nNatural selection is the process where organisms with traits better suited to their environment are more likely to survive and reproduce, causing those advantageous traits to become more common over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nThink of a software team's code review process as a selective environment for code.\n\n**Variation:**\nTwo developers on your team write different functions to solve the same problem: finding the most frequent item in a list.\n\n```python\n# Developer A's solution: Simple and readable\ndef find_common_item(items):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    return max(counts, key=counts.get)\n\n# Developer B's solution: More advanced, uses a library\nfrom collections import Counter\ndef find_common_item_v2(items):\n    return Counter(items).most_common(1)[0][0]\n```\n\n**Selection Pressure:**\nDuring the code review, the senior engineer (the \"environment\") evaluates both solutions. The pressure is for code that is not only correct but also easy for the entire team to understand, debug, and maintain.\n\n**Retention:**\nThe reviewer finds Developer A's code clearer and more transparent. Developer B's code, while efficient, is slightly more obscure. The reviewer approves Developer A's version. It is merged into the main codebase. This \"fit\" solution is now the inherited standard for this task, and future developers are expected to follow this pattern.\n\nKey Insight:\nJust like in biology, the \"fittest\" code isn't always the most complex, but the one best suited to the team's environment (prioritizing clarity and maintainability). Successful patterns are retained and become the standard over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of beetles living on dark tree bark. Most beetles are green, but due to random **variation** in their DNA, a few beetles are brown. This brown coloration is a **heritable** trait, meaning it can be passed down to their offspring.\n\nOne day, a new predator arrives that hunts by sight. On the dark bark, the green beetles are easily spotted and eaten by the predator. The brown beetles, however, are well-camouflaged and survive at a much higher rate.\n\nThis is **selection pressure**—the environment (the predator and the dark bark) is \"selecting\" for the brown trait. The surviving brown beetles reproduce, passing on their brown coloration genes. Over many generations, the beetle population shifts from mostly green to mostly brown, because the brown beetles were better adapted to survive in that specific environment.\n\nLet's add a simple number: If a predator eats 90% of the green beetles but only 10% of the brown beetles, the brown beetles will contribute significantly more offspring to the next generation, changing the population's traits over time.\n\nKey Insight:\nNatural selection is the process where organisms with traits better suited to their environment are more likely to survive and reproduce, causing those advantageous traits to become more common over time.",
+        "example_id": "ex_47dbfa326a3848eb",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a software team at a tech company in Kolkata building a new feature.\n\nThe \"Organism\": The feature itself, specifically a data-sorting algorithm.\nThe \"Population\": Several developers on the team have each written their own version of this algorithm.\n\nVariation:\n- Developer A's code is incredibly fast but has a bug that corrupts data in 1% of cases.\n- Developer B's code is extremely reliable and never corrupts data, but it's slow and causes the app to lag.\n- Developer C's code is a good compromise: it's reasonably fast and has no known bugs.\n\nSelection Pressure:\nThe code is deployed to the live production environment. The \"environment\" here is the real-world user experience.\n- Developer A's code is quickly identified because the 1% data corruption leads to angry customer support tickets and data integrity issues. It is selected against and must be fixed.\n- Developer B's code is flagged by performance monitoring tools for its high CPU usage and slow response times, degrading the user experience. It is also selected against.\n- Developer C's code performs well under load, has no bugs, and provides a smooth user experience. It is selected for.\n\nHeritability:\nThe team lead decides to make Developer C's version the official, standard implementation for the sorting algorithm. All future developers working on similar features are required to use this version as the starting point. The \"good trait\" (the balanced, efficient code) is now inherited by the entire codebase.\n\nKey Insight:\nIn software, the production environment acts as the selector, favoring code that is both efficient and reliable. The best-performing implementations are then copied and reused, causing the overall quality of the software to improve over time, just like advantageous traits become more common in a species.",
+        "example_id": "ex_a7c3709dce504dc9"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nThink of a software team's code review process as a selective environment for code.\n\n**Variation:**\nTwo developers on your team write different functions to solve the same problem: finding the most frequent item in a list.\n\n```python\n# Developer A's solution: Simple and readable\ndef find_common_item(items):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    return max(counts, key=counts.get)\n\n# Developer B's solution: More advanced, uses a library\nfrom collections import Counter\ndef find_common_item_v2(items):\n    return Counter(items).most_common(1)[0][0]\n```\n\n**Selection Pressure:**\nDuring the code review, the senior engineer (the \"environment\") evaluates both solutions. The pressure is for code that is not only correct but also easy for the entire team to understand, debug, and maintain.\n\n**Retention:**\nThe reviewer finds Developer A's code clearer and more transparent. Developer B's code, while efficient, is slightly more obscure. The reviewer approves Developer A's version. It is merged into the main codebase. This \"fit\" solution is now the inherited standard for this task, and future developers are expected to follow this pattern.\n\nKey Insight:\nJust like in biology, the \"fittest\" code isn't always the most complex, but the one best suited to the team's environment (prioritizing clarity and maintainability). Successful patterns are retained and become the standard over time.",
+        "example_id": "ex_28806bc1dede4eca"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:23:05.685053"
+}

@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Natural Selection",
+  "topic_str": "प्राकृतिक चयन",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example provides a detailed, step-by-step explanation of natural selection using a specific scenario involving beetles in Mumbai, incorporating local environmental factors and genetic principles. It also includes relevant calculations and a clear conclusion, aligning well with the user's profile and learning preferences.\n\n[PF] PERSONALIZATION FIDELITY — The example references Mumbai, the user's location, and uses a relatable local environmental context, which enhances personalization. It also employs domain-specific terminology and a scenario involving beetles, fitting the user's high school level and example-based learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content involves genetic calculations, Hardy-Weinberg equilibrium, and selection pressures, which are appropriate for a high school student with medium complexity. The depth is suitable, neither too superficial nor overly technical.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanations, including allele frequencies, fitness, and selection, are accurate and consistent with biological principles. The calculations and interpretations align with established genetics concepts.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from initial conditions to results and interpretation. The inclusion of calculations and a summary takeaway makes it memorable and instructive.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of beetles camouflaged on tree bark under pollution conditions is highly appropriate for illustrating natural selection in biology. The vocabulary and framing are consistent with the biological domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example shifts from a specific, real-world scenario in Mumbai involving dengue and mosquito control to a more generalized, hypothetical model involving water-filled habitats and a resistance allele in mosquitoes. While it simplifies the explanation and makes it more abstract, it still does not directly relate to the user's domain or context, which was the main critique. Therefore, it partially addresses the feedback but does not fully resolve the issue of domain relevance.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example connects the concept of natural selection to a relatable scenario involving beetles in a polluted environment, aligning with the user's preference for everyday life examples. It clearly explains how environmental pressures influence allele frequencies, addressing the critique effectively. \n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: प्राकृतिक चयन\n\nExample:\n- परिदृश्य: मुंबई के एक मोहल्ले में dengue-रोधी नियंत्रण के लिए कीटनाशक spray किया गया; मकड़ियों-सी मच्छर भी प्रभावित होते हैं।\n- विविधता: इस आबादी में प्रतिरोधी जीन (R) वाले मच्छर और गैर-प्रतिरोधी (r) मच्छर दोनों रहते हैं।\n- आबादी और आर आवृत्ति: कुल 1000 मच्छर; 300 RR (दोनों alkilles के साथ), 700 rr. p0 = 0.30।\n- चयन दबाव और सर्वाइव: spray के बाद RR मच्छर 70% बचते हैं; rr मच्छर 40% बचते हैं।\n- survivors की गिनती:\n  RR survivors = 0.7 × 300 = 210\n  rr survivors = 0.4 × 700 = 280\n  कुल survivors = 210 + 280 = 490\n- आर-अल्le की आवृत्ति among survivors:\n  RR में 2 R alleles प्रति मच्छर → 210 × 2 = 420 R alleles\n  rr में R alleles नहीं → 0\n  कुल allele count = 2 × 490 = 980\n  p' = 420 / 980 ≈ 0.429\n- अर्थ: चयन दबाव के कारण प्रतिरोधी allele की आवृत्ति आबादी में बढ़ गई है; अगली पीढ़ी में प्रतिरोधी trait वाले मच्छर अधिक योगदान दे सकते हैं; कीटनाशक के प्रभाव पर असर हो सकता है।\n\n- नोट: यह एक सरल मॉडल है जिसमें केवल दो जीन-स्तर के genotypes मान लिए गए हैं; वास्तविक आबादी में heterozygotes आदि हो सकते हैं।\n\nKey Insight:\n- प्राकृतिक चयन से variation के कारण differential survival से allele frequency बढ़ती है; अब आपका कार्य है: यदि यही दबाव बना रहता है, तो कौन-सी विशेषता की आवृत्ति बढ़ेगी और क्यों?",
+    "final_example": "Concept: प्राकृतिक चयन\n\nExample:\nहम एक Mumbai के पार्क के एक पेड़ की ठंडी सायर के नीचे beetles की एक छोटी आबादी देखते हैं। पेड़ की खाल पर धुआँ और धूल जमा रहता है, इसलिए कुछ beetles dark रंग के (D डॉमिनेंट allele) हैं और कुछ हल्के रंग के (d) हैं। इस दुनिया में D allele dominant है: DD और Dd दोनों dark, dd light दिखाते हैं। Trait heredity के कारण बच्चों में अक्सर वही alleles मिलते हैं जो माता-पिता के पास थे।\n\nस्थिति और मानक (initial) मान:\n- p = D allele की फ्रीक्वेन्सी = 0.60\n- q = d allele की फ्रीक्वेन्सी = 0.40\n- Genotype वितरण Hardy-Weinberg के अनुसार पीढ़ी 0: DD = p^2 = 0.36, Dd = 2pq = 0.48, dd = q^2 = 0.16\n\nपरिणाम (natural selection के दबाव के साथ):\n- पर्यावरण दबाव: pollution से tree bark काला रहता है, dark beetles préfér camouflaged रहते हैं; हल्के beetles birds द्वारा आसानी से पकड़े जाते हैं।\n- Viability के relative fitness: w(DD) = 1, w(Dd) = 1, w(dd) = 0.6\n\nΠढ़ी 0 के after-selection genotype (unnormalized):\n- DD: 0.36\n- Dd: 0.48\n- dd: 0.16 × 0.6 = 0.096\nSum = 0.936\n\nΛिकल (normalization) के बाद genotype frequencies पहली पीढ़ी (p1, q1):\n- DD ≈ 0.36 / 0.936 ≈ 0.385\n- Dd ≈ 0.48 / 0.936 ≈ 0.514\n- dd ≈ 0.096 / 0.936 ≈ 0.103\n\nAllele frequencies पहली पीढ़ी के बाद:\n- p1 = DD + 0.5 × Dd ≈ 0.385 + 0.257 ≈ 0.642\n- q1 = 1 − p1 ≈ 0.358\n\nपीढ़ी 2 (same selection pressures के साथ, अब p1 = 0.642, q1 = 0.358):\nGenotype frequencies (HW):\n- DD: p1^2 ≈ 0.412\n- Dd: 2p1q1 ≈ 0.459\n- dd: q1^2 ≈ 0.128\n\nunnormalized after selection:\n- DD: 0.412\n- Dd: 0.459\n- dd: 0.128 × 0.6 ≈ 0.077\n\nSum ≈ 0.947\nNormalized:\n- DD ≈ 0.412 / 0.947 ≈ 0.435\n- Dd ≈ 0.459 / 0.947 ≈ 0.484\n- dd ≈ 0.077 / 0.947 ≈ 0.081\n\nAllele frequencies दूसरी पीढ़ी के बाद:\n- p2 = DD + 0.5 × Dd ≈ 0.435 + 0.242 ≈ 0.677\n- q2 = 1 − p2 ≈ 0.323\n\nInterpretation:\n- पहले दबाव के कारण D allele की फ्रीक्वेन्सी 0.60 से 0.642 और फिर 0.677 तक बढ़ती है।\n- इस प्रकार population में darker beetles की आवृत्ति बढ़ती है, जिससे phenotype composition धीरे-धीरे dark की ओर shift हो रहा है।\n\nTakeaway:\nपारिस्थितिकी दबावों के कारण advantageous trait की allele frequency बढ़ती है—Natural selection directional evolution को जन्म देता है, और Mumbai जैसे शहरों में pollution/habitat changes इस दिशा में बदलाव ला सकते हैं।\n\nSawal:\nइस उदाहरण में कौन सा ट्रेट fitness के तौर पर फायदा दिखा और selection pressure क्या था, जिससे evolution dark allele की ओर गया?",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: प्राकृतिक चयन\n\nExample:\n- परिदृश्य: मुंबई के एक मोहल्ले में dengue-रोधी नियंत्रण के लिए कीटनाशक spray किया गया; मकड़ियों-सी मच्छर भी प्रभावित होते हैं।\n- विविधता: इस आबादी में प्रतिरोधी जीन (R) वाले मच्छर और गैर-प्रतिरोधी (r) मच्छर दोनों रहते हैं।\n- आबादी और आर आवृत्ति: कुल 1000 मच्छर; 300 RR (दोनों alkilles के साथ), 700 rr. p0 = 0.30।\n- चयन दबाव और सर्वाइव: spray के बाद RR मच्छर 70% बचते हैं; rr मच्छर 40% बचते हैं।\n- survivors की गिनती:\n  RR survivors = 0.7 × 300 = 210\n  rr survivors = 0.4 × 700 = 280\n  कुल survivors = 210 + 280 = 490\n- आर-अल्le की आवृत्ति among survivors:\n  RR में 2 R alleles प्रति मच्छर → 210 × 2 = 420 R alleles\n  rr में R alleles नहीं → 0\n  कुल allele count = 2 × 490 = 980\n  p' = 420 / 980 ≈ 0.429\n- अर्थ: चयन दबाव के कारण प्रतिरोधी allele की आवृत्ति आबादी में बढ़ गई है; अगली पीढ़ी में प्रतिरोधी trait वाले मच्छर अधिक योगदान दे सकते हैं; कीटनाशक के प्रभाव पर असर हो सकता है।\n\n- नोट: यह एक सरल मॉडल है जिसमें केवल दो जीन-स्तर के genotypes मान लिए गए हैं; वास्तविक आबादी में heterozygotes आदि हो सकते हैं।\n\nKey Insight:\n- प्राकृतिक चयन से variation के कारण differential survival से allele frequency बढ़ती है; अब आपका कार्य है: यदि यही दबाव बना रहता है, तो कौन-सी विशेषता की आवृत्ति बढ़ेगी और क्यों?",
+        "example_id": "ex_039ccf77279940d3",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "विषय: प्राकृतिक चयन\n\nउदाहरण:\nप्रियया, मुंबई के एक मोहल्ले में बारिश के मौसम के बाद पानी भर जाता है और वहां Aedes aegypti मच्छर पनपते हैं। स्थानीय नियंत्रण के लिए नगर निकाय नियमित कीटनाशक स्प्रे कराती है, जिससे कमजोर (कीटनाशक के प्रति संवेदनशील) मच्छर मर जाते हैं और मजबूत (कीटनाशक-प्रतिरोधी) मच्छर बचे रहते हैं। कुछ मच्छरों में एक विशेष allele R होता है जो pyrethroid प्रकार के कीटनाशकों के प्रति प्रतिरोध देता है; ऐसे मच्छर जीवित रहते हैं और उनके बच्चे बनते हैं, इस प्रकार allele R की आवृत्ति बढ़ती है।\n\nआधारधारणा (सरल मॉडल):\n- मान लें कि आबादी में प्रतिरोधी allele R की आवृत्ति q = 0.2 है (संभावना S allele p = 0.8, क्योंकि p = 1 − q)।\n- जीन-स्तर पर सामान्य प्रकार: SS (0.64), RS (0.32), RR (0.04)।\n- स्प्रे के कारण SS genotype के जीव मर जाते हैं; बचे RS और RR रहते हैं।\n- बचे हुए जनसंख्या में कुल उपस्थिति: RS = 0.32, RR = 0.04 → कुल 0.36 व्यक्ति।\n- RR एलील के लिए योगदान: RR प्रति व्यक्ति में 2 आर एलील, RS प्रति व्यक्ति में 1 आर एलील।\n  कुल आर एलील = 2×0.04 + 1×0.32 = 0.40।\n  कुल एलील गिनती = 2×0.36 = 0.72।\n- नई आवृत्ति q' = 0.40 / 0.72 ≈ 0.56।\n\nइस एक पीढ़ी के भीतर, प्रतिरोधी allele R की आवृत्ति लगभग 0.56 तक बढ़ गई, क्योंकि चयन दबाव ने संवेदनशील मच्छरों को कम कर दिया और प्रतिरोधी गुट को अधिक सफलतापूर्वक प्रजनन का मौका मिला।\n\nमुख्य निष्कर्ष:\n- उच्च चयन दबाव के सामने, स्थानीय परिस्थितियों में प्रतिरोधी गुण की आवृत्ति तेज़ी से बढ़ सकती है। यह दिखाता है कि चरित्र-आवृत्ति आबादी के वातावरण के दबावों के अनुसार कैसे बदल सकती है।\n\nप्रश्न:\nइन परिस्थितियों में कौन सा गुण आवृत्ति में बढ़ेगा और क्यों? (उदा: प्रतिरोधी allele R की आवृत्ति बढ़ेगी—क्यों या क्यों नहीं?)",
+        "example_id": "ex_0900cf27e69e4e30"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: प्राकृतिक चयन\n\nExample:\nहम एक Mumbai के पार्क के एक पेड़ की ठंडी सायर के नीचे beetles की एक छोटी आबादी देखते हैं। पेड़ की खाल पर धुआँ और धूल जमा रहता है, इसलिए कुछ beetles dark रंग के (D डॉमिनेंट allele) हैं और कुछ हल्के रंग के (d) हैं। इस दुनिया में D allele dominant है: DD और Dd दोनों dark, dd light दिखाते हैं। Trait heredity के कारण बच्चों में अक्सर वही alleles मिलते हैं जो माता-पिता के पास थे।\n\nस्थिति और मानक (initial) मान:\n- p = D allele की फ्रीक्वेन्सी = 0.60\n- q = d allele की फ्रीक्वेन्सी = 0.40\n- Genotype वितरण Hardy-Weinberg के अनुसार पीढ़ी 0: DD = p^2 = 0.36, Dd = 2pq = 0.48, dd = q^2 = 0.16\n\nपरिणाम (natural selection के दबाव के साथ):\n- पर्यावरण दबाव: pollution से tree bark काला रहता है, dark beetles préfér camouflaged रहते हैं; हल्के beetles birds द्वारा आसानी से पकड़े जाते हैं।\n- Viability के relative fitness: w(DD) = 1, w(Dd) = 1, w(dd) = 0.6\n\nΠढ़ी 0 के after-selection genotype (unnormalized):\n- DD: 0.36\n- Dd: 0.48\n- dd: 0.16 × 0.6 = 0.096\nSum = 0.936\n\nΛिकल (normalization) के बाद genotype frequencies पहली पीढ़ी (p1, q1):\n- DD ≈ 0.36 / 0.936 ≈ 0.385\n- Dd ≈ 0.48 / 0.936 ≈ 0.514\n- dd ≈ 0.096 / 0.936 ≈ 0.103\n\nAllele frequencies पहली पीढ़ी के बाद:\n- p1 = DD + 0.5 × Dd ≈ 0.385 + 0.257 ≈ 0.642\n- q1 = 1 − p1 ≈ 0.358\n\nपीढ़ी 2 (same selection pressures के साथ, अब p1 = 0.642, q1 = 0.358):\nGenotype frequencies (HW):\n- DD: p1^2 ≈ 0.412\n- Dd: 2p1q1 ≈ 0.459\n- dd: q1^2 ≈ 0.128\n\nunnormalized after selection:\n- DD: 0.412\n- Dd: 0.459\n- dd: 0.128 × 0.6 ≈ 0.077\n\nSum ≈ 0.947\nNormalized:\n- DD ≈ 0.412 / 0.947 ≈ 0.435\n- Dd ≈ 0.459 / 0.947 ≈ 0.484\n- dd ≈ 0.077 / 0.947 ≈ 0.081\n\nAllele frequencies दूसरी पीढ़ी के बाद:\n- p2 = DD + 0.5 × Dd ≈ 0.435 + 0.242 ≈ 0.677\n- q2 = 1 − p2 ≈ 0.323\n\nInterpretation:\n- पहले दबाव के कारण D allele की फ्रीक्वेन्सी 0.60 से 0.642 और फिर 0.677 तक बढ़ती है।\n- इस प्रकार population में darker beetles की आवृत्ति बढ़ती है, जिससे phenotype composition धीरे-धीरे dark की ओर shift हो रहा है।\n\nTakeaway:\nपारिस्थितिकी दबावों के कारण advantageous trait की allele frequency बढ़ती है—Natural selection directional evolution को जन्म देता है, और Mumbai जैसे शहरों में pollution/habitat changes इस दिशा में बदलाव ला सकते हैं।\n\nSawal:\nइस उदाहरण में कौन सा ट्रेट fitness के तौर पर फायदा दिखा और selection pressure क्या था, जिससे evolution dark allele की ओर गया?",
+        "example_id": "ex_f95ae555e3b34684"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:09:48.774279"
+}

@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Natural Selection",
+  "topic_str": "প্রাকৃতিক নির্বাচন",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by using Bengali language and a relatable analogy involving software code, which aligns with the user's background as a software engineer. It also incorporates Bengali terminology and context, making it more engaging for the user. \n\nRegarding complexity, the example discusses natural selection through a detailed, quantitative analogy involving code stability and mutation, which is appropriate for an undergraduate-level learner with a technical background. The depth of the explanation is suitable for medium complexity, matching the user's learning preference for examples.\n\nThe factual content about natural selection and genetic algorithms appears accurate, with correct descriptions of the process and outcomes, ensuring scientific correctness.\n\nStructurally, the example is well-organized, with a clear progression from concept to analogy, including steps, analysis, and insights, making it pedagogically effective. The flow is logical, and the analogy is explicitly linked to the core concept, aiding understanding.\n\nThe analogy of natural selection to code optimization is domain-appropriate, as it uses a familiar technical context for a user with an engineering background, making the framing suitable for the topic.\n\n---\n\nPF: The example uses the user's profession, language, and learning style effectively, integrating a technical analogy that resonates with an engineer.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation and analogy matches the user's medium complexity level, providing enough detail without being overly simplistic or complex.  \nAXIS_SCORE: 4\n\nCA: The scientific content about natural selection and genetic algorithms is accurate, with correct descriptions of the process and outcomes.  \nAXIS_SCORE: 5\n\nPC: The structure is clear, with a logical flow from concept to analogy, analysis, and insight, facilitating learning.  \nAXIS_SCORE: 5\n\nDA: The analogy is highly domain-appropriate, using software engineering concepts to explain biological evolution, which aligns well with the user's background.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example shifts from a team-based coding scenario to a data processing context involving algorithms, which is more relevant to a software engineering domain. However, it still does not incorporate the user's specific critique about the example not being relevant to their field, which is presumably biology or natural sciences, and instead remains within a CS framework. Therefore, it partially addresses the critique but does not fully resolve the core concern about domain relevance.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes a preference for code-based analogies over abstract descriptions, and the regenerated example successfully incorporates a clear, concrete coding scenario involving bug fixing and version selection, which aligns with this preference. Therefore, it effectively addresses the critique by replacing abstract concepts with a tangible, code-related analogy.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nএকটি সফটওয়্যার টিমের কথা ভাবুন যারা একটি নতুন ফিচার তৈরি করছে। টিমের প্রতিটি সদস্যের কাছে ভিন্ন ভিন্ন কোডিং পদ্ধতি রয়েছে।\n\nপ্রাকৃতিক নির্বাচনের মতো এখানেও ঘটে:\n- কিছু কোডিং পদ্ধতি অন্যদের তুলনায় ভালো কাজ করে (বেশি দক্ষ, কম বাগ)\n- যে কোডগুলো ভালো কাজ করে সেগুলো বেশি ব্যবহৃত হয় এবং অন্যদের দ্বারা শেখা হয়\n- খারাপ কোডগুলো ধীরে ধীরে বাদ পড়ে যায়\n\nএকটি বাস্তব উদাহরণ:\nএকটি ই-কমার্স সাইটে পেমেন্ট গেটওয়ে ইন্টিগ্রেশন।\n- পদ্ধতি A: 1000 টি লেনদেনে 99.9% সাফল্যের হার\n- পদ্ধতি B: 1000 টি লেনদেনে 95% সাফল্যের হার\n\nসময়ের সাথে সাথে:\n- পদ্ধতি A বেশি ব্যবহৃত হয়, ডেভেলপাররা এটি শেখে\n- পদ্ধতি B-এর বাগগুলো ধরা পড়ে, টিম এটি পরিবর্তন করে\n- শেষ পর্যন্ত পদ্ধতি A স্ট্যান্ডার্ড হয়ে ওঠে\n\nমূল কথা:\nযোগ্যতমের জয় — যারা ভালো সমাধান দেয় তারা টিকে থাকে আর দুর্বলরা বাদ পড়ে যায়।",
+    "final_example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nপ্রাকৃতিক নির্বাচনকে একটি অপ্টিমাইজেশন অ্যালগরিদমের মতো কল্পনা করুন যা প্রজন্মের পর প্রজন্ম ধরে সফটওয়্যার কোডকে উন্নত করে।\n\nএকটি কোডবেস বিবেচনা করুন যেখানে একটি ত্রুটি (bug) রয়েছে যা 10% ক্ষেত্রে অ্যাপ্লিকেশনটিকে ক্র্যাশ করে।\n\nপ্রাথমিক জনসংখ্যা (কোডের বিভিন্ন সংস্করণ):\n- সংস্করণ A: 95% স্থিতিশীল, 5% ক্র্যাশ রেট\n- সংস্করণ B: 85% স্থিতিশীল, 15% ক্র্যাশ রেট\n- সংস্করণ C: 70% স্থিতিশীল, 30% ক্র্যাশ রেট\n\nনির্বাচন প্রক্রিয়া:\n1. প্রতিটি সংস্করণ 100 বার চালানো হয় (ফিটনেস টেস্ট)\n2. যে সংস্করণগুলো কম ক্র্যাশ করে সেগুলো বেশি \"প্রজনন\" করে (মার্জড ইনটু মেইন ব্রাঞ্চ)\n3. যে সংস্করণগুলো বেশি ক্র্যাশ করে সেগুলো \"বিলুপ্ত\" হয় (ডিপ্লয় করা হয় না)\n\n20টি \"প্রজন্মের\" পর:\n- সংস্করণ A-এর ক্র্যাশ রেট কমে 1%-এ দাঁড়ায় (শক্তিশালী নির্বাচন)\n- সংস্করণ C সম্পূর্ণ নির্মূল হয়ে যায় (বিলুপ্ত)\n- নতুন হাইব্রিড সংস্করণ তৈরি হয় (জেনেটিক রিকম্বিনেশন)\n\nপরিমাণগত বিশ্লেষণ:\n- অ্যালিল ফ্রিকোয়েন্সি পরিবর্তন: স্থিতিশীলতা জিন 10% থেকে বেড়ে 85% হয়েছে\n- ফিটনেস ফাংশন: ক্র্যাশ রেট 20% থেকে কমে 1% হয়েছে\n- নির্বাচনের তীব্রতা: 95% কোডবেস স্থিতিশীল সংস্করণের দিকে ধাবিত হয়েছে\n\nমূল অন্তর্দৃষ্টি:\nপ্রাকৃতিক নির্বাচন একটি পুনরাবৃত্তিমূলক অপ্টিমাইজেশন প্রক্রিয়ার মতো কাজ করে যেখানে কোডের স্থিতিশীলতা একটি ফিটনেস মেট্রিক হিসেবে কাজ করে। এটি প্রজন্মের পর প্রজন্ম ধরে সবচেয়ে কার্যকর বৈশিষ্ট্যগুলোকে সংরক্ষণ করে এবং ত্রুটিপূর্ণ কোডগুলোকে নির্মূল করে।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nএকটি সফটওয়্যার টিমের কথা ভাবুন যারা একটি নতুন ফিচার তৈরি করছে। টিমের প্রতিটি সদস্যের কাছে ভিন্ন ভিন্ন কোডিং পদ্ধতি রয়েছে।\n\nপ্রাকৃতিক নির্বাচনের মতো এখানেও ঘটে:\n- কিছু কোডিং পদ্ধতি অন্যদের তুলনায় ভালো কাজ করে (বেশি দক্ষ, কম বাগ)\n- যে কোডগুলো ভালো কাজ করে সেগুলো বেশি ব্যবহৃত হয় এবং অন্যদের দ্বারা শেখা হয়\n- খারাপ কোডগুলো ধীরে ধীরে বাদ পড়ে যায়\n\nএকটি বাস্তব উদাহরণ:\nএকটি ই-কমার্স সাইটে পেমেন্ট গেটওয়ে ইন্টিগ্রেশন।\n- পদ্ধতি A: 1000 টি লেনদেনে 99.9% সাফল্যের হার\n- পদ্ধতি B: 1000 টি লেনদেনে 95% সাফল্যের হার\n\nসময়ের সাথে সাথে:\n- পদ্ধতি A বেশি ব্যবহৃত হয়, ডেভেলপাররা এটি শেখে\n- পদ্ধতি B-এর বাগগুলো ধরা পড়ে, টিম এটি পরিবর্তন করে\n- শেষ পর্যন্ত পদ্ধতি A স্ট্যান্ডার্ড হয়ে ওঠে\n\nমূল কথা:\nযোগ্যতমের জয় — যারা ভালো সমাধান দেয় তারা টিকে থাকে আর দুর্বলরা বাদ পড়ে যায়।",
+        "example_id": "ex_735e8e706c864bae",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nকল্পনা করুন আপনি কলকাতার একজন সফটওয়্যার ইঞ্জিনিয়ার, অর্জুন। আপনি একটি নতুন ফিচার তৈরির কাজ করছেন যার জন্য ব্যবহারকারীর বিপুল পরিমাণ ডেটা প্রসেস করা প্রয়োজন। আপনার কাছে এটি করার দুটি উপায় আছে:\n\n1.  **সমাধান A:** একটি সাধারণ, বহুল ব্যবহৃত অ্যালগরিদম ব্যবহার করা। এটি লেখা সহজ এবং দ্রুত কাজ করে, কিন্তু বিশাল ডেটাসেটের ক্ষেত্রে এটি ধীরগতির এবং অনেক মেমরি খরচ করে।\n2.  **সমাধান B:** একটি আরও জটিল এবং উন্নত অ্যালগরিদম ব্যবহার করা। এটি লিখতে কিছুটা বেশি সময় লাগে, কিন্তু এটি অত্যন্ত দক্ষ এবং খুব দ্রুত ডেটা প্রসেস করতে পারে।\n\nআপনার টিম এখন একটি \"নির্বাচন\" প্রক্রিয়ার মধ্য দিয়ে যাচ্ছে। \"পরিবেশ\" হলো আপনার প্রোডাকশন সার্ভার, যেখানে গতি এবং মেমরি ব্যবহার সবচেয়ে গুরুত্বপূর্ণ। আপনি উভয় সমাধান পরীক্ষা করে দেখেন।\n\n*   **প্রাকৃতিক নির্বাচন:** সমাধান A যখন বিশাল ডেটাসেট প্রসেস করার চেষ্টা করে, তখন এটি সার্ভারের গতি কমিয়ে দেয় এবং এমনকি ক্র্যাশও করতে পারে। এটি \"অযোগ্য\" হিসেবে গণ্য হয় এবং বাতিল করা হয়। অন্যদিকে, সমাধান B অত্যন্ত দক্ষতার সাথে কাজ করে এবং দ্রুত কাজ শেষ করে। এটি \"যোগ্য\" হিসেবে বিবেচিত হয় এবং আপনার কোডবেসে অন্তর্ভুক্ত করা হয়।\n\n*   **উত্তরাধিকার:** সমাধান B এখন আপনার প্রজেক্টের স্ট্যান্ডার্ড হিসেবে গণ্য হয়। যখনই কোনো নতুন ইঞ্জিনিয়ারকে একই ধরনের সমস্যার সম্মুখীন হতে হবে, তিনি সমাধান B-কেই প্রথম রেফারেন্স হিসেবে ব্যবহার করবেন। একটি দক্ষ অ্যালগরিদমের \"বৈশিষ্ট্য\" এখন কোডবেসে \"উত্তরাধিকার\" সূত্রে চলে এসেছে এবং এটি ভবিষ্যতের জন্য একটি আদর্শ পদ্ধতি হিসেবে প্রতিষ্ঠিত হয়েছে।\n\nমূল অন্তর্দৃষ্টি:\nএকটি সফটওয়্যার টিমের মধ্যে, সবচেয়ে দক্ষ এবং নির্ভরযোগ্য সমাধানগুলো টিকে থাকে এবং কোডবেসের অংশ হয়ে যায়, ঠিক যেমন শক্তিশালী জীবরা বিবর্তিত হয়। এই প্রক্রিয়াটি, যেখানে কোডের 'ফিটনেস' পারফরম্যান্স এবং রক্ষণাবেক্ষণযোগ্যতা দ্বারা বিচার করা হয়, সেটিই হলো প্রাকৃতিক নির্বাচনের একটি রূপ।",
+        "example_id": "ex_4a847a5c6db8496a"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nপ্রাকৃতিক নির্বাচনকে একটি অপ্টিমাইজেশন অ্যালগরিদমের মতো কল্পনা করুন যা প্রজন্মের পর প্রজন্ম ধরে সফটওয়্যার কোডকে উন্নত করে।\n\nএকটি কোডবেস বিবেচনা করুন যেখানে একটি ত্রুটি (bug) রয়েছে যা 10% ক্ষেত্রে অ্যাপ্লিকেশনটিকে ক্র্যাশ করে।\n\nপ্রাথমিক জনসংখ্যা (কোডের বিভিন্ন সংস্করণ):\n- সংস্করণ A: 95% স্থিতিশীল, 5% ক্র্যাশ রেট\n- সংস্করণ B: 85% স্থিতিশীল, 15% ক্র্যাশ রেট\n- সংস্করণ C: 70% স্থিতিশীল, 30% ক্র্যাশ রেট\n\nনির্বাচন প্রক্রিয়া:\n1. প্রতিটি সংস্করণ 100 বার চালানো হয় (ফিটনেস টেস্ট)\n2. যে সংস্করণগুলো কম ক্র্যাশ করে সেগুলো বেশি \"প্রজনন\" করে (মার্জড ইনটু মেইন ব্রাঞ্চ)\n3. যে সংস্করণগুলো বেশি ক্র্যাশ করে সেগুলো \"বিলুপ্ত\" হয় (ডিপ্লয় করা হয় না)\n\n20টি \"প্রজন্মের\" পর:\n- সংস্করণ A-এর ক্র্যাশ রেট কমে 1%-এ দাঁড়ায় (শক্তিশালী নির্বাচন)\n- সংস্করণ C সম্পূর্ণ নির্মূল হয়ে যায় (বিলুপ্ত)\n- নতুন হাইব্রিড সংস্করণ তৈরি হয় (জেনেটিক রিকম্বিনেশন)\n\nপরিমাণগত বিশ্লেষণ:\n- অ্যালিল ফ্রিকোয়েন্সি পরিবর্তন: স্থিতিশীলতা জিন 10% থেকে বেড়ে 85% হয়েছে\n- ফিটনেস ফাংশন: ক্র্যাশ রেট 20% থেকে কমে 1% হয়েছে\n- নির্বাচনের তীব্রতা: 95% কোডবেস স্থিতিশীল সংস্করণের দিকে ধাবিত হয়েছে\n\nমূল অন্তর্দৃষ্টি:\nপ্রাকৃতিক নির্বাচন একটি পুনরাবৃত্তিমূলক অপ্টিমাইজেশন প্রক্রিয়ার মতো কাজ করে যেখানে কোডের স্থিতিশীলতা একটি ফিটনেস মেট্রিক হিসেবে কাজ করে। এটি প্রজন্মের পর প্রজন্ম ধরে সবচেয়ে কার্যকর বৈশিষ্ট্যগুলোকে সংরক্ষণ করে এবং ত্রুটিপূর্ণ কোডগুলোকে নির্মূল করে।",
+        "example_id": "ex_d11ff0644dca4ad2"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:28:55.277460"
+}

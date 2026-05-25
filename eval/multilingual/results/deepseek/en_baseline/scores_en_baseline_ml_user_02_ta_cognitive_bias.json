@@ -1,0 +1,62 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_02",
+  "lang": "ta",
+  "topic": "Cognitive Bias",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including Meena’s name, profession, and location, and it aligns with her learning style by providing a concrete, relatable example. The depth of explanation about the cognitive bias and the mitigation strategy appears appropriate for a medium complexity level, balancing technical accuracy with accessibility. The factual content about the availability heuristic and diagnostic protocols in a medical context is accurate and well-explained, supporting correct understanding. The structure is clear, with a logical flow from scenario to explanation, and the example uses domain-specific vocabulary and framing suitable for a healthcare professional. The analogy and framing are appropriate for the medical domain, making the example relevant and engaging for the target audience.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Meena’s name, location, and profession, and it uses a medical scenario relevant to her role, aligning well with her profile and learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical detail with clarity, matching a medium complexity level suitable for a professional nurse. It avoids overly technical jargon or oversimplification.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and the mitigation approach are factually correct, with no evident inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation of the bias, and a practical countermeasure, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for a medical context, using terminology and scenarios relevant to nursing and healthcare.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nMeena, as a nurse in Chennai, you might see a patient with a persistent cough and immediately think of tuberculosis because you've treated several cases recently. This is an example of the **availability heuristic**, a type of cognitive bias where you overestimate the likelihood of events based on how easily examples come to mind.\n\nIn your work, this could play out like this:\n- **Recent Experience:** Last week, three patients you saw were diagnosed with TB.\n- **Current Case:** A new patient presents with a cough and fatigue.\n- **Bias in Action:** Your mind jumps to TB as the most probable cause, even though a common viral infection or asthma are statistically more common.\n- **Potential Risk:** You might unintentionally overlook other symptoms or tests that point to a different, less memorable illness.\n\nA simple way to counter this bias is to consciously use a checklist or protocol for respiratory symptoms, which forces you to consider all common possibilities, not just the most recent or vivid ones.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to systematic errors in judgment; recognizing them, especially in high-stakes fields like healthcare, is the first step toward making more accurate, objective decisions.",
+    "final_example": "Concept: Cognitive Bias — The Availability Heuristic\n\nExample:\nMeena, a nurse in a Chennai hospital, is assessing a patient who presents with chest pain and shortness of breath. She has just finished a shift where she treated two patients with severe panic attacks who had similar symptoms. Because those recent cases are fresh and vivid in her mind, she might initially lean toward diagnosing another panic attack, even though the patient's risk factors (like high blood pressure and a family history) make a cardiac event a more statistically likely and dangerous possibility.\n\nHow the bias works:\n- The availability heuristic is the mental shortcut where we judge the likelihood of an event based on how easily examples come to mind.\n- Recent, dramatic, or emotionally charged memories are more \"available\" and can feel more common than they truly are.\n- In this case, the memorable panic attack cases are more available than the many past, less dramatic cases of stable angina she has managed.\n\nA balanced approach:\nTo counter this bias, Meena consciously consults the hospital's clinical protocol for chest pain, which mandates an ECG and cardiac enzyme tests for all such presentations, regardless of her initial impression. This systematic check ensures the rarer but critical heart condition is not missed.\n\nKey Insight:\nThe availability heuristic can lead to diagnostic errors by making recent or dramatic cases seem more probable. Using checklists and protocols helps override this instinct, ensuring decisions are based on evidence and probability, not just memory.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nMeena, as a nurse in Chennai, you might see a patient with a persistent cough and immediately think of tuberculosis because you've treated several cases recently. This is an example of the **availability heuristic**, a type of cognitive bias where you overestimate the likelihood of events based on how easily examples come to mind.\n\nIn your work, this could play out like this:\n- **Recent Experience:** Last week, three patients you saw were diagnosed with TB.\n- **Current Case:** A new patient presents with a cough and fatigue.\n- **Bias in Action:** Your mind jumps to TB as the most probable cause, even though a common viral infection or asthma are statistically more common.\n- **Potential Risk:** You might unintentionally overlook other symptoms or tests that point to a different, less memorable illness.\n\nA simple way to counter this bias is to consciously use a checklist or protocol for respiratory symptoms, which forces you to consider all common possibilities, not just the most recent or vivid ones.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to systematic errors in judgment; recognizing them, especially in high-stakes fields like healthcare, is the first step toward making more accurate, objective decisions.",
+        "example_id": "ex_bf28f4b10a334d19",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias — The Availability Heuristic\n\nExample:\nMeena, a nurse in a Chennai hospital, is assessing a patient who presents with chest pain and shortness of breath. She has just finished a shift where she treated two patients with severe panic attacks who had similar symptoms. Because those recent cases are fresh and vivid in her mind, she might initially lean toward diagnosing another panic attack, even though the patient's risk factors (like high blood pressure and a family history) make a cardiac event a more statistically likely and dangerous possibility.\n\nHow the bias works:\n- The availability heuristic is the mental shortcut where we judge the likelihood of an event based on how easily examples come to mind.\n- Recent, dramatic, or emotionally charged memories are more \"available\" and can feel more common than they truly are.\n- In this case, the memorable panic attack cases are more available than the many past, less dramatic cases of stable angina she has managed.\n\nA balanced approach:\nTo counter this bias, Meena consciously consults the hospital's clinical protocol for chest pain, which mandates an ECG and cardiac enzyme tests for all such presentations, regardless of her initial impression. This systematic check ensures the rarer but critical heart condition is not missed.\n\nKey Insight:\nThe availability heuristic can lead to diagnostic errors by making recent or dramatic cases seem more probable. Using checklists and protocols helps override this instinct, ensuring decisions are based on evidence and probability, not just memory.",
+        "example_id": "ex_64b150dcd8ec4cc7"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-13T20:03:24.711656"
+}

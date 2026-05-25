@@ -1,0 +1,517 @@
+{
+  "provider": "deepseek",
+  "generated_at": "2026-04-13T20:57:01.865134",
+  "fnl": {
+    "indic": {
+      "n": 12,
+      "composite_mean": 4.7749999999999995,
+      "composite_values": [
+        5.0,
+        4.8,
+        4.3,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.6,
+        4.8,
+        4.8
+      ],
+      "lang_match_mean": 1.0,
+      "fcr3_mean": 1.0,
+      "fcr4_mean": 0.9090909090909091,
+      "lur_mean": 0.9166666666666666,
+      "decision_accuracy_mean": 0.9444444444444445,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "foreign": {
+      "n": 12,
+      "composite_mean": 4.808333333333333,
+      "composite_values": [
+        4.8,
+        4.8,
+        5.0,
+        5.0,
+        4.8,
+        4.7,
+        4.8,
+        4.8,
+        4.6,
+        4.8,
+        4.8,
+        4.8
+      ],
+      "lang_match_mean": 0.5,
+      "fcr3_mean": 0.8636363636363636,
+      "fcr4_mean": 0.6818181818181818,
+      "lur_mean": 1.0,
+      "decision_accuracy_mean": 0.8194444444444445,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "all": {
+      "n": 24,
+      "composite_mean": 4.791666666666667,
+      "composite_values": [
+        5.0,
+        4.8,
+        4.3,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.6,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        5.0,
+        4.8,
+        4.7,
+        4.8,
+        4.8,
+        4.6,
+        4.8,
+        4.8,
+        4.8
+      ],
+      "lang_match_mean": 0.8,
+      "fcr3_mean": 0.9318181818181818,
+      "fcr4_mean": 0.7954545454545454,
+      "lur_mean": 0.9583333333333334,
+      "decision_accuracy_mean": 0.8819444444444445,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "per_language": {
+      "hi": {
+        "n": 4,
+        "composite_mean": 4.725,
+        "composite_values": [
+          5.0,
+          4.8,
+          4.3,
+          4.8
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 1.0,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 1.0,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "ta": {
+        "n": 4,
+        "composite_mean": 4.85,
+        "composite_values": [
+          5.0,
+          4.8,
+          4.8,
+          4.8
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 0.6666666666666666,
+        "lur_mean": 0.75,
+        "decision_accuracy_mean": 0.8333333333333333,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "bn": {
+        "n": 4,
+        "composite_mean": 4.75,
+        "composite_values": [
+          4.8,
+          4.6,
+          4.8,
+          4.8
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 1.0,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 1.0,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "de": {
+        "n": 4,
+        "composite_mean": 4.9,
+        "composite_values": [
+          4.8,
+          4.8,
+          5.0,
+          5.0
+        ],
+        "lang_match_mean": null,
+        "fcr3_mean": 0.8333333333333334,
+        "fcr4_mean": 0.8333333333333334,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.625,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "ar": {
+        "n": 4,
+        "composite_mean": 4.775,
+        "composite_values": [
+          4.8,
+          4.7,
+          4.8,
+          4.8
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 0.75,
+        "fcr4_mean": 0.5,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.9166666666666666,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "zh": {
+        "n": 4,
+        "composite_mean": 4.75,
+        "composite_values": [
+          4.6,
+          4.8,
+          4.8,
+          4.8
+        ],
+        "lang_match_mean": 0.0,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 0.75,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.9166666666666666,
+        "kappa_pf": null,
+        "kappa_n": 0
+      }
+    },
+    "wilcoxon_vs_en_indic": {
+      "n_pairs": 12,
+      "mean_diff": -0.05833333333333335,
+      "statistic": 6.0,
+      "p_value": 0.31731050786291415,
+      "cohens_d": -0.3159055776845669,
+      "significant_p05": false,
+      "significant_p01": false
+    },
+    "wilcoxon_vs_en_foreign": {
+      "n_pairs": 12,
+      "mean_diff": 0.008333333333333378,
+      "statistic": 4.0,
+      "p_value": 0.7054569861112734,
+      "cohens_d": 0.08032193289025029,
+      "significant_p05": false,
+      "significant_p01": false
+    },
+    "wilcoxon_bonferroni_alpha": 0.025
+  },
+  "nfeo": {
+    "indic": {
+      "n": 12,
+      "composite_mean": 4.816666666666666,
+      "composite_values": [
+        5.0,
+        4.8,
+        4.8,
+        5.0,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.4,
+        4.8
+      ],
+      "lang_match_mean": 0.9166666666666666,
+      "fcr3_mean": 0.9166666666666666,
+      "fcr4_mean": 0.5,
+      "lur_mean": 1.0,
+      "decision_accuracy_mean": 0.7777777777777778,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "foreign": {
+      "n": 12,
+      "composite_mean": 4.816666666666666,
+      "composite_values": [
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        4.6,
+        4.8,
+        4.8
+      ],
+      "lang_match_mean": 1.0,
+      "fcr3_mean": 0.9166666666666666,
+      "fcr4_mean": 0.75,
+      "lur_mean": 1.0,
+      "decision_accuracy_mean": 0.8333333333333334,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "all": {
+      "n": 24,
+      "composite_mean": 4.816666666666666,
+      "composite_values": [
+        5.0,
+        4.8,
+        4.8,
+        5.0,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.4,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        4.6,
+        4.8,
+        4.8
+      ],
+      "lang_match_mean": 0.9583333333333334,
+      "fcr3_mean": 0.9166666666666666,
+      "fcr4_mean": 0.625,
+      "lur_mean": 1.0,
+      "decision_accuracy_mean": 0.8055555555555555,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "per_language": {
+      "hi": {
+        "n": 4,
+        "composite_mean": 4.9,
+        "composite_values": [
+          5.0,
+          4.8,
+          4.8,
+          5.0
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 0.75,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 1.0,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "ta": {
+        "n": 4,
+        "composite_mean": 4.85,
+        "composite_values": [
+          5.0,
+          4.8,
+          4.8,
+          4.8
+        ],
+        "lang_match_mean": 0.75,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 0.5,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.5,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "bn": {
+        "n": 4,
+        "composite_mean": 4.7,
+        "composite_values": [
+          4.8,
+          4.8,
+          4.4,
+          4.8
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 0.75,
+        "fcr4_mean": 0.25,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.8333333333333333,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "de": {
+        "n": 4,
+        "composite_mean": 4.85,
+        "composite_values": [
+          4.8,
+          4.8,
+          4.8,
+          5.0
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 0.875,
+        "fcr4_mean": 0.875,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.8333333333333333,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "ar": {
+        "n": 4,
+        "composite_mean": 4.85,
+        "composite_values": [
+          4.8,
+          4.8,
+          4.8,
+          5.0
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 0.875,
+        "fcr4_mean": 0.625,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.8333333333333333,
+        "kappa_pf": null,
+        "kappa_n": 0
+      },
+      "zh": {
+        "n": 4,
+        "composite_mean": 4.75,
+        "composite_values": [
+          4.8,
+          4.6,
+          4.8,
+          4.8
+        ],
+        "lang_match_mean": 1.0,
+        "fcr3_mean": 1.0,
+        "fcr4_mean": 0.75,
+        "lur_mean": 1.0,
+        "decision_accuracy_mean": 0.8333333333333333,
+        "kappa_pf": null,
+        "kappa_n": 0
+      }
+    },
+    "wilcoxon_vs_en_indic": {
+      "n_pairs": 12,
+      "mean_diff": -0.016666666666666607,
+      "statistic": 9.0,
+      "p_value": 0.7388826803635273,
+      "cohens_d": -0.09667364890456605,
+      "significant_p05": false,
+      "significant_p01": false
+    },
+    "wilcoxon_vs_en_foreign": {
+      "n_pairs": 12,
+      "mean_diff": 0.01666666666666668,
+      "statistic": 2.0,
+      "p_value": 0.5637028616507731,
+      "cohens_d": 0.16903085094570333,
+      "significant_p05": false,
+      "significant_p01": false
+    },
+    "wilcoxon_bonferroni_alpha": 0.025
+  },
+  "en_baseline": {
+    "indic": {
+      "n": 12,
+      "composite_mean": 4.833333333333333,
+      "composite_values": [
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8
+      ],
+      "lang_match_mean": null,
+      "fcr3_mean": null,
+      "fcr4_mean": null,
+      "lur_mean": 0.0,
+      "decision_accuracy_mean": null,
+      "kappa_pf": null,
+      "kappa_n": 0
+    },
+    "foreign": {
+      "n": 12,
+      "composite_mean": 4.8,
+      "composite_values": [
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.6
+      ],
+      "lang_match_mean": null,
+      "fcr3_mean": null,
+      "fcr4_mean": null,
+      "lur_mean": 0.0,
+      "decision_accuracy_mean": null,
+      "kappa_pf": null,
+      "kappa_n": 1
+    },
+    "all": {
+      "n": 24,
+      "composite_mean": 4.816666666666666,
+      "composite_values": [
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        5.0,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.8,
+        4.6
+      ],
+      "lang_match_mean": null,
+      "fcr3_mean": null,
+      "fcr4_mean": null,
+      "lur_mean": 0.0,
+      "decision_accuracy_mean": null,
+      "kappa_pf": null,
+      "kappa_n": 1
+    }
+  }
+}

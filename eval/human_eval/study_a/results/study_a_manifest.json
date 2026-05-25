@@ -1,0 +1,927 @@
+[
+  {
+    "example_id": "EX01",
+    "user_id": "study_a_user_01",
+    "annotator_id": "A1",
+    "topic": "Natural Selection",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Aritro",
+      "role": "engineering_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Natural Selection\n\n**Example:**\nConsider a population of beetles living in a forest. Some beetles are brown, others are green.\n\nBirds (predators) hunt by sight. Green beetles blend into the leafy environment and are harder to spot, while brown beetles stand out against the green leaves and are eaten more frequently.\n\n**Over several generations:**\n1. Brown beetles are eaten more often and produce fewer offspring.\n2. Green beetles survive longer, reproduce more, and pass on the green-colour trait.\n3. Gradually, the beetle population shifts — more and more beetles are green.\n\n**Key Insight:**\nNatural selection is not random. Traits that improve survival in a given environment become more common over time. The environment \"selects\" which traits persist — not by intention, but by differential survival and reproduction.\n\nNo individual beetle changes colour. The *population* changes because individuals with better-suited traits leave more descendants.",
+    "final_example": "**Concept:** Natural Selection — for an Engineering Student\n\n**Example:**\nThink of natural selection like an iterative optimisation algorithm — similar to a genetic algorithm you might study in computational intelligence.\n\nImagine you're designing a load-bearing truss. You start with a population of 100 random designs. Each design is tested against the \"fitness function\": maximum load capacity at minimum material cost. The weakest designs (low fitness) are discarded. The strongest designs (high fitness) are selected, slightly mutated (introducing variation), and recombined to form the next generation.\n\n**This maps directly to biology:**\n| Algorithm | Biology |\n|-----------|---------|\n| Random initial population | Genetic variation in a species |\n| Fitness function | Environmental survival pressure |\n| Selection | Differential survival and reproduction |\n| Mutation + crossover | Genetic mutation and sexual reproduction |\n| Next generation | Offspring population |\n\n**In Kolkata's engineering culture:** Think of how IIT-JEE coaching institutes evolved. Only teaching methods that produced results (high ranks) survived and were adopted widely. Less effective approaches \"died out.\" The coaching ecosystem underwent selection pressure.\n\n**Key Insight:**\nNatural selection is nature's optimisation algorithm. Unlike gradient descent which follows a single path, it explores the solution space in parallel — a massively parallelised search that has been running for billions of years.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "The example is okay but feels too abstract. Can you make it more relatable to engineering work, like algorithm design or system optimisation?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "Yes this is much better — the genetic algorithm parallel really clicked for me. Can you add a concrete local example?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 3,
+        "feedback": "Perfect, the coaching institute example from Kolkata makes it very tangible. I understand it now.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.31,
+      "CC": 3.87,
+      "CA": 4.94,
+      "PC": 4.61,
+      "DA": 3.72
+    },
+    "llm_t3_scores": {
+      "PF": 4.1,
+      "CC": 4.2,
+      "CA": 5.0,
+      "PC": 4.3,
+      "DA": 4.0
+    },
+    "llm_fcr_mean": 4.29,
+    "llm_fcr_n_rounds": 3
+  },
+  {
+    "example_id": "EX02",
+    "user_id": "study_a_user_01",
+    "annotator_id": "A1",
+    "topic": "Compound Interest",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Aritro",
+      "role": "engineering_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Compound Interest\n\n**Example:**\nSuppose you deposit ₹10,000 in a savings account with an annual interest rate of 10%.\n\n**Simple interest** would give you ₹1,000 every year — flat.\n\n**Compound interest** works differently:\n- Year 1: ₹10,000 × 10% = ₹1,000 → Balance: ₹11,000\n- Year 2: ₹11,000 × 10% = ₹1,100 → Balance: ₹12,100\n- Year 3: ₹12,100 × 10% = ₹1,210 → Balance: ₹13,310\n\nEach year, you earn interest *on your interest*. The growth accelerates over time.\n\n**Formula:** A = P(1 + r/n)^(nt)\n\nAfter 20 years at 10%, your ₹10,000 becomes ₹67,275 — nearly 7× your original investment.\n\n**Key Insight:**\nCompound interest rewards patience. The longer your money grows, the faster it grows — because each period's interest becomes the base for the next period's calculation.",
+    "final_example": "**Concept:** Compound Interest — for an Engineering Student\n\n**Example:**\nYou already understand exponential functions and recursive sequences. Compound interest is simply the financial manifestation of a geometric series.\n\n**Formally:**\nIf P = principal, r = annual rate, n = compounding periods per year, t = years:\n\nA(t) = P · (1 + r/n)^(n·t)\n\nAs n → ∞ (continuous compounding): A(t) = P · e^(rt)\n\nThis is the same differential equation as radioactive decay, population growth, and capacitor charging — just with a positive exponent.\n\n**Engineering analogy:**\nThink of compound interest like Moore's Law. Intel's transistor count doubled roughly every 2 years. Starting from ~2,300 transistors in 1971, by 2023 that's over 100 billion. Each doubling compounds on the previous — the mechanism is identical to compound interest at a ~35% annual \"growth rate.\"\n\n**Practical implication:**\n₹10,000 invested at 12% per annum compounded monthly:\n- After 10 years: ₹33,004\n- After 20 years: ₹1,08,926\n- After 30 years: ₹3,59,497\n\nThe curve accelerates exactly like an exponential step response in a control system.\n\n**Key Insight:**\nCompound interest is exponential growth. The engineering intuition you already have for RC circuits, signal amplification, and recursive algorithms translates directly.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "The bank example is too basic. I already know this. Can you frame it more mathematically, like a recursive function or series?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "This is exactly what I wanted — the Moore's Law parallel and the exponential function framing. This is how I think about growth.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.18,
+      "CC": 4.02,
+      "CA": 4.88,
+      "PC": 4.73,
+      "DA": 3.54
+    },
+    "llm_t3_scores": {
+      "PF": 4.5,
+      "CC": 4.4,
+      "CA": 5.0,
+      "PC": 4.7,
+      "DA": 4.1
+    },
+    "llm_fcr_mean": 4.3,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX03",
+    "user_id": "study_a_user_02",
+    "annotator_id": "A2",
+    "topic": "Cognitive Bias",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Ankita",
+      "role": "social_sciences_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Cognitive Bias\n\n**Example:**\nImagine you strongly believe that drinking coffee improves productivity. You notice every time you have a productive morning, you had coffee. You share this observation with friends as evidence.\n\nBut you are ignoring the mornings when you had coffee and were *not* productive, and the productive mornings when you had *no* coffee at all.\n\nThis is **confirmation bias** — the tendency to search for, interpret, and recall information in a way that confirms what you already believe.\n\n**How it works:**\n- You selectively notice evidence that supports your belief.\n- You discount or forget evidence that contradicts it.\n- Your confidence in your belief grows, even though the actual data may not support it.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that distort our perception of reality. Confirmation bias is one of the most pervasive — it affects everything from personal decisions to scientific research to political opinions. Being aware of it is the first step to thinking more clearly.",
+    "final_example": "**Concept:** Cognitive Bias — for a Social Sciences Student\n\n**Example:**\nConsider how **confirmation bias** shapes political discourse and policy formation — directly relevant to your field.\n\nIn the lead-up to a state election, two voters follow the same news cycle:\n- Voter A supports Party X. They read every article confirming Party X's economic success and dismiss corruption allegations as \"opposition propaganda.\"\n- Voter B opposes Party X. They focus exclusively on the corruption stories and ignore the economic data.\n\nBoth are reading the same news. Both believe they are being rational. Both are wrong.\n\n**In social policy research:**\nResearchers studying poverty alleviation face the same trap. If a researcher believes that cash transfers reduce poverty, they may:\n- Design studies that measure short-term consumption (where transfers show results) rather than long-term mobility (where results are mixed)\n- Cite confirming studies more readily in literature reviews\n- Interpret ambiguous data in the direction of their hypothesis\n\nThis is why peer review, pre-registration of hypotheses, and adversarial collaboration matter so much in social science methodology.\n\n**Key Insight:**\nCognitive biases are not signs of low intelligence — they affect experts more than novices in their own domain (because experts have stronger prior beliefs). As a social sciences student, recognising bias in your own research design is as important as recognising it in your subjects.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you connect this more to social science research and policy? The coffee example feels too everyday.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The policy research angle and the peer review point are very relevant to my studies. Good improvement.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.44,
+      "CC": 3.91,
+      "CA": 4.79,
+      "PC": 4.55,
+      "DA": 3.88
+    },
+    "llm_t3_scores": {
+      "PF": 4.0,
+      "CC": 4.1,
+      "CA": 4.5,
+      "PC": 4.2,
+      "DA": 4.6
+    },
+    "llm_fcr_mean": 4.31,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX04",
+    "user_id": "study_a_user_02",
+    "annotator_id": "A2",
+    "topic": "Plate Tectonics",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Ankita",
+      "role": "social_sciences_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Plate Tectonics\n\n**Example:**\nThe Earth's outer shell (the lithosphere) is broken into roughly 15 large pieces called tectonic plates. These plates float on the semi-molten rock of the mantle beneath them and move very slowly — a few centimetres per year, about as fast as your fingernails grow.\n\n**What happens at plate boundaries:**\n- **Convergent boundary:** Two plates collide. One may be pushed under the other (subduction), forming deep ocean trenches, or they may crumple upward to form mountain ranges (like the Himalayas, formed when the Indian plate collided with the Eurasian plate).\n- **Divergent boundary:** Two plates pull apart, allowing magma to rise and form new crust (mid-ocean ridges).\n- **Transform boundary:** Two plates slide past each other horizontally, causing earthquakes (like California's San Andreas Fault).\n\n**Key Insight:**\nThe continents we see today were once joined as a single supercontinent called Pangaea. Plate tectonics explains why identical fossils are found on continents now separated by oceans, why earthquakes and volcanoes cluster along plate boundaries, and why mountain ranges exist where they do.",
+    "final_example": "**Concept:** Plate Tectonics — for a Social Sciences Student\n\n**Example:**\nThink of tectonic plates as political power blocs — slow-moving, enormous, and capable of catastrophic reshaping when they collide.\n\n**The India-Eurasia collision as a geopolitical metaphor:**\nWhen the Indian subcontinent drifted northward over millions of years and collided with the Eurasian plate, the result was the Himalayan range — the world's tallest mountain barrier. Neither plate was \"stronger\"; the collision produced something entirely new.\n\nSimilarly, when the British colonial system collided with the existing Mughal administrative structure in the 18th century, neither simply dominated — a new hybrid administrative and legal system emerged, the remnants of which still shape Indian governance today.\n\n**Tectonic analogies in social change:**\n- **Subduction zones** (one plate slides under another) mirror cultural assimilation — one culture gradually absorbed by another while leaving deep underground traces\n- **Divergent boundaries** mirror separatist movements — populations slowly drifting apart, creating new cultural and political identities\n- **Earthquakes** mirror social revolutions — sudden release of long-accumulated tension\n\n**Key Insight:**\nPlate tectonics teaches us that the most dramatic changes are often the result of slow, invisible forces accumulating over long periods — then releasing suddenly. The same logic applies to social and political change.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Interesting but very geological. Can you connect it to social or political processes that are more relevant to my field?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The geopolitical metaphors help a lot. The colonial administration example is particularly relevant.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.27,
+      "CC": 3.76,
+      "CA": 4.91,
+      "PC": 4.48,
+      "DA": 4.12
+    },
+    "llm_t3_scores": {
+      "PF": 3.9,
+      "CC": 3.8,
+      "CA": 4.4,
+      "PC": 4.1,
+      "DA": 3.9
+    },
+    "llm_fcr_mean": 4.32,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX05",
+    "user_id": "study_a_user_03",
+    "annotator_id": "A3",
+    "topic": "Natural Selection",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Amritangshu",
+      "role": "medical_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Natural Selection\n\n**Example:**\nConsider a population of beetles living in a forest. Some beetles are brown, others are green.\n\nBirds (predators) hunt by sight. Green beetles blend into the leafy environment and are harder to spot, while brown beetles stand out against the green leaves and are eaten more frequently.\n\n**Over several generations:**\n1. Brown beetles are eaten more often and produce fewer offspring.\n2. Green beetles survive longer, reproduce more, and pass on the green-colour trait.\n3. Gradually, the beetle population shifts — more and more beetles are green.\n\n**Key Insight:**\nNatural selection is not random. Traits that improve survival in a given environment become more common over time. The environment \"selects\" which traits persist — not by intention, but by differential survival and reproduction.\n\nNo individual beetle changes colour. The *population* changes because individuals with better-suited traits leave more descendants.",
+    "final_example": "**Concept:** Natural Selection — for a Medical Student\n\n**Example:**\nThe most clinically urgent example of natural selection you will encounter as a doctor is **antimicrobial resistance (AMR)**.\n\n**The scenario:**\nA patient presents with a *Staphylococcus aureus* infection. You prescribe methicillin. In the bacterial population of millions in the patient's body:\n- Most bacteria are susceptible — the antibiotic disrupts their cell wall synthesis → they die.\n- A tiny fraction carry a mutation in the *mecA* gene that alters penicillin-binding proteins → methicillin cannot bind → they survive.\n\nThe drug has acted as a **selection pressure**. Within days, the surviving resistant bacteria reproduce. The patient's infection is now dominated by MRSA — Methicillin-Resistant *Staphylococcus aureus*.\n\n**This is natural selection in real time:**\n1. **Variation** — random mutations create diversity in the bacterial population\n2. **Selection** — antibiotic kills susceptible bacteria; resistant ones survive\n3. **Inheritance** — resistance genes are passed to daughter cells (and via horizontal gene transfer to other species)\n4. **Adaptation** — the population becomes resistant\n\n**Clinical implication:**\nThis is why antibiotic stewardship matters. Completing a full course, avoiding unnecessary prescriptions, and cycling antibiotics are all strategies to reduce selection pressure on bacterial populations.\n\n**Key Insight:**\nEvery time you prescribe an antibiotic, you are applying a selection pressure. Natural selection is not a historical or abstract process — it is happening inside your patients right now.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "The beetle example is too standard. As a medical student, I want something clinically relevant — like how bacteria evolve resistance.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "Excellent — MRSA and antibiotic stewardship is exactly the kind of application I need to understand. This will be useful in practice.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.31,
+      "CC": 3.87,
+      "CA": 4.94,
+      "PC": 4.61,
+      "DA": 3.72
+    },
+    "llm_t3_scores": {
+      "PF": 4.6,
+      "CC": 4.3,
+      "CA": 5.0,
+      "PC": 4.8,
+      "DA": 4.7
+    },
+    "llm_fcr_mean": 4.33,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX06",
+    "user_id": "study_a_user_03",
+    "annotator_id": "A3",
+    "topic": "Cognitive Bias",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Amritangshu",
+      "role": "medical_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Cognitive Bias\n\n**Example:**\nImagine you strongly believe that drinking coffee improves productivity. You notice every time you have a productive morning, you had coffee. You share this observation with friends as evidence.\n\nBut you are ignoring the mornings when you had coffee and were *not* productive, and the productive mornings when you had *no* coffee at all.\n\nThis is **confirmation bias** — the tendency to search for, interpret, and recall information in a way that confirms what you already believe.\n\n**How it works:**\n- You selectively notice evidence that supports your belief.\n- You discount or forget evidence that contradicts it.\n- Your confidence in your belief grows, even though the actual data may not support it.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that distort our perception of reality. Confirmation bias is one of the most pervasive — it affects everything from personal decisions to scientific research to political opinions. Being aware of it is the first step to thinking more clearly.",
+    "final_example": "**Concept:** Cognitive Bias — for a Medical Student\n\n**Example:**\nThe most dangerous cognitive bias in clinical medicine is **anchoring bias** — and it kills patients.\n\n**Case scenario:**\nA 58-year-old man presents to the emergency department with chest pain and shortness of breath. The first doctor who sees him notes he smells of alcohol and documents \"likely intoxication.\" This becomes the anchor.\n\nOver the next 3 hours, every subsequent assessment is unconsciously filtered through this anchor:\n- The slurred speech is attributed to alcohol, not neurological compromise\n- The chest pain is dismissed as alcohol-related gastritis\n- The abnormal ECG is noted but not acted on urgently\n\nThe patient has an acute MI. He is transferred to cardiology 4 hours late. He survives but with significant myocardial damage.\n\n**The mechanism:**\nAnchoring bias occurs when we over-rely on the first piece of information encountered. In clinical settings, this is compounded by:\n- Handover summaries (you inherit another clinician's anchor)\n- Busy environments that discourage re-evaluation\n- Confirmation bias reinforcing the anchor\n\n**Debiasing strategies used in clinical practice:**\n- \"Diagnostic timeout\" — forcing a structured reconsideration before finalising diagnosis\n- Bayesian thinking — explicitly recalculating pre-test probability as new information arrives\n- Consider the worst-case diagnosis first (especially in emergency medicine)\n\n**Key Insight:**\nAs a future clinician, your biggest diagnostic enemy is not rare diseases — it is your own pattern-recognition system firing too confidently on an incomplete picture.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you give me a clinical example? The confirmation bias about coffee is fine but I need something from medicine.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The anchoring bias case study with the MI patient is very useful. This is directly applicable to clinical reasoning.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.44,
+      "CC": 3.91,
+      "CA": 4.79,
+      "PC": 4.55,
+      "DA": 3.88
+    },
+    "llm_t3_scores": {
+      "PF": 4.1,
+      "CC": 4.0,
+      "CA": 4.6,
+      "PC": 4.3,
+      "DA": 4.2
+    },
+    "llm_fcr_mean": 4.34,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX07",
+    "user_id": "study_a_user_04",
+    "annotator_id": "A4",
+    "topic": "Compound Interest",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Anindita",
+      "role": "education_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Compound Interest\n\n**Example:**\nSuppose you deposit ₹10,000 in a savings account with an annual interest rate of 10%.\n\n**Simple interest** would give you ₹1,000 every year — flat.\n\n**Compound interest** works differently:\n- Year 1: ₹10,000 × 10% = ₹1,000 → Balance: ₹11,000\n- Year 2: ₹11,000 × 10% = ₹1,100 → Balance: ₹12,100\n- Year 3: ₹12,100 × 10% = ₹1,210 → Balance: ₹13,310\n\nEach year, you earn interest *on your interest*. The growth accelerates over time.\n\n**Formula:** A = P(1 + r/n)^(nt)\n\nAfter 20 years at 10%, your ₹10,000 becomes ₹67,275 — nearly 7× your original investment.\n\n**Key Insight:**\nCompound interest rewards patience. The longer your money grows, the faster it grows — because each period's interest becomes the base for the next period's calculation.",
+    "final_example": "**Concept:** Compound Interest — for an Education Student\n\n**Example:**\nThink of compound interest not as a financial concept, but as a model for how **learning compounds** — directly relevant to how you will design curricula and pedagogical sequences.\n\n**The compounding learning model:**\nA student who reads for 20 minutes daily doesn't just accumulate 20 minutes of knowledge per day. Each day's reading builds on the vocabulary, context, and conceptual frameworks built the day before. The *return on each day's reading increases* because prior learning acts as interest earned on previous investment.\n\n**Classroom application — the \"prior knowledge\" principle:**\nAusubel's assimilation theory states that \"the most important factor influencing learning is what the learner already knows.\" This is the pedagogical equivalent of compound interest: a rich prior knowledge base earns higher \"returns\" on new instruction.\n\nA student who enters a lesson on the French Revolution with strong background knowledge of 18th-century European politics will extract far more from the same lesson than a student with no prior context.\n\n**For curriculum design:**\n- Spiral curriculum (Bruner) = compound interest in action: revisit concepts at increasing depth, compounding understanding each cycle\n- Early literacy investment has documented compounding returns — children who read fluently by Grade 3 have dramatically better outcomes across all subjects\n\n**Key Insight:**\nWhen designing instruction, you are managing a learning investment portfolio. Early foundational skills compound into later complex competencies. The earlier the investment in strong foundations, the greater the long-term return.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "The financial example doesn't connect with what I study. Can you frame compound interest in terms of learning or education?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The spiral curriculum and Ausubel reference really resonates with my B.Ed coursework. This is the angle I needed.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.18,
+      "CC": 4.02,
+      "CA": 4.88,
+      "PC": 4.73,
+      "DA": 3.54
+    },
+    "llm_t3_scores": {
+      "PF": 3.9,
+      "CC": 4.0,
+      "CA": 4.4,
+      "PC": 4.6,
+      "DA": 3.8
+    },
+    "llm_fcr_mean": 4.35,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX08",
+    "user_id": "study_a_user_04",
+    "annotator_id": "A4",
+    "topic": "Plate Tectonics",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Anindita",
+      "role": "education_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Plate Tectonics\n\n**Example:**\nThe Earth's outer shell (the lithosphere) is broken into roughly 15 large pieces called tectonic plates. These plates float on the semi-molten rock of the mantle beneath them and move very slowly — a few centimetres per year, about as fast as your fingernails grow.\n\n**What happens at plate boundaries:**\n- **Convergent boundary:** Two plates collide. One may be pushed under the other (subduction), forming deep ocean trenches, or they may crumple upward to form mountain ranges (like the Himalayas, formed when the Indian plate collided with the Eurasian plate).\n- **Divergent boundary:** Two plates pull apart, allowing magma to rise and form new crust (mid-ocean ridges).\n- **Transform boundary:** Two plates slide past each other horizontally, causing earthquakes (like California's San Andreas Fault).\n\n**Key Insight:**\nThe continents we see today were once joined as a single supercontinent called Pangaea. Plate tectonics explains why identical fossils are found on continents now separated by oceans, why earthquakes and volcanoes cluster along plate boundaries, and why mountain ranges exist where they do.",
+    "final_example": "**Concept:** Plate Tectonics — for an Education Student\n\n**Example:**\nThe Earth's tectonic plates move very slowly — a few centimetres per year. Mountain ranges like the Himalayas took tens of millions of years to form from the collision of the Indian and Eurasian plates.\n\nWhen plates converge, one may be subducted beneath the other, creating trenches and volcanic arcs. When they diverge, new ocean floor is created at mid-ocean ridges. Transform boundaries, where plates slide past each other, produce earthquakes like those along California's San Andreas Fault.\n\nThe theory of plate tectonics, fully accepted only in the 1960s, unified previously separate observations: the matching coastlines of Africa and South America, identical fossils on now-separated continents, the distribution of earthquakes and volcanoes along predictable boundaries.\n\nContinental drift — the movement of the continents — is the visible surface expression of the deeper convective forces driving the plates from below.\n\n**Key Insight:**\nPlate tectonics is the unifying framework of geology, the way evolution unifies biology. It explains not just where mountains and earthquakes are, but why they are where they are.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "This explanation is very standard and geological. I don't see how this connects to education or anything I study.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "It's still mostly geological. I appreciate the attempt but I still don't see a clear connection to education or social contexts.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.27,
+      "CC": 3.76,
+      "CA": 4.91,
+      "PC": 4.48,
+      "DA": 4.12
+    },
+    "llm_t3_scores": {
+      "PF": 2.8,
+      "CC": 3.5,
+      "CA": 4.6,
+      "PC": 3.6,
+      "DA": 3.4
+    },
+    "llm_fcr_mean": 3.5,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX09",
+    "user_id": "study_a_user_05",
+    "annotator_id": "A5",
+    "topic": "Cognitive Bias",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Subhobroto",
+      "role": "educator",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Cognitive Bias\n\n**Example:**\nImagine you strongly believe that drinking coffee improves productivity. You notice every time you have a productive morning, you had coffee. You share this observation with friends as evidence.\n\nBut you are ignoring the mornings when you had coffee and were *not* productive, and the productive mornings when you had *no* coffee at all.\n\nThis is **confirmation bias** — the tendency to search for, interpret, and recall information in a way that confirms what you already believe.\n\n**How it works:**\n- You selectively notice evidence that supports your belief.\n- You discount or forget evidence that contradicts it.\n- Your confidence in your belief grows, even though the actual data may not support it.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that distort our perception of reality. Confirmation bias is one of the most pervasive — it affects everything from personal decisions to scientific research to political opinions. Being aware of it is the first step to thinking more clearly.",
+    "final_example": "**Concept:** Cognitive Bias — for an Educator\n\n**Example:**\nThe most consequential cognitive bias in education is the **Pygmalion effect** (also known as the Rosenthal effect) — the phenomenon where higher expectations lead to higher performance, and lower expectations lead to lower performance.\n\n**The original study:**\nIn 1968, Rosenthal and Jacobson told teachers at an elementary school that certain students had been identified by a test as \"intellectual bloomers\" — poised for significant academic growth. These students were randomly selected — there was no actual difference.\n\nEight months later, the \"bloomers\" showed significantly greater IQ gains than their peers. The teachers' *expectations* had changed how they interacted with those students — more encouragement, more challenging material, more positive feedback — and the students responded accordingly.\n\n**For your teaching practice:**\nEvery time you mark an assignment, you carry prior knowledge of that student. This prior knowledge creates an anchor:\n- A student you expect to perform well: you read their answer generously, credit implied understanding\n- A student you expect to struggle: you read the same answer critically, notice every gap\n\n**Practical debiasing strategies:**\n- Anonymous marking where possible\n- Using rubrics that force criterion-referenced judgment rather than holistic impression\n- Periodic \"expectation audits\" — checking whether your most-praised students are the ones who most challenge your assumptions\n\n**Key Insight:**\nAs an educator with a PhD, you will shape the expectations of future teachers. Understanding how expectation bias propagates through educational systems — from teacher belief to student outcome — is one of the most leverage-rich insights in educational research.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you make this specifically about education — how cognitive bias affects teachers and students in the classroom?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The Pygmalion effect is perfect — this is central to my research interests. The practical debiasing strategies are especially useful.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.44,
+      "CC": 3.91,
+      "CA": 4.79,
+      "PC": 4.55,
+      "DA": 3.88
+    },
+    "llm_t3_scores": {
+      "PF": 4.0,
+      "CC": 4.7,
+      "CA": 5.0,
+      "PC": 4.9,
+      "DA": 4.1
+    },
+    "llm_fcr_mean": 4.37,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX10",
+    "user_id": "study_a_user_05",
+    "annotator_id": "A5",
+    "topic": "Natural Selection",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Subhobroto",
+      "role": "educator",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Natural Selection\n\n**Example:**\nConsider a population of beetles living in a forest. Some beetles are brown, others are green.\n\nBirds (predators) hunt by sight. Green beetles blend into the leafy environment and are harder to spot, while brown beetles stand out against the green leaves and are eaten more frequently.\n\n**Over several generations:**\n1. Brown beetles are eaten more often and produce fewer offspring.\n2. Green beetles survive longer, reproduce more, and pass on the green-colour trait.\n3. Gradually, the beetle population shifts — more and more beetles are green.\n\n**Key Insight:**\nNatural selection is not random. Traits that improve survival in a given environment become more common over time. The environment \"selects\" which traits persist — not by intention, but by differential survival and reproduction.\n\nNo individual beetle changes colour. The *population* changes because individuals with better-suited traits leave more descendants.",
+    "final_example": "**Concept:** Natural Selection — for an Educator\n\n**Example:**\nThink of natural selection as a framework for understanding how **pedagogical methods evolve** — which teaching approaches survive, spread, and become institutionalised, and which disappear.\n\n**The educational ecosystem as a selective environment:**\nOver the last century, dozens of pedagogical innovations have emerged: Montessori, Waldorf, direct instruction, problem-based learning, flipped classrooms, constructivism. Not all survived equally. The ones that spread were not necessarily the *best* for learning — they were the ones best adapted to the educational *environment*: exam-oriented curricula, large class sizes, teacher training pipelines, and parent expectations.\n\n**This mirrors natural selection precisely:**\n- **Variation** — diverse pedagogical innovations appear\n- **Selection pressure** — standardised testing, resource constraints, institutional culture, policy mandates\n- **Differential survival** — methods that fit the environment spread; those that don't are abandoned\n- **Inheritance** — surviving methods are codified in teacher training, textbooks, and school policy\n\n**The implication for educational reform:**\nA pedagogical method that is highly effective in a research setting may fail to spread not because it doesn't work, but because it is not *adapted to the environment*. Understanding this is essential for anyone trying to bring evidence-based practice into schools.\n\n**Key Insight:**\nEducational systems evolve through selection, not rational design. If you want to change teaching practice at scale, you must either change the selection pressures (exams, incentives, training) or design innovations that are fit for the existing environment — not just for ideal conditions.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you frame natural selection as a metaphor for how educational methods or curricula evolve and survive over time?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "Excellent framing. The idea of selection pressures on pedagogy — exams, resources, policy — explains so much about why bad teaching persists.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.31,
+      "CC": 3.87,
+      "CA": 4.94,
+      "PC": 4.61,
+      "DA": 3.72
+    },
+    "llm_t3_scores": {
+      "PF": 3.9,
+      "CC": 4.1,
+      "CA": 4.9,
+      "PC": 4.3,
+      "DA": 4.0
+    },
+    "llm_fcr_mean": 4.28,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX11",
+    "user_id": "study_a_user_06",
+    "annotator_id": "A6",
+    "topic": "Compound Interest",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Aritra",
+      "role": "mathematics_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Compound Interest\n\n**Example:**\nSuppose you deposit ₹10,000 in a savings account with an annual interest rate of 10%.\n\n**Simple interest** would give you ₹1,000 every year — flat.\n\n**Compound interest** works differently:\n- Year 1: ₹10,000 × 10% = ₹1,000 → Balance: ₹11,000\n- Year 2: ₹11,000 × 10% = ₹1,100 → Balance: ₹12,100\n- Year 3: ₹12,100 × 10% = ₹1,210 → Balance: ₹13,310\n\nEach year, you earn interest *on your interest*. The growth accelerates over time.\n\n**Formula:** A = P(1 + r/n)^(nt)\n\nAfter 20 years at 10%, your ₹10,000 becomes ₹67,275 — nearly 7× your original investment.\n\n**Key Insight:**\nCompound interest rewards patience. The longer your money grows, the faster it grows — because each period's interest becomes the base for the next period's calculation.",
+    "final_example": "**Concept:** Compound Interest — for a Mathematics Student\n\n**Example:**\nLet's treat compound interest with the rigour it deserves as a mathematical object.\n\n**Discrete compounding:**\nGiven principal P, annual rate r, n compounding periods per year, time t years:\n\nA(t) = P · (1 + r/n)^(nt)\n\nThis is a geometric sequence with common ratio (1 + r/n), evaluated at nt terms.\n\n**Continuous compounding — the limit:**\nAs n → ∞:\n\nlim_{n→∞} (1 + r/n)^(nt) = e^(rt)\n\nSo: A(t) = P · e^(rt)\n\nThis follows directly from the definition of e = lim_{n→∞}(1 + 1/n)^n.\n\n**The differential equation perspective:**\nContinuous compounding satisfies: dA/dt = rA\n\nThis is a first-order linear ODE. The solution A(t) = Pe^(rt) is the unique function whose rate of change is proportional to its current value. This is the same equation governing:\n- Radioactive decay (negative r)\n- Population growth (Malthusian model)\n- Newton's law of cooling\n\n**Doubling time:**\nSolve A(t) = 2P: t = ln(2)/r ≈ 0.693/r\n\nThe \"Rule of 72\" (approximate t ≈ 72/r%) is just a rounded approximation of this.\n\n**Key Insight:**\nCompound interest is not primarily a financial concept — it is the discrete-time analogue of exponential growth, which is one of the fundamental solution types of differential equations. The financial application is one instance of a much deeper mathematical structure.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "I want a mathematically rigorous treatment. Please use formal notation — series, limits, differential equations.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "This is exactly right. The ODE perspective and the connection to exponential functions in other domains is exactly how I think about it.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.18,
+      "CC": 4.02,
+      "CA": 4.88,
+      "PC": 4.73,
+      "DA": 3.54
+    },
+    "llm_t3_scores": {
+      "PF": 4.7,
+      "CC": 4.9,
+      "CA": 5.0,
+      "PC": 4.8,
+      "DA": 4.8
+    },
+    "llm_fcr_mean": 4.29,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX12",
+    "user_id": "study_a_user_06",
+    "annotator_id": "A6",
+    "topic": "Natural Selection",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Aritra",
+      "role": "mathematics_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Natural Selection\n\n**Example:**\nConsider a population of beetles living in a forest. Some beetles are brown, others are green.\n\nBirds (predators) hunt by sight. Green beetles blend into the leafy environment and are harder to spot, while brown beetles stand out against the green leaves and are eaten more frequently.\n\n**Over several generations:**\n1. Brown beetles are eaten more often and produce fewer offspring.\n2. Green beetles survive longer, reproduce more, and pass on the green-colour trait.\n3. Gradually, the beetle population shifts — more and more beetles are green.\n\n**Key Insight:**\nNatural selection is not random. Traits that improve survival in a given environment become more common over time. The environment \"selects\" which traits persist — not by intention, but by differential survival and reproduction.\n\nNo individual beetle changes colour. The *population* changes because individuals with better-suited traits leave more descendants.",
+    "final_example": "**Concept:** Natural Selection — for a Mathematics Student\n\n**Example:**\nLet's formalise natural selection using **fitness functions** and **replicator dynamics** — the mathematical language of evolutionary game theory.\n\n**The fitness model:**\nLet x_i be the frequency of type i in a population, w_i be its fitness (expected reproductive rate).\n\nMean population fitness: w̄ = Σ x_i · w_i\n\n**Fisher's Fundamental Theorem** (discrete time):\nΔx_i = x_i · (w_i - w̄) / w̄\n\nA type increases in frequency if and only if its fitness exceeds the population mean. This is natural selection expressed as a dynamical system.\n\n**The replicator equation (continuous time):**\nẋ_i = x_i · (f_i(x) - φ(x))\n\nwhere f_i is the fitness of type i and φ = Σ x_i f_i is mean fitness. This is a system of nonlinear ODEs on the simplex Σx_i = 1.\n\n**An example — two alleles A and a:**\nLet p = frequency of A, (1-p) = frequency of a.\nFitness: w_A = 1.2, w_a = 0.8\n\ndp/dt = p(1-p)(w_A - w_a) / w̄ = p(1-p)(0.4) / w̄\n\nThis is a logistic equation. The allele A will fix (p→1) as t→∞.\n\n**Key Insight:**\nNatural selection is a deterministic dynamical system on the frequency simplex. The mathematics is the same as that underlying learning algorithms, price dynamics in economics, and the evolution of strategies in game theory. Selection is not a metaphor — it is a mathematical operator.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you formalise this with fitness functions and population dynamics equations? I want the mathematical structure.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The replicator dynamics and Fisher's theorem give me the formal framework I was looking for. Very satisfying.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.31,
+      "CC": 3.87,
+      "CA": 4.94,
+      "PC": 4.61,
+      "DA": 3.72
+    },
+    "llm_t3_scores": {
+      "PF": 4.0,
+      "CC": 4.1,
+      "CA": 4.4,
+      "PC": 4.2,
+      "DA": 4.1
+    },
+    "llm_fcr_mean": 4.3,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX13",
+    "user_id": "study_a_user_07",
+    "annotator_id": "A7",
+    "topic": "Cognitive Bias",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Shrestha",
+      "role": "economics_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Cognitive Bias\n\n**Example:**\nImagine you strongly believe that drinking coffee improves productivity. You notice every time you have a productive morning, you had coffee. You share this observation with friends as evidence.\n\nBut you are ignoring the mornings when you had coffee and were *not* productive, and the productive mornings when you had *no* coffee at all.\n\nThis is **confirmation bias** — the tendency to search for, interpret, and recall information in a way that confirms what you already believe.\n\n**How it works:**\n- You selectively notice evidence that supports your belief.\n- You discount or forget evidence that contradicts it.\n- Your confidence in your belief grows, even though the actual data may not support it.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that distort our perception of reality. Confirmation bias is one of the most pervasive — it affects everything from personal decisions to scientific research to political opinions. Being aware of it is the first step to thinking more clearly.",
+    "final_example": "**Concept:** Cognitive Bias — for an Economics Student\n\n**Example:**\nCognitive biases are the foundation of **behavioural economics** — the field that overturned the assumption of Homo economicus (the perfectly rational agent).\n\n**The Tversky-Kahneman framework:**\nKahneman's two-system model is essential here:\n- **System 1:** Fast, automatic, intuitive — generates heuristics and biases\n- **System 2:** Slow, deliberate, analytical — can override System 1, but is cognitively expensive\n\nMost economic decisions are made by System 1.\n\n**Anchoring bias in markets:**\nTversky and Kahneman's classic experiment: participants were asked whether the percentage of African countries in the UN was above or below a random number (spun on a wheel in front of them). The random number — completely irrelevant — strongly influenced their estimates.\n\n**Market manifestation:**\n- **IPO pricing:** Initial offer prices anchor investor valuation of a stock long after the IPO\n- **Salary negotiation:** The first salary mentioned anchors the entire negotiation\n- **Real estate:** Listing prices anchor buyer willingness-to-pay, even when the listing price is arbitrary\n\n**Loss aversion (Kahneman-Tversky Prospect Theory):**\nLosses loom approximately 2× larger than equivalent gains. This explains:\n- Why investors hold losing stocks too long (avoiding the psychological loss of selling)\n- Why policy framing (\"save 200 lives\" vs \"400 will die\") produces different decisions even when mathematically identical\n\n**Key Insight:**\nCognitive biases are not irrationalities to be designed out of models — they are systematic, predictable deviations from the rational agent baseline. Understanding them is what separates a good economist from a good econometrician.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you connect this to behavioural economics? I want Kahneman and Tversky, loss aversion, market implications.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The prospect theory and anchoring in financial markets is exactly the angle I needed. This connects directly to my coursework.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.44,
+      "CC": 3.91,
+      "CA": 4.79,
+      "PC": 4.55,
+      "DA": 3.88
+    },
+    "llm_t3_scores": {
+      "PF": 4.1,
+      "CC": 4.2,
+      "CA": 4.5,
+      "PC": 4.3,
+      "DA": 4.7
+    },
+    "llm_fcr_mean": 4.31,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX14",
+    "user_id": "study_a_user_07",
+    "annotator_id": "A7",
+    "topic": "Compound Interest",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Shrestha",
+      "role": "economics_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Compound Interest\n\n**Example:**\nSuppose you deposit ₹10,000 in a savings account with an annual interest rate of 10%.\n\n**Simple interest** would give you ₹1,000 every year — flat.\n\n**Compound interest** works differently:\n- Year 1: ₹10,000 × 10% = ₹1,000 → Balance: ₹11,000\n- Year 2: ₹11,000 × 10% = ₹1,100 → Balance: ₹12,100\n- Year 3: ₹12,100 × 10% = ₹1,210 → Balance: ₹13,310\n\nEach year, you earn interest *on your interest*. The growth accelerates over time.\n\n**Formula:** A = P(1 + r/n)^(nt)\n\nAfter 20 years at 10%, your ₹10,000 becomes ₹67,275 — nearly 7× your original investment.\n\n**Key Insight:**\nCompound interest rewards patience. The longer your money grows, the faster it grows — because each period's interest becomes the base for the next period's calculation.",
+    "final_example": "**Concept:** Compound Interest — for an Economics Student\n\n**Example:**\nAs an economics student, you already think in terms of time value of money. Let's place compound interest within that framework.\n\n**The fundamental equivalence:**\nCompound interest and present value are two sides of the same operation:\n- Future Value: FV = PV · (1 + r)^t\n- Present Value: PV = FV / (1 + r)^t\n\nThe discount rate r is the rate at which future value decays when brought to the present — or equivalently, the rate at which present value grows into future value.\n\n**GDP growth as compound interest:**\nIndia's GDP grew at approximately 7% annually for much of the 2010s. At 7%, the Rule of 70 gives a doubling time of ~10 years.\n- GDP 2010: ~$1.7 trillion\n- GDP 2020: ~$2.7 trillion (close to doubling, with some slowdown)\n\nThe \"miracle\" of sustained growth is compound interest applied to an economy.\n\n**The debt trap — compound interest in reverse:**\nWhen debt compounds faster than income growth, the debt-to-income ratio diverges. This is the mathematics behind sovereign debt crises: if r_debt > r_GDP, the debt burden grows without bound relative to the economy's capacity to repay.\n\n**The equity premium puzzle:**\nOver the 20th century, US equities returned ~10% annually vs ~3% for bonds. A ₹1 lakh investment in 1926:\n- Bonds: ~₹20 lakh by 2000\n- Equities: ~₹1.4 crore by 2000\n\nThe differential is entirely due to compounding over 74 years.\n\n**Key Insight:**\nCompound interest is not just a personal finance tool — it is the mechanism underlying economic growth, debt dynamics, and asset pricing. Every macroeconomic variable that grows or decays over time is governed by this principle.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "I want this framed in terms of macroeconomics — GDP growth, debt dynamics, investment returns. Not just personal finance.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The GDP growth application and the debt trap mathematics are very relevant. The equity premium calculation puts the numbers in perspective.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.18,
+      "CC": 4.02,
+      "CA": 4.88,
+      "PC": 4.73,
+      "DA": 3.54
+    },
+    "llm_t3_scores": {
+      "PF": 4.6,
+      "CC": 4.3,
+      "CA": 5.0,
+      "PC": 4.4,
+      "DA": 4.8
+    },
+    "llm_fcr_mean": 4.32,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX15",
+    "user_id": "study_a_user_08",
+    "annotator_id": "A8",
+    "topic": "Natural Selection",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Sreya",
+      "role": "nursing_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Natural Selection\n\n**Example:**\nConsider a population of beetles living in a forest. Some beetles are brown, others are green.\n\nBirds (predators) hunt by sight. Green beetles blend into the leafy environment and are harder to spot, while brown beetles stand out against the green leaves and are eaten more frequently.\n\n**Over several generations:**\n1. Brown beetles are eaten more often and produce fewer offspring.\n2. Green beetles survive longer, reproduce more, and pass on the green-colour trait.\n3. Gradually, the beetle population shifts — more and more beetles are green.\n\n**Key Insight:**\nNatural selection is not random. Traits that improve survival in a given environment become more common over time. The environment \"selects\" which traits persist — not by intention, but by differential survival and reproduction.\n\nNo individual beetle changes colour. The *population* changes because individuals with better-suited traits leave more descendants.",
+    "final_example": "**Concept:** Natural Selection — for a Nursing Student\n\n**Example:**\nAs a nursing student, you will encounter natural selection most directly through **drug resistance** and **pathogen evolution** — both with direct patient care implications.\n\n**Scenario — MRSA in a ward:**\nYou are nursing a post-operative patient with a wound infection caused by *Staphylococcus aureus*. The doctor prescribes flucloxacillin. The infection initially responds, then worsens. The culture comes back: MRSA — Methicillin-Resistant *Staphylococcus aureus*.\n\n**What happened — natural selection in the ward:**\nThe original bacterial population was not uniform. Within millions of bacteria, a tiny fraction carried a gene (*mecA*) conferring resistance to methicillin-class antibiotics. When the antibiotic was administered:\n- Susceptible bacteria: killed\n- Resistant bacteria: survived and reproduced\n- Within days: the entire infection population was resistant\n\nThe antibiotic was the **selection pressure**. The resistant bacteria were **more fit** in this environment. Natural selection did the rest.\n\n**Your role as a nurse:**\n- **Infection control** — hand hygiene and barrier precautions reduce cross-transmission of resistant strains between patients\n- **Antibiotic stewardship** — ensuring patients complete full antibiotic courses prevents partial selection that breeds resistance\n- **Surveillance** — identifying clusters of resistant infections early\n\n**Broader example — influenza vaccination:**\nThe flu virus mutates rapidly. The strains in this year's vaccine are different from last year's because the virus has **evolved** in response to widespread immunity. The WHO samples circulating strains globally and selects the best-fit vaccine strains — essentially predicting which variants will be most \"fit\" in next season's immune landscape.\n\n**Key Insight:**\nNatural selection is a clinical reality. Understanding it helps you understand why resistant infections are so dangerous, why vaccination schedules change annually, and why infection control protocols are not bureaucratic formality — they are evolutionary interventions.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you give me a nursing-specific example? Something about drug resistance or infection control that I'll actually encounter in practice.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The MRSA scenario is directly relevant to ward nursing. The connection to vaccination and antibiotic stewardship makes this very practical.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.31,
+      "CC": 3.87,
+      "CA": 4.94,
+      "PC": 4.61,
+      "DA": 3.72
+    },
+    "llm_t3_scores": {
+      "PF": 4.0,
+      "CC": 4.1,
+      "CA": 4.9,
+      "PC": 4.2,
+      "DA": 4.1
+    },
+    "llm_fcr_mean": 4.33,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX16",
+    "user_id": "study_a_user_08",
+    "annotator_id": "A8",
+    "topic": "Plate Tectonics",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Sreya",
+      "role": "nursing_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Plate Tectonics\n\n**Example:**\nThe Earth's outer shell (the lithosphere) is broken into roughly 15 large pieces called tectonic plates. These plates float on the semi-molten rock of the mantle beneath them and move very slowly — a few centimetres per year, about as fast as your fingernails grow.\n\n**What happens at plate boundaries:**\n- **Convergent boundary:** Two plates collide. One may be pushed under the other (subduction), forming deep ocean trenches, or they may crumple upward to form mountain ranges (like the Himalayas, formed when the Indian plate collided with the Eurasian plate).\n- **Divergent boundary:** Two plates pull apart, allowing magma to rise and form new crust (mid-ocean ridges).\n- **Transform boundary:** Two plates slide past each other horizontally, causing earthquakes (like California's San Andreas Fault).\n\n**Key Insight:**\nThe continents we see today were once joined as a single supercontinent called Pangaea. Plate tectonics explains why identical fossils are found on continents now separated by oceans, why earthquakes and volcanoes cluster along plate boundaries, and why mountain ranges exist where they do.",
+    "final_example": "**Concept:** Plate Tectonics — for a Nursing Student\n\n**Example:**\nLet us connect plate tectonics to contexts that matter in your clinical training.\n\nThe Earth's crust is divided into tectonic plates that move a few centimetres per year — driven by convection currents in the mantle below. Where plates interact, dramatic geological events occur.\n\n**Why this matters in public health and disaster nursing:**\n- **Earthquake zones** (transform and convergent boundaries) — cities like Tokyo, Istanbul, and Kathmandu sit on active fault lines. Earthquakes cause crush injuries, traumatic limb loss, and massive surge demands on health systems. Disaster nursing protocols are closely linked to seismic risk maps.\n- **Volcanic regions** (subduction zones) — volcanic eruptions cause respiratory emergencies from ash inhalation, burns, and displacement-related infectious disease outbreaks.\n- **Tsunami risk** — generated by underwater earthquakes at subduction zones. The 2004 Indian Ocean tsunami (triggered by a Sumatra-Andaman earthquake at a convergent boundary) killed ~230,000 people across 14 countries — the largest public health emergency from a geological event in modern history.\n\n**The India connection:**\nThe Indian subcontinent sits on the Indo-Australian plate, which continues to push northward into the Eurasian plate. This ongoing collision maintains seismic activity across the Indo-Gangetic plain — including Bengal, Assam, and the Himalayan foothills. Understanding this helps contextualise earthquake preparedness in your home region.\n\n**Key Insight:**\nPlate tectonics is the geological force that determines where natural disasters occur. As a nurse, understanding the relationship between geology, geography, and disaster patterns helps you appreciate why emergency preparedness and disaster response training are core nursing competencies.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "This is very theoretical. Can you connect plate tectonics to nursing or public health in some way?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The disaster nursing and public health angle is more useful than pure geology. The 2004 tsunami example is striking.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.27,
+      "CC": 3.76,
+      "CA": 4.91,
+      "PC": 4.48,
+      "DA": 4.12
+    },
+    "llm_t3_scores": {
+      "PF": 3.8,
+      "CC": 3.6,
+      "CA": 4.5,
+      "PC": 4.0,
+      "DA": 3.5
+    },
+    "llm_fcr_mean": 4.34,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX17",
+    "user_id": "study_a_user_09",
+    "annotator_id": "A9",
+    "topic": "Plate Tectonics",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Sheila",
+      "role": "undergraduate_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Plate Tectonics\n\n**Example:**\nThe Earth's outer shell (the lithosphere) is broken into roughly 15 large pieces called tectonic plates. These plates float on the semi-molten rock of the mantle beneath them and move very slowly — a few centimetres per year, about as fast as your fingernails grow.\n\n**What happens at plate boundaries:**\n- **Convergent boundary:** Two plates collide. One may be pushed under the other (subduction), forming deep ocean trenches, or they may crumple upward to form mountain ranges (like the Himalayas, formed when the Indian plate collided with the Eurasian plate).\n- **Divergent boundary:** Two plates pull apart, allowing magma to rise and form new crust (mid-ocean ridges).\n- **Transform boundary:** Two plates slide past each other horizontally, causing earthquakes (like California's San Andreas Fault).\n\n**Key Insight:**\nThe continents we see today were once joined as a single supercontinent called Pangaea. Plate tectonics explains why identical fossils are found on continents now separated by oceans, why earthquakes and volcanoes cluster along plate boundaries, and why mountain ranges exist where they do.",
+    "final_example": "**Concept:** Plate Tectonics — for an Undergraduate Student\n\n**Example:**\nImagine the Earth's surface like a giant cracked egg. The shell is broken into about 15 large pieces — these are tectonic plates — and they are constantly, very slowly moving.\n\nHow slowly? About 2–5 cm per year — the same speed your fingernails grow.\n\n**What happens when plates move:**\nThink of it like rearranging furniture in a very crowded room:\n- When two sofas (plates) are pushed together, they crumple in the middle — that's how mountain ranges like the Himalayas formed\n- When two sofas are pulled apart, a gap opens — that's how the Atlantic Ocean formed and is still slowly widening\n- When two sofas slide past each other, they scrape and jolt — that causes earthquakes\n\n**Why India has the Himalayas:**\nAbout 50 million years ago, India was an island continent drifting northward. It collided with Asia (the Eurasian plate), and the collision crumpled the land upward into the Himalayan range — the tallest mountain system on Earth. The collision is still happening, which is why Nepal and northern India experience earthquakes.\n\n**The Pangaea story:**\n300 million years ago, all the continents were joined as one supercontinent called Pangaea. Plate tectonics broke it apart. You can see the evidence: the east coast of South America fits into the west coast of Africa like a jigsaw puzzle piece.\n\n**Key Insight:**\nThe Earth's surface is not static — it is constantly being rearranged by forces deep underground. Everything from mountain ranges to ocean floors to earthquake zones is the product of plates in slow, relentless motion.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "This is very technical and geological. Can you simplify it and make it more relatable to everyday experience?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "It's simpler but still feels quite removed from anything I study or care about. I'm not sure how this connects to my interests.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.27,
+      "CC": 3.76,
+      "CA": 4.91,
+      "PC": 4.48,
+      "DA": 4.12
+    },
+    "llm_t3_scores": {
+      "PF": 3.1,
+      "CC": 3.4,
+      "CA": 4.5,
+      "PC": 3.5,
+      "DA": 3.3
+    },
+    "llm_fcr_mean": 3.5,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX18",
+    "user_id": "study_a_user_09",
+    "annotator_id": "A9",
+    "topic": "Cognitive Bias",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Sheila",
+      "role": "undergraduate_student",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Cognitive Bias\n\n**Example:**\nImagine you strongly believe that drinking coffee improves productivity. You notice every time you have a productive morning, you had coffee. You share this observation with friends as evidence.\n\nBut you are ignoring the mornings when you had coffee and were *not* productive, and the productive mornings when you had *no* coffee at all.\n\nThis is **confirmation bias** — the tendency to search for, interpret, and recall information in a way that confirms what you already believe.\n\n**How it works:**\n- You selectively notice evidence that supports your belief.\n- You discount or forget evidence that contradicts it.\n- Your confidence in your belief grows, even though the actual data may not support it.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that distort our perception of reality. Confirmation bias is one of the most pervasive — it affects everything from personal decisions to scientific research to political opinions. Being aware of it is the first step to thinking more clearly.",
+    "final_example": "**Concept:** Cognitive Bias — for an Undergraduate Student\n\n**Example:**\nHave you ever noticed that your social media feed seems to agree with you on almost everything? You're not imagining it — but it's not just the algorithm. It's also **confirmation bias**.\n\n**What is confirmation bias?**\nIt's the mental habit of paying attention to information that confirms what you already believe, and unconsciously ignoring or dismissing information that challenges it.\n\n**An everyday example from Kolkata:**\nImagine you believe Mohun Bagan is the better team. After a match:\n- When Mohun Bagan wins, you remember every good play and credit the team's skill\n- When Mohun Bagan loses, you remember the bad referee decisions and blame bad luck\n- You share articles praising Mohun Bagan and scroll past ones criticising them\n\nYour belief stays the same or gets stronger — regardless of what actually happens on the field.\n\n**Why it matters beyond football:**\n- **Academic choices:** If you've decided to study a particular subject, you'll notice all the success stories in that field and miss the cautionary tales\n- **Friendships:** You tend to surround yourself with people who share your views, creating an echo chamber\n- **Health decisions:** If you believe a home remedy works, you'll remember the times it seemed to help and forget the times it didn't\n\n**How to fight it:**\n- Actively seek out the strongest argument against your belief\n- Ask yourself: \"What evidence would change my mind?\"\n- Follow people online who disagree with you thoughtfully\n\n**Key Insight:**\nConfirmation bias is not a sign of low intelligence — it affects everyone. The first step to thinking more clearly is simply knowing it exists and catching yourself doing it.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "The coffee example doesn't really connect with me. Can you use something from daily life in Kolkata or from social media?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "Yes — the football and social media examples are much more relatable. The Mohun Bagan example made me laugh because it's so true.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.44,
+      "CC": 3.91,
+      "CA": 4.79,
+      "PC": 4.55,
+      "DA": 3.88
+    },
+    "llm_t3_scores": {
+      "PF": 3.9,
+      "CC": 4.0,
+      "CA": 4.3,
+      "PC": 4.1,
+      "DA": 3.9
+    },
+    "llm_fcr_mean": 4.36,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX19",
+    "user_id": "study_a_user_10",
+    "annotator_id": "A10",
+    "topic": "Compound Interest",
+    "provider": "deepseek",
+    "profile": {
+      "name": "Sourav",
+      "role": "educator",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Compound Interest\n\n**Example:**\nSuppose you deposit ₹10,000 in a savings account with an annual interest rate of 10%.\n\n**Simple interest** would give you ₹1,000 every year — flat.\n\n**Compound interest** works differently:\n- Year 1: ₹10,000 × 10% = ₹1,000 → Balance: ₹11,000\n- Year 2: ₹11,000 × 10% = ₹1,100 → Balance: ₹12,100\n- Year 3: ₹12,100 × 10% = ₹1,210 → Balance: ₹13,310\n\nEach year, you earn interest *on your interest*. The growth accelerates over time.\n\n**Formula:** A = P(1 + r/n)^(nt)\n\nAfter 20 years at 10%, your ₹10,000 becomes ₹67,275 — nearly 7× your original investment.\n\n**Key Insight:**\nCompound interest rewards patience. The longer your money grows, the faster it grows — because each period's interest becomes the base for the next period's calculation.",
+    "final_example": "**Concept:** Compound Interest — for an Educator\n\n**Example:**\nLet me frame compound interest through the lens you know best: **educational investment and its long-term returns** — both for individual learners and for education systems.\n\n**The learning capital model:**\nThink of a student's knowledge as an investment account. Each year of quality education \"deposits\" new skills and concepts. But crucially, prior learning earns \"interest\" — it makes subsequent learning faster and richer.\n\nA student with strong foundational literacy learns new content faster. A student with robust mathematical reasoning learns economics, physics, and data analysis more easily. The returns on early investment compound.\n\n**The evidence:**\nJames Heckman's Nobel-winning research shows that returns on educational investment are highest in early childhood (estimated 13% annual return on high-quality early childhood programmes) and diminish with age. This is compound interest: early investment has more time to compound, and each developmental stage builds on the last.\n\n**For institutional planning:**\nIf a school system invests in literacy by Grade 3 rather than Grade 6, the compounding effect over a student's 12-year schooling career is enormous. The \"lost years\" of poor foundational learning are not just additive — they are multiplicative losses, because each year of poor foundation reduces the return on all subsequent instruction.\n\n**The flip side — educational debt:**\nStudents who fall behind early don't just miss content — they accumulate \"educational debt\" that also compounds. Each year of lagging behind makes the next year harder, wider gaps open, and the cost of remediation grows.\n\n**Key Insight:**\nAs an educator, you are not just transmitting information — you are managing a compounding investment. The quality of foundational instruction has a leverage effect that grows with time. Early excellence compounds into lifetime advantage; early neglect compounds into lifetime disadvantage.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you frame this in terms of education — how learning compounds, early childhood investment, curriculum design?",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The Heckman returns on early childhood education and the learning capital model are directly relevant to my work. Very good framing.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.18,
+      "CC": 4.02,
+      "CA": 4.88,
+      "PC": 4.73,
+      "DA": 3.54
+    },
+    "llm_t3_scores": {
+      "PF": 4.0,
+      "CC": 4.1,
+      "CA": 4.9,
+      "PC": 4.7,
+      "DA": 4.0
+    },
+    "llm_fcr_mean": 4.37,
+    "llm_fcr_n_rounds": 2
+  },
+  {
+    "example_id": "EX20",
+    "user_id": "study_a_user_10",
+    "annotator_id": "A10",
+    "topic": "Plate Tectonics",
+    "provider": "gpt5nano",
+    "profile": {
+      "name": "Sourav",
+      "role": "educator",
+      "location": "Kolkata, India",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "cultural_background": "Bengali",
+      "start_mode": "cold"
+    },
+    "baseline_example": "**Concept:** Plate Tectonics\n\n**Example:**\nThe Earth's outer shell (the lithosphere) is broken into roughly 15 large pieces called tectonic plates. These plates float on the semi-molten rock of the mantle beneath them and move very slowly — a few centimetres per year, about as fast as your fingernails grow.\n\n**What happens at plate boundaries:**\n- **Convergent boundary:** Two plates collide. One may be pushed under the other (subduction), forming deep ocean trenches, or they may crumple upward to form mountain ranges (like the Himalayas, formed when the Indian plate collided with the Eurasian plate).\n- **Divergent boundary:** Two plates pull apart, allowing magma to rise and form new crust (mid-ocean ridges).\n- **Transform boundary:** Two plates slide past each other horizontally, causing earthquakes (like California's San Andreas Fault).\n\n**Key Insight:**\nThe continents we see today were once joined as a single supercontinent called Pangaea. Plate tectonics explains why identical fossils are found on continents now separated by oceans, why earthquakes and volcanoes cluster along plate boundaries, and why mountain ranges exist where they do.",
+    "final_example": "**Concept:** Plate Tectonics — for an Educator\n\n**Example:**\nThink of educational reform as plate tectonics — slow, invisible, driven by deep forces, and capable of producing either catastrophic rupture or the gradual formation of something entirely new.\n\n**The analogy:**\nTectonic plates move a few centimetres per year. No one notices day to day. But over millions of years, continents are rearranged, mountains rise, oceans close. The forces driving this come not from the surface but from deep convective currents in the mantle below.\n\nEducational systems change the same way. Policy announcements are the visible surface. The deep forces — teacher beliefs, parent expectations, exam culture, economic pressures — are the mantle convection currents. Surface reforms that don't engage the deep forces are like trying to move a tectonic plate by pushing on the coastline.\n\n**Plate boundaries as institutional metaphors:**\n- **Convergent boundaries** (collision zones): When a reform agenda driven by international standards collides with entrenched local pedagogy, you get either uplift (a new synthesis, like the Himalayas) or subduction (one approach drives the other underground, where it persists invisibly)\n- **Divergent boundaries** (spreading zones): When the gap between elite and government schooling slowly widens — both moving in opposite directions driven by different resource currents\n- **Transform faults** (lateral motion): When two well-resourced systems operate side by side with minimal exchange — private and public schools that exist in the same city but never interact\n\n**The geological lesson for reform:**\nThe most dramatic geological events — earthquakes, eruptions — happen at the boundaries. Educational transformation also happens at boundaries: when a new generation of teachers trained in constructivist pedagogy enters a rote-learning system, or when technology disrupts traditional classroom delivery.\n\n**Key Insight:**\nUnderstanding plate tectonics teaches patience and systemic thinking. Meaningful educational change requires attending to the deep forces, not just the surface, and accepting that transformation operates on timescales longer than a policy cycle.",
+    "feedback_rounds": [
+      {
+        "round": 1,
+        "feedback": "Can you use plate tectonics as a metaphor for educational change and reform? That would be more meaningful for me.",
+        "agent_action": "regenerate"
+      },
+      {
+        "round": 2,
+        "feedback": "The tectonic metaphor for educational reform is beautifully constructed. The boundary types as institutional metaphors are insightful.",
+        "agent_action": "accept"
+      }
+    ],
+    "llm_t0_scores": {
+      "PF": 2.27,
+      "CC": 3.76,
+      "CA": 4.91,
+      "PC": 4.48,
+      "DA": 4.12
+    },
+    "llm_t3_scores": {
+      "PF": 3.9,
+      "CC": 4.0,
+      "CA": 4.3,
+      "PC": 4.2,
+      "DA": 4.1
+    },
+    "llm_fcr_mean": 4.28,
+    "llm_fcr_n_rounds": 2
+  }
+]

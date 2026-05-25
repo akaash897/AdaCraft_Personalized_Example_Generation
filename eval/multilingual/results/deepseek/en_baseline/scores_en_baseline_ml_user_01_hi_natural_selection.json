@@ -1,0 +1,62 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "topic": "Natural Selection",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the concept of natural selection by using Priya's context as a student in Mumbai, making the analogy relatable and grounded in her real-world experience. It also incorporates her learning style (example-based) and cultural setting, which enhances engagement. The depth of the analogy aligns well with a high school level, providing a clear, step-by-step explanation that is accessible and pedagogically sound. The framing remains within the biological domain, using familiar academic scenarios, and the analogy is appropriate for the topic.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Priya's role as a student in Mumbai, integrating her environment and learning context, which makes it highly personalized.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances biological concepts with familiar academic scenarios, matching a medium complexity level suitable for high school students. It avoids overly technical language or overly simplistic analogies.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The analogy correctly captures core principles of natural selection, such as variation, selection pressure, differential survival, and inheritance, without factual errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, with a clear progression from the analogy to the key insight, making the concept accessible and memorable for learners. The flow is smooth, and the analogy bridges well to the scientific concept.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy uses a familiar academic setting and study strategies, which are appropriate for biology and natural selection, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Natural Selection\n\nExample:\nPriya, imagine you're observing a population of peppered moths in a forest near Mumbai. These moths come in two main colors: light gray and dark gray. They rest on tree trunks during the day, and birds are their main predators.\n\nInitial Situation (Before Industrialization):\n- The tree trunks are light-colored due to lichen growth.\n- Light gray moths are well camouflaged against the light bark.\n- Dark gray moths stand out and are easily spotted and eaten by birds.\n- Result: Most moths in the population are light gray.\n\nEnvironmental Change:\n- Factories are built, and soot from pollution darkens the tree trunks over time.\n- Now, the dark gray moths are better camouflaged against the dark bark.\n- The light gray moths become highly visible to birds.\n\nProcess of Natural Selection:\n1. Variation: The moth population has inherited color variation (light vs. dark).\n2. Selection Pressure: Bird predation acts as the pressure. Birds eat the moths they can see most easily.\n3. Differential Survival & Reproduction: In the polluted forest, dark moths survive longer and have more opportunities to reproduce than light moths.\n4. Heredity: The surviving dark moths pass their \"dark color\" genes to their offspring.\n5. Outcome Over Generations: The proportion of dark moths in the population increases significantly. The population has adapted to its changed environment.\n\nKey Insight:\nNatural selection is not random; it's the process where traits that improve an organism's chance of survival and reproduction in a specific environment become more common in the population over generations. The environment determines which traits are advantageous.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nPriya, as a student in Mumbai, you experience a form of natural selection every time you prepare for a major exam, like the board exams or a competitive entrance test. The pressure to succeed is high, and only certain \"traits\" or strategies lead to advancement.\n\nScenario: The Evolution of Study Methods\nImagine your class is a population of students. Initially, everyone uses a variety of study techniques: some cram the night before, some make detailed notes, some form study groups, and some rely solely on classroom lectures.\n\nThe \"environmental pressure\" is the difficult, application-based board exam. This exam favors students who can solve complex problems, not just memorize facts.\n\n- **Variation:** Students naturally have different study habits (traits).\n- **Selection Pressure:** The tough exam acts as the selector. Methods that lead to poor understanding (like pure cramming) result in low scores.\n- **Differential Survival/Reproduction:** Students who used effective strategies (like consistent practice and concept mapping) score well. They \"survive\" (pass) and get to \"reproduce\" their methods—they become tutors, their notes are copied, and their techniques are adopted by peers next year.\n- **Inheritance:** The next batch of students inherits and refines these successful study strategies. Over several exam cycles, ineffective methods become rare in the class population, while adaptive, high-yield techniques become common.\n\nA numeric look: If 100 students try a new \"active recall\" technique and 85 of them score above 90%, while only 20 out of 100 students using \"passive rereading\" achieve that mark, the active recall method is being \"selected for\" and will spread.\n\nKey Insight:\nNatural selection isn't about being the \"best\" in an absolute sense, but about being better adapted to a specific, pressing environment. In your academic environment, the traits (study strategies) that reliably lead to high scores are the ones that get passed on and become the new norm.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nPriya, imagine you're observing a population of peppered moths in a forest near Mumbai. These moths come in two main colors: light gray and dark gray. They rest on tree trunks during the day, and birds are their main predators.\n\nInitial Situation (Before Industrialization):\n- The tree trunks are light-colored due to lichen growth.\n- Light gray moths are well camouflaged against the light bark.\n- Dark gray moths stand out and are easily spotted and eaten by birds.\n- Result: Most moths in the population are light gray.\n\nEnvironmental Change:\n- Factories are built, and soot from pollution darkens the tree trunks over time.\n- Now, the dark gray moths are better camouflaged against the dark bark.\n- The light gray moths become highly visible to birds.\n\nProcess of Natural Selection:\n1. Variation: The moth population has inherited color variation (light vs. dark).\n2. Selection Pressure: Bird predation acts as the pressure. Birds eat the moths they can see most easily.\n3. Differential Survival & Reproduction: In the polluted forest, dark moths survive longer and have more opportunities to reproduce than light moths.\n4. Heredity: The surviving dark moths pass their \"dark color\" genes to their offspring.\n5. Outcome Over Generations: The proportion of dark moths in the population increases significantly. The population has adapted to its changed environment.\n\nKey Insight:\nNatural selection is not random; it's the process where traits that improve an organism's chance of survival and reproduction in a specific environment become more common in the population over generations. The environment determines which traits are advantageous.",
+        "example_id": "ex_e1b4ee178f5d4c37",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nPriya, as a student in Mumbai, you experience a form of natural selection every time you prepare for a major exam, like the board exams or a competitive entrance test. The pressure to succeed is high, and only certain \"traits\" or strategies lead to advancement.\n\nScenario: The Evolution of Study Methods\nImagine your class is a population of students. Initially, everyone uses a variety of study techniques: some cram the night before, some make detailed notes, some form study groups, and some rely solely on classroom lectures.\n\nThe \"environmental pressure\" is the difficult, application-based board exam. This exam favors students who can solve complex problems, not just memorize facts.\n\n- **Variation:** Students naturally have different study habits (traits).\n- **Selection Pressure:** The tough exam acts as the selector. Methods that lead to poor understanding (like pure cramming) result in low scores.\n- **Differential Survival/Reproduction:** Students who used effective strategies (like consistent practice and concept mapping) score well. They \"survive\" (pass) and get to \"reproduce\" their methods—they become tutors, their notes are copied, and their techniques are adopted by peers next year.\n- **Inheritance:** The next batch of students inherits and refines these successful study strategies. Over several exam cycles, ineffective methods become rare in the class population, while adaptive, high-yield techniques become common.\n\nA numeric look: If 100 students try a new \"active recall\" technique and 85 of them score above 90%, while only 20 out of 100 students using \"passive rereading\" achieve that mark, the active recall method is being \"selected for\" and will spread.\n\nKey Insight:\nNatural selection isn't about being the \"best\" in an absolute sense, but about being better adapted to a specific, pressing environment. In your academic environment, the traits (study strategies) that reliably lead to high scores are the ones that get passed on and become the new norm.",
+        "example_id": "ex_87cb8ff13f7b444c"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-13T19:48:10.873167"
+}

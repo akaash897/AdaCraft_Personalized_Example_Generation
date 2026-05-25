@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_02",
+  "lang": "ta",
+  "topic": "Compound Interest",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including Meena's profession, location, and learning preferences, making it relevant and engaging for her. The complexity level is appropriate, providing a clear explanation of the compound interest formula with step-by-step calculations suitable for a medium level learner. The factual content about the formula and interest calculation is accurate and aligns with standard financial principles. The structure is logical, starting from the scenario, moving through the calculation, and ending with a key insight, which supports pedagogical clarity. The analogy and framing are appropriate for the domain of finance and savings, matching the topic of compound interest.\n\nPF: The example incorporates Meena's profile details, profession, location, and learning style, making it highly personalized. It uses a relatable scenario involving her goal of funding a course, which is relevant to her context.  \nAXIS_SCORE: 5\n\nCC: The complexity matches the medium level specified, with clear explanations, basic formulas, and straightforward calculations suitable for someone with professional education but not advanced financial expertise.  \nAXIS_SCORE: 4\n\nCA: The content correctly states the compound interest formula, correctly applies the calculation, and accurately explains the concept without errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from scenario to calculation to insight, making it easy to follow and understand. The key insight reinforces the learning point effectively.  \nAXIS_SCORE: 5\n\nDA: The framing and analogies are appropriate for a financial topic, using real-world savings and investment context relevant to the user's profile, with domain-specific vocabulary.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Compound Interest\n\nExample:\nMeena, a nurse in Chennai, wants to save for a ₹30,000 certification fee to advance her career. She decides to invest ₹5,000 each year in a savings account that offers 7% annual compound interest.\n\nHere’s how her savings grow over the first three years:\n\n**Year 1:**\n*   **Initial Deposit:** ₹5,000\n*   **Interest Earned (7% of ₹5,000):** ₹350\n*   **Total at Year-End:** ₹5,000 + ₹350 = ₹5,350\n\n**Year 2:**\n*   **Starting Amount:** The total from Year 1, which is ₹5,350\n*   **Interest Earned (7% of ₹5,350):** ₹374.50\n*   **Total at Year-End:** ₹5,350 + ₹374.50 = ₹5,724.50\n\n**Year 3:**\n*   **Starting Amount:** The total from Year 2, which is ₹5,724.50\n*   **Interest Earned (7% of ₹5,724.50):** ₹400.72\n*   **Total at Year-End:** ₹5,724.50 + ₹400.72 = ₹6,125.22\n\nNotice how in Year 3, Meena earned more interest (₹400.72) than in Year 1 (₹350), even though she didn't add more money. This is because the interest is calculated on the growing balance, including the previous year's interest.\n\n**Practice Problem:**\nIf Meena continues this plan for 5 years, what will be the total amount in her account at the end of Year 5? (Calculate the totals for Year 4 and Year 5).\n\nKey Insight:\nCompound interest makes your money grow faster over time because you earn interest on both your initial savings and the accumulated interest.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nMeena, a nurse in Chennai, wants to fund her certification in critical care. The course costs ₹80,000. She decides to invest her savings now to let it grow over two years instead of trying to save the full amount later.\n\nHer Investment Plan:\n  - Initial Amount (Principal): ₹65,000\n  - Annual Interest Rate: 7% (a typical rate for a fixed deposit in India)\n  - Investment Period: 2 years\n  - Compounding: Annually (interest is calculated and added once per year)\n\nThe Calculation:\n  The formula for compound interest is: A = P(1 + r)^t\n  Where:\n    A = the future value of the investment\n    P = the principal amount (₹65,000)\n    r = the annual interest rate (0.07)\n    t = the number of years (2)\n\n  Step 1: Calculate the growth factor: (1 + 0.07)^2 = (1.07)^2 = 1.1449\n  Step 2: Calculate the final amount: A = 65,000 * 1.1449 = ₹74,418.50\n\nThe Result:\n  After two years, Meena's initial investment of ₹65,000 has grown to ₹74,418.50. While this is close to her goal, it shows how much she needs to save from her salary or invest a slightly larger principal to reach her ₹80,000 target.\n\nKey Insight:\n  The extra ₹9,418.50 is the interest earned. The power of compounding means she earned interest not just on her initial ₹65,0",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nMeena, a nurse in Chennai, wants to save for a ₹30,000 certification fee to advance her career. She decides to invest ₹5,000 each year in a savings account that offers 7% annual compound interest.\n\nHere’s how her savings grow over the first three years:\n\n**Year 1:**\n*   **Initial Deposit:** ₹5,000\n*   **Interest Earned (7% of ₹5,000):** ₹350\n*   **Total at Year-End:** ₹5,000 + ₹350 = ₹5,350\n\n**Year 2:**\n*   **Starting Amount:** The total from Year 1, which is ₹5,350\n*   **Interest Earned (7% of ₹5,350):** ₹374.50\n*   **Total at Year-End:** ₹5,350 + ₹374.50 = ₹5,724.50\n\n**Year 3:**\n*   **Starting Amount:** The total from Year 2, which is ₹5,724.50\n*   **Interest Earned (7% of ₹5,724.50):** ₹400.72\n*   **Total at Year-End:** ₹5,724.50 + ₹400.72 = ₹6,125.22\n\nNotice how in Year 3, Meena earned more interest (₹400.72) than in Year 1 (₹350), even though she didn't add more money. This is because the interest is calculated on the growing balance, including the previous year's interest.\n\n**Practice Problem:**\nIf Meena continues this plan for 5 years, what will be the total amount in her account at the end of Year 5? (Calculate the totals for Year 4 and Year 5).\n\nKey Insight:\nCompound interest makes your money grow faster over time because you earn interest on both your initial savings and the accumulated interest.",
+        "example_id": "ex_def374fa1c0f46dc",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Compound Interest\n\nExample:\nMeena, a nurse in Chennai, wants to save for her Advanced Cardiac Life Support (ACLS) certification, which costs ₹45,000. She has ₹25,000 to invest and plans to put it in a fixed deposit for 3 years. The bank offers an annual interest rate of 7%, compounded once per year.\n\nHere’s how her money grows:\n\n**Year 1:**\n*   **Principal:** ₹25,000\n*   **Interest Earned (7%):** ₹25,000 × 0.07 = ₹1,750\n*   **Total at Year End:** ₹25,000 + ₹1,750 = ₹26,750\n\n**Year 2:**\n*   **New Principal:** ₹26,750 (the previous total)\n*   **Interest Earned (7%):** ₹26,750 × 0.07 = ₹1,872.50\n*   **Total at Year End:** ₹26,750 + ₹1,872.50 = ₹28,622.50\n\n**Year 3:**\n*   **New Principal:** ₹28,622.50\n*   **Interest Earned (7%):** ₹28,622.50 × 0.07 = ₹2,003.58\n*   **Total at Year End:** ₹28,622.50 + ₹2,003.58 = **₹30,626.08**\n\nUsing the formula A = P(1 + r)^t, we get:\nA = 25,000 × (1 + 0.07)³\nA = 25,000 × (1.07)³\nA = 25,000 × 1.225043 = **₹30,626.08**\n\nAfter 3 years, Meena will have ₹30,626.08. She is still short of her ₹45,000 goal, showing how important it is to start with a larger principal or a longer time frame.\n\n**Practice Problem:**\nIf Meena adds another ₹10,000 to her account at the *start* of Year 2, how much total money will she have after 3 years?\n\nKey Insight:\nCompound interest means you earn interest not only on your initial money but also on the interest you've already accumulated. This creates a \"snowball effect\" where your savings grow faster over time.",
+        "example_id": "ex_f4422bb4255b44b8"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Compound Interest\n\nExample:\nMeena, a nurse in Chennai, wants to fund her certification in critical care. The course costs ₹80,000. She decides to invest her savings now to let it grow over two years instead of trying to save the full amount later.\n\nHer Investment Plan:\n  - Initial Amount (Principal): ₹65,000\n  - Annual Interest Rate: 7% (a typical rate for a fixed deposit in India)\n  - Investment Period: 2 years\n  - Compounding: Annually (interest is calculated and added once per year)\n\nThe Calculation:\n  The formula for compound interest is: A = P(1 + r)^t\n  Where:\n    A = the future value of the investment\n    P = the principal amount (₹65,000)\n    r = the annual interest rate (0.07)\n    t = the number of years (2)\n\n  Step 1: Calculate the growth factor: (1 + 0.07)^2 = (1.07)^2 = 1.1449\n  Step 2: Calculate the final amount: A = 65,000 * 1.1449 = ₹74,418.50\n\nThe Result:\n  After two years, Meena's initial investment of ₹65,000 has grown to ₹74,418.50. While this is close to her goal, it shows how much she needs to save from her salary or invest a slightly larger principal to reach her ₹80,000 target.\n\nKey Insight:\n  The extra ₹9,418.50 is the interest earned. The power of compounding means she earned interest not just on her initial ₹65,0",
+        "example_id": "ex_1b00109e964e4591"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:19:09.425634"
+}

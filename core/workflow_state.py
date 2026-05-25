@@ -57,6 +57,9 @@ class PersonalizedGenerationState(TypedDict, total=False):
     workflow_started_at: Optional[str]
     workflow_completed_at: Optional[str]
 
+    # Language
+    response_language: Optional[str]       # e.g. "Hindi" — detected from topic or feedback
+
     # Evaluation mode — disables capability layers for ablation study
     # None | "t0" | "t1" | "t2" | "t3"
     # t0: no profile, no context, no feedback processing

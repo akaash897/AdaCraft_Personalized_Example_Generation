@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Natural Selection",
+  "topic_str": "प्राकृतिक चयन",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 3,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.4,
+    "reasoning": "The example effectively uses a relatable scenario set in Mumbai, involving a local context (mosquitoes and spray), which aligns well with Priya's profile. It employs a story format that is example-based, making the concept of natural selection accessible and memorable for a high school student. The explanation is structured clearly, with step-by-step stages that mirror the scientific process, facilitating understanding. The analogy of mosquitoes and spray is appropriate for biology and uses domain-specific vocabulary, enhancing domain appropriateness.\n\nHowever, the complexity level is somewhat simplified, focusing on basic principles without delving into genetic mechanisms or more detailed evolutionary concepts, which might be slightly below the \"medium\" complexity level Priya prefers. The factual content appears accurate, with no evident errors, and the structure supports learning well.\n\n[PF] PERSONALIZATION FIDELITY — The example is tailored to Priya's profile, using Mumbai as the setting, and the scenario involves a local, relatable context. It also matches her learning style by providing a concrete, example-based explanation.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation covers the core concepts of natural selection at a basic level suitable for high school, but it doesn't incorporate more advanced details like genetic variation mechanisms or evolutionary timescales, which would align better with a medium complexity level.  \nAXIS_SCORE: 3\n\n[CA] CONCEPTUAL ACCURACY — The scientific content is correct, accurately describing variation, selection, inheritance, and the resulting change in population, with no errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from variation to result, and the analogy makes the concept memorable. The step-by-step format enhances clarity and learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of mosquitoes and spray is highly appropriate for biology, and the framing aligns well with the topic of natural selection, making it domain-specific and suitable.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 3, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example simplifies the concept and makes it more relatable to urban life, which aligns with the user's desire for domain relevance. It removes the specific example of crows using cars to crack nuts, replacing it with a more general scenario of city-dwelling crows adapting to food sources, thus addressing the critique effectively.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes understanding through everyday life examples, which the original example lacked, focusing instead on city-dwelling birds. The regenerated example introduces a relatable scenario involving mosquitoes and a household setting, aligning better with daily life and making the concept more accessible. Therefore, it effectively addresses the user's feedback.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "अवधारणा:\nप्राकृतिक चयन विकास का मूल तंत्र है। यह वह प्रक्रिया है जिसमें वे जीव जो अपने पर्यावरण के अनुकूल होते हैं, अधिक जीवित रहते हैं और अधिक संतानें उत्पन्न करते हैं। इसके चार मुख्य तत्व होते हैं: विविधता (जीवों में भिन्नता), उत्तराधिकार (संतानें अपने माता-पिता के लक्षण प्राप्त करती हैं), चयन (पर्यावरण कुछ लक्षणों को प्राथमिकता देता है), और समय के साथ होने वाला परिवर्तन।\n\nउदाहरण:\nमुंबई के कौवे और ट्रैफिक\n\n1.  **विविधता (Variation):** मुंबई में रहने वाले कौवों की आबादी में सभी कौवे एक जैसे नहीं होते। कुछ कौवे स्वभाव से अधिक साहसी या अधिक बुद्धिमान होते हैं।\n\n2.  **समस्या (Selective Pressure):** लोग अक्सर सड़क किनारे अखरोट जैसे कठोर खोल वाले मेवे फेंक देते हैं। ये मेवे खाने में अच्छे तो होते हैं, लेकिन कौवे की चोंच से इन्हें तोड़ना बहुत कठिन होता है। यह कठोर खोल कौवों के लिए एक 'चयन दबाव' (selective pressure) बन जाता है—जो उन्हें भोजन प्राप्त करने से रोकता है।\n\n3.  **समाधान (Adaptation):** एक बुद्धिमान कौवा इस समस्या का समाधान ढूंढ लेता है। वह सड़क पर एक कार को आते हुए देखता है और जानबूझकर अखरोट को सड़क पर रख देता है। जब कार का टायर अखरोट के ऊपर से गुजरता है, तो वह टूट जाता है। कौवा कार के आगे निकलने का इंतज़ार करता है और फिर आसानी से टूटा हुआ अखरोट खा लेता है।\n\n4.  **उत्तरजीविता और प्रजनन (Survival and Reproduction):** जो कौवे इस ट्रिक को सीख जाते हैं, उन्हें भोजन का एक आसान और भरोसेमंद स्रोत मिल जाता है। वे स्वस्थ और शक्तिशाली बन जाते हैं, जिससे उनके जीवित रहने की संभावना बढ़ जाती है और वे अधिक अंडे देकर संतानें पैदा कर पाते हैं।\n\n5.  **उत्तराधिकार (Inheritance):** यह सीखा हुआ व्यवहार अगली पीढ़ी में भी जाता है। छोटे कौवे अपने माता-पिता या अन्य सफल कौवों को देखकर यह ट्रिक सीखते हैं। इस तरह, यह अनुकूलन पूरी कौवों की आबादी में फैल जाता है।\n\nमुख्य अंतर्दृष्टि:\nप्राकृतिक",
+    "final_example": "अवधारणा: प्राकृतिक चयन\n\nउदाहरण: मुंबई में मच्छरों की कहानी\n\nकल्पना कीजिए कि प्रिया मुंबई में रहती है। हर मानसून में, उसके घर में मच्छर बहुत बढ़ जाते हैं। परिवार उन्हें भगाने के लिए एक खास ब्रांड का मच्छर भगाने का स्प्रे या कॉइल खरीदता है।\n\n1.  **विविधता (Variation):** शुरुआत में, स्प्रे बहुत असरदार होता है। लेकिन मच्छरों की आबादी में कुछ मच्छरों के पास एक ऐसा गुण होता है जिससे वे स्प्रे के केमिकल के प्रति थोड़े कम संवेदनशील होते हैं। यह गुण उनके जीन में होता है।\n\n2.  **चयन (Selection):** जब परिवार स्प्रे का इस्तेमाल करता है, तो सामान्य मच्छर मर जाते हैं। लेकिन वे कुछ मच्छर, जिनमें प्रतिरोध का गुण है, बच जाते हैं।\n\n3.  **विरासत (Inheritance):** ये बचे हुए मच्छर प्रजनन करते हैं। उनके बच्चों को भी वही 'प्रतिरोध' वाला गुण विरासत में मिलता है।\n\n4.  **समय के साथ परिणाम (Result over Time):** अगर परिवार साल-दर-साल यही स्प्रे इस्तेमाल करता रहे, तो कुछ साल बाद प्रिया नोटिस करती है कि स्प्रे अब उतना असरदार नहीं रहा। क्यों? क्योंकि अब मच्छरों की पूरी आबादी में 'प्रतिरोध' वाला गुण फैल चुका है। स्प्रे ने उन मच्छरों को खत्म कर दिया जो संवेदनशील थे, और सिर्फ उन्हीं को छोड़ा जो प्रतिरोधी थे।\n\nमुख्य अंतर्दृष्टि:\nपर्यावरण (जैसे मच्छर भगाने का स्प्रे) एक 'चयनकर्ता' की तरह काम करता है, जो उन जीवों को चुनता है जो उसके लिए सबसे बेहतर अनुकूलित हैं। यह प्रक्रिया कई पीढ़ियों में होती है और पूरी आबादी के गुणों को बदल देती है।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "अवधारणा:\nप्राकृतिक चयन विकास का मूल तंत्र है। यह वह प्रक्रिया है जिसमें वे जीव जो अपने पर्यावरण के अनुकूल होते हैं, अधिक जीवित रहते हैं और अधिक संतानें उत्पन्न करते हैं। इसके चार मुख्य तत्व होते हैं: विविधता (जीवों में भिन्नता), उत्तराधिकार (संतानें अपने माता-पिता के लक्षण प्राप्त करती हैं), चयन (पर्यावरण कुछ लक्षणों को प्राथमिकता देता है), और समय के साथ होने वाला परिवर्तन।\n\nउदाहरण:\nमुंबई के कौवे और ट्रैफिक\n\n1.  **विविधता (Variation):** मुंबई में रहने वाले कौवों की आबादी में सभी कौवे एक जैसे नहीं होते। कुछ कौवे स्वभाव से अधिक साहसी या अधिक बुद्धिमान होते हैं।\n\n2.  **समस्या (Selective Pressure):** लोग अक्सर सड़क किनारे अखरोट जैसे कठोर खोल वाले मेवे फेंक देते हैं। ये मेवे खाने में अच्छे तो होते हैं, लेकिन कौवे की चोंच से इन्हें तोड़ना बहुत कठिन होता है। यह कठोर खोल कौवों के लिए एक 'चयन दबाव' (selective pressure) बन जाता है—जो उन्हें भोजन प्राप्त करने से रोकता है।\n\n3.  **समाधान (Adaptation):** एक बुद्धिमान कौवा इस समस्या का समाधान ढूंढ लेता है। वह सड़क पर एक कार को आते हुए देखता है और जानबूझकर अखरोट को सड़क पर रख देता है। जब कार का टायर अखरोट के ऊपर से गुजरता है, तो वह टूट जाता है। कौवा कार के आगे निकलने का इंतज़ार करता है और फिर आसानी से टूटा हुआ अखरोट खा लेता है।\n\n4.  **उत्तरजीविता और प्रजनन (Survival and Reproduction):** जो कौवे इस ट्रिक को सीख जाते हैं, उन्हें भोजन का एक आसान और भरोसेमंद स्रोत मिल जाता है। वे स्वस्थ और शक्तिशाली बन जाते हैं, जिससे उनके जीवित रहने की संभावना बढ़ जाती है और वे अधिक अंडे देकर संतानें पैदा कर पाते हैं।\n\n5.  **उत्तराधिकार (Inheritance):** यह सीखा हुआ व्यवहार अगली पीढ़ी में भी जाता है। छोटे कौवे अपने माता-पिता या अन्य सफल कौवों को देखकर यह ट्रिक सीखते हैं। इस तरह, यह अनुकूलन पूरी कौवों की आबादी में फैल जाता है।\n\nमुख्य अंतर्दृष्टि:\nप्राकृतिक",
+        "example_id": "ex_2afe7af32c784f08",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "अवधारणा: प्राकृतिक चयन\n\nउदाहरण:\nमुंबई के कौवे प्राकृतिक चयन का एक बेहतरीन उदाहरण हैं।\n\nविविधता:\nमुंबई के कौवे अलग-अलग आकार और व्यवहार के होते हैं। कुछ कौवे बहुत साहसी होते हैं, जबकि कुछ डरपोक। कुछ कौवे इंसानों के पास आने में सहज होते हैं, जबकि कुछ दूर रहते हैं।\n\nविरासत:\nकौवों के ये गुण उनके बच्चों में भी जाते हैं। साहसी कौवे के बच्चे भी साहसी होते हैं और डरपोक कौवे के बच्चे भी डरपोक।\n\nचयनात्मक दबाव:\nमुंबई में भोजन के लिए संघर्ष है। स्ट्रीट फूड विक्रेताओं के पास खाने के टुकड़े होते हैं। जो कौवे साहसी हैं और इंसानों के पास जाकर खाना चुरा सकते हैं, उन्हें अधिक भोजन मिलता है। डरपोक कौवे भूखे रह जाते हैं।\n\nसमय:\nकई पीढ़ियों के बाद, मुंबई के कौवे बहुत साहसी हो गए हैं। वे इंसानों के पास आकर खाना चुराते हैं और डरते नहीं हैं।\n\nमुख्य अंतर्दृष्टि:\nप्राकृतिक चयन उन जीवों को प्राथमिकता देता है जो अपने वातावरण के अनुसार ढल जाते हैं। मुंबई के कौवे ने शहर के भोजन स्रोतों के अनुसार खुद को बदल लिया है।",
+        "example_id": "ex_37e3fb096b044f32"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "अवधारणा: प्राकृतिक चयन\n\nउदाहरण: मुंबई में मच्छरों की कहानी\n\nकल्पना कीजिए कि प्रिया मुंबई में रहती है। हर मानसून में, उसके घर में मच्छर बहुत बढ़ जाते हैं। परिवार उन्हें भगाने के लिए एक खास ब्रांड का मच्छर भगाने का स्प्रे या कॉइल खरीदता है।\n\n1.  **विविधता (Variation):** शुरुआत में, स्प्रे बहुत असरदार होता है। लेकिन मच्छरों की आबादी में कुछ मच्छरों के पास एक ऐसा गुण होता है जिससे वे स्प्रे के केमिकल के प्रति थोड़े कम संवेदनशील होते हैं। यह गुण उनके जीन में होता है।\n\n2.  **चयन (Selection):** जब परिवार स्प्रे का इस्तेमाल करता है, तो सामान्य मच्छर मर जाते हैं। लेकिन वे कुछ मच्छर, जिनमें प्रतिरोध का गुण है, बच जाते हैं।\n\n3.  **विरासत (Inheritance):** ये बचे हुए मच्छर प्रजनन करते हैं। उनके बच्चों को भी वही 'प्रतिरोध' वाला गुण विरासत में मिलता है।\n\n4.  **समय के साथ परिणाम (Result over Time):** अगर परिवार साल-दर-साल यही स्प्रे इस्तेमाल करता रहे, तो कुछ साल बाद प्रिया नोटिस करती है कि स्प्रे अब उतना असरदार नहीं रहा। क्यों? क्योंकि अब मच्छरों की पूरी आबादी में 'प्रतिरोध' वाला गुण फैल चुका है। स्प्रे ने उन मच्छरों को खत्म कर दिया जो संवेदनशील थे, और सिर्फ उन्हीं को छोड़ा जो प्रतिरोधी थे।\n\nमुख्य अंतर्दृष्टि:\nपर्यावरण (जैसे मच्छर भगाने का स्प्रे) एक 'चयनकर्ता' की तरह काम करता है, जो उन जीवों को चुनता है जो उसके लिए सबसे बेहतर अनुकूलित हैं। यह प्रक्रिया कई पीढ़ियों में होती है और पूरी आबादी के गुणों को बदल देती है।",
+        "example_id": "ex_ef7170f639ac4441"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:12:41.910684"
+}

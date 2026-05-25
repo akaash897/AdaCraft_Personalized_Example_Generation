@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Cognitive Bias",
+  "topic_str": "संज्ञानात्मक पूर्वाग्रह",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using Priya's name, location, and context, making it relatable for the user. The complexity level appears appropriate, with a clear explanation of availability bias and its implications, suitable for a high school student. The factual content about the bias is accurate, correctly illustrating how recent or vivid information influences perception of risk. The structure is logical, starting with the concept, example, and concluding with questions and reflection, which supports pedagogical clarity. The analogy of media reports and personal decision-making is well-suited to the domain of cognitive biases, making the framing appropriate and engaging.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Priya's name, location, and context, aligning well with the user's profile, especially considering her learning style and background.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation is detailed enough to match a high school student's medium complexity level, avoiding overly technical language while providing sufficient depth.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of availability bias and its effects is factually correct, with no evident errors or misconceptions.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from concept to example, and ending with questions that reinforce learning. The bridge between theory and example is explicit.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of media reports influencing perception of weather and health risks is appropriate for cognitive biases, fitting well within the psychology domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique was that the original example did not relate to their domain, and they requested an example relevant to their field. The regenerated example shifts from a market scenario to a mobile phone purchase, which is more aligned with consumer electronics, but it still remains within a general consumer context rather than a specific domain the user might be interested in. Therefore, it partially addresses the critique by providing a different example, but it may not fully satisfy the user's need for domain-specific relevance if their domain is different.\n\nCOMPLIANCE_SCORE: 3\nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that examples should be relatable to everyday life for better understanding. The regenerated example about Mumbai's monsoon and daily weather-related decisions directly connects to common experiences, making it more relatable than the original example about buying a smartphone. Therefore, it effectively addresses the critique.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "विषय: संज्ञानात्मक पूर्वाग्रह\n\nउदाहरण:\nPriya, Mumbai के एक स्थानीय बाज़ार में आम खरीदने जाती है। पहला स्टाल वाला बताता है: “1 किलोग्राम आम Rs 180.” दूसरा स्टाल Rs 120/kg बताता है, तीसरे स्टाल Rs 100/kg देता है. Priya ने पहले दाम को-anchor- के रूप में पकड़ लिया (Anchoring), इसलिए बाकी दाम उसे अक्सर कम या ज्यादा लगते नहीं, बल्कि उसे ठीक-ठाक लगता है। negociación करते हुए वह अंत में Rs 110/kg पर मान लेती है। यदि सामान्य कीमत इस सीज़न में औसतन Rs 100/kg के आसपास होती है, तो Priya ने anchoring की वजह से लगभग Rs 10 अधिक चुकाए हैं, जबकि पहली कीमत Rs 180 होने के कारण उसने यह मान लिया कि 110 उसका अच्छा समझौता है।\n\nपूर्वाग्रह की पहचान:\n- स्थिरांक पूर्वाग्रह (Anchoring bias)\n\nयह निर्णय कैसे biased करता है:\n- पहला दिया गया मूल्य mental anchor बन जाता है। उसके बाद के मूल्य उसी-anchor- के आस-पास judgment को प्रभावित कर देते हैं, भले वास्तविक मूल्य या सामान्य बाजार कीमत उससे अलग हो। इस नमूने में Priya ने 180 को anchor मान लिया, जिससे 110 में भी उसे “उच्च-तकफ” लग रहा था जबकि वास्तविक मूल्य करीब 100 होना चाहिए था।\n\nकैसे कम किया जा सकता है (दैनंदिन जीवन के उपाय):\n- तीन जगहों से समान वस्तुएँ के दाम माँगे और तुलना करें।\n- खरीद से पहले अपने लक्ष्य मूल्य तय रखें (उदाहरण: 100 Rs/kg) और उसी पर टिके रहें।\n- बाजार के सामान्य दामों की जानकारी रखें (सीजनल रेंज याद रखें) ताकि anchor प्रभाव कम हो।\n- अगर संभव हो तो \"थोड़ा इंतज़ार/रुकें\" और फिर से मूल्य देखने के बाद निर्णय लें।\n- मूल्य-वार्ता के दौरान सीधे पूछें: “क्या यह सबसे सही कीमत है?” और वैकल्पिक दामों के साथ तुलना को प्राथमिकता दें।\n\nमुख्य निष्कर्ष:\nपहला दाम एक मन-स्थिर अंक (anchor) बना देता है और उसके बाद के निर्णय उस अंक की दिशा में घूमते हैं; सही मूल्य जानने के लिए कई स्रोत से दाम लेने और लक्ष्य मूल्य निर्धारित रखना सबसे प्रभावी बचाव है।",
+    "final_example": "संकल्पना: संज्ञानात्मक पूर्वाग्रह — उपलब्धता पूर्वाग्रह\n\nउदाहरण:\nप्रिया मुंबई के मानसून में कॉलेज जा रही है। पिछले कुछ दिनों में टीवी और सोशल मीडिया पर बारिश के कारण ट्रैफिक jams, जलभराव और डेंगू के खतरे से जुड़ी खबरें खूब दिखीं। इन खबरों के कारण उसे ऐसा लगने लगा कि बारिश के दिनों में ट्रैफिक और जलभराव अक्सर होते हैं, और डेंगू का खतरा भी शहर के कई हिस्सों में हो सकता है।\n\nसंख्या-उदाहरण:\n- पिछले 3 दिनों में बारिश के कारण जलभराव की खबरें 2 बार दिखीं (2/3 दिन). Priya सोचती है: बारिश के दिनों में जलभराव की संभावना लगभग 66% है.\n- डेंगू से जुड़ी खबरों की ताज़ा कवरेज भी अधिक दिखने लगी, इसलिए उसे लगता है कि अब उसके इलाके में यह खतरा अधिक है।\n\nनतीजा:\nइस उपलब्धता पूर्वाग्रह के कारण Priya ने निर्णय लिया कि बारिश के दिनों में बाहर जाना कम जोखिमभरा नहीं लगता, इसलिए वह आज कॉलेज तक पहुँचने के लिए मेट्रो लेती है और छाता/मच्छरदानी आदि साथ रखती है, ताकि बारिश और डेंगू के खतरे के बावजूद काम चला सके।\n\nप्रश्न:\n1) यह कौन-सा पूर्वाग्रह है?\n2) इसे रोकने के लिए एक सरल उपाय क्या हो सकता है?\n\nप्रतिबिंब:\nमुंबई जैसे तेज़-चलन वाले शहर में रोज़मर्रा की खबरें लोगों के निर्णयों को जल्दी प्रभावित कर सकती हैं। उपलब्ध जानकारी हमें सही जोखिम-मान नहीं दे पाती, क्योंकि दूर से सुनी गयी घटनाओं की याद आसानी से अधिक महसूस होती है।\n\nमुख्य विचार:\nउपलब्ध जानकारी की याददाश्त से निर्णय लेना जोखिम भरा हो सकता है; विभिन्न स्रोतों से सतही नहीं बल्कि समग्र और औपचारिक जोखिम-आकलन करना मददगार है।\n\nReflective prompt:\nआप मुंबई में अपने दैनिक निर्णयों में यह bias कैसे देखेंगे, और कौन सा सरल तरीका अपनाकर अधिक संतुलित निर्णय ले पाएंगे?",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "विषय: संज्ञानात्मक पूर्वाग्रह\n\nउदाहरण:\nPriya, Mumbai के एक स्थानीय बाज़ार में आम खरीदने जाती है। पहला स्टाल वाला बताता है: “1 किलोग्राम आम Rs 180.” दूसरा स्टाल Rs 120/kg बताता है, तीसरे स्टाल Rs 100/kg देता है. Priya ने पहले दाम को-anchor- के रूप में पकड़ लिया (Anchoring), इसलिए बाकी दाम उसे अक्सर कम या ज्यादा लगते नहीं, बल्कि उसे ठीक-ठाक लगता है। negociación करते हुए वह अंत में Rs 110/kg पर मान लेती है। यदि सामान्य कीमत इस सीज़न में औसतन Rs 100/kg के आसपास होती है, तो Priya ने anchoring की वजह से लगभग Rs 10 अधिक चुकाए हैं, जबकि पहली कीमत Rs 180 होने के कारण उसने यह मान लिया कि 110 उसका अच्छा समझौता है।\n\nपूर्वाग्रह की पहचान:\n- स्थिरांक पूर्वाग्रह (Anchoring bias)\n\nयह निर्णय कैसे biased करता है:\n- पहला दिया गया मूल्य mental anchor बन जाता है। उसके बाद के मूल्य उसी-anchor- के आस-पास judgment को प्रभावित कर देते हैं, भले वास्तविक मूल्य या सामान्य बाजार कीमत उससे अलग हो। इस नमूने में Priya ने 180 को anchor मान लिया, जिससे 110 में भी उसे “उच्च-तकफ” लग रहा था जबकि वास्तविक मूल्य करीब 100 होना चाहिए था।\n\nकैसे कम किया जा सकता है (दैनंदिन जीवन के उपाय):\n- तीन जगहों से समान वस्तुएँ के दाम माँगे और तुलना करें।\n- खरीद से पहले अपने लक्ष्य मूल्य तय रखें (उदाहरण: 100 Rs/kg) और उसी पर टिके रहें।\n- बाजार के सामान्य दामों की जानकारी रखें (सीजनल रेंज याद रखें) ताकि anchor प्रभाव कम हो।\n- अगर संभव हो तो \"थोड़ा इंतज़ार/रुकें\" और फिर से मूल्य देखने के बाद निर्णय लें।\n- मूल्य-वार्ता के दौरान सीधे पूछें: “क्या यह सबसे सही कीमत है?” और वैकल्पिक दामों के साथ तुलना को प्राथमिकता दें।\n\nमुख्य निष्कर्ष:\nपहला दाम एक मन-स्थिर अंक (anchor) बना देता है और उसके बाद के निर्णय उस अंक की दिशा में घूमते हैं; सही मूल्य जानने के लिए कई स्रोत से दाम लेने और लक्ष्य मूल्य निर्धारित रखना सबसे प्रभावी बचाव है।",
+        "example_id": "ex_b9617577e22b4ada",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "संकल्पना: संज्ञानात्मक पूर्वाग्रह\n\nउदाहरण:\nस्थिति:\nमुंबई के बाजार में Priya एक स्थानीय मोबाइल बाजार में उपयोग किया गया स्मार्टफोन खरीदना चाहती है। विक्रेता फोन दिखाते हुए कहता है, \"यह फोन नया था 12,000 रुपए में, पर आज 11,000 रुपए में दे रहा हूँ।\" Priya पहली कीमत सुनते हीanchoring (एंकरिंग) से प्रभावित होती है और सोचती है कि 9,000–9,500 में मिल सकता है। वह कहते हैं, \"मैं 9,500 तक मान लूँगा,\" पर विक्रेता 10,500 पर टिक गया। Priya अंततः लगभग 10,500 के आसपास ही भुगतान कर देती है। अगर Priya ने दूसरी दुकानों से भी मूल्य नहीं देखा होता, तो यह कीमत एंकरिंग के कारण अधिक तय हो जाती।\n\nपुष्टि के लिए प्रमुख बिंदु:\n- फोन स्थिति: लगभग 1 वर्ष पुराना, बैट्री क्षमता ~70%.\n- मुंबई के स्थानीय बाज़ारों में मूल्य निर्धारण अक्सर शुरुआती कीमत से प्रभावित होता है।\n\nपहचानने योग्य पूर्वाग्रह:\n- एंकरिंग (Anchoring) — पहली बताई गई कीमत मनोवैज्ञानिक रूप से एक संदर्भ बन जाती है, जिसके आस-पास आगे की बातचीत और निर्णय आकार लेती है।\n\nप्रश्न (Priya से): कृपया इन बिंदुओं पर विचार करें\n1) यह पूर्वाग्रह कौन सा है और यह स्थिति क्यों स्पष्ट रूप से एंकरिंग दिखाती है?\n2) इस एंकरिंग से Priya के निर्णय में कौन से तरीके से पक्षपात हुआ? उसका नुकसान क्या हुआ?\n3) दैनिक जीवन में इस पूर्वाग्रह को कम करने के लिए आप कौन-सी रणनीतियाँ अपनाएंगी?\n\nनीचे pragmatic strategies (दैनिक जीवन उपाय):\n- अक्सर एक से अधिक विक्रेताओं से मूल्य जानना और तुलना करना ताकि कोई एक समानांतर एंकरिंग असर न रहे।\n- खरीदने से पहले वस्तु की वास्तविक मूल्य/स्थिति पर आधारित अपनी खुद की सीमा तय करना और उसे सख्ती से रखना।\n- शुरुआती कीमत को खुद से न बताएं; विक्रेता द्वारा दिए गए पहले मूल्य पर तुरंत निर्णय न करें।\n- वस्तु की जरूरी जानकारी एकत्र करें (मॉडल, स्थिति, वारंटी/सेवा इतिहास) और उसी आधार पर मूल्य का आकलन करें।\n- मौन/खामोशी तकनीक अपनाएं या वॉक-एवे तकनीक अपनाकर कुछ समय के लिए बातचीत रोकना ताकि जोखिम-आधारित निर्णय मिल सके।\n\nKey Insight:\nएंकरिंग में पहली कीमत दिमागी संदर्भ बनाकर निर्णय को दिशा देती है; बाहरी डेटा और कई स्रोत देखकर आप इस आरेख को पलटकर अधिक तटस्थ, मूल्य-सक्षम निर्णय ले सकते हैं।",
+        "example_id": "ex_9bf55303fd9e45b4"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "संकल्पना: संज्ञानात्मक पूर्वाग्रह — उपलब्धता पूर्वाग्रह\n\nउदाहरण:\nप्रिया मुंबई के मानसून में कॉलेज जा रही है। पिछले कुछ दिनों में टीवी और सोशल मीडिया पर बारिश के कारण ट्रैफिक jams, जलभराव और डेंगू के खतरे से जुड़ी खबरें खूब दिखीं। इन खबरों के कारण उसे ऐसा लगने लगा कि बारिश के दिनों में ट्रैफिक और जलभराव अक्सर होते हैं, और डेंगू का खतरा भी शहर के कई हिस्सों में हो सकता है।\n\nसंख्या-उदाहरण:\n- पिछले 3 दिनों में बारिश के कारण जलभराव की खबरें 2 बार दिखीं (2/3 दिन). Priya सोचती है: बारिश के दिनों में जलभराव की संभावना लगभग 66% है.\n- डेंगू से जुड़ी खबरों की ताज़ा कवरेज भी अधिक दिखने लगी, इसलिए उसे लगता है कि अब उसके इलाके में यह खतरा अधिक है।\n\nनतीजा:\nइस उपलब्धता पूर्वाग्रह के कारण Priya ने निर्णय लिया कि बारिश के दिनों में बाहर जाना कम जोखिमभरा नहीं लगता, इसलिए वह आज कॉलेज तक पहुँचने के लिए मेट्रो लेती है और छाता/मच्छरदानी आदि साथ रखती है, ताकि बारिश और डेंगू के खतरे के बावजूद काम चला सके।\n\nप्रश्न:\n1) यह कौन-सा पूर्वाग्रह है?\n2) इसे रोकने के लिए एक सरल उपाय क्या हो सकता है?\n\nप्रतिबिंब:\nमुंबई जैसे तेज़-चलन वाले शहर में रोज़मर्रा की खबरें लोगों के निर्णयों को जल्दी प्रभावित कर सकती हैं। उपलब्ध जानकारी हमें सही जोखिम-मान नहीं दे पाती, क्योंकि दूर से सुनी गयी घटनाओं की याद आसानी से अधिक महसूस होती है।\n\nमुख्य विचार:\nउपलब्ध जानकारी की याददाश्त से निर्णय लेना जोखिम भरा हो सकता है; विभिन्न स्रोतों से सतही नहीं बल्कि समग्र और औपचारिक जोखिम-आकलन करना मददगार है।\n\nReflective prompt:\nआप मुंबई में अपने दैनिक निर्णयों में यह bias कैसे देखेंगे, और कौन सा सरल तरीका अपनाकर अधिक संतुलित निर्णय ले पाएंगे?",
+        "example_id": "ex_1d37af52a46342ad"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:14:02.465100"
+}

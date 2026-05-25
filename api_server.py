@@ -90,7 +90,7 @@ def api_info():
                     "user_id": "string (required)",
                     "topic": "string (required)",
                     "mode": "adaptive (optional, default: adaptive)",
-                    "provider": "openai|openrouter (optional)"
+                    "provider": "openai|openrouter|sarvam (optional)"
                 },
                 "returns": {
                     "thread_id": "string — use this to resume",

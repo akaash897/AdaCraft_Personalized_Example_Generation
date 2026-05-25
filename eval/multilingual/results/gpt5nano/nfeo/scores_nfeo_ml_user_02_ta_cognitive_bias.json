@@ -1,0 +1,127 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_02",
+  "lang": "ta",
+  "lang_name": "Tamil",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including Meena's profession, location, and learning style, and uses a domain-specific context relevant to nursing. The complexity level appears appropriate, with detailed clinical reasoning and terminology suitable for a professional nurse. The factual content about cognitive bias, specifically availability bias, is accurate and well-explained, with a realistic clinical vignette that enhances understanding. The structure is clear, with a logical flow from concept to example to reflection prompt, facilitating learning. The analogies and framing are appropriate for the healthcare domain, using clinical scenarios familiar to nurses, which enhances domain relevance.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Meena's role, location, and learning style, and uses a clinical nursing scenario, aligning well with her profile.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content matches a medium complexity level, with detailed clinical reasoning suitable for a professional nurse, not overly simplified or overly technical.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of availability bias and the clinical vignette are factually correct, with no evident inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from concept to example to reflection, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for a healthcare/nursing context, with clinical scenarios and terminology fitting the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "இந்த உதாரணம் என் துறையுடன் தொடர்பில்லாதது போல் தெரிகிறது. என் தொழில் சார்ந்த உதாரணம் தர முடியுமா?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique indicates that the original example was not relevant to their field, and the regenerated example attempts to provide a more general medical scenario involving chest pain, which is more aligned with healthcare. However, it still may not be sufficiently tailored to the user's specific profession or context, and the example remains somewhat generic rather than deeply connected to a particular domain. Therefore, it partially addresses the critique but does not fully customize the example to the user's field.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "மருத்துவ உதாரணங்கள் எனக்கு கருத்துகளை புரிந்துகொள்ள எளிதாக இருக்கும்.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that medical examples are easier to understand, suggesting the need for clearer, more relatable medical scenarios. The regenerated example incorporates a detailed medical case with specific patient data, aligning with the user's preference for medical examples, and explains the bias in a way that is accessible. Therefore, it effectively addresses the critique by making the example more medically concrete and understandable.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Availability bias is a quick mental shortcut where we judge how likely something is based on how easily examples come to mind, rather than on all the evidence. In nursing, this can shape fast triage decisions in emergencies, sometimes skipping less obvious but important possibilities.\n\nExample:\nMeena is a nurse in a busy emergency department in Chennai. A 32-year-old woman arrives with chest tightness after a brisk walk. Earlier in the shift, Meena treated several patients whose chest pain was due to anxiety, and those cases are fresh in memory. Because of that recency, she leans toward labeling this case as anxiety-related and starts with reassurance, delaying an ECG and troponin tests. About 60 minutes later, the patient’s chest pain worsens; an ECG reveals ischemic changes, and she is quickly moved for further cardiac care. The delay happened because availability bias led her to over-weight recent, non-serious cases when the stakes were high.\n\nReflection prompt:\nThink of a recent patient case you managed. What bias could have influenced your quick judgment, and how might you counter it in real time (e.g., pause to run through red flags, ensure essential tests are ordered, check baseline risk factors)?\n\nKey Insight:\nAvailability bias can make quick judgments feel right because memorable cases dominate memory, but in emergencies it can hide serious conditions unless we actively check for alternatives.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nMeena, a nurse in an emergency department in Chennai, knows that cognitive biases can creep into triage. Availability bias is a mental shortcut where you judge the likelihood of a condition based on how easily you can recall recent, memorable cases, rather than on the current patient’s data. In your unit, the night log shows three chest-pain presentations in the last 12 hours that were confirmed ACS, plus a couple of cases labeled anxiety or reflux. Those vivid, recent outcomes can nudge the next chest-pain patient toward an ACS concern even before a full assessment is complete.\n\nMrs. R, a 65-year-old with hypertension, high cholesterol, and a smoking history, arrives with 45 minutes of central chest pressure rated 6/10. Vitals: BP 126/78, HR 92, RR 18, SpO2 98% on room air. Pain is provoked by exertion and relieved by rest; she denies heavy sweating or shortness of breath. The triage team notes the recent ACS cases and leans toward an ACS workup (aspirin 300 mg chewable, ECG within 10 minutes, troponin). An ECG is performed and troponin drawn; results come back later as non-diagnostic with negative troponin, and the team shades toward non-cardiac causes like reflux or musculoskeletal pain, documenting serial observations and planning observation with appropriate precautions. This vignette highlights how a memory-heavy recent caseload can shape judgment in a new patient.\n\nReflection Prompt: Which cognitive bias influenced the triage judgment, and what one nursing practice would you use to counter it?\n\nKey Insight:\nAvailability bias makes clinicians lean toward diagnoses that match recent memorable cases.\nCounter with structured assessments, checklists, and deliberate consideration of alternative explanations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Availability bias is a quick mental shortcut where we judge how likely something is based on how easily examples come to mind, rather than on all the evidence. In nursing, this can shape fast triage decisions in emergencies, sometimes skipping less obvious but important possibilities.\n\nExample:\nMeena is a nurse in a busy emergency department in Chennai. A 32-year-old woman arrives with chest tightness after a brisk walk. Earlier in the shift, Meena treated several patients whose chest pain was due to anxiety, and those cases are fresh in memory. Because of that recency, she leans toward labeling this case as anxiety-related and starts with reassurance, delaying an ECG and troponin tests. About 60 minutes later, the patient’s chest pain worsens; an ECG reveals ischemic changes, and she is quickly moved for further cardiac care. The delay happened because availability bias led her to over-weight recent, non-serious cases when the stakes were high.\n\nReflection prompt:\nThink of a recent patient case you managed. What bias could have influenced your quick judgment, and how might you counter it in real time (e.g., pause to run through red flags, ensure essential tests are ordered, check baseline risk factors)?\n\nKey Insight:\nAvailability bias can make quick judgments feel right because memorable cases dominate memory, but in emergencies it can hide serious conditions unless we actively check for alternatives.",
+        "example_id": "ex_0d0ce1ca22944992",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "இந்த உதாரணம் என் துறையுடன் தொடர்பில்லாதது போல் தெரிகிறது. என் தொழில் சார்ந்த உதாரணம் தர முடியுமா?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nMeena, a nurse in Chennai, works in a busy emergency department and often does triage during peak hours.\n\nScenario:\nA 62-year-old man arrives with chest pain that started 30 minutes ago. He describes a heavy, squeezing sensation radiating to his left arm. He’s visibly anxious and sweaty but verbally denies shortness of breath. Over the past few days, Meena has seen several chest-pain cases that turned out to be anxiety or reflux, so she quickly labels this patient as likely anxious and chooses to monitor rather than act immediately.\n\nBias in action:\nAvailability bias — Meena relies on recent, memorable chest-pain cases instead of evaluating this patient on the current data, leading to delaying an ECG and troponin testing.\n\nCountermeasure:\nFollow ACS/ACS-like protocol for chest pain: perform a 12-lead ECG within 10 minutes of arrival, order troponin, assess risk factors, and avoid labeling as “just anxiety” without objective evidence.\n\nReflection prompt:\nDuring your last shift, did a recent similar case influence your initial impression of a current patient? Identify one bias you noticed and one objective action you could take to counter it next time.\n\nKey Insight:\nAvailability bias can skew quick triage judgments; always validate chest-pain assessments with objective tests (ECG and troponin) to rule in or out cardiac causes.",
+        "example_id": "ex_c635ac83f9ab45d2"
+      },
+      {
+        "round": 2,
+        "feedback_given": "இது மிகவும் நன்றாக உள்ளது! இந்த உதாரணம் கருத்தை புரிந்துகொள்ள உதவியது.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "மருத்துவ உதாரணங்கள் எனக்கு கருத்துகளை புரிந்துகொள்ள எளிதாக இருக்கும்.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nMeena, a nurse in an emergency department in Chennai, knows that cognitive biases can creep into triage. Availability bias is a mental shortcut where you judge the likelihood of a condition based on how easily you can recall recent, memorable cases, rather than on the current patient’s data. In your unit, the night log shows three chest-pain presentations in the last 12 hours that were confirmed ACS, plus a couple of cases labeled anxiety or reflux. Those vivid, recent outcomes can nudge the next chest-pain patient toward an ACS concern even before a full assessment is complete.\n\nMrs. R, a 65-year-old with hypertension, high cholesterol, and a smoking history, arrives with 45 minutes of central chest pressure rated 6/10. Vitals: BP 126/78, HR 92, RR 18, SpO2 98% on room air. Pain is provoked by exertion and relieved by rest; she denies heavy sweating or shortness of breath. The triage team notes the recent ACS cases and leans toward an ACS workup (aspirin 300 mg chewable, ECG within 10 minutes, troponin). An ECG is performed and troponin drawn; results come back later as non-diagnostic with negative troponin, and the team shades toward non-cardiac causes like reflux or musculoskeletal pain, documenting serial observations and planning observation with appropriate precautions. This vignette highlights how a memory-heavy recent caseload can shape judgment in a new patient.\n\nReflection Prompt: Which cognitive bias influenced the triage judgment, and what one nursing practice would you use to counter it?\n\nKey Insight:\nAvailability bias makes clinicians lean toward diagnoses that match recent memorable cases.\nCounter with structured assessments, checklists, and deliberate consideration of alternative explanations.",
+        "example_id": "ex_85b3edad5aa44133"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T14:12:17.701376"
+}

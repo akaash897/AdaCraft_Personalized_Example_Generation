@@ -147,8 +147,14 @@ def _call_openai_judge(
     temperature: float = 0.0,
     max_retries: int = 3,
 ) -> str:
-    """Call GPT-4.1-mini (or any OpenAI model) as judge."""
-    client = OpenAI(api_key=api_key, timeout=60.0)
+    """Call GPT-4.1-nano (or any OpenAI model) as judge.
+    If the api_key is an OpenRouter key (sk-or-*), routes through OpenRouter."""
+    if api_key and api_key.startswith("sk-or-"):
+        or_model = model if "/" in model else f"openai/{model}"
+        client = OpenAI(api_key=api_key, base_url=OPENROUTER_BASE_URL, timeout=60.0)
+        model = or_model
+    else:
+        client = OpenAI(api_key=api_key, timeout=60.0)
     for attempt in range(max_retries):
         try:
             response = client.chat.completions.create(

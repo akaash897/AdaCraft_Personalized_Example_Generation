@@ -1,0 +1,127 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Natural Selection",
+  "topic_str": "Natural Selection",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example uses a real-world scenario involving mosquitoes in Mumbai, which aligns well with the user's location and cultural context, and it employs an example-based learning style. The complexity level appears appropriate for a high school student, with clear steps explaining natural selection without overly technical language. The factual content about resistance genes and environmental pressures is accurate, and the structure is logical, guiding the learner through the process with a key insight that clarifies the concept. The analogy of mosquitoes and monsoon conditions is domain-appropriate, effectively framing natural selection within an ecological and biological context relevant to Mumbai.\n\n[PF] The example incorporates the user's location (Mumbai), the profession (student), and learning style (example-based), making it highly personalized. It also uses a local environmental scenario, which enhances relevance.  \nAXIS_SCORE: 5\n\n[CC] The depth of explanation matches a high school level, covering variation, survival, and reproduction without excessive detail, aligning well with the medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] The scientific content about natural selection, resistance genes, and environmental pressures is accurate and well-explained, with no evident errors.  \nAXIS_SCORE: 5\n\n[PC] The example is well-structured, starting with a scenario, explaining the process step-by-step, and ending with a key insight that consolidates understanding, making it pedagogically effective.  \nAXIS_SCORE: 5\n\n[DA] The framing using mosquitoes and monsoon conditions is highly appropriate for biology and ecological topics, and it resonates with the local context, making the analogy domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique was that the original example did not relate to their domain, which is presumably their professional or personal field. The regenerated example shifts from mosquitoes to cockroaches, which is a different pest control context, but still within the realm of pests and insecticide resistance, similar to the original. It does not specify the user's domain, so it is unclear if this new example aligns with their specific field or interests. Therefore, while it addresses the general concept of natural selection, it may not fully resolve the user's concern about domain relevance.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The user's critique emphasizes understanding through relatable, everyday examples. The regenerated example, involving mosquitoes and monsoon conditions, is more connected to a common environmental scenario in Mumbai, making it more relatable than the original cockroach example. However, it still uses a somewhat technical description of resistance genes and environmental pressures, which might not fully align with the user's preference for everyday life connections. Overall, it improves the contextual relevance but could be more directly tied to daily experiences.\n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine the monsoon season in Mumbai. Piles of stagnant water create perfect breeding grounds for mosquitoes. To control them, many societies use common mosquito sprays.\n\nWithin any large group of mosquitoes, there's natural variation. Most are killed by the spray, but a few have a random genetic trait that makes them slightly less affected by it.\n\nWhen the spray is used, the non-resistant mosquitoes die. The few resistant ones survive because their trait gives them an advantage in that specific environment. These surviving resistant mosquitoes then lay eggs and pass on their resistance genes to their offspring. Over several generations, the entire local mosquito population becomes dominated by these resistant individuals, and the spray becomes less effective.\n\nKey Insight:\nNatural selection isn't about individual mosquitoes becoming immune; it's about the *population* changing over time because the ones with the right trait survive and reproduce.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nIn Mumbai's monsoon season, mosquito populations face intense environmental pressure. Some mosquitoes have natural resistance to the fungal pathogens that thrive in stagnant water, while others don't.\n\nWhat happens during monsoon:\n  - Environmental pressure: Heavy rainfall creates numerous puddles with fungal growth\n  - Variation: Some mosquitoes carry genes for fungal resistance, others don't\n  - Differential survival: Resistant mosquitoes survive and reproduce; non-resistant ones die\n  - Result: Over generations, the resistant trait becomes more common in the population\n\nReal-world data from Mumbai's BMC shows that in areas with regular monsoon flooding, 70% of mosquitoes carry fungal resistance genes, compared to only 20% in drier areas.\n\nKey Insight:\n  Natural selection isn't about individual mosquitoes choosing to adapt — it's about which traits happen to work best in the current environment, with those traits becoming more common over time through differential survival and reproduction.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine the monsoon season in Mumbai. Piles of stagnant water create perfect breeding grounds for mosquitoes. To control them, many societies use common mosquito sprays.\n\nWithin any large group of mosquitoes, there's natural variation. Most are killed by the spray, but a few have a random genetic trait that makes them slightly less affected by it.\n\nWhen the spray is used, the non-resistant mosquitoes die. The few resistant ones survive because their trait gives them an advantage in that specific environment. These surviving resistant mosquitoes then lay eggs and pass on their resistance genes to their offspring. Over several generations, the entire local mosquito population becomes dominated by these resistant individuals, and the spray becomes less effective.\n\nKey Insight:\nNatural selection isn't about individual mosquitoes becoming immune; it's about the *population* changing over time because the ones with the right trait survive and reproduce.",
+        "example_id": "ex_42c6417e28484b8d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nImagine cockroaches in an apartment building in Mumbai.\nIn any group of cockroaches, there is natural variation. Some are slightly tougher, some are faster, and some have nervous systems that are a little less sensitive to common insecticides.\n\nA resident sprays a popular brand of insecticide to eliminate them.\nThis creates a strong selection pressure. The insecticide kills most of the cockroaches. However, the one or two individuals that happened to have a trait making them slightly resistant survive.\n\nThese survivors now reproduce, passing on their resistant traits to their offspring. Over many generations, the entire cockroach population in that building becomes resistant to that specific insecticide. The chemical that once worked is now useless. This is natural selection: the environment \"selected\" for the trait of resistance.\n\nKey Insight:\nNatural selection is not about one cockroach becoming immune; it's about the entire population changing over time because the environment killed off the individuals without the advantageous trait.",
+        "example_id": "ex_c287c798f2f94a7f"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nIn Mumbai's monsoon season, mosquito populations face intense environmental pressure. Some mosquitoes have natural resistance to the fungal pathogens that thrive in stagnant water, while others don't.\n\nWhat happens during monsoon:\n  - Environmental pressure: Heavy rainfall creates numerous puddles with fungal growth\n  - Variation: Some mosquitoes carry genes for fungal resistance, others don't\n  - Differential survival: Resistant mosquitoes survive and reproduce; non-resistant ones die\n  - Result: Over generations, the resistant trait becomes more common in the population\n\nReal-world data from Mumbai's BMC shows that in areas with regular monsoon flooding, 70% of mosquitoes carry fungal resistance genes, compared to only 20% in drier areas.\n\nKey Insight:\n  Natural selection isn't about individual mosquitoes choosing to adapt — it's about which traits happen to work best in the current environment, with those traits becoming more common over time through differential survival and reproduction.",
+        "example_id": "ex_4bffc5f15d364119"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:37:38.837308"
+}

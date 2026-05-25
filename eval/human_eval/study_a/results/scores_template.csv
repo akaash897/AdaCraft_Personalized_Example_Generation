@@ -1,0 +1,21 @@
+annotator_id,example_id,user_id,topic,provider,start_mode,PF,CC,CA,PC,DA,FC,IS,IP,EU,WU,BF
+A1,EX01,study_a_user_01,Natural Selection,deepseek,cold,4,4,5,4,4,4,5,T3,4,4,5
+A1,EX02,study_a_user_01,Compound Interest,gpt5nano,cold,5,3,5,5,3,5,5,T3,4,4,5
+A2,EX03,study_a_user_02,Cognitive Bias,deepseek,cold,4,4,4,4,5,4,5,T3,4,4,5
+A2,EX04,study_a_user_02,Plate Tectonics,gpt5nano,cold,4,3,4,4,4,4,3,T3,3,4,5
+A3,EX05,study_a_user_03,Natural Selection,deepseek,cold,5,4,5,5,5,5,5,T3,5,5,5
+A3,EX06,study_a_user_03,Cognitive Bias,gpt5nano,cold,4,4,4,4,4,4,5,T3,4,4,4
+A4,EX07,study_a_user_04,Compound Interest,deepseek,cold,4,4,4,5,4,4,4,T3,4,4,5
+A4,EX08,study_a_user_04,Plate Tectonics,gpt5nano,cold,2,3,4,3,3,2,2,T0,3,2,4
+A5,EX09,study_a_user_05,Cognitive Bias,gpt5nano,cold,4,5,5,5,4,4,4,T3,5,5,5
+A5,EX10,study_a_user_05,Natural Selection,deepseek,cold,4,4,5,4,4,4,5,T3,4,4,5
+A6,EX11,study_a_user_06,Compound Interest,deepseek,cold,5,5,5,5,5,5,5,T3,5,5,5
+A6,EX12,study_a_user_06,Natural Selection,gpt5nano,cold,4,4,4,4,4,4,3,T3,4,3,5
+A7,EX13,study_a_user_07,Cognitive Bias,deepseek,cold,4,4,4,4,5,4,5,T3,4,4,5
+A7,EX14,study_a_user_07,Compound Interest,gpt5nano,cold,5,4,5,4,5,5,5,T3,4,4,5
+A8,EX15,study_a_user_08,Natural Selection,gpt5nano,cold,4,4,5,4,4,4,4,T3,4,4,5
+A8,EX16,study_a_user_08,Plate Tectonics,deepseek,cold,4,3,4,4,3,3,3,T3,3,3,4
+A9,EX17,study_a_user_09,Plate Tectonics,deepseek,cold,3,3,4,3,3,2,2,T0,3,2,4
+A9,EX18,study_a_user_09,Cognitive Bias,gpt5nano,cold,4,4,4,4,4,4,4,T3,4,4,5
+A10,EX19,study_a_user_10,Compound Interest,deepseek,cold,4,4,5,5,4,4,5,T3,4,5,5
+A10,EX20,study_a_user_10,Plate Tectonics,gpt5nano,cold,4,4,4,4,3,4,4,T3,4,4,5

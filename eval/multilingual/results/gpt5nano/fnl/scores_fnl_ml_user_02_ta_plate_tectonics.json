@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_02",
+  "lang": "ta",
+  "lang_name": "Tamil",
+  "topic": "Plate Tectonics",
+  "topic_str": "தட்டு நகர்வியல்",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by including the user's name, location, and profession, and relates the concept of \"தட்டு நகர்வியல்\" to ward management in a hospital setting, which aligns with the user's nursing background. The analogies are domain-specific, connecting geological movements to hospital ward operations, which suits the user's learning style of example-based learning.\n\nRegarding complexity, the explanation includes multiple types of boundary interactions with detailed analogies and calculations, matching a medium complexity level suitable for a professional nurse. The factual content about tectonic boundaries appears accurate, with correct terminology and descriptions, ensuring conceptual accuracy. The structure is clear, with a logical flow from concept to example, making it pedagogically effective. The analogies are appropriate for the domain, using hospital ward management to illustrate geological concepts, which is suitable given the user's background.\n\n[PF] PERSONALIZATION FIDELITY — The example is well-tailored, incorporating the user's name, location, profession, and learning style, and uses domain-specific analogies relevant to nursing and hospital wards.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes detailed analogies, calculations, and multiple boundary types, matching a medium complexity level for a professional nurse.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content about tectonic boundaries and their types is accurate, with correct descriptions and terminology.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with clear explanations and logical flow from concept to analogy, facilitating learning.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogies are highly appropriate, using hospital ward management to illustrate geological concepts, aligning well with the user's background.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "ta",
+    "detected_name": "Tamil",
+    "expected_lang": "ta",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "ta",
+    "detected_name": "Tamil",
+    "expected_lang": "ta",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "இந்த உதாரணம் என் துறையுடன் தொடர்பில்லாதது போல் தெரிகிறது. என் தொழில் சார்ந்த உதாரணம் தர முடியுமா?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example simplifies the explanation and attempts to relate the concept to a medical ward scenario, which could be more relatable to someone with a professional background in nursing. However, it still largely retains the original content and structure, with minimal direct addressing of the user's critique that the example was unrelated to their field. It does not clearly tailor the analogy or examples specifically to nursing or healthcare, which was the core of the user's feedback. Therefore, it only partially resolves the critique.\n\nCOMPLIANCE_SCORE: 3\nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "மருத்துவ உதாரணங்கள் எனக்கு கருத்துகளை புரிந்துகொள்ள எளிதாக இருக்கும்.",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique emphasizes the need for medical examples to facilitate understanding, which the regenerated example attempts by relating tectonic boundaries to ward management and nursing scenarios. While it makes an effort to connect the geological concepts to healthcare contexts, the analogies are somewhat abstract and may not clearly clarify the concepts for someone unfamiliar with either domain. Therefore, it partially addresses the feedback but does not fully resolve the need for clearer, more straightforward medical examples.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: தட்டு நகர்வியல்\n\nExample:\nMeena, சென்னை्नில் பணிபுரியும் ஒரு நர்சாக, மக்கள் ஆரோக்கியம் போக்குவரத்தைப் பற்றி கல்விப்பகுதியில் ஒரு சிறிய கூட்டம் நடத்துகிறாள். கூட்டத்தில் பூமியின் பிளீடுகள் என்ன, அவை எவ்வாறு நகர்கின்றன, Mantle convection என்ன என்பவற்றை எளிதாக விளக்கத் தேவையாக இருக்கும். அவள் ஒரு ஜிக்ஸா படுகோலான analogy-யை பயன்படுத்தினால் சிறப்பாகிவிடும்.\n\nபொருளின் அடிப்படை விளக்கம்\n- லிதொஸ்பெரிக் பிளீடுகள் என்ன? பூமியின் உறுதிப்படையான வெளிப்புற படி—theக் கிரஸ்ட் மற்றும் மேல்தட்டு மெட்டல் ஒன்று சேர்ந்து உருவாக்கும் பல துடுப்புகள். இவை அஸ்தெனோஸ்பியோரின் மேல் மென்மையான நிலையில் மெதுவாக திசையாற்றி நகர்கின்றன.\n- மன்ட்ல் வெப்பச்சுழற்சி என்ன? பூமியின் உள்ளே வெப்பம் பரவுவது கொண்டு மெத்தொண்டு தளர்தல், அடுத்தபடி பிளீடுகள் அப்படியே வளைந்து, நகர்ந்து கொண்டு சென்று சேர்கின்றன.\n\nவிரிவாக்க எல்லை (Divergent boundary), ஒத்துக்கொள்ளும் எல்லை (Convergent boundary), பரிமாற்ற எல்லை (Transform boundary)\n- Divergent boundary (விரிவாக்க எல்லை): இரண்டு பிளீடுகள் ஒன்றிலிருந்து விலகி separation ஆகும். புதியMITTED பரப்பு உருவாக்குகின்றன.\n- Convergent boundary (ஒத்துக்கொள்ளும் எல்லை): இரண்டு பிளீடுகள் ஒன்றுக்கொன்று எதிர்நோக்கி நகரும்; ஒன்று இன்னொரு பிளீடின் மீது சென்று subduction ஆகிறது அல்லது படிகம் உயர்வாகும்.\n- Transform boundary (பரிமாற்ற எல்லை): இரண்டு பிளீடுகள் ஒருமிச்சமாய் ஏறக்குறைய அடிக்கடி பக்கம் அலையமாக நகருகின்றன; நேரடியாக சீரிழைப்பு (sliding past one another) நடக்கும்.\n\nஜிக்ஸாக்கள் analogy (ஒப்புமை)\n- இரண்டு பிளீடுகள் ஒரு ஜிக்ஸா பொருட்களாக கொள்ளுங்கள். தயாரான பொருட்கள் மென்மையாக இணைக்கின்றன, ஆனால் சில நேரங்களில் பொருட்கள் திடுக்கிடாமல் வழிநடப்பதில் இடைவெளிகள் அல்லது ஓட்டங்கள் தோன்றும்.\n- Divergent boundary-யில் δύο பிளீடுகள் கைத் தரப்பில் இருந்து பிரிந்துவிடும் நிலையில், ஜிக்ஸாக்குள் இரண்டு துணைப்பிக்கைகள் பணி இடைவெளியில் வெறும் இடம் உருவாக்குகின்றன.\n- Convergent boundary-யில் ஒரு பிளீட் மற்றொன்றை ஒட்டி வார்த்தை போல பொருந்தி ஒரு பாதிப்பை ஏற்படுத்தும்; சில நேரங்களில் ஒரு பிளீடு மற்றொருக்குப் படிகம் கீழே சொரிகும்.\n- Transform boundary-யில் பிளீடுகள் மயக்கமாகவும் எதிர்பாராதவையாகவும் அடுத்தவர் மீதான வழியில் அற்றும், அரை-அடி நகர்கின்றன.\n\nஉதாரணங்கள் மற்றும் everyday நிகழ்வுகள்\n- பூவான பூம்போல் படும் பூகம்புகள்: பிளீடுகள் boundary-களின் இயக்கத்தால் பூகம்பங்கள் உருவாகலாம்.\n- திடீரென அகலமான அழிப்புகள்: பலக்கும் பூகம்பங்கள் மற்றும் பூங்குடை பாகங்கள் அழிந்து விடும்.\n- க்கோல் நோயாளிகள்: வெப்பக்குறைவிலான ஓர் இடத்தில் மலைச்சரிவுகள் மற்றும் வெப்பவெடிப்புகள் போன்ற நிகழ்வுகள் எப்போதும் boundary-கள் மேலே நடைபெறக் கூடும்.\n\nபயிற்சி கேள்வி\n- Divergent boundary எதற்குக் காரணமான படி? ஒரு எடுத்துக்காட்டு கூறி விளக்குக.\nவிடை: Divergent boundary என்பது இரண்டு பிளீடுகள் ஒன்றிலிருந்து பிரிவதால் புதிய உலை/பகுதி உருவாகும் நிலை. எடுத்துக்காட்டு: Mid-Atlantic Ridge (மத்திய ஆசிய கடல் விரிவாக்கம்) மற்றும் East African Rift.\n\nKey Insight: தட்டை நகர்வியல் பூமியின் வெளிப்புற வடிவுகளை நேரடியாக மாற்றும் உட்புற வெப்பச்சுழற்சி மற்றும் பிளீடுகளின் இயல்புநிலை இயக்கத்தால் ஏற்படும் முக்கிய விதமாகும்.",
+    "final_example": "கான்செப்ட்:\nபூமி பல பெரிய தட்டுக்களாகப் பரப்பப்பட்டுள்ளது. அந்த தட்டுகள் மெத்தெதிர்களாய் மென்மையாக நகர்கின்றன; அவை இடையோடு மேலோடாக, கீழே, அல்லது ஒருவருடன் அசைபடுகின்றன. இந்த அசைவுகள் \"தட்டு நகர்வியல்\" என்பதற்கு அடிப்படை. முக்கியமாக இந்த நகர்வு மூன்று வகை எல்லைகளில் நிகழ்கிறது: பிரிவு-எல்லை (பிரிவுகள் விரிவடைகின்றன), ஒட்டுமை-எல்லை (இரு தட்டு சேர்ந்து வழிகறல் படை நீளத்தில் நகர்கிறது), மாற்றம்-எல்லை (இரு தட்டு ஒரு மனையிடையே அற்புதமாக அசைகின்றன). nurse-பண்பில் இதை நோக்கிய அணுகுமுறையும் ward-ல் நிகழும் பராமரிப்பு-செயல்பாடுகளுக்கும் ஒப்பிடலாம்.\n\nஉதாரணம்:\nMeena, சென்னை மருத்துவமனையில் ஓர் நர்சிங் பணியில் இருக்கும் ஒருவர். தட்டு நகர்வியல் எவ்வாறு ward-விளக்கங்களில் ஒவ்வென்று பார்க்கும் என்பதை அறிய உதாரணமாக, ward-இன் பரப்புகளை நோக்கலாம்.\n\nபிரிவு-எல்லை (Boundary: Divergent)\n- விளக்கம்: ward-ல் படுக்கைத் தொகுதிகள் மற்றும் தள்ளுபடி பகுதிகள் ஒன்று வேறு பகுதியில் விரிவடைகின்றன; புதிய சிறப்பு சேவைகள் அப்பகுதியில் உருவாக்கமுடியும்.\n- analogiya: bed-headers மற்றும் partition-கள் சிறப்பு உடைப்பு-அவசர இடங்களை வாரியம் செய்யும் பொழுது, புதிய சேவை தலைமை (சேவைக்குழு) படையெடுக்கும். இதுபோல பூமியில் பிரிவு-எல்லை புதிய புவி பரப்பு (new ocean basin) உருவாக்கும்.\n\nConvergent (Boundary: ஒட்டும்-எல்லை)\n- விளக்கம்: இரண்டு தட்டுகள் ஒன்று சேர்ந்து ஒரு தடு/வழித்தியை உருவாக்கும். ward-ல் இரண்டு சேவை குழுக்கள் ஒட்டி வேலை செய்கின்ற போது ஒரு மைய சேவை அமைப்புகள் உருவாகக்கூடும்; வெளிப்படையான சேவைகளை ஒருங்கிணைக்கும்.\n- analogiya: முன் நோயாளி சேவை நேரங்கொள்ளும் மையம் (triage/ER) மற்றும் அறுவைப்புற சேவைகள் ஒன்று சேர்ந்து வளமான வழிகாட்டி அமைப்பை உருவாக்குவது; இந்த ஒட்டல் பகுதியில் தடங்கள் (trenches) போலப் பெரும்பான்மையான நடைமுறைப் பாதைகள் உருவாவை காட்டும்.\n\nமாற்றம்-எல்லை (Boundary: Transform)\n- விளக்கம்: தட்டு நகர்கின்ற படி பக்கசார்ந்த அமைப்புகள் மாற்றம் அடைகின்றன; ward-ல் நிலைமை மாற்றம், இடம் பரிமாற்றம், பாதுகாப்பு-வளமை உயர்வு போன்றவற்றை உருவாக்கும்.\n- analogiya: நோயாளி பராமரிப்பு சுற்றுப்புறம் புத்தாக்கம் அடையும் போது bed முறைகள், உபகரண அமைப்பு மற்றும் பருவச்சூழல் முறைகளும் மாற்றமடைகின்றன; இது நலப்படுத்தப்பட்ட wellness-சரிவு உருவாகும் வாய்ப்புகள்.\n\nஎண் உதாரணம் (Direct calculation)\n- நிலை: ஒரு தட்டு சராசரி 5 சென்டிமீட்டர்/வருடம் நகர்கிறது என நினைத்துக் கொள்ளுங்கள்.\n- 10 ஆண்டுகளுக்கு நகர்வு: 5 cm/ ஆண்டு × 10 ஆண்டு = 50 சென்டிமீட்டர்கள்.\n- Nursing-context-இல் பொருளாக்கம்: ward-ல் partition-கள் ஒழுங்குப்போடும் வீதம் வருடம் 5 cm போல படும் என்று வைத்துக்கொள்வதால், 10 ஆண்டுகளில் ward-இல் செல்லும் இடம் 50 cm ஆகும்; இது புதிய சேவை-சுழல் உருவாக மூலம் patient-care-உயிரணுக்குப் பாதிப்பை உருவாக்கும் எனப் பொருள்படுத்தலாம்.\n\nமுக்கிய உணர்வு:\nதட்டு நகர்வு மெதுவாக நிகழ்ந்தாலும், தொடர் மாற்றங்கள் பரப்புகளின் முழுமையான அமைப்பை மாறி விடும்; சிறிய நகர்வு நேரத்தில் எதிர்பாராத ward-வடிவமைப்பு மாற்றங்களுக்கு வழிவகுக்கும்.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: தட்டு நகர்வியல்\n\nExample:\nMeena, சென்னை्नில் பணிபுரியும் ஒரு நர்சாக, மக்கள் ஆரோக்கியம் போக்குவரத்தைப் பற்றி கல்விப்பகுதியில் ஒரு சிறிய கூட்டம் நடத்துகிறாள். கூட்டத்தில் பூமியின் பிளீடுகள் என்ன, அவை எவ்வாறு நகர்கின்றன, Mantle convection என்ன என்பவற்றை எளிதாக விளக்கத் தேவையாக இருக்கும். அவள் ஒரு ஜிக்ஸா படுகோலான analogy-யை பயன்படுத்தினால் சிறப்பாகிவிடும்.\n\nபொருளின் அடிப்படை விளக்கம்\n- லிதொஸ்பெரிக் பிளீடுகள் என்ன? பூமியின் உறுதிப்படையான வெளிப்புற படி—theக் கிரஸ்ட் மற்றும் மேல்தட்டு மெட்டல் ஒன்று சேர்ந்து உருவாக்கும் பல துடுப்புகள். இவை அஸ்தெனோஸ்பியோரின் மேல் மென்மையான நிலையில் மெதுவாக திசையாற்றி நகர்கின்றன.\n- மன்ட்ல் வெப்பச்சுழற்சி என்ன? பூமியின் உள்ளே வெப்பம் பரவுவது கொண்டு மெத்தொண்டு தளர்தல், அடுத்தபடி பிளீடுகள் அப்படியே வளைந்து, நகர்ந்து கொண்டு சென்று சேர்கின்றன.\n\nவிரிவாக்க எல்லை (Divergent boundary), ஒத்துக்கொள்ளும் எல்லை (Convergent boundary), பரிமாற்ற எல்லை (Transform boundary)\n- Divergent boundary (விரிவாக்க எல்லை): இரண்டு பிளீடுகள் ஒன்றிலிருந்து விலகி separation ஆகும். புதியMITTED பரப்பு உருவாக்குகின்றன.\n- Convergent boundary (ஒத்துக்கொள்ளும் எல்லை): இரண்டு பிளீடுகள் ஒன்றுக்கொன்று எதிர்நோக்கி நகரும்; ஒன்று இன்னொரு பிளீடின் மீது சென்று subduction ஆகிறது அல்லது படிகம் உயர்வாகும்.\n- Transform boundary (பரிமாற்ற எல்லை): இரண்டு பிளீடுகள் ஒருமிச்சமாய் ஏறக்குறைய அடிக்கடி பக்கம் அலையமாக நகருகின்றன; நேரடியாக சீரிழைப்பு (sliding past one another) நடக்கும்.\n\nஜிக்ஸாக்கள் analogy (ஒப்புமை)\n- இரண்டு பிளீடுகள் ஒரு ஜிக்ஸா பொருட்களாக கொள்ளுங்கள். தயாரான பொருட்கள் மென்மையாக இணைக்கின்றன, ஆனால் சில நேரங்களில் பொருட்கள் திடுக்கிடாமல் வழிநடப்பதில் இடைவெளிகள் அல்லது ஓட்டங்கள் தோன்றும்.\n- Divergent boundary-யில் δύο பிளீடுகள் கைத் தரப்பில் இருந்து பிரிந்துவிடும் நிலையில், ஜிக்ஸாக்குள் இரண்டு துணைப்பிக்கைகள் பணி இடைவெளியில் வெறும் இடம் உருவாக்குகின்றன.\n- Convergent boundary-யில் ஒரு பிளீட் மற்றொன்றை ஒட்டி வார்த்தை போல பொருந்தி ஒரு பாதிப்பை ஏற்படுத்தும்; சில நேரங்களில் ஒரு பிளீடு மற்றொருக்குப் படிகம் கீழே சொரிகும்.\n- Transform boundary-யில் பிளீடுகள் மயக்கமாகவும் எதிர்பாராதவையாகவும் அடுத்தவர் மீதான வழியில் அற்றும், அரை-அடி நகர்கின்றன.\n\nஉதாரணங்கள் மற்றும் everyday நிகழ்வுகள்\n- பூவான பூம்போல் படும் பூகம்புகள்: பிளீடுகள் boundary-களின் இயக்கத்தால் பூகம்பங்கள் உருவாகலாம்.\n- திடீரென அகலமான அழிப்புகள்: பலக்கும் பூகம்பங்கள் மற்றும் பூங்குடை பாகங்கள் அழிந்து விடும்.\n- க்கோல் நோயாளிகள்: வெப்பக்குறைவிலான ஓர் இடத்தில் மலைச்சரிவுகள் மற்றும் வெப்பவெடிப்புகள் போன்ற நிகழ்வுகள் எப்போதும் boundary-கள் மேலே நடைபெறக் கூடும்.\n\nபயிற்சி கேள்வி\n- Divergent boundary எதற்குக் காரணமான படி? ஒரு எடுத்துக்காட்டு கூறி விளக்குக.\nவிடை: Divergent boundary என்பது இரண்டு பிளீடுகள் ஒன்றிலிருந்து பிரிவதால் புதிய உலை/பகுதி உருவாகும் நிலை. எடுத்துக்காட்டு: Mid-Atlantic Ridge (மத்திய ஆசிய கடல் விரிவாக்கம்) மற்றும் East African Rift.\n\nKey Insight: தட்டை நகர்வியல் பூமியின் வெளிப்புற வடிவுகளை நேரடியாக மாற்றும் உட்புற வெப்பச்சுழற்சி மற்றும் பிளீடுகளின் இயல்புநிலை இயக்கத்தால் ஏற்படும் முக்கிய விதமாகும்.",
+        "example_id": "ex_61cdc25ef9054005",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "இந்த உதாரணம் என் துறையுடன் தொடர்பில்லாதது போல் தெரிகிறது. என் தொழில் சார்ந்த உதாரணம் தர முடியுமா?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: தட்டு நகர்வியல்\n\nExample:\nசுருக்கமான பதிப்பு:\nபூமியின் வெளிப்புற மேற்பரப்பு பெரிய துண்டுகள், அவற்றை நாம் லிதோஸ்பெரிக் படுகள் என்று அழைக்குகிறோம். இவை திடமானதாகவும், அஸ்தெனோஸ்பெர்டின் மேலே மெதுவாகப் போக்கமுடன் கூடியாய் திலைத்து நகர்கின்றன. பூமியின் உள்ளடக்கம் வெப்பமானது உருவாக்கும் மெதுவான ஓட்டம் (மண்டல குண்டிச் சுற்று) படுக்களை நகர்த்தி, படுகள் ஒன்றோடு ஒன்றாக நகர்வதை உண்டாக்குகிறது. படுக்கள் ერთმანეთს சந்திக்கும் இடங்கள் boundary-கள் என்று அழைக்கப்படுகின்றன; இவை மூன்று வகையை அடையும்: பிரிவுத் எல்லை (Divergent), சேரும்/ஒட்டும் எல்லை (Convergent), மாற்று எல்லை (Transform). பிரிவுத் எல்லையில் புதிய பரப்பு உருவாகின்றது; சேரும் எல்லையில் படுக்கள் ஒருமித்து மேலோட்டமான அழுத்தம் ஏற்படுத்துகின்றன; மாற்று எல்லையில் தட்டுகள் போலே வழிசெலுத்திக் கொண்டு நகர்கின்றன.\n\nExample:\nநர்ஸிங்-கட்சி அடிப்படையில் ஒரு மருத்துவமனைக் காட்சி:\n- Ward-team-கள் = தட்டு படுகள்; ward-ம் patient load-ம் என்பது படுக்களின் அழுத்தம் (stress) போல.\n- Handover zone-ங்கள் = boundary-கள்; patient flow மாற்றம்/handoff இவை வழிகாட்டும் இடங்கள்.\n- Divergent boundary (பிரிவுத் எல்லை) → இரண்டு ward-கள் தடைமறைந்து இடத்தை விட்டாலும், புதிய bed-space உருவாகிறது (புதிய patient flow-க்கு இடம் உருவாக்கம்).\n- Convergent boundary (சேரும் எல்லை) → overcapacity இருக்கும் போது ward-கள் ஆதரவு ஒன்றாக ஒத்துவிடுகிறமையோடு resources-ஐ சேர்க்கின்றன.\n- Transform boundary (மாற்று எல்லை) → அறைகளின் வழிகளில் staff-ம் patients-வும் ஓடிக்குச் செல்லும் போது தடைகள் உருவாகலாம்; அச்செய்திகள் திசைப்படுத்தப்பட வேண்டியது முக்கியம்.\n\nKey Insight:\nபூமியிின் நகர்வு boundaries-ங்கள் எந்த வகையில் வேலை செய்தாலும், நிகழ்பாடுகள் எப்போதும் அந்த எல்லைகளில் நடந்துகொன்டே இருக்கும்; அதிகம் பொருட்கள்/load இருக்கும் போது அணைப்பு அல்லது விரிவுகள் ஏற்படுவது இயல்பானது.",
+        "example_id": "ex_ba45330985cc4369"
+      },
+      {
+        "round": 2,
+        "feedback_given": "இது மிகவும் நன்றாக உள்ளது! இந்த உதாரணம் கருத்தை புரிந்துகொள்ள உதவியது.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "மருத்துவ உதாரணங்கள் எனக்கு கருத்துகளை புரிந்துகொள்ள எளிதாக இருக்கும்.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "கான்செப்ட்:\nபூமி பல பெரிய தட்டுக்களாகப் பரப்பப்பட்டுள்ளது. அந்த தட்டுகள் மெத்தெதிர்களாய் மென்மையாக நகர்கின்றன; அவை இடையோடு மேலோடாக, கீழே, அல்லது ஒருவருடன் அசைபடுகின்றன. இந்த அசைவுகள் \"தட்டு நகர்வியல்\" என்பதற்கு அடிப்படை. முக்கியமாக இந்த நகர்வு மூன்று வகை எல்லைகளில் நிகழ்கிறது: பிரிவு-எல்லை (பிரிவுகள் விரிவடைகின்றன), ஒட்டுமை-எல்லை (இரு தட்டு சேர்ந்து வழிகறல் படை நீளத்தில் நகர்கிறது), மாற்றம்-எல்லை (இரு தட்டு ஒரு மனையிடையே அற்புதமாக அசைகின்றன). nurse-பண்பில் இதை நோக்கிய அணுகுமுறையும் ward-ல் நிகழும் பராமரிப்பு-செயல்பாடுகளுக்கும் ஒப்பிடலாம்.\n\nஉதாரணம்:\nMeena, சென்னை மருத்துவமனையில் ஓர் நர்சிங் பணியில் இருக்கும் ஒருவர். தட்டு நகர்வியல் எவ்வாறு ward-விளக்கங்களில் ஒவ்வென்று பார்க்கும் என்பதை அறிய உதாரணமாக, ward-இன் பரப்புகளை நோக்கலாம்.\n\nபிரிவு-எல்லை (Boundary: Divergent)\n- விளக்கம்: ward-ல் படுக்கைத் தொகுதிகள் மற்றும் தள்ளுபடி பகுதிகள் ஒன்று வேறு பகுதியில் விரிவடைகின்றன; புதிய சிறப்பு சேவைகள் அப்பகுதியில் உருவாக்கமுடியும்.\n- analogiya: bed-headers மற்றும் partition-கள் சிறப்பு உடைப்பு-அவசர இடங்களை வாரியம் செய்யும் பொழுது, புதிய சேவை தலைமை (சேவைக்குழு) படையெடுக்கும். இதுபோல பூமியில் பிரிவு-எல்லை புதிய புவி பரப்பு (new ocean basin) உருவாக்கும்.\n\nConvergent (Boundary: ஒட்டும்-எல்லை)\n- விளக்கம்: இரண்டு தட்டுகள் ஒன்று சேர்ந்து ஒரு தடு/வழித்தியை உருவாக்கும். ward-ல் இரண்டு சேவை குழுக்கள் ஒட்டி வேலை செய்கின்ற போது ஒரு மைய சேவை அமைப்புகள் உருவாகக்கூடும்; வெளிப்படையான சேவைகளை ஒருங்கிணைக்கும்.\n- analogiya: முன் நோயாளி சேவை நேரங்கொள்ளும் மையம் (triage/ER) மற்றும் அறுவைப்புற சேவைகள் ஒன்று சேர்ந்து வளமான வழிகாட்டி அமைப்பை உருவாக்குவது; இந்த ஒட்டல் பகுதியில் தடங்கள் (trenches) போலப் பெரும்பான்மையான நடைமுறைப் பாதைகள் உருவாவை காட்டும்.\n\nமாற்றம்-எல்லை (Boundary: Transform)\n- விளக்கம்: தட்டு நகர்கின்ற படி பக்கசார்ந்த அமைப்புகள் மாற்றம் அடைகின்றன; ward-ல் நிலைமை மாற்றம், இடம் பரிமாற்றம், பாதுகாப்பு-வளமை உயர்வு போன்றவற்றை உருவாக்கும்.\n- analogiya: நோயாளி பராமரிப்பு சுற்றுப்புறம் புத்தாக்கம் அடையும் போது bed முறைகள், உபகரண அமைப்பு மற்றும் பருவச்சூழல் முறைகளும் மாற்றமடைகின்றன; இது நலப்படுத்தப்பட்ட wellness-சரிவு உருவாகும் வாய்ப்புகள்.\n\nஎண் உதாரணம் (Direct calculation)\n- நிலை: ஒரு தட்டு சராசரி 5 சென்டிமீட்டர்/வருடம் நகர்கிறது என நினைத்துக் கொள்ளுங்கள்.\n- 10 ஆண்டுகளுக்கு நகர்வு: 5 cm/ ஆண்டு × 10 ஆண்டு = 50 சென்டிமீட்டர்கள்.\n- Nursing-context-இல் பொருளாக்கம்: ward-ல் partition-கள் ஒழுங்குப்போடும் வீதம் வருடம் 5 cm போல படும் என்று வைத்துக்கொள்வதால், 10 ஆண்டுகளில் ward-இல் செல்லும் இடம் 50 cm ஆகும்; இது புதிய சேவை-சுழல் உருவாக மூலம் patient-care-உயிரணுக்குப் பாதிப்பை உருவாக்கும் எனப் பொருள்படுத்தலாம்.\n\nமுக்கிய உணர்வு:\nதட்டு நகர்வு மெதுவாக நிகழ்ந்தாலும், தொடர் மாற்றங்கள் பரப்புகளின் முழுமையான அமைப்பை மாறி விடும்; சிறிய நகர்வு நேரத்தில் எதிர்பாராத ward-வடிவமைப்பு மாற்றங்களுக்கு வழிவகுக்கும்.",
+        "example_id": "ex_ca68b0c6bb134e7e"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:44:58.830413"
+}

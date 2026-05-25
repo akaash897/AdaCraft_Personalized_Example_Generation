@@ -1,0 +1,117 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Compound Interest",
+  "topic_str": "चक्रवृद्धि ब्याज",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example provides a detailed scenario involving a family saving in a recurring deposit account, which is relevant to the concept of compound interest. It uses specific profile details such as location (Mumbai), cultural context (family saving for marriage), and learning style (example-based), making it quite personalized. The language is Hindi, matching the user's language preference, and the scenario is realistic for a high school student in India. \n\nThe complexity level appears appropriate, with clear formulas and step-by-step calculations suitable for a high school learner. The factual content about compound interest and the formula used are correct, demonstrating good conceptual accuracy. The structure is logical, starting from concept explanation to detailed calculation, which aids learning. The framing is domain-appropriate, using a real-life savings scenario relevant to the topic of compound interest in finance.\n\nPF: The example is well-tailored, incorporating the user's profile details, language, and learning style effectively.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation, including formulas and calculations, matches the medium complexity level expected for a high school student.  \nAXIS_SCORE: 4\n\nCA: The factual content, including the compound interest formula and calculation steps, is accurate and correctly applied.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear flow from concept to calculation, making it pedagogically effective.  \nAXIS_SCORE: 5\n\nDA: The analogy of a family saving in a bank account is highly appropriate for the domain of finance and compound interest, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The user's critique was that the original example did not seem related to their domain, implying a need for a more contextually relevant example. The regenerated example introduces a different scenario involving a family saving through recurring deposits, which is somewhat similar but still generic and not tailored to a specific domain or user context. It does not clearly demonstrate how the example aligns with the user's particular field or interests, nor does it explicitly address the critique about domain relevance. Therefore, it only partially resolves the core concern.\n\nCOMPLIANCE_SCORE: 3\nCOMPLIANT: NO",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "अवधारणा: चक्रवृद्धि ब्याज (Compound Interest)\n\nउदाहरण:\nमुंबई में रहने वाली प्रिया के परिवार ने अपनी बेटी की शादी के लिए बचत शुरू की है। वे हर महीने एक बैंक में 5,000 रुपये की पुनरावर्ती जमा (Recurring Deposit) करने का फैसला करते हैं। बैंक उन्हें सालाना 6% की ब्याज दर देता है, और यह ब्याज हर महीने चक्रवृद्धि (Compound) होता है।\n\nआइए समझते हैं कि यह कैसे काम करता है और 5 साल बाद उनके पास कितनी रकम होगी।\n\n**चक्रवृद्धि ब्याज क्या है?**\nसाधारण ब्याज में आपको सिर्फ मूल राशि (Principal) पर ब्याज मिलता है। लेकिन चक्रवृद्धि ब्याज में, आपको मूल राशि के साथ-साथ पिछले महीनों में जमा हुए ब्याज पर भी ब्याज मिलता है। यह ब्याज पर ब्याज कमाने जैसा है।\n\n**गणना के लिए शर्तें:**\n*   **मासिक जमा (P):** 5,000 रुपये\n*   **वार्षिक ब्याज दर (R):** 6% या 0.06\n*   **समय (T):** 5 साल\n*   **चक्रवृद्धि आवृत्ति:** मासिक (हर महीने)\n\nचूँकि ब्याज मासिक चक्रवृद्धि है, हमें मासिक ब्याज दर और कुल महीनों की गणना करनी होगी:\n*   **मासिक ब्याज दर (r):** 0.06 / 12 = 0.005\n*   **कुल महीने (n):** 5 साल × 12 महीने = 60 महीने\n\nपुनरावर्ती जमा का भविष्य मूल्य (Future Value - FV) निकालने का सूत्र है:\n**FV = P × [((1 + r)^n - 1) / r] × (1 + r)**\n\nअब मान रखते हैं:\n*   FV = 5000 × [((1 + 0.005)^60 - 1) / 0.005] × (1 + 0.005)\n*   FV = 5000 × [((1.005)^60 - 1) / 0.005] × 1.005\n*   FV = 5000 × [(1.34986 - 1) / 0.005] × 1.005\n*   FV = 5000 × [0.34986 / 0.005] × 1.005\n*   FV = 5000 × 69.972 × 1.005\n*   FV ≈ 351,809.60 रुपये\n\nतो, 5 साल बाद प्रिया के परिवार के पास लगभग **3,51,810 रुपये** जमा होंगे।\n\nमुख्य अंतर्दृष्टि:\nचक्रवृद्धि ब्याज समय के साथ आपकी धनराशि को तेजी से बढ़ाता है क्योंकि आप न केवल अपनी मूल जमा राशि पर, बल्कि उस ब्याज पर भी कमाते हैं जो ब्याज पहले ही कमा चुका है। इसीलिए जल्दी शुरुआत करना और निरंतर निवेश करना दीर्घकालिक बचत के लिए सबसे प्रभावी रणनीति है।",
+    "final_example": "Concept: चक्रवृद्धि ब्याज वह ब्याज है जिसमें मूलधन और पिछले अवधियों के संचित ब्याज पर भी ब्याज अर्जित किया जाता है। यह सरल ब्याज से अलग है, जहाँ ब्याज केवल मूलधन पर गणना की जाती है।\n\nExample:\nपरिदृश्य: मुंबई के अंधेरी में रहने वाला एक परिवार अपनी बेटी की शादी के लिए बचत करने का फैसला करता है। वे एक राष्ट्रीयकृत बैंक में 'रिकरिंग डिपॉजिट' (आरडी) खाता खोलते हैं। वे हर महीने एक निश्चित राशि जमा करने का निर्णय लेते हैं।\n\nविवरण:\n- मासिक जमा (P): ₹5,000\n- वार्षिक ब्याज दर (r): 7%\n- समय (t): 3 वर्ष\n- ब्याज चक्रवृद्धि अवधि (n): मासिक (12 बार प्रति वर्ष)\n\nसूत्र: रिकरिंग डिपॉजिट का भविष्य मूल्य (FV) ज्ञात करने का सूत्र है:\nFV = P × [ (1 + r/n)^(nt) - 1 ] / (r/n)\nयहाँ, P मासिक जमा है, r वार्षिक ब्याज दर है, n वर्ष में ब्याज चक्रवृद्धि होने की संख्या है, और t वर्षों में समय है।\n\nगणना:\n- r/n = 0.07 / 12 ≈ 0.00583\n- nt = 12 × 3 = 36\n- (1 + r/n)^(nt) = (1 + 0.00583)^36 ≈ 1.2329\n- FV = 5000 × [ (1.2329 - 1) ] / (0.07/12)\n- FV = 5000 × [ 0.2329 ] / 0.00583\n- FV = 5000 × 39.948\n- FV ≈ ₹1,99,740\n\nपरिणाम: 3 साल बाद, परिवार के पास लगभग ₹1,99,740 होंगे। इसमें उनकी कुल जमा राशि (5000 × 36 = ₹1,80,",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "अवधारणा: चक्रवृद्धि ब्याज (Compound Interest)\n\nउदाहरण:\nमुंबई में रहने वाली प्रिया के परिवार ने अपनी बेटी की शादी के लिए बचत शुरू की है। वे हर महीने एक बैंक में 5,000 रुपये की पुनरावर्ती जमा (Recurring Deposit) करने का फैसला करते हैं। बैंक उन्हें सालाना 6% की ब्याज दर देता है, और यह ब्याज हर महीने चक्रवृद्धि (Compound) होता है।\n\nआइए समझते हैं कि यह कैसे काम करता है और 5 साल बाद उनके पास कितनी रकम होगी।\n\n**चक्रवृद्धि ब्याज क्या है?**\nसाधारण ब्याज में आपको सिर्फ मूल राशि (Principal) पर ब्याज मिलता है। लेकिन चक्रवृद्धि ब्याज में, आपको मूल राशि के साथ-साथ पिछले महीनों में जमा हुए ब्याज पर भी ब्याज मिलता है। यह ब्याज पर ब्याज कमाने जैसा है।\n\n**गणना के लिए शर्तें:**\n*   **मासिक जमा (P):** 5,000 रुपये\n*   **वार्षिक ब्याज दर (R):** 6% या 0.06\n*   **समय (T):** 5 साल\n*   **चक्रवृद्धि आवृत्ति:** मासिक (हर महीने)\n\nचूँकि ब्याज मासिक चक्रवृद्धि है, हमें मासिक ब्याज दर और कुल महीनों की गणना करनी होगी:\n*   **मासिक ब्याज दर (r):** 0.06 / 12 = 0.005\n*   **कुल महीने (n):** 5 साल × 12 महीने = 60 महीने\n\nपुनरावर्ती जमा का भविष्य मूल्य (Future Value - FV) निकालने का सूत्र है:\n**FV = P × [((1 + r)^n - 1) / r] × (1 + r)**\n\nअब मान रखते हैं:\n*   FV = 5000 × [((1 + 0.005)^60 - 1) / 0.005] × (1 + 0.005)\n*   FV = 5000 × [((1.005)^60 - 1) / 0.005] × 1.005\n*   FV = 5000 × [(1.34986 - 1) / 0.005] × 1.005\n*   FV = 5000 × [0.34986 / 0.005] × 1.005\n*   FV = 5000 × 69.972 × 1.005\n*   FV ≈ 351,809.60 रुपये\n\nतो, 5 साल बाद प्रिया के परिवार के पास लगभग **3,51,810 रुपये** जमा होंगे।\n\nमुख्य अंतर्दृष्टि:\nचक्रवृद्धि ब्याज समय के साथ आपकी धनराशि को तेजी से बढ़ाता है क्योंकि आप न केवल अपनी मूल जमा राशि पर, बल्कि उस ब्याज पर भी कमाते हैं जो ब्याज पहले ही कमा चुका है। इसीलिए जल्दी शुरुआत करना और निरंतर निवेश करना दीर्घकालिक बचत के लिए सबसे प्रभावी रणनीति है।",
+        "example_id": "ex_fa998ad85b5d4be6",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: चक्रवृद्धि ब्याज वह ब्याज है जिसमें मूलधन और पिछले अवधियों के संचित ब्याज पर भी ब्याज अर्जित किया जाता है। यह सरल ब्याज से अलग है, जहाँ ब्याज केवल मूलधन पर गणना की जाती है।\n\nExample:\nपरिदृश्य: मुंबई के अंधेरी में रहने वाला एक परिवार अपनी बेटी की शादी के लिए बचत करने का फैसला करता है। वे एक राष्ट्रीयकृत बैंक में 'रिकरिंग डिपॉजिट' (आरडी) खाता खोलते हैं। वे हर महीने एक निश्चित राशि जमा करने का निर्णय लेते हैं।\n\nविवरण:\n- मासिक जमा (P): ₹5,000\n- वार्षिक ब्याज दर (r): 7%\n- समय (t): 3 वर्ष\n- ब्याज चक्रवृद्धि अवधि (n): मासिक (12 बार प्रति वर्ष)\n\nसूत्र: रिकरिंग डिपॉजिट का भविष्य मूल्य (FV) ज्ञात करने का सूत्र है:\nFV = P × [ (1 + r/n)^(nt) - 1 ] / (r/n)\nयहाँ, P मासिक जमा है, r वार्षिक ब्याज दर है, n वर्ष में ब्याज चक्रवृद्धि होने की संख्या है, और t वर्षों में समय है।\n\nगणना:\n- r/n = 0.07 / 12 ≈ 0.00583\n- nt = 12 × 3 = 36\n- (1 + r/n)^(nt) = (1 + 0.00583)^36 ≈ 1.2329\n- FV = 5000 × [ (1.2329 - 1) ] / (0.07/12)\n- FV = 5000 × [ 0.2329 ] / 0.00583\n- FV = 5000 × 39.948\n- FV ≈ ₹1,99,740\n\nपरिणाम: 3 साल बाद, परिवार के पास लगभग ₹1,99,740 होंगे। इसमें उनकी कुल जमा राशि (5000 × 36 = ₹1,80,",
+        "example_id": "ex_705a1f53f74e4173"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "",
+        "example_id": "ex_a89ed8e12f634f34"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:17:22.091719"
+}

@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "topic": "Cognitive Bias",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example is tailored to Priya's profile by mentioning her name, location, and role as a student working on a project, which aligns well with her learning style of example-based instruction. The scenario involves a group project, which is relatable for a high school student, and the context of marketing and social media is accessible and relevant. The language and depth are appropriate for a high school level, making the complexity suitable. The factual content about confirmation bias is accurate, illustrating the concept clearly. The framing uses a real-world, familiar setting, and the analogy of decision-making in a group project is appropriate for the domain of cognitive biases.\n\n[PF] PERSONALIZATION FIDELITY — The example directly incorporates Priya's name, location, and role, and uses a relatable scenario aligned with her learning style, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The scenario and explanation are appropriate for a high school student, with clear language and a straightforward example that matches the medium complexity level.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of confirmation bias is accurate, and the example correctly illustrates how it influences decision-making without factual errors.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear setup, conflict, and conclusion, and the key insight explicitly connects the example to the concept, facilitating learning.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of group decision-making in a marketing project is appropriate for discussing cognitive biases, and the framing is suitable for the psychological domain.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Cognitive Bias - The Availability Heuristic\n\nExample:\nPriya, a student in Mumbai, takes the local train to college every day. Her commute is usually routine and safe.\n\nOne evening, she watches a news report showing a dramatic video of a chain-snatching incident on a crowded fast train. The story is vivid and the victim's fear is palpable.\n\nThe next morning, as Priya boards her usual train, she feels unusually anxious. She clutches her bag tightly and becomes hyper-aware of the crowd around her. Even though nothing happens, the thought of a theft keeps running through her mind.\n\nThis is the Availability Heuristic. Because the news story was recent, emotional, and easy to visualize, the example of a theft is \"available\" in her memory. She mistakenly believes such events are more common than they actually are, simply because the story is so easy to recall.\n\nPriya, can you explain how that single, dramatic news story might have made her feel the risk of theft was more likely on her train, even if she's never personally experienced it?\n\nKey Insight:\nOur brains often judge the probability of an event based on how easily an example comes to mind, not on actual statistical likelihood.",
+    "final_example": "Concept: Cognitive Bias (Confirmation Bias)\n\nExample:\nPriya is working on a group project for her marketing class. Her teammate, Rohan, is convinced the best approach is to focus on a digital-first strategy. As they research, Rohan finds articles about successful social media campaigns and highlights them. When Priya finds a case study showing a traditional print campaign was more effective for their target audience, Rohan dismisses it, saying, \"That's an old model, it doesn't apply anymore.\" The group's final presentation heavily favors the digital-first idea, not because it's the strongest evidence, but because Rohan's initial belief shaped the entire research process.\n\nCan you identify where Rohan's confirmation bias might have led the group to ignore valuable data?\n\nKey Insight:\nConfirmation bias causes us to favor information that confirms our existing beliefs, leading to unbalanced decisions and potentially ignoring crucial counter-evidence.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias - The Availability Heuristic\n\nExample:\nPriya, a student in Mumbai, takes the local train to college every day. Her commute is usually routine and safe.\n\nOne evening, she watches a news report showing a dramatic video of a chain-snatching incident on a crowded fast train. The story is vivid and the victim's fear is palpable.\n\nThe next morning, as Priya boards her usual train, she feels unusually anxious. She clutches her bag tightly and becomes hyper-aware of the crowd around her. Even though nothing happens, the thought of a theft keeps running through her mind.\n\nThis is the Availability Heuristic. Because the news story was recent, emotional, and easy to visualize, the example of a theft is \"available\" in her memory. She mistakenly believes such events are more common than they actually are, simply because the story is so easy to recall.\n\nPriya, can you explain how that single, dramatic news story might have made her feel the risk of theft was more likely on her train, even if she's never personally experienced it?\n\nKey Insight:\nOur brains often judge the probability of an event based on how easily an example comes to mind, not on actual statistical likelihood.",
+        "example_id": "ex_034cc4d7ea264128",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias: The Availability Heuristic\n\nExample:\nScenario: Priya, a university student in Mumbai, is preparing for her final exams in organic chemistry. Last week, she heard a story about a senior who studied for months but still failed the exam. The story was dramatic and shared widely among students.\n\nThe Bias in Action:\nBecause that failure story is so fresh and memorable, Priya starts to believe that failing is much more common and likely than it actually is. She feels a heightened sense of risk and anxiety, spending far more time on organic chemistry than on her other subjects, even if her grades in those are stronger. She is letting a single, available example (the senior's failure) heavily influence her perception of the overall situation.\n\nWhy it Happens:\nThe Availability Heuristic is a mental shortcut where we overestimate the importance of information that is easily recalled. Vivid, recent, or emotionally charged events (like a peer's dramatic failure) are more \"available\" in our minds, making them seem more probable or representative than they truly are.\n\nKey Insight:\nOur brains rely on memorable stories, not statistical reality, to judge risk. A single dramatic event can feel more threatening than a mountain of boring, reassuring data.",
+        "example_id": "ex_d633dbca18ff46c3"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias (Confirmation Bias)\n\nExample:\nPriya is working on a group project for her marketing class. Her teammate, Rohan, is convinced the best approach is to focus on a digital-first strategy. As they research, Rohan finds articles about successful social media campaigns and highlights them. When Priya finds a case study showing a traditional print campaign was more effective for their target audience, Rohan dismisses it, saying, \"That's an old model, it doesn't apply anymore.\" The group's final presentation heavily favors the digital-first idea, not because it's the strongest evidence, but because Rohan's initial belief shaped the entire research process.\n\nCan you identify where Rohan's confirmation bias might have led the group to ignore valuable data?\n\nKey Insight:\nConfirmation bias causes us to favor information that confirms our existing beliefs, leading to unbalanced decisions and potentially ignoring crucial counter-evidence.",
+        "example_id": "ex_2c2b7246c59f4ee2"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:08:54.201037"
+}

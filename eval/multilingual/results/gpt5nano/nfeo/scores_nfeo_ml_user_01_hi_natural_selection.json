@@ -1,0 +1,127 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Natural Selection",
+  "topic_str": "Natural Selection",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the context by referencing Priya's location in Mumbai and her environment during the monsoon, aligning with her learning style of example-based instruction. The scenario is specific and relatable, integrating her cultural setting into the natural selection concept.\n\nRegarding complexity, the explanation includes genetic terminology, allele frequency shifts, and generational changes, which are appropriate for a high school student with medium complexity understanding, balancing detail without being overly technical.\n\nThe scientific content is accurate, correctly describing inheritance, differential survival, and allele frequency changes, with no evident errors or misconceptions.\n\nStructurally, the example is well-organized, progressing logically from variation to heredity, survival, reproduction, and allele frequency shifts, making it easy to follow and memorable.\n\nThe framing and analogies are appropriate for biology, using geckos and their environment in Mumbai, which is a domain-specific and suitable analogy for natural selection.\n\nPERSONALIZATION FIDELITY: The example uses Priya's name, location, and environment, making it highly tailored to her profile.  \nAXIS_SCORE: 5\n\nCOMPLEXITY CALIBRATION: The content matches high school level with appropriate genetic and evolutionary detail, fitting the medium complexity level.  \nAXIS_SCORE: 4\n\nCONCEPTUAL ACCURACY: The scientific facts about natural selection, heredity, and allele frequency are correct and well-explained.  \nAXIS_SCORE: 5\n\nPEDAGOGICAL CLARITY: The structured flow from variation to allele shifts, with clear headings and logical progression, supports learning effectively.  \nAXIS_SCORE: 5\n\nDOMAIN APPROPRIATENESS: The biological analogy with geckos and their environment is perfectly suited for explaining natural selection.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a generic lizard scenario to a more urban Mumbai gecko context, aligning better with the user's domain concern. It maintains the core principles of natural selection while embedding the example in a familiar, city-based environment, thus effectively addressing the critique.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes the importance of relatable, everyday life examples for better understanding. The regenerated example successfully grounds the concept of natural selection in familiar Mumbai settings, such as geckos on walls during monsoon, making it more relatable and easier to grasp. Therefore, it effectively addresses the critique.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Natural Selection\n\nExample:\nContext: In Mumbai after the monsoon, Priya observes a small lizard population along a muddy puddle at the edge of a river. Lizards vary in color: brown or green. The brown ones blend with the muddy bank and wet soil; green ones stand out against the same background.\n\nVariation:\n- Colors in the population: brown and green\n- Initial counts: 70 brown, 50 green (total 120)\n\nEnvironmental pressure:\n- Predators (birds) hunt by sight; camouflaged lizards are less likely to be eaten.\n\nVariation-to-survival (Differential Survival):\n- Brown lizards' survival rate: 60% → 42 survive\n- Green lizards' survival rate: 25% → 12 survive\n- Surviving group: 42 brown, 12 green\n\nInheritance:\n- Offspring tend to inherit parental color traits; if survivors reproduce, the color makeup of the next generation will reflect the survivors’ frequencies, reinforcing whichever trait aids survival.\n\nLink to trait frequency in the next generation:\n- Brown frequency among survivors: 42 / (42 + 12) ≈ 0.78 (78%)\n- Green frequency: ≈ 0.22 (22%)\n- If mating continues with similar survival biases, the next generation will likely have more brown lizards than the initial generation.\n\nPrompt:\nWhich trait increased and why was it favored?\n\nKey Insight:\nNatural selection shifts trait frequencies toward traits that improve survival under current conditions; in this monsoon environment, brown coloration provided better camouflage, so the brown trait increased in frequency across generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nPriya, a student in Mumbai, watches geckos in a crowded chawl courtyard during the monsoon. On a damp wall, two color forms appear: dark brown geckos and light tan geckos. This set-up grounds the story in everyday Mumbai life: monsoon puddles, crowded courtyards, and predators like birds and larger lizards.\n\nVariation:\n- The gecko population shows visible color variation: some are dark brown, others light tan. This difference is inherited, so offspring tend to resemble their parents more often than not.\n\nHeredity:\n- The color trait is passed from parents to offspring. If a dark brown parent has offspring, those young geckos often inherit the color form of their parent, making the trait heritable.\n\nDifferential Survival:\n- After rain, the wet wall makes light tan geckos stand out to predators (birds and bigger lizards) more than the dark brown geckos, which blend into the damp, shaded crevices. Dark brown geckos have higher survival on these walls during the monsoon, while light tan geckos suffer higher predation.\n\nReproduction:\n- Surviving dark brown geckos reproduce and pass on their color alleles to their offspring. With more dark brown adults able to survive and raise young, the next generation has more dark brown color alleles in the gene pool.\n\nAllele-frequency shifts (illustrative, across a few generations):\n- Generation 0: Dark brown allele frequency p0 = 0.60; Light tan allele frequency q0 = 0.40.\n- After one generational cycle (Generation 1): p1 ≈ 0.70; q1 ≈ 0.30.\n- After the next cycle (Generation 2): p2 ≈ 0.75; q2 ≈ 0.25.\n- After another cycle (Generation 3): p3 ≈ 0.88; q3 ≈ 0.12.\nExplanation: Because dark brown geckos survive more on the monsoon walls and contribute more offspring, the share of the dark brown color allele in the population increases over generations.\n\nKey Insight:\nIn a Mumbai monsoon setting, visible color differences can influence survival and reproduction, gradually shifting the gene pool toward the trait that best matches the environment.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nContext: In Mumbai after the monsoon, Priya observes a small lizard population along a muddy puddle at the edge of a river. Lizards vary in color: brown or green. The brown ones blend with the muddy bank and wet soil; green ones stand out against the same background.\n\nVariation:\n- Colors in the population: brown and green\n- Initial counts: 70 brown, 50 green (total 120)\n\nEnvironmental pressure:\n- Predators (birds) hunt by sight; camouflaged lizards are less likely to be eaten.\n\nVariation-to-survival (Differential Survival):\n- Brown lizards' survival rate: 60% → 42 survive\n- Green lizards' survival rate: 25% → 12 survive\n- Surviving group: 42 brown, 12 green\n\nInheritance:\n- Offspring tend to inherit parental color traits; if survivors reproduce, the color makeup of the next generation will reflect the survivors’ frequencies, reinforcing whichever trait aids survival.\n\nLink to trait frequency in the next generation:\n- Brown frequency among survivors: 42 / (42 + 12) ≈ 0.78 (78%)\n- Green frequency: ≈ 0.22 (22%)\n- If mating continues with similar survival biases, the next generation will likely have more brown lizards than the initial generation.\n\nPrompt:\nWhich trait increased and why was it favored?\n\nKey Insight:\nNatural selection shifts trait frequencies toward traits that improve survival under current conditions; in this monsoon environment, brown coloration provided better camouflage, so the brown trait increased in frequency across generations.",
+        "example_id": "ex_eb6918c8c83c4df0",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nContext:\nIn a Mumbai neighborhood after the monsoon, geckos live on a building wall. The wall shows damp, dark patches and rough texture, and predators hunt at night. The scene is distinctly urban, with concrete and brick surfaces common in many Mumbai flats, making camouflage on wall colors a real factor for survival.\n\nVariation (traits and counts):\n- Trait: Dorsal color morph\n  - Dark color: 60 individuals\n  - Light color: 40 individuals\nTotal: 100 geckos on the wall\n\nEnvironmental pressure:\nNighttime predators rely on sight. On a damp, dark wall, geckos that blend with the background are less likely to be seen and eaten. Dark morphs blend in better with the monsoon-dark wall, while light morphs stand out.\n\nVariation-to-survival (differential survival with survival rates and survivor counts):\n- Survival rate for dark morph: 0.60\n- Survival rate for light morph: 0.25\n- Dark survivors: 60 × 0.60 = 36\n- Light survivors: 40 × 0.25 = 10\n\nInheritance:\nAssume the color morph is moderately heritable and each survivor contributes to the next generation by producing 2 offspring. Offspring counts by morph:\n- Dark offspring: 36 survivors × 2 = 72\n- Light offspring: 10 survivors × 2 = 20\nTotal next-generation individuals: 92\n\nNext generation trait frequencies (inferred from offspring counts):\n- Dark: 72/92 ≈ 78.3%\n- Light: 20/92 ≈ 21.7%\n\nNote on how the next generation would look:\nBecause dark-colored geckos had higher survival and their offspring inherit color, the next generation would have a higher proportion of dark morphs compared to the initial generation.\n\nQuestion for Priya:\nWhich trait increased in frequency, and why was it favored in this Mumbai monsoon environment?\n\nKey Insight:\nEnvironmental pressure (predation based on visibility on a damp, dark wall) favored the darker morph, and because that trait is heritable, its frequency rises in the next generation.",
+        "example_id": "ex_9a4e2a1b1a194272"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nPriya, a student in Mumbai, watches geckos in a crowded chawl courtyard during the monsoon. On a damp wall, two color forms appear: dark brown geckos and light tan geckos. This set-up grounds the story in everyday Mumbai life: monsoon puddles, crowded courtyards, and predators like birds and larger lizards.\n\nVariation:\n- The gecko population shows visible color variation: some are dark brown, others light tan. This difference is inherited, so offspring tend to resemble their parents more often than not.\n\nHeredity:\n- The color trait is passed from parents to offspring. If a dark brown parent has offspring, those young geckos often inherit the color form of their parent, making the trait heritable.\n\nDifferential Survival:\n- After rain, the wet wall makes light tan geckos stand out to predators (birds and bigger lizards) more than the dark brown geckos, which blend into the damp, shaded crevices. Dark brown geckos have higher survival on these walls during the monsoon, while light tan geckos suffer higher predation.\n\nReproduction:\n- Surviving dark brown geckos reproduce and pass on their color alleles to their offspring. With more dark brown adults able to survive and raise young, the next generation has more dark brown color alleles in the gene pool.\n\nAllele-frequency shifts (illustrative, across a few generations):\n- Generation 0: Dark brown allele frequency p0 = 0.60; Light tan allele frequency q0 = 0.40.\n- After one generational cycle (Generation 1): p1 ≈ 0.70; q1 ≈ 0.30.\n- After the next cycle (Generation 2): p2 ≈ 0.75; q2 ≈ 0.25.\n- After another cycle (Generation 3): p3 ≈ 0.88; q3 ≈ 0.12.\nExplanation: Because dark brown geckos survive more on the monsoon walls and contribute more offspring, the share of the dark brown color allele in the population increases over generations.\n\nKey Insight:\nIn a Mumbai monsoon setting, visible color differences can influence survival and reproduction, gradually shifting the gene pool toward the trait that best matches the environment.",
+        "example_id": "ex_537dc5510f2546c8"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:54:42.625488"
+}

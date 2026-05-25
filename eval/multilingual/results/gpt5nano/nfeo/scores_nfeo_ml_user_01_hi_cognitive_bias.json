@@ -1,0 +1,127 @@
+{
+  "scenario": "nfeo",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Cognitive Bias",
+  "topic_str": "Cognitive Bias",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using Priya's name, location, and context as a Mumbai student, aligning well with her profile. It employs an example-based learning style, illustrating the cognitive bias through a relatable daily activity, which enhances engagement. The complexity appears appropriate for a high school student, with clear explanations and practical precautions, avoiding overly technical language. The factual content about the availability heuristic and the importance of checking official statistics is accurate and well-explained. The structure is logical, with a clear example, guiding question, and key insight, facilitating understanding. The analogy of train theft incidents is domain-appropriate, using familiar concepts from everyday life in Mumbai, making the framing relevant and accessible.\n\n[PF] PERSONALIZATION FIDELITY — The example is highly tailored to Priya's profile, incorporating her name, location, and context as a Mumbai student, and matching her learning style with a relatable, real-world scenario.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances simplicity with enough detail to illustrate the bias, suitable for a high school level, with no overly technical language or concepts.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and the importance of checking base rates is accurate, with correct references to cognitive biases and statistical reasoning.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear narrative, a guiding question, and a key insight that reinforces learning, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of train theft incidents in Mumbai is highly appropriate, using familiar, real-world framing that aligns well with the topic of cognitive biases in everyday decision-making.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "en",
+    "detected_name": "English",
+    "expected_lang": "en",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example offers multiple Mumbai-specific scenarios, giving the user options to select one that aligns with their domain, which directly addresses the critique about relevance. It also provides detailed, localized examples that are more likely to resonate with someone familiar with Mumbai, fulfilling the user's request for domain-specific content. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes the importance of relating examples to everyday life to enhance understanding. The regenerated example effectively connects the availability heuristic to Priya’s daily Mumbai train commute, making it more relatable and concrete, thus addressing the critique well. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\nExample:\nDefinition:\nThe Availability Heuristic is a mental shortcut where people judge how likely something is based on how easily examples come to mind. Because vivid, recent, or emotional events stand out, we tend to think they happen more often than they actually do.\n\nMumbai-based scenario:\n- Priya, a student in Mumbai, often shops for groceries near her college by visiting a busy local market and sometimes uses the local train to get around.\n- Recently, a few dramatic social media posts and neighbor stories about pickpockets on crowded trains became very memorable. Even though most rides are safe, those vivid stories stick in her memory.\n- Because of these memories, she starts avoiding the train and instead takes auto-rickshaws for every trip. It’s slower and much more expensive, changing her daily budget and routines.\n\nNumeric illustration:\n- Typical week on the train: 4 rides × ₹6 per ride = ₹24.\n- If she uses autos for the same 4 trips: 4 rides × ₹60 per ride = ₹240.\n- Extra weekly cost due to the bias: ₹216.\n\nReflective prompt:\nThink of a time in Mumbai when a vivid news story or incident made you overestimate how common it was. What choice did you change because of that impression? Have you seen this bias in your own experiences recently?\n\nKey Insight:\nAvailability bias makes memorable events loom large in our minds, shaping our sense of frequency and risk more than the overall data would.",
+    "final_example": "Concept: Availability Heuristic\n\nExample:\nPriya, a student in Mumbai, takes the local train from Bandra to Churchgate every day. After two viral theft videos—one at Charni Road, another on a crowded Bandra-bound coach—and a friend's message about a snatch near CST, she overestimates the danger on her line. She now feels the chance of theft on any given journey is high, around 40–50% during peak hours, simply because those vivid stories are front and center in her mind.\n\nTo feel safer, she changes her habits:\n- Avoids the busiest carriages during peak hours\n- Keeps her bag in front, zipper closed, and checks belongings at every stop\n- Tries to travel in slightly less crowded windows when possible\n\nBut broader, local crime statistics show thefts on her line are not that common per journey, and incidents cluster in specific cars and at certain times, not across every train.\n\nGuiding question: How could Priya check official statistics and base rates to form a more balanced view, and which precautions are most effective without over-correcting?\n\nKey Insight:\nThe availability heuristic makes vivid, recent incidents loom larger than typical risk. Checking base rates helps align perception with reality.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\nExample:\nDefinition:\nThe Availability Heuristic is a mental shortcut where people judge how likely something is based on how easily examples come to mind. Because vivid, recent, or emotional events stand out, we tend to think they happen more often than they actually do.\n\nMumbai-based scenario:\n- Priya, a student in Mumbai, often shops for groceries near her college by visiting a busy local market and sometimes uses the local train to get around.\n- Recently, a few dramatic social media posts and neighbor stories about pickpockets on crowded trains became very memorable. Even though most rides are safe, those vivid stories stick in her memory.\n- Because of these memories, she starts avoiding the train and instead takes auto-rickshaws for every trip. It’s slower and much more expensive, changing her daily budget and routines.\n\nNumeric illustration:\n- Typical week on the train: 4 rides × ₹6 per ride = ₹24.\n- If she uses autos for the same 4 trips: 4 rides × ₹60 per ride = ₹240.\n- Extra weekly cost due to the bias: ₹216.\n\nReflective prompt:\nThink of a time in Mumbai when a vivid news story or incident made you overestimate how common it was. What choice did you change because of that impression? Have you seen this bias in your own experiences recently?\n\nKey Insight:\nAvailability bias makes memorable events loom large in our minds, shaping our sense of frequency and risk more than the overall data would.",
+        "example_id": "ex_8b5ae8eb2a65490c",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Availability Heuristic\n\nExample:\nDefinition:\n  The Availability Heuristic is a mental shortcut where you judge how common or likely something is based on how easily examples come to mind. Vivid, recent, or dramatic events stick in memory and can distort our sense of frequency, making rare things seem common.\n\nMumbai-domain options (choose one to tailor the scenario):\n  - Commerce/Marketing in Mumbai markets: A single viral video of a stall with massive sales makes you overestimate how often such quick success happens in local markets.\n  - Student life in Mumbai colleges: One student’s dramatic exam comeback leads you to believe that last-minute cramming almost always guarantees top marks.\n  - Local governance / civic issues in Mumbai: A widely shared clip of fast pothole repair makes you think city maintenance is rapidly improving everywhere, ignoring slower, ongoing work.\n\nScenario (illustrative examples for each option):\n  - Commerce/Marketing in Mumbai markets: In a bustling Mumbai market, a short video shows a tiny stall that suddenly explodes with customers after a flashy promotion. You leave thinking that flash promotions routinely convert to big sales, even though most stalls don’t get that viral boost.\n  - Student life in Mumbai colleges: A friend posts a story about acing a tough test after staying up all night before the exam. You start assuming late-night cramming is the best path for all exams, even if that’s just one memorable case.\n  - Local governance / civic issues in Mumbai: A social media clip highlights a pothole fixed within days after a complaint goes viral. You conclude the city fixes most problems quickly, overlooking the many issues that drag on for weeks or months.\n\nReflective prompt:\n  Think of a time in your daily life in Mumbai when a vivid incident biased your view of how common or likely something is. How did that bias shape your choices or opinions? Can you spot a similar pattern in your own experiences?\n\nKey Insight:\n  The Availability Heuristic shows how memorable cases, not balanced data, steer our judgments. Recognizing this bias helps you pause and check whether vivid examples reflect overall patterns.",
+        "example_id": "ex_57011fa8e0074a13"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Availability Heuristic\n\nExample:\nPriya, a student in Mumbai, takes the local train from Bandra to Churchgate every day. After two viral theft videos—one at Charni Road, another on a crowded Bandra-bound coach—and a friend's message about a snatch near CST, she overestimates the danger on her line. She now feels the chance of theft on any given journey is high, around 40–50% during peak hours, simply because those vivid stories are front and center in her mind.\n\nTo feel safer, she changes her habits:\n- Avoids the busiest carriages during peak hours\n- Keeps her bag in front, zipper closed, and checks belongings at every stop\n- Tries to travel in slightly less crowded windows when possible\n\nBut broader, local crime statistics show thefts on her line are not that common per journey, and incidents cluster in specific cars and at certain times, not across every train.\n\nGuiding question: How could Priya check official statistics and base rates to form a more balanced view, and which precautions are most effective without over-correcting?\n\nKey Insight:\nThe availability heuristic makes vivid, recent incidents loom larger than typical risk. Checking base rates helps align perception with reality.",
+        "example_id": "ex_eb77f935c76a4c6a"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:58:29.088117"
+}

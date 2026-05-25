@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Cognitive Bias",
+  "topic_str": "জ্ঞানীয় পক্ষপাত",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by including the user's name, location, and profession, and uses Bengali language and contextually relevant analogies, aligning well with the user's profile. The complexity appears appropriate, providing a detailed explanation suitable for an undergraduate engineer with medium difficulty preference. The factual content about cognitive bias, specifically availability bias, is accurate and well-explained, with correct terminology and concepts. The structure of the example is clear, with a logical flow from concept to example to solution, making it pedagogically effective. The analogies and framing are appropriate for the domain of cognitive psychology, using programming and data analysis metaphors that resonate with a software engineer.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates the user's name, location, profession, and language, and uses domain-specific analogies relevant to a software engineer, making it highly tailored.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes technical details, pseudo-code, and nuanced discussion suitable for an undergraduate engineer, matching the medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of availability bias, its effects, and suggested solutions are factually correct and align with established psychological understanding.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured with a clear progression from concept to example to solution, and the pseudo-code enhances understanding, making it highly pedagogically sound.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies involving logs, API calls, and data analysis are highly appropriate for the domain of software engineering and data-driven decision-making, matching the topic well.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a generic, domain-agnostic scenario to a specific software development context involving concurrency and race conditions, which aligns better with a developer's perspective. It directly incorporates technical details and terminology relevant to software engineers, addressing the critique that the original example was not pertinent to the user's domain. Therefore, it effectively resolves the user's concern.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that code-related analogies are clearer than abstract descriptions, and the regenerated example shifts from an abstract explanation to a concrete, code-like pseudocode with comments, aligning with this preference. Therefore, it effectively addresses the critique by making the concept more tangible through code snippets.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "ধারণা: জ্ঞানীয় পক্ষপাত\nসংক্ষিপ্ত সংজ্ঞা: জ্ঞানীয় পক্ষপাত হলো একটি মনস্তাত্ত্বিক প্রবণতা, বিশেষ করে Confirmation Bias, যেখানে আমরা নিজের আগে থেকে গেঁঠে রাখা বিশ্বাসকে সমর্থন করে এমন তথ্য বেশি গ্রহণ করি এবং বিরোধী বা আপত্তিজনক তথ্য বাধা হিসেবে দেখতে ভুল করি।\n\nউদাহরণ:\nপ্রেক্ষাপট\nকলকাতার একটি সফটওয়্যার কোম্পানিতে এন্ড-টু-এন্ড সিস্টেম পরীক্ষণের কাজ করছেন আর্জুন, একজন সফটওয়্যার ইঞ্জিনিয়ার। সাম্প্রতি একটি মডিউলে concurrency race-condition-জনিত সমস্যা এসেছে বলে মনে হচ্ছে। তিনি সন্দেহ করছেন সাম্প্রতিক একটি কনফিগারেশন আপডেটই মূল সমস্যা।\n\nসমর্থিত তথ্য (confirmation-worthy data)\n- সাম্প্রতিক commit-এ করা পরিবর্তনটি মডিউল M-এ ঘটনার সাথে সঙ্গতিপূর্ণ।\n- বিল্ড ও টেস্টে ঐ মডিউলটির কার্যকারিতা সাধারণত ঠিক থাকে, অন্য মডিউলদের ক্ষেত্রে সমস্যা দেখা দেয় না।\n- ক্যাপচা লগে দেখা যাচ্ছে, নির্দিষ্ট পরিস্থিতিতে error আসে যখন একটি নির্দিষ্ট config সেটিং সক্রিয় থাকে।\n\nবিপরীত তথ্য (counter-evidence)\n- বিকল্প সূত্র অনুযায়ী সমস্যাExternal API-এর বিকলতা বা নেটওয়ার্ক লেটেন্স-এর ফলেও ঘটতে পারে, যা মডিউল M-এ কোনো পরিবর্তন ছাড়া ঘটতে পারে।\n- লোকাল ডিভাইসে reproduce হয়নি; production-এ ঘটলে একই ভাবে না ঘটলে সম্ভাব্যতা কমে।\n- অন্য দলের রান-লগে একই ধরনের ভুল কোনো পরিবর্তনের প্রমাণ দেয়নি।\n\nপুনর্মূল্যায়নের ধাপ (Counter-evidence বিবেচনায় নিয়ে সম্ভাব্যতা পুনর্মূল্যায়ন)\n- আগে যে তথ্যটি বেশি প্রভাব ফেলছিল, সেটিকে যাচাই করা: যদি counter-evidence শক্তিশালী হয়, তবে ধারণা আপডেট করতে হবে।\n- Bayesian-র মত সহজ আপডেট নীতি না-হয়েও, “যে তথ্য সঙ্গতিপূর্ণ সেটিকে বেশি গুরুত্ব না দিয়ে” সবাই যে তথ্যগুলো নিতেই বা শুরু করে তা বিবেচনায় নিন।\n- সিদ্ধান্ত নিতে হবে: যদি external কারণ প্রমাণিত হয়, মডিউলের বাগ নয়ও হতে পারে।\n\nবাস্তব ডেটায় biases‑কেমন কাজ করে তা নিয়ে প্রতিফলন (1–2 লাইন)\nবাস্তব ডেটায় Confirmation Bias আমাদের সিদ্ধান্তকে অযৌক্তিকভাবে স্থির করে দিতে পারে; counter-evidence বিবেচনায় না নালে ভুল সিদ্ধান্ত নেয়ার আশঙ্কা বাড়ে।\n\nমূল অন্তর্দৃষ্টি:\nConfirmation Bias আসলে আমাদের পূর্বধারণা নিশ্চিত করতে তথ্য বাছাই করতে শেখায় না, বরং আমাদের মূল্যায়নকে একপেশে করে দেয়; সতর্ক থাকলে counter-evidence বিবেচনা করে বিশ্লেষণ আরও নির্ভরযোগ্য হয়।",
+    "final_example": "ধারণা: জ্ঞানীয় পক্ষপাত (Availability bias)\n\nউদাহরণ:\nআর্মান কলকাতা-র একজন সফটওয়্যার ইঞ্জিনিয়ার, আরজন-এমপি টিমে কাজ করেন। সাম্প্রতিক এক দিন তিনি ডিবাগ করার সময় এর লগে কয়েকটি 429 (rate limit)‑সংক্রান্ত এন্ট্রি দেখেন এবং মনে করেন আপনার সিস্টেমে API rate limiting সর্বজনীন সমস্যা—কারণ তা তখনই বেশি টুকিটাকি নজরে এসেছে। তবে বাস্তবে গত কয়েক দিনের ডাটা দেখা গেলে গড় ব্যবহার অনেক বেশি ছিল না; তিনি একথা ভুল বুঝে ফেলেছিলেন কারণ যা মনে হয়েছে, সেগুলো মেমোরিতে সবচেয়ে সহজে দেখা গেছে।\n\nধাপে ধাপে (সংক্ষেপ ২–৩ ধাপ):\n1) দৈনন্দিন সিদ্ধান্তে প্রভাব: Arjun সাম্প্রতিক কয়েকটি 429-সংবাদ দেখে ভাবে “অপরিবর্তনীয়ভাবে API‑র বিরুদ্ধে ব্যস্ততা বেশি”—এটি Availability bias‑এর সাধারণ রূপ; সাম্প্রতিক মন্তব্যগুলো মেমোরিতে বেশি দৃশ্যমান হয় বলে সিদ্ধান্ত জোড়া যায়।\n2) কোড-সমান্তরিত ব্যাখ্যা: এটি মেমোরি‑ক্যাশ (recent_errors)‑এর মতো, যা যত দ্রুত স্মৃতি থেকে আসে তত বেশি বিশ্বাসযোগ্য মনে হয়। try/catch-ধরনের আচরণ (শাখা-তড়িৎ) ঠিক তখনই কাজে লাগে যখন ডিবাগ করতে হয়; তবে এক্সপোজারের বাইরে থাকা ডেটা ছাড়া সিদ্ধান্ত ভুল হতে পারে।\n3) সমাধান/চালনা: বড় ডেটা সংগ্রহ করুন, representative sample নিন, concurrency/র‍্যান-ডেটা যাচাই করুন; সমস্যা নিরূপণে race condition বা concurrency‑পরিবর্তন বিবেচনায় রাখুন।\n\nপসিড়-স্নিপেট (পseudo‑код, বাংলায় মন্তব্যসহ):\n# Availability bias উদাহরণ\nrecent_errors = count_errors('payments-api', last_1_hour)   # উদাহরণ: 3\ntotal_calls   = count_calls('payments-api', last_1_hour)    # উদাহরণ: 60\n\nif recent_errors / total_calls > 0.05:\n    assumption = \"rate limit সমস্যা সম্ভাব্য\"\nelse:\n    assumption = \"অন্যান্য কারণ সম্ভব\"\n\n# স্মৃতি-ক্যাশের মতো: সাম্প্রতিক ডেটা না দেখে জোর decision না নিন\nsample = sample_logs('payments-api', 200)\nestimated_rate = analyze(sample)\n\nমূল কথা:\nAvailability bias হলো আমরা যে তথ্যটি সর্বাধিক স্মরণ করছি সেটিকে বেশি মূল্যায়ন করি; তাই সঠিক সিদ্ধান্ত নিতে উচিত পুরো ডেটা ও ঘটনার একটি নিরপেক্ষ চিত্র দেখা।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "ধারণা: জ্ঞানীয় পক্ষপাত\nসংক্ষিপ্ত সংজ্ঞা: জ্ঞানীয় পক্ষপাত হলো একটি মনস্তাত্ত্বিক প্রবণতা, বিশেষ করে Confirmation Bias, যেখানে আমরা নিজের আগে থেকে গেঁঠে রাখা বিশ্বাসকে সমর্থন করে এমন তথ্য বেশি গ্রহণ করি এবং বিরোধী বা আপত্তিজনক তথ্য বাধা হিসেবে দেখতে ভুল করি।\n\nউদাহরণ:\nপ্রেক্ষাপট\nকলকাতার একটি সফটওয়্যার কোম্পানিতে এন্ড-টু-এন্ড সিস্টেম পরীক্ষণের কাজ করছেন আর্জুন, একজন সফটওয়্যার ইঞ্জিনিয়ার। সাম্প্রতি একটি মডিউলে concurrency race-condition-জনিত সমস্যা এসেছে বলে মনে হচ্ছে। তিনি সন্দেহ করছেন সাম্প্রতিক একটি কনফিগারেশন আপডেটই মূল সমস্যা।\n\nসমর্থিত তথ্য (confirmation-worthy data)\n- সাম্প্রতিক commit-এ করা পরিবর্তনটি মডিউল M-এ ঘটনার সাথে সঙ্গতিপূর্ণ।\n- বিল্ড ও টেস্টে ঐ মডিউলটির কার্যকারিতা সাধারণত ঠিক থাকে, অন্য মডিউলদের ক্ষেত্রে সমস্যা দেখা দেয় না।\n- ক্যাপচা লগে দেখা যাচ্ছে, নির্দিষ্ট পরিস্থিতিতে error আসে যখন একটি নির্দিষ্ট config সেটিং সক্রিয় থাকে।\n\nবিপরীত তথ্য (counter-evidence)\n- বিকল্প সূত্র অনুযায়ী সমস্যাExternal API-এর বিকলতা বা নেটওয়ার্ক লেটেন্স-এর ফলেও ঘটতে পারে, যা মডিউল M-এ কোনো পরিবর্তন ছাড়া ঘটতে পারে।\n- লোকাল ডিভাইসে reproduce হয়নি; production-এ ঘটলে একই ভাবে না ঘটলে সম্ভাব্যতা কমে।\n- অন্য দলের রান-লগে একই ধরনের ভুল কোনো পরিবর্তনের প্রমাণ দেয়নি।\n\nপুনর্মূল্যায়নের ধাপ (Counter-evidence বিবেচনায় নিয়ে সম্ভাব্যতা পুনর্মূল্যায়ন)\n- আগে যে তথ্যটি বেশি প্রভাব ফেলছিল, সেটিকে যাচাই করা: যদি counter-evidence শক্তিশালী হয়, তবে ধারণা আপডেট করতে হবে।\n- Bayesian-র মত সহজ আপডেট নীতি না-হয়েও, “যে তথ্য সঙ্গতিপূর্ণ সেটিকে বেশি গুরুত্ব না দিয়ে” সবাই যে তথ্যগুলো নিতেই বা শুরু করে তা বিবেচনায় নিন।\n- সিদ্ধান্ত নিতে হবে: যদি external কারণ প্রমাণিত হয়, মডিউলের বাগ নয়ও হতে পারে।\n\nবাস্তব ডেটায় biases‑কেমন কাজ করে তা নিয়ে প্রতিফলন (1–2 লাইন)\nবাস্তব ডেটায় Confirmation Bias আমাদের সিদ্ধান্তকে অযৌক্তিকভাবে স্থির করে দিতে পারে; counter-evidence বিবেচনায় না নালে ভুল সিদ্ধান্ত নেয়ার আশঙ্কা বাড়ে।\n\nমূল অন্তর্দৃষ্টি:\nConfirmation Bias আসলে আমাদের পূর্বধারণা নিশ্চিত করতে তথ্য বাছাই করতে শেখায় না, বরং আমাদের মূল্যায়নকে একপেশে করে দেয়; সতর্ক থাকলে counter-evidence বিবেচনা করে বিশ্লেষণ আরও নির্ভরযোগ্য হয়।",
+        "example_id": "ex_962d0c61dac6493e",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা:\nজ্ঞানীয় পক্ষপাত হলো মানুষের সিদ্ধান্ত/বিশ্লেষণের ক্ষেত্রে তথ্য যাচাইকে প্রভাবিত করা একটি সাধারণ প্রবণতা। বিশেষ করে Confirmation Bias হলো আমরা নতুন তথ্যকে নিজের আগে থেকে গঠিত ধারণার সঙ্গে মেলাতে চাই, বিরোধী বা counter-evidence এড়িয়ে চলতে পারি।\n\nউদাহরণ:\nসংক্ষিপ্ত ডেভেলপার-উপযোগী সংজ্ঞা:\nConfirmation Bias হলো যখন ডেভেলপার নতুন লগ-এ নাযুক প্রমাণ দেখেও আগে থেকে নেওয়া ধারণা—যেমন “রেস-কন্ডিশন নয়” বা “লক-হডড়াই সব ঠিক করেছে”—কে বেশি মূল্যায়ন করেন, এবং বিরোধী তথ্য ও counter-evidence কম বিবেচনা করেন।\n\nবাস্তব-সম্ভাব্য উদাহরণ:\n- পরিস্থিতি: একটি ওয়েব সার্ভিস যেখানে বহু থ্রেড একই শেয়ার্ড ইনভেন্টরি কাউন্টার আপডেট করে। ঠিকঠাক synchronization ছাড়া race condition হওয়ার সম্ভাবনা রয়েছে। একটি feature flag USE_LOCK দিয়ে ক্রিটিকাল সেকশন-লকিং চালু/বন্ধ করা হয়।\n- সমস্যা ধারণা: ডেভেলপার assume করেন বাগটি heavy-load-এ বহু টার্নে ঘটে, তাই race-condition নয়; logs ও টেস্ট mostly pass, তাই সমস্যাটিকে performance অথবা নেটওয়ার্ক ল্যাগ-এর ফল হিসেবে দেখেন।\n- বাস্তব-উপলব্ধ প্রমাণ (Evidence):\n  - commits: \"refactor: remove global lock on inventory update\" এবং \"chore: optimize concurrency path\" — লুকানো ভাবে lock-হটস্পট 제거 করা হয়েছে।\n  - logs: একাধিক থ্রেড একই ইনভেন্টরি আইটেম আপডেট করলে interleaved আউটপুট দেখা যায়; কিছু সেশনেও final count mismatch পাওয়া যায়।\n  - tests: concurrency stress test 20-টি রান-এ 1-2 বার race-condition-সম্ভবনা প্রকাশিত হয় (count inconsistent).\n- পরীক্ষা ও ভুল-প্রমাণ (Steps to test and falsify the hypothesis):\n  1) USE_LOCK = ON এ concurrency stress test চালুন; পরিষ্কার ফলাফল দেখা নিশ্চিত করুন (নির্ভুল count)।\n  2) USE_LOCK = OFF এ একই test পুনরাবৃত্তি করুন; count inconsistencies পুনরায় ঘটলে race-condition-confirm হয়।\n  3) lock-based patch প্রয়োগ করে دوبارہ test চালান; যদি inconsistencies দূর হয়, hypothesis শক্ত হয়।\n  4) counter-evidence খুঁজুন: logs-এ interleaving chứng দিতে পারে; API timing/উইথ-লগে order-id追踪 করুন।\n  5) সম্ভব হলে একই behavior flag-Toggle সহ different load-profile-এ reproducing নিশ্চিত করুন।\n- প্রমাণের ধরণ:\n  - commits: \"remove_lock on inventory update\", \"refactor: simplify concurrency path\"\n  - logs: interleaved updates, order-id mismatches, timing gaps\n  - tests: concurrency stress test results, flakiness reports\n- প্রতিফলন প্রশ্নসমূহ (সংক্ষেপ):\n  - কোন তথ্য আগে নিলেন—লগের interleaving নাকি টেস্ট ফলাফল?\n  - counter-evidence কে খুঁজে না দেখে bias বজায় রাখতে কী সফলতা দেখেছিলেন?\n- প্রতিফলন (1–2 লাইনের):\nConfirmation Bias আপনাকে আগে থেকে অনুমানকে শক্ত করে ধরে রাখায় counter-evidence ভুলভাবে উপেক্ষা করতে বাধ্য করে; counter-evidence বিবেচনায় নিয়ে পুনঃমূল্যায়ন করলে বাগ-সূত্র স্পষ্ট হয়।\n\nমূল কথা:\n Confirm-ation bias–এর ঘুঁচকে বের করা মানে তথ্যের সংঘর্ষ দেখলে সিদ্ধান্তে segera বদলানো না; counter-evidence পরীক্ষা করে লজিকাল পুনর্বিবেচনা করলে race-condition-সহ প্রকৃত সমস্যা স্পষ্ট হয়।",
+        "example_id": "ex_8d3e61ad0fa64530"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা: জ্ঞানীয় পক্ষপাত (Availability bias)\n\nউদাহরণ:\nআর্মান কলকাতা-র একজন সফটওয়্যার ইঞ্জিনিয়ার, আরজন-এমপি টিমে কাজ করেন। সাম্প্রতিক এক দিন তিনি ডিবাগ করার সময় এর লগে কয়েকটি 429 (rate limit)‑সংক্রান্ত এন্ট্রি দেখেন এবং মনে করেন আপনার সিস্টেমে API rate limiting সর্বজনীন সমস্যা—কারণ তা তখনই বেশি টুকিটাকি নজরে এসেছে। তবে বাস্তবে গত কয়েক দিনের ডাটা দেখা গেলে গড় ব্যবহার অনেক বেশি ছিল না; তিনি একথা ভুল বুঝে ফেলেছিলেন কারণ যা মনে হয়েছে, সেগুলো মেমোরিতে সবচেয়ে সহজে দেখা গেছে।\n\nধাপে ধাপে (সংক্ষেপ ২–৩ ধাপ):\n1) দৈনন্দিন সিদ্ধান্তে প্রভাব: Arjun সাম্প্রতিক কয়েকটি 429-সংবাদ দেখে ভাবে “অপরিবর্তনীয়ভাবে API‑র বিরুদ্ধে ব্যস্ততা বেশি”—এটি Availability bias‑এর সাধারণ রূপ; সাম্প্রতিক মন্তব্যগুলো মেমোরিতে বেশি দৃশ্যমান হয় বলে সিদ্ধান্ত জোড়া যায়।\n2) কোড-সমান্তরিত ব্যাখ্যা: এটি মেমোরি‑ক্যাশ (recent_errors)‑এর মতো, যা যত দ্রুত স্মৃতি থেকে আসে তত বেশি বিশ্বাসযোগ্য মনে হয়। try/catch-ধরনের আচরণ (শাখা-তড়িৎ) ঠিক তখনই কাজে লাগে যখন ডিবাগ করতে হয়; তবে এক্সপোজারের বাইরে থাকা ডেটা ছাড়া সিদ্ধান্ত ভুল হতে পারে।\n3) সমাধান/চালনা: বড় ডেটা সংগ্রহ করুন, representative sample নিন, concurrency/র‍্যান-ডেটা যাচাই করুন; সমস্যা নিরূপণে race condition বা concurrency‑পরিবর্তন বিবেচনায় রাখুন।\n\nপসিড়-স্নিপেট (পseudo‑код, বাংলায় মন্তব্যসহ):\n# Availability bias উদাহরণ\nrecent_errors = count_errors('payments-api', last_1_hour)   # উদাহরণ: 3\ntotal_calls   = count_calls('payments-api', last_1_hour)    # উদাহরণ: 60\n\nif recent_errors / total_calls > 0.05:\n    assumption = \"rate limit সমস্যা সম্ভাব্য\"\nelse:\n    assumption = \"অন্যান্য কারণ সম্ভব\"\n\n# স্মৃতি-ক্যাশের মতো: সাম্প্রতিক ডেটা না দেখে জোর decision না নিন\nsample = sample_logs('payments-api', 200)\nestimated_rate = analyze(sample)\n\nমূল কথা:\nAvailability bias হলো আমরা যে তথ্যটি সর্বাধিক স্মরণ করছি সেটিকে বেশি মূল্যায়ন করি; তাই সঠিক সিদ্ধান্ত নিতে উচিত পুরো ডেটা ও ঘটনার একটি নিরপেক্ষ চিত্র দেখা।",
+        "example_id": "ex_906a3919d77247bd"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:54:35.457388"
+}

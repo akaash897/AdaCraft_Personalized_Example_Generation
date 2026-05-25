@@ -1,0 +1,116 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Natural Selection",
+  "topic_str": "प्राकृतिक चयन",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.3,
+    "reasoning": "The example uses a corporate scenario set in Mumbai, involving project managers and software adoption, to illustrate natural selection. It integrates the user's location and profession, and employs an example-based learning style, making the analogy relatable and concrete. The depth of the example covers the process over multiple generations, aligning well with a high school understanding, and the scientific content about natural selection appears accurate. The structure is clear, with a logical flow from scenario to outcome, and the analogy is appropriate for biology, framing the concept in organizational terms.\n\n[PF] PERSONALIZATION FIDELITY — The example reflects the user's profile well, using Mumbai as the location, a student role, and an example from a corporate setting that can be easily understood by a high school student. The analogy is domain-specific to biology but framed in a familiar organizational context, matching the learning style.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The example discusses the process over multiple generations, involving concepts like selection pressure, adaptation, and reproductive success, which are appropriate for a high school level. The language and depth are suitable, with no overly complex terminology.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The core idea of natural selection is correctly represented, including variation, selection pressure, adaptation, and the spread of advantageous traits. The analogy aligns well with scientific principles, with no factual inaccuracies apparent.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, process, and outcome, making the concept accessible. The analogy bridges the abstract concept to a concrete organizational example, aiding understanding. The flow is logical, and the takeaway is memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy uses a corporate setting to explain a biological concept, which is somewhat off-domain but still effective and appropriate for high school learners. The vocabulary and framing are suitable, and the analogy enhances understanding without causing confusion.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique is that the original example does not relate to their domain, which appears to be a professional or organizational context rather than ecology. The regenerated example shifts the focus from ecological traits to workplace skills and organizational dynamics, directly addressing the domain concern. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "**संकल्प:** प्राकृतिक चयन (Natural Selection)\n\n**उदाहरण:**\n\nप्रिया, मुम्बई में एक छात्रा हैं। एक स्थानीय पार्क में, आपने देखा है कि कुछ छोटे पक्षी (गौरैया) अधिक बारीक पत्तों के बीच भोजन खोजने में बेहतर हैं, जबकि अन्य मजबूत पत्तों को तोड़ने में बेहतर हैं।\n\nमान लीजिए, एक विशेष पार्क में, पिछले कुछ वर्षों में, बारीक पत्तों वाले पेड़ों की संख्या बढ़ गई है (जैसे, अधिक नीम के पेड़ लगे)। इसका क्या प्रभाव होता है?\n\n1.  **विविधता:** गौरैया की आबादी में, कुछ पक्षियों के पास पतले, नुकीले चोंच हैं (जो बारीक पत्तों में फंसे बीजों को आसानी से निकाल सकते हैं)। कुछ के पास मजबूत, छोटी चोंच हैं (जो मोटे पत्तों को तोड़ सकती हैं)।\n2.  **पर्यावरणीय परिवर्तन:** अब अधिक बारीक पत्ते हैं। इस नए पर्यावरण में, पतली चोंच वाले पक्षियों के लिए भोजन खोजना आसान हो जाता है। मजबूत चोंच वाले पक्षियों के लिए भोजन खोजना कठिन हो जाता है।\n3.  **अस्तित्व और प्रजनन:** पतली चोंच वाले पक्षियों को अधिक भोजन मिलता है। वे स्वस्थ रहते हैं, अधिक बच्चे पैदा करने की संभावना अधिक होती है, और उनके बच्चों में भी पतली चोंच की विशेषता होने की संभावना होती है। मजबूत चोंच वाले पक्षियों को कम भोजन मिलता है, उनके अस्तित्व और प्रजनन की संभावना कम हो जाती है।\n4.  **परिणाम:** कई पीढ़ियों के बाद, गौरैया की आबादी में पतली चोंच वाले पक्षियों की संख्या बढ़ जाएगी। मजबूत चोंच वाले पक्षियों की संख्या कम हो जाएगी। पक्षी आबादी का औसत चोंच का आकार बदल जाएगा।\n\n**मूल सिद्धांत:**\nप्राकृतिक चयन एक प्रक्रिया है जहाँ पर्यावरण उन जीवों को \"चुनता\" है जिनके लक्षण उस विशेष परिस्थिति में अस्तित्व और प्रजनन के लिए बेहतर होते हैं। यह एक पीढ़ी से दूसरी पीढ़ी में जनसंख्या के लक्षणों को बदल सकता है।",
+    "final_example": "**अवधारणा:** प्राकृतिक चयन\n\n**उदाहरण:**\nमुंबई में एक बड़ी आईटी कंपनी में, एक नया प्रोजेक्ट मैनेजमेंट सॉफ्टवेयर पेश किया गया है। शुरुआत में, सभी प्रोजेक्ट मैनेजरों को इसे अपनाने के लिए कहा गया, लेकिन इसके उपयोग में अलग-अलग दक्षताएं थीं।\n\n**परिदृश्य:**\n*   **विविधता:** कुछ मैनेजर तकनीकी रूप से मजबूत थे और नए सॉफ्टवेयर में जल्दी महारत हासिल कर लेते थे। कुछ मैनेजर पारंपरिक तरीकों (जैसे स्प्रेडशीट और ईमेल) के आदी थे और नए सिस्टम के साथ संघर्ष करते थे।\n*   **चयन दबाव:** कंपनी ने दक्षता और समयबद्धता को प्रमुख प्रदर्शन संकेतक (KPI) बना दिया। नया सॉफ्टवेयर इन KPI को ट्रैक करने और रिपोर्ट करने का प्राथमिक तरीका बन गया।\n*   **अनुकूलन:** जो मैनेजर सॉफ्टवेयर का प्रभावी ढंग से उपयोग कर सके, वे बेहतर रिपोर्टिंग, टीम समन्वय और परिणामस्वरूप, सफल प्रोजेक्ट डिलिवरी दिखा सके। जो नहीं कर सके, उनकी परफॉर्मेंस रेटिंग कम होने लगी।\n*   **परिणाम (प्रजनन सफलता):** बेहतर रेटिंग वाले मैनेजरों को प्रमोशन, बोनस और नए, महत्वपूर्ण प्रोजेक्ट सौंपे गए। उनकी 'विधि' (सॉफ्टवेयर का उपयोग) को संगठन में पुरस्कृत और प्रसारित किया गया। संघर्ष कर रहे मैनेजरों को या तो प्रशिक्षण लेना पड़ा (अनुकूलन), या फिर वे कम प्रभावशाली भूमिकाओं में चले गए, या कंपनी छोड़ दी।\n\n**गहराई में जाएँ:**\nयह प्रक्रिया पीढ़ी-दर-पीढ़ी (प्रोजेक्ट साइकिल के हिसाब से) काम करती है। समय के साथ, कंपनी की 'मैनेजर आबादी' में डिजिटल टूल्स का प्रभावी ढंग से उपयोग करने वाले व्यक्तियों का अनुपात बढ़ जाता है। यह 'वंशागति' का एक रूप है, क्योंकि नए भर्ती किए गए मैनेजर भी अब उस सफल 'विधि' को सीखते और अपनाते हैं जो संगठनात्मक वातावरण में फलती-फूलती है।\n\n**मुख्य सूत्र:**\nप्राकृतिक चयन किसी आबादी में उन अनुकूलित विशेषताओं के प्रसार की प्रक्रिया है जो किसी विशिष्ट वातावरण में अस्तित्व और सफलता की संभावना बढ़ाती हैं, जबकि कम अनुकूलित विशेषताएँ समय के साथ कम होती जाती हैं।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**संकल्प:** प्राकृतिक चयन (Natural Selection)\n\n**उदाहरण:**\n\nप्रिया, मुम्बई में एक छात्रा हैं। एक स्थानीय पार्क में, आपने देखा है कि कुछ छोटे पक्षी (गौरैया) अधिक बारीक पत्तों के बीच भोजन खोजने में बेहतर हैं, जबकि अन्य मजबूत पत्तों को तोड़ने में बेहतर हैं।\n\nमान लीजिए, एक विशेष पार्क में, पिछले कुछ वर्षों में, बारीक पत्तों वाले पेड़ों की संख्या बढ़ गई है (जैसे, अधिक नीम के पेड़ लगे)। इसका क्या प्रभाव होता है?\n\n1.  **विविधता:** गौरैया की आबादी में, कुछ पक्षियों के पास पतले, नुकीले चोंच हैं (जो बारीक पत्तों में फंसे बीजों को आसानी से निकाल सकते हैं)। कुछ के पास मजबूत, छोटी चोंच हैं (जो मोटे पत्तों को तोड़ सकती हैं)।\n2.  **पर्यावरणीय परिवर्तन:** अब अधिक बारीक पत्ते हैं। इस नए पर्यावरण में, पतली चोंच वाले पक्षियों के लिए भोजन खोजना आसान हो जाता है। मजबूत चोंच वाले पक्षियों के लिए भोजन खोजना कठिन हो जाता है।\n3.  **अस्तित्व और प्रजनन:** पतली चोंच वाले पक्षियों को अधिक भोजन मिलता है। वे स्वस्थ रहते हैं, अधिक बच्चे पैदा करने की संभावना अधिक होती है, और उनके बच्चों में भी पतली चोंच की विशेषता होने की संभावना होती है। मजबूत चोंच वाले पक्षियों को कम भोजन मिलता है, उनके अस्तित्व और प्रजनन की संभावना कम हो जाती है।\n4.  **परिणाम:** कई पीढ़ियों के बाद, गौरैया की आबादी में पतली चोंच वाले पक्षियों की संख्या बढ़ जाएगी। मजबूत चोंच वाले पक्षियों की संख्या कम हो जाएगी। पक्षी आबादी का औसत चोंच का आकार बदल जाएगा।\n\n**मूल सिद्धांत:**\nप्राकृतिक चयन एक प्रक्रिया है जहाँ पर्यावरण उन जीवों को \"चुनता\" है जिनके लक्षण उस विशेष परिस्थिति में अस्तित्व और प्रजनन के लिए बेहतर होते हैं। यह एक पीढ़ी से दूसरी पीढ़ी में जनसंख्या के लक्षणों को बदल सकता है।",
+        "example_id": "ex_ff1b3e5c856e4cd8",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**अवधारणा:** प्राकृतिक चयन\n\n**उदाहरण:**\nमुंबई में एक बड़ी आईटी कंपनी में, एक नया प्रोजेक्ट मैनेजमेंट सॉफ्टवेयर पेश किया गया है। शुरुआत में, सभी प्रोजेक्ट मैनेजरों को इसे अपनाने के लिए कहा गया, लेकिन इसके उपयोग में अलग-अलग दक्षताएं थीं।\n\n**परिदृश्य:**\n*   **विविधता:** कुछ मैनेजर तकनीकी रूप से मजबूत थे और नए सॉफ्टवेयर में जल्दी महारत हासिल कर लेते थे। कुछ मैनेजर पारंपरिक तरीकों (जैसे स्प्रेडशीट और ईमेल) के आदी थे और नए सिस्टम के साथ संघर्ष करते थे।\n*   **चयन दबाव:** कंपनी ने दक्षता और समयबद्धता को प्रमुख प्रदर्शन संकेतक (KPI) बना दिया। नया सॉफ्टवेयर इन KPI को ट्रैक करने और रिपोर्ट करने का प्राथमिक तरीका बन गया।\n*   **अनुकूलन:** जो मैनेजर सॉफ्टवेयर का प्रभावी ढंग से उपयोग कर सके, वे बेहतर रिपोर्टिंग, टीम समन्वय और परिणामस्वरूप, सफल प्रोजेक्ट डिलिवरी दिखा सके। जो नहीं कर सके, उनकी परफॉर्मेंस रेटिंग कम होने लगी।\n*   **परिणाम (प्रजनन सफलता):** बेहतर रेटिंग वाले मैनेजरों को प्रमोशन, बोनस और नए, महत्वपूर्ण प्रोजेक्ट सौंपे गए। उनकी 'विधि' (सॉफ्टवेयर का उपयोग) को संगठन में पुरस्कृत और प्रसारित किया गया। संघर्ष कर रहे मैनेजरों को या तो प्रशिक्षण लेना पड़ा (अनुकूलन), या फिर वे कम प्रभावशाली भूमिकाओं में चले गए, या कंपनी छोड़ दी।\n\n**गहराई में जाएँ:**\nयह प्रक्रिया पीढ़ी-दर-पीढ़ी (प्रोजेक्ट साइकिल के हिसाब से) काम करती है। समय के साथ, कंपनी की 'मैनेजर आबादी' में डिजिटल टूल्स का प्रभावी ढंग से उपयोग करने वाले व्यक्तियों का अनुपात बढ़ जाता है। यह 'वंशागति' का एक रूप है, क्योंकि नए भर्ती किए गए मैनेजर भी अब उस सफल 'विधि' को सीखते और अपनाते हैं जो संगठनात्मक वातावरण में फलती-फूलती है।\n\n**मुख्य सूत्र:**\nप्राकृतिक चयन किसी आबादी में उन अनुकूलित विशेषताओं के प्रसार की प्रक्रिया है जो किसी विशिष्ट वातावरण में अस्तित्व और सफलता की संभावना बढ़ाती हैं, जबकि कम अनुकूलित विशेषताएँ समय के साथ कम होती जाती हैं।",
+        "example_id": "ex_fc4b5dd6ed5a4a87"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T17:18:30.659444"
+}

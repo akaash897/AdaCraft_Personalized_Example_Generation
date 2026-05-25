@@ -1,0 +1,116 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_05",
+  "lang": "ar",
+  "lang_name": "Arabic",
+  "topic": "Plate Tectonics",
+  "topic_str": "الصفائح التكتونية",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example attempts to personalize the analogy by referencing the user's profession as a nurse and using medical terminology and concepts, which aligns with her background. The complexity level appears to be medium, with a mix of basic and slightly more detailed analogies, suitable for someone with a professional education. The factual content about tectonic plates and their movements is accurate, and the analogies are appropriate for explaining scientific concepts in a relatable way. The structure is clear, with a logical flow from general concept to specific examples, and the analogies are domain-appropriate, using medical and biological terms to explain geological processes.\n\n[PF] PERSONALIZATION FIDELITY — The example uses medical analogies and references the user's profession as a nurse, which enhances relevance. The use of medical terminology and concepts is domain-specific and tailored to her background.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content balances basic scientific facts with analogies that are accessible but not overly simplistic, matching a medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanations about tectonic plates, their movements, and related phenomena like earthquakes and volcanoes are accurate and well-explained.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, with clear sections and analogies that bridge the concept to familiar medical scenarios, aiding understanding. The flow is smooth, and the analogy-to-concept connection is explicit.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogies are well-suited for the geological topic, using medical and biological frames that are appropriate given the user's background and learning style.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "ar",
+    "detected_name": "Arabic",
+    "expected_lang": "ar",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "ar",
+    "detected_name": "Arabic",
+    "expected_lang": "ar",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example attempts to relate the concept of tectonic plates to familiar biological and medical processes, which could be relevant to someone in the medical field. However, it still uses analogies that are quite abstract and not directly connected to the user's specific professional context, and it doesn't incorporate concrete examples from the user's field. Therefore, it partially addresses the critique but does not fully meet the user's request for a more relevant, domain-specific example.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: NO",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "المفهوم: الصفائح التكتونية\n\nالمثال:\nفاطمة، تخيلي أن قشرة الأرض ليست قطعة واحدة صلبة، بل أشبه بلوحة فسيفساء مكونة من قطع كبيرة تتحرك ببطء شديد فوق طبقة ساخنة ولزجة في الداخل. هذه القطع الكبيرة تسمى \"الصفائح التكتونية\".\n\nفي مصر، يمكننا رؤية تأثير هذه الحركة بوضوح. وادي النيل، حيث تعيش وتعملين، يقع في منطقة انخفاض بين صفيحتين: الصفيحة الأفريقية والصفيحة العربية. هاتان الصفيحتان تتباعدان عن بعضهما ببطء، بمعدل يقارب سنتيمترين في السنة (مثل سرعة نمو أظافرك). هذا التباعد هو ما يخلق البحر الأحمر ويتسبب في الزلازل الخفيفة التي قد تشعرين بها أحيانًا في المنطقة.\n\nما يحدث عند الحدود بين الصفائح:\n- **التباعد**: كما في البحر الأحمر، حيث تبتعد الصفائح وتندفع الصهارة لتشكل قشرة أرضية جديدة.\n- **التقارب**: كما عند جبال الألب، حيث تصطدم الصفائح مسببة طيًا ورفعًا للقشرة مشكلةً الجبال.\n- **الانزلاق الجانبي**: كما في صدع سان أندرياس في كاليفورنيا، حيث تنزلق الصفيحتان أفقياً متجاوزتين بعضهما، مسببة زلازل.\n\nالرؤية الأساسية:\nحركة الصفائح التكتونية البطيئة هي القوة الدافعة وراء تشكيل تضاريس كوكبنا الرئيسية - من المحيطات والجبال إلى الوادي الذي تعيش فيه - وهي سبب معظم النشاط الزلزالي والبركاني في العالم.",
+    "final_example": "**المفهوم:** الصفائح التكتونية\n\n**المثال:**\n\nفكر في الأرض كجسم بشري كبير، والصفائح التكتونية هي مثل الأجزاء الرئيسية في جهاز تنفسي أو جهاز دوري. كمرضية، أنت تعرف أن القلب يدفع الدم عبر الشرايين، وأن الشرايين يمكن أن تتحرك أو تتغير بمرور الوقت بسبب الضغط أو المرض.\n\nفي الأرض، هناك \"صفائح\" صلبة كبيرة (مثل قطع من الجلد الصلب) تتحرك فوق طبقة أكثر ليونة تحتها (مثل طبقة من العضلات أو الأنسجة تحت الجلد). حركة هذه الصفائح هي مثل حركة أجزاء جهاز طبي معقد:\n\n1.  **الصفائح المتقاربة:** مثل عندما تضغط قطعتين من الجلد (أو أجزاء من جهاز) تجاه بعضهما في عملية جراحية. هذا يمكن أن يسبب \"اصطدامًا\" يؤدي إلى تكوين \"جبال\" – مشابه لتكوين نتوء أو ندبة جراحية مرتفعة تحت الجلد.\n2.  **الصفائح المتباعدة:** مثل عندما تفتح شقًا جراحياً، تتباعد الأجزاء وتخلق فجوة. في الأرض، هذا يسمح بخروج مادة جديدة من الداخل (مثل حمم بركانية) لملء الفراغ – مشابه لخروج سوائل أو مواد من الجسم لملء منطقة مفتوحة.\n3.  **الصفائح المتحولة:** مثل عندما يتحرك جزء من جهاز طبي (مثل أنبوب) جانبيًا ضد جزء آخر، مما يسبب احتكاكًا. هذا الاحتكاك يمكن أن يسبب \"زلازل\" – مشابه لاهتزاز أو اضطراب في نظام الجسم بسبب حركة غير متوقعة.\n\n**مثال رقمي (لحركة الصفائح):**\n*   سرعة حركة الصفائح تختلف، لكن بعضها يتحرك بسرعة تصل إلى عدة سنتيمترات في السنة.\n*   هذا مشابه لسرعة تغير بعض الأوضاع في جسم المريض تحت العلاج (مثل سرعة انتشار التهاب أو نمو ندبة).\n\n**الرؤية الأساسية:**\nحركة الصفائح التكتونية هي عملية مستمرة وطبيعية \"لإعادة تشكيل\" سطح الأرض، مثل العمليات البيولوجية المستمرة في الجسم التي تعيد تشكيل الأنسجة أو الأعضاء بمرور الوقت. الزلازل والبراكين هي غالبًا علامات على هذه الحركة النشطة.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "المفهوم: الصفائح التكتونية\n\nالمثال:\nفاطمة، تخيلي أن قشرة الأرض ليست قطعة واحدة صلبة، بل أشبه بلوحة فسيفساء مكونة من قطع كبيرة تتحرك ببطء شديد فوق طبقة ساخنة ولزجة في الداخل. هذه القطع الكبيرة تسمى \"الصفائح التكتونية\".\n\nفي مصر، يمكننا رؤية تأثير هذه الحركة بوضوح. وادي النيل، حيث تعيش وتعملين، يقع في منطقة انخفاض بين صفيحتين: الصفيحة الأفريقية والصفيحة العربية. هاتان الصفيحتان تتباعدان عن بعضهما ببطء، بمعدل يقارب سنتيمترين في السنة (مثل سرعة نمو أظافرك). هذا التباعد هو ما يخلق البحر الأحمر ويتسبب في الزلازل الخفيفة التي قد تشعرين بها أحيانًا في المنطقة.\n\nما يحدث عند الحدود بين الصفائح:\n- **التباعد**: كما في البحر الأحمر، حيث تبتعد الصفائح وتندفع الصهارة لتشكل قشرة أرضية جديدة.\n- **التقارب**: كما عند جبال الألب، حيث تصطدم الصفائح مسببة طيًا ورفعًا للقشرة مشكلةً الجبال.\n- **الانزلاق الجانبي**: كما في صدع سان أندرياس في كاليفورنيا، حيث تنزلق الصفيحتان أفقياً متجاوزتين بعضهما، مسببة زلازل.\n\nالرؤية الأساسية:\nحركة الصفائح التكتونية البطيئة هي القوة الدافعة وراء تشكيل تضاريس كوكبنا الرئيسية - من المحيطات والجبال إلى الوادي الذي تعيش فيه - وهي سبب معظم النشاط الزلزالي والبركاني في العالم.",
+        "example_id": "ex_aa4cf5bff1fc4e9b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "هذا المثال لا يبدو ذا صلة بمجال عملي. هل يمكنك استخدام مثال من تخصصي؟",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**المفهوم:** الصفائح التكتونية\n\n**المثال:**\n\nفكر في الأرض كجسم بشري كبير، والصفائح التكتونية هي مثل الأجزاء الرئيسية في جهاز تنفسي أو جهاز دوري. كمرضية، أنت تعرف أن القلب يدفع الدم عبر الشرايين، وأن الشرايين يمكن أن تتحرك أو تتغير بمرور الوقت بسبب الضغط أو المرض.\n\nفي الأرض، هناك \"صفائح\" صلبة كبيرة (مثل قطع من الجلد الصلب) تتحرك فوق طبقة أكثر ليونة تحتها (مثل طبقة من العضلات أو الأنسجة تحت الجلد). حركة هذه الصفائح هي مثل حركة أجزاء جهاز طبي معقد:\n\n1.  **الصفائح المتقاربة:** مثل عندما تضغط قطعتين من الجلد (أو أجزاء من جهاز) تجاه بعضهما في عملية جراحية. هذا يمكن أن يسبب \"اصطدامًا\" يؤدي إلى تكوين \"جبال\" – مشابه لتكوين نتوء أو ندبة جراحية مرتفعة تحت الجلد.\n2.  **الصفائح المتباعدة:** مثل عندما تفتح شقًا جراحياً، تتباعد الأجزاء وتخلق فجوة. في الأرض، هذا يسمح بخروج مادة جديدة من الداخل (مثل حمم بركانية) لملء الفراغ – مشابه لخروج سوائل أو مواد من الجسم لملء منطقة مفتوحة.\n3.  **الصفائح المتحولة:** مثل عندما يتحرك جزء من جهاز طبي (مثل أنبوب) جانبيًا ضد جزء آخر، مما يسبب احتكاكًا. هذا الاحتكاك يمكن أن يسبب \"زلازل\" – مشابه لاهتزاز أو اضطراب في نظام الجسم بسبب حركة غير متوقعة.\n\n**مثال رقمي (لحركة الصفائح):**\n*   سرعة حركة الصفائح تختلف، لكن بعضها يتحرك بسرعة تصل إلى عدة سنتيمترات في السنة.\n*   هذا مشابه لسرعة تغير بعض الأوضاع في جسم المريض تحت العلاج (مثل سرعة انتشار التهاب أو نمو ندبة).\n\n**الرؤية الأساسية:**\nحركة الصفائح التكتونية هي عملية مستمرة وطبيعية \"لإعادة تشكيل\" سطح الأرض، مثل العمليات البيولوجية المستمرة في الجسم التي تعيد تشكيل الأنسجة أو الأعضاء بمرور الوقت. الزلازل والبراكين هي غالبًا علامات على هذه الحركة النشطة.",
+        "example_id": "ex_f0e5b1251dc9408f"
+      },
+      {
+        "round": 2,
+        "feedback_given": "هذا رائع! المثال ساعدني حقاً على فهم المفهوم.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "أفهم بشكل أفضل عندما تُستخدم أمثلة من المعدات الطبية لشرح الأفكار المجردة.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T18:45:05.369147"
+}

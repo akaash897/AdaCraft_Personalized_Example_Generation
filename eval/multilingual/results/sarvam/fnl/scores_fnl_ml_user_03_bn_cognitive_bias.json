@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Cognitive Bias",
+  "topic_str": "জ্ঞানীয় পক্ষপাত",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively introduces the concept of cognitive biases using relatable analogies, such as debugging code and Google search behavior, which are familiar to an engineer like Arjun. The language is clear and accessible, matching a medium complexity level, and the analogies are appropriate for the domain of software engineering. The structure is logical, starting with a definition, providing examples, and concluding with the importance of recognizing biases, which supports pedagogical clarity. The framing aligns well with the topic of cognitive biases, avoiding off-topic analogies.\n\n[PF] PERSONALIZATION FIDELITY — The example mentions debugging and Google searches, which are relevant to a software engineer, and uses Bengali language as specified. It does not explicitly mention Arjun's location or name, but the analogies are domain-specific.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The content is at a medium level, suitable for an undergraduate engineer, with clear explanations and relatable examples, matching the user's stated complexity.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of cognitive biases as systematic errors or \"bugs\" in thinking is accurate, and the examples correctly illustrate common biases like confirmation bias and regression to the mean.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear definition, illustrative examples, and a concluding statement on the importance of recognizing biases, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies are highly appropriate for the domain of software engineering and cognitive processes, using familiar scenarios like debugging and search behavior.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": false,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example shifts the focus to a different scenario involving a software engineer and a bug, which is relevant to the domain but does not directly address the user's critique about the example's relevance to their specific field. It somewhat improves clarity but still lacks the personalized context the user requested. \n\nCOMPLIANCE_SCORE: 3\nCOMPLIANT: NO",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The user's critique emphasizes that code-related analogies are clearer than abstract descriptions, and the regenerated example attempts to incorporate more technical, code-related scenarios such as bug fixing and testing, aligning with this preference. However, it still contains some abstract language and does not fully leverage concrete, code-specific metaphors throughout, which could make the analogy even more explicit.\n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "**ধারণা:** জ্ঞানীয় পক্ষপাত (Cognitive Bias)\n\n**উদাহরণ:**\nএকজন সফটওয়্যার ইঞ্জিনিয়ার যখন একটি কোড ডিবাগ করেন, তখন তিনি প্রায়শই 'কনফার্মেশন বায়াস' বা নিশ্চিতকরণ পক্ষপাতের শিকার হন।\n\nধরা যাক, আপনি একটি ওয়েব অ্যাপ্লিকেশনে লগইন বাগ ঠিক করছেন। আপনার প্রাথমিক ধারণা হলো, সমস্যাটি ডেটাবেস কানেকশনে। তখন আপনি কেবল সেই প্রমাণগুলোই খুঁজবেন যা আপনার ধারণাকে সমর্থন করে — যেমন কানেকশন টাইমআউট চেক করা বা নেটওয়ার্ক লগ দেখা। কিন্তু আপনি অন্যান্য সম্ভাবনাগুলো উপেক্ষা করেন, যেমন ভুল পাসওয়ার্ড ফরম্যাট বা সেশন ম্যানেজমেন্টের সমস্যা।\n\nপ্রোগ্রামিংয়ে এই পক্ষপাত অত্যন্ত সাধারণ কারণ আমরা চাই আমাদের প্রাথমিক সমাধানটি সঠিক হোক। ফলে আমরা আমাদের হাইপোথিসিস বা অনুকল্পকে সমর্থন করে এমন ডেটা বেশি গুরুত্ব দিই এবং পরস্পরবিরোধী প্রমাণগুলোকে গুরুত্বহীন করে ফেলি।\n\n**মূল অন্তর্দৃষ্টি:**\nআমাদের মস্তিষ্ক এমন তথ্য পছন্দ করে যা আমাদের বিদ্যমান বিশ্বাসকে নিশ্চিত করে, এমনকি যখন সেই বিশ্বাস ভুল হয়। প্রোগ্রামিংয়ে এটি আমাদের ভুল জায়গায় খুঁজতে বাধ্য করে এবং বাগ ফিক্স করতে দেরি করিয়ে দেয়।",
+    "final_example": "ধারণা:\nজ্ঞানীয় পক্ষপাত হলো মানুষের চিন্তাশক্তির একটি পদ্ধতিগত 'বাগ' (bug)। এটি আমাদের চিন্তাভাবনাকে সংক্ষিপ্ত করে কিন্তু প্রায়শই ভুল সিদ্ধান্তের দিকে নিয়ে যায়।\n\nউদাহরণ:\nবাগ ফিক্স করার সময় আমরা প্রায়ই শুধু সেই টেস্ট কেসগুলো চালাই যা ব্যর্থ হয়েছে। এটি একটি পক্ষপাত, কারণ আমরা নতুন কোনো ত্রুটি (regression) তৈরি করেছি কি না তা যাচাই করি না।\nগুগল সার্চ করার সময় আমরা এমন ফলাফল পছন্দ করি যা আমাদের আগের ধারণাকে সমর্থন করে, অনেকটা কোড রিভিউয়ের সময় নিজের লেখা কোডের পক্ষে যুক্তি দেওয়ার মতো।\n\nমূল ধারণা:\nএই 'বাগ'গুলো চিনতে পারা হলো মানুষের 'সিস্টেম'কে ডিবাগ করার প্রথম ধাপ। এটি আমাদের সিদ্ধান্তগুলোকে আরও যৌক্তিক এবং নির্ভুল করে তোলে।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**ধারণা:** জ্ঞানীয় পক্ষপাত (Cognitive Bias)\n\n**উদাহরণ:**\nএকজন সফটওয়্যার ইঞ্জিনিয়ার যখন একটি কোড ডিবাগ করেন, তখন তিনি প্রায়শই 'কনফার্মেশন বায়াস' বা নিশ্চিতকরণ পক্ষপাতের শিকার হন।\n\nধরা যাক, আপনি একটি ওয়েব অ্যাপ্লিকেশনে লগইন বাগ ঠিক করছেন। আপনার প্রাথমিক ধারণা হলো, সমস্যাটি ডেটাবেস কানেকশনে। তখন আপনি কেবল সেই প্রমাণগুলোই খুঁজবেন যা আপনার ধারণাকে সমর্থন করে — যেমন কানেকশন টাইমআউট চেক করা বা নেটওয়ার্ক লগ দেখা। কিন্তু আপনি অন্যান্য সম্ভাবনাগুলো উপেক্ষা করেন, যেমন ভুল পাসওয়ার্ড ফরম্যাট বা সেশন ম্যানেজমেন্টের সমস্যা।\n\nপ্রোগ্রামিংয়ে এই পক্ষপাত অত্যন্ত সাধারণ কারণ আমরা চাই আমাদের প্রাথমিক সমাধানটি সঠিক হোক। ফলে আমরা আমাদের হাইপোথিসিস বা অনুকল্পকে সমর্থন করে এমন ডেটা বেশি গুরুত্ব দিই এবং পরস্পরবিরোধী প্রমাণগুলোকে গুরুত্বহীন করে ফেলি।\n\n**মূল অন্তর্দৃষ্টি:**\nআমাদের মস্তিষ্ক এমন তথ্য পছন্দ করে যা আমাদের বিদ্যমান বিশ্বাসকে নিশ্চিত করে, এমনকি যখন সেই বিশ্বাস ভুল হয়। প্রোগ্রামিংয়ে এটি আমাদের ভুল জায়গায় খুঁজতে বাধ্য করে এবং বাগ ফিক্স করতে দেরি করিয়ে দেয়।",
+        "example_id": "ex_fd3f1c23bf714467",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা: নিশ্চিতকরণ পক্ষপাত (Confirmation Bias)\n\nউদাহরণ:\nএকজন সফটওয়্যার ইঞ্জিনিয়ার একটি জটিল বাগ (bug) খুঁজছেন। তিনি প্রাথমিকভাবে ভাবলেন যে সমস্যাটি একটি নির্দিষ্ট মডিউলে। নিশ্চিতকরণ পক্ষপাত তখন কাজ করে যখন তিনি কেবল সেই মডিউলের কোডগুলোই মনোযোগ দিয়ে পরীক্ষা করেন এবং অন্য কোথাও খোঁজার চেষ্টা করেন না। এমনকি অন্য কোনো সহকর্মী যদি অন্য কোনো সম্ভাব্য কারণের কথা বলেন, তিনিও তা অগ্রাহ্য করতে পারেন। এর ফলে তিনি সঠিক সমাধান খুঁজে পেতে অনেক সময় নষ্ট করেন।\n\nমূল ধারণা:\nনিশ্চিতকরণ পক্ষপাত আমাদের নিজস্ব ধারণাগুলোকে চ্যালেঞ্জ করার ক্ষমতা কমিয়ে দেয়, যার ফলে আমরা কেবল সেই তথ্যগুলোই খুঁজি যা আমাদের বিশ্বাসকে সমর্থন করে। সফটওয়্যার ডেভেলপমেন্টের মতো জটিল ক্ষেত্রে এটি ভুল এবং অদক্ষ সমাধানের দিকে নিয়ে যেতে পারে।",
+        "example_id": "ex_091cdd55022a4fdb"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা:\nজ্ঞানীয় পক্ষপাত হলো মানুষের চিন্তাশক্তির একটি পদ্ধতিগত 'বাগ' (bug)। এটি আমাদের চিন্তাভাবনাকে সংক্ষিপ্ত করে কিন্তু প্রায়শই ভুল সিদ্ধান্তের দিকে নিয়ে যায়।\n\nউদাহরণ:\nবাগ ফিক্স করার সময় আমরা প্রায়ই শুধু সেই টেস্ট কেসগুলো চালাই যা ব্যর্থ হয়েছে। এটি একটি পক্ষপাত, কারণ আমরা নতুন কোনো ত্রুটি (regression) তৈরি করেছি কি না তা যাচাই করি না।\nগুগল সার্চ করার সময় আমরা এমন ফলাফল পছন্দ করি যা আমাদের আগের ধারণাকে সমর্থন করে, অনেকটা কোড রিভিউয়ের সময় নিজের লেখা কোডের পক্ষে যুক্তি দেওয়ার মতো।\n\nমূল ধারণা:\nএই 'বাগ'গুলো চিনতে পারা হলো মানুষের 'সিস্টেম'কে ডিবাগ করার প্রথম ধাপ। এটি আমাদের সিদ্ধান্তগুলোকে আরও যৌক্তিক এবং নির্ভুল করে তোলে।",
+        "example_id": "ex_5819137607294092"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:30:49.817444"
+}

@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "topic": "Cognitive Bias",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including Priya’s name, location, and profession, and it uses a context relevant to her environment in Mumbai, which aligns well with her profile. The complexity level appears appropriate, with a clear explanation of the availability heuristic and its impact, suitable for a high school student with medium complexity preferences. The factual content about the availability heuristic and its influence on decision-making is accurate and well-explained, with no evident errors. The structure of the example is logical, with a clear flow from scenario to impact and insight, making it pedagogically effective. The analogy and framing are appropriate for the domain of cognitive biases, using a real-world, professional context that resonates with the topic of risk assessment and decision-making, fitting the domain well.\n\n[PF] PERSONALIZATION FIDELITY — The example is highly tailored, incorporating Priya’s name, location, and professional environment, and it uses a real-world scenario relevant to her context.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation of the availability heuristic is at a suitable depth for a high school student, balancing detail with accessibility, matching the medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and its effects are factually correct, with no inaccuracies or misleading statements.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, impact, and key insight, facilitating understanding and retention. The flow is logical and easy to follow.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing and analogies are appropriate for the cognitive bias topic, using a professional, real-world context relevant to decision-making in finance/IT, which aligns well with the domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nContext:\n  Priya, a student in Mumbai, spends time online reading tech news and discussion forums.\n\nSituation:\n  She sees three recent articles about AI and automation affecting jobs and remembers a few dramatic headlines.\n\nObservation:\n  Based on those vivid stories, she estimates there is a 75% chance that most software development jobs in India will be automated within five years.\n\nWhat it is:\n  Availability bias (availability heuristic): judging how likely something is based on how easily examples come to mind.\n\nReality check:\n  Broad evidence suggests automation tends to shift tasks and change job roles rather than replace most jobs outright; base rates from research are usually much more modest and vary by field.\n\nImpact:\n  Priya might focus on “safer” skill choices or withdraw from pursuing certain tech paths, guided by a skewed sense of risk.\n\nKey Insight:\n  What’s freshest in memory can feel most likely; check base rates and look across many sources to counter this bias.",
+    "final_example": "Concept: Availability Heuristic\n\nExample:\nPriya, a Mumbai student interning at a fintech startup in Bandra-Kurla Complex (BKC), is helping the team evaluate a new anti-fraud analytics tool recommended by a vendor. A high-profile data breach at a rival bank was widely covered in local business news and discussed in her Bandra office corridors, making the incident feel fresh and salient.\n\nWhat happens:\n- Because the breach was vividly reported and top-of-mind, Priya overestimates how likely such failures are with the new tool.\n- She gravitates toward caution based on that memorable example, rather than weighing the tool's overall track record or the broader baseline risk.\n\nNumeric illustration:\n- Baseline risk of a breach with this class of tool: 1%\n- Priya’s quick estimate after the news: 15–20%\n\nImpact:\n- Decision: delays procurement by two weeks to gather more evidence and hear from more users.\n- Consequence: potential project timeline slip in Mumbai’s fast-paced finance/IT pace, but riskier, less informed choice is avoided.\n\nKey Insight:\n  Memorable, recent examples loom larger in judgment than typical statistics, especially in Mumbai’s dense, news-driven professional environment. Availability bias can tilt risk assessments when high-profile stories dominate memory.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nContext:\n  Priya, a student in Mumbai, spends time online reading tech news and discussion forums.\n\nSituation:\n  She sees three recent articles about AI and automation affecting jobs and remembers a few dramatic headlines.\n\nObservation:\n  Based on those vivid stories, she estimates there is a 75% chance that most software development jobs in India will be automated within five years.\n\nWhat it is:\n  Availability bias (availability heuristic): judging how likely something is based on how easily examples come to mind.\n\nReality check:\n  Broad evidence suggests automation tends to shift tasks and change job roles rather than replace most jobs outright; base rates from research are usually much more modest and vary by field.\n\nImpact:\n  Priya might focus on “safer” skill choices or withdraw from pursuing certain tech paths, guided by a skewed sense of risk.\n\nKey Insight:\n  What’s freshest in memory can feel most likely; check base rates and look across many sources to counter this bias.",
+        "example_id": "ex_8d0e3fe418b54510",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nContext:\nPriya is a software developer in a Mumbai startup, working in Andheri East. The team is planning a mid-cycle release for their ride-sharing app used by millions of Mumbai commuters. A recent outage last Monday during the morning rush in Navi Mumbai is still fresh in her mind.\n\nWhat happened:\n- The outage memory is vivid and easy to recall.\n- In planning risk for the new feature, Priya’s judgment is colored by that recent incident.\n\nWhat it is:\n- Availability bias: the tendency to judge how likely something is based on how easily past examples come to mind, rather than on objective data.\n\nNumeric example:\n- Baseline risk (from historical data) of a similar outage: 8%.\n- Priya’s estimate after recalling the Navi Mumbai incident: 40%.\n\nEffect on the plan:\n- The team increases monitoring and adds extra logging.\n- Sprint plan shifts to allow a longer testing window, effectively delaying the release by about one week.\n\nMumbai-specific context:\n- The memory sits alongside real-life factors like long commutes (Andheri to Navi Mumbai), crowded trains, and monsoon-season delays—typical pressures in a Mumbai tech workplace that can amplify reactions to vivid incidents.\n\nKey Insight:\nAvailability bias inflates perceived risk when a recent, memorable incident dominates memory; back it up with data and historical trends to keep risk assessments balanced.",
+        "example_id": "ex_befa38a0d27e4ab5"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Availability Heuristic\n\nExample:\nPriya, a Mumbai student interning at a fintech startup in Bandra-Kurla Complex (BKC), is helping the team evaluate a new anti-fraud analytics tool recommended by a vendor. A high-profile data breach at a rival bank was widely covered in local business news and discussed in her Bandra office corridors, making the incident feel fresh and salient.\n\nWhat happens:\n- Because the breach was vividly reported and top-of-mind, Priya overestimates how likely such failures are with the new tool.\n- She gravitates toward caution based on that memorable example, rather than weighing the tool's overall track record or the broader baseline risk.\n\nNumeric illustration:\n- Baseline risk of a breach with this class of tool: 1%\n- Priya’s quick estimate after the news: 15–20%\n\nImpact:\n- Decision: delays procurement by two weeks to gather more evidence and hear from more users.\n- Consequence: potential project timeline slip in Mumbai’s fast-paced finance/IT pace, but riskier, less informed choice is avoided.\n\nKey Insight:\n  Memorable, recent examples loom larger in judgment than typical statistics, especially in Mumbai’s dense, news-driven professional environment. Availability bias can tilt risk assessments when high-profile stories dominate memory.",
+        "example_id": "ex_f6c3fd24bfb24bbd"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T15:37:44.708820"
+}

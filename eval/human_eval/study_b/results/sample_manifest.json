@@ -1,0 +1,1022 @@
+[
+  {
+    "example_id": "EX01",
+    "tier": "t0",
+    "provider": "deepseek",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "profile": {
+      "user_id": "eval_user_06",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "llm_scores_float": {
+      "PF": 2.77,
+      "CC": 4.12,
+      "CA": 4.75,
+      "PC": 4.8,
+      "DA": 4.25
+    },
+    "llm_composite": 4.3
+  },
+  {
+    "example_id": "EX02",
+    "tier": "t0",
+    "provider": "deepseek",
+    "user_id": "eval_user_05",
+    "topic": "Compound Interest",
+    "profile": {
+      "user_id": "eval_user_05",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "llm_scores_float": {
+      "PF": 2.62,
+      "CC": 4.15,
+      "CA": 5.0,
+      "PC": 4.75,
+      "DA": 4.35
+    },
+    "llm_composite": 4.3
+  },
+  {
+    "example_id": "EX03",
+    "tier": "t0",
+    "provider": "deepseek",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_01",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 2.66,
+      "CC": 4.1,
+      "CA": 4.87,
+      "PC": 4.67,
+      "DA": 4.51
+    },
+    "llm_composite": 4.4
+  },
+  {
+    "example_id": "EX04",
+    "tier": "t0",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_04",
+      "name": "Kenji",
+      "role": "engineer",
+      "education_level": "undergraduate",
+      "profession": "Software Engineer",
+      "location": "Tokyo, Japan",
+      "cultural_background": "East Asian",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 1,
+      "CC": 5,
+      "CA": 4,
+      "PC": 5,
+      "DA": 3
+    },
+    "llm_scores_float": {
+      "PF": 1.0,
+      "CC": 5.0,
+      "CA": 4.0,
+      "PC": 5.0,
+      "DA": 3.0
+    },
+    "llm_composite": 3.7
+  },
+  {
+    "example_id": "EX05",
+    "tier": "t0",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_02",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 3,
+      "CC": 3,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 3.0,
+      "CC": 3.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.2
+  },
+  {
+    "example_id": "EX06",
+    "tier": "t0",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_02",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 3,
+      "CC": 3,
+      "CA": 5,
+      "PC": 3,
+      "DA": 4
+    },
+    "llm_scores_float": {
+      "PF": 3.0,
+      "CC": 3.0,
+      "CA": 5.0,
+      "PC": 3.0,
+      "DA": 4.0
+    },
+    "llm_composite": 3.7
+  },
+  {
+    "example_id": "EX07",
+    "tier": "t1",
+    "provider": "deepseek",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_01",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 4.98,
+      "CC": 4.26,
+      "CA": 5.0,
+      "PC": 4.69,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX08",
+    "tier": "t1",
+    "provider": "deepseek",
+    "user_id": "eval_user_08",
+    "topic": "Natural Selection",
+    "profile": {
+      "user_id": "eval_user_08",
+      "name": "Kenji",
+      "role": "engineer",
+      "education_level": "undergraduate",
+      "profession": "Software Engineer",
+      "location": "Tokyo, Japan",
+      "cultural_background": "East Asian",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 4.56,
+      "CC": 4.34,
+      "CA": 4.94,
+      "PC": 4.97,
+      "DA": 4.81
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX09",
+    "tier": "t1",
+    "provider": "deepseek",
+    "user_id": "eval_user_03",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_03",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 4.87,
+      "CC": 4.37,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.89
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX10",
+    "tier": "t1",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_02",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 5.0
+  },
+  {
+    "example_id": "EX11",
+    "tier": "t1",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "profile": {
+      "user_id": "eval_user_02",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 3.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 4.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.4
+  },
+  {
+    "example_id": "EX12",
+    "tier": "t1",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_01",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 3,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 3.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.6
+  },
+  {
+    "example_id": "EX13",
+    "tier": "t2",
+    "provider": "deepseek",
+    "user_id": "eval_user_08",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_08",
+      "name": "Kenji",
+      "role": "engineer",
+      "education_level": "undergraduate",
+      "profession": "Software Engineer",
+      "location": "Tokyo, Japan",
+      "cultural_background": "East Asian",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 4.8,
+      "CC": 4.49,
+      "CA": 4.95,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX14",
+    "tier": "t2",
+    "provider": "deepseek",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "profile": {
+      "user_id": "eval_user_06",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.29,
+      "CA": 5.0,
+      "PC": 4.99,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX15",
+    "tier": "t2",
+    "provider": "deepseek",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_04",
+      "name": "Kenji",
+      "role": "engineer",
+      "education_level": "undergraduate",
+      "profession": "Software Engineer",
+      "location": "Tokyo, Japan",
+      "cultural_background": "East Asian",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.58,
+      "CA": 5.0,
+      "PC": 4.89,
+      "DA": 4.91
+    },
+    "llm_composite": 5.0
+  },
+  {
+    "example_id": "EX16",
+    "tier": "t2",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_02",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 5.0
+  },
+  {
+    "example_id": "EX17",
+    "tier": "t2",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "profile": {
+      "user_id": "eval_user_06",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 4.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX18",
+    "tier": "t2",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_01",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 5.0
+  },
+  {
+    "example_id": "EX19",
+    "tier": "t3",
+    "provider": "deepseek",
+    "user_id": "eval_user_07",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_07",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX20",
+    "tier": "t3",
+    "provider": "deepseek",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_04",
+      "name": "Kenji",
+      "role": "engineer",
+      "education_level": "undergraduate",
+      "profession": "Software Engineer",
+      "location": "Tokyo, Japan",
+      "cultural_background": "East Asian",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX21",
+    "tier": "t3",
+    "provider": "deepseek",
+    "user_id": "eval_user_05",
+    "topic": "Compound Interest",
+    "profile": {
+      "user_id": "eval_user_05",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX22",
+    "tier": "t3",
+    "provider": "deepseek",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_02",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX23",
+    "tier": "t3",
+    "provider": "deepseek",
+    "user_id": "eval_user_03",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_03",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 5.0
+  },
+  {
+    "example_id": "EX24",
+    "tier": "t3",
+    "provider": "deepseek",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_06",
+      "name": "Amara",
+      "role": "nurse",
+      "education_level": "professional",
+      "profession": "Nurse",
+      "location": "Lagos, Nigeria",
+      "cultural_background": "West African",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX25",
+    "tier": "t3",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_03",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_03",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.0
+    },
+    "llm_composite": 4.9
+  },
+  {
+    "example_id": "EX26",
+    "tier": "t3",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_03",
+    "topic": "Compound Interest",
+    "profile": {
+      "user_id": "eval_user_03",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 5.0
+  },
+  {
+    "example_id": "EX27",
+    "tier": "t3",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_07",
+    "topic": "Compound Interest",
+    "profile": {
+      "user_id": "eval_user_07",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 4.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.6
+  },
+  {
+    "example_id": "EX28",
+    "tier": "t3",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_04",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_04",
+      "name": "Kenji",
+      "role": "engineer",
+      "education_level": "undergraduate",
+      "profession": "Software Engineer",
+      "location": "Tokyo, Japan",
+      "cultural_background": "East Asian",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 4.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  },
+  {
+    "example_id": "EX29",
+    "tier": "t3",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_07",
+    "topic": "Cognitive Bias",
+    "profile": {
+      "user_id": "eval_user_07",
+      "name": "Carlos",
+      "role": "humanities_researcher",
+      "education_level": "phd",
+      "profession": "Humanities Researcher",
+      "location": "S\u00e3o Paulo, Brazil",
+      "cultural_background": "Latin American",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "warm"
+    },
+    "llm_scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "llm_scores_float": {
+      "PF": 5.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.0
+    },
+    "llm_composite": 4.9
+  },
+  {
+    "example_id": "EX30",
+    "tier": "t3",
+    "provider": "gpt5nano",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "profile": {
+      "user_id": "eval_user_01",
+      "name": "Lena",
+      "role": "student",
+      "education_level": "high_school",
+      "profession": "Student",
+      "location": "Berlin, Germany",
+      "cultural_background": "European",
+      "learning_style": "example-based",
+      "complexity": "medium",
+      "start_mode": "cold"
+    },
+    "llm_scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "llm_scores_float": {
+      "PF": 4.0,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "llm_composite": 4.8
+  }
+]

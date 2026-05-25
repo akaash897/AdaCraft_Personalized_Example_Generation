@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "topic": "Compound Interest",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example is personalized by mentioning Priya's profession, location, and goal, which aligns well with her profile. It uses her name and city, and the scenario is relatable for a high school student interested in practical financial concepts, matching her learning style of example-based instruction. The analogies are within the domain of finance, which is appropriate for explaining compound interest.\n\nRegarding complexity, the explanation includes formulas, step-by-step calculations, and specific numerical examples, which seem suitable for a high school level with medium complexity. The content is accurate, with correct formulas and calculations, and the step-by-step breakdown facilitates understanding, indicating good pedagogical clarity. The framing and analogies are appropriate for the financial domain, making the example relevant and accessible.\n\n[PF] PERSONALIZATION FIDELITY — The example effectively incorporates Priya’s name, location, and profession, making it highly personalized and relevant.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances formulas, calculations, and context suitable for a high school student, matching the medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The formulas and calculations are correct, and the core concept of compound interest is accurately presented.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is clear, with a logical flow from concept to example, and the step-by-step calculations reinforce understanding. The formula and example are well integrated.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely within the financial domain, appropriate for explaining compound interest to a high school student.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept:\nCompound interest is when you earn interest on your initial money (the principal) and also on the interest you have already accumulated. It's often called \"interest on interest,\" which makes your money grow faster over time.\n\nExample:\nPriya, a student in Mumbai, wants to buy a new laptop that costs ₹50,000. Her parents give her ₹10,000 to start a savings account that earns 5% compound interest per year. Let's see how her money grows.\n\nYear 1:\n  - She starts with ₹10,000.\n  - Interest earned: 5% of ₹10,000 = ₹500.\n  - Total at the end of Year 1: ₹10,000 + ₹500 = ₹10,500.\n\nYear 2:\n  - The new principal is now ₹10,500.\n  - Interest earned: 5% of ₹10,500 = ₹525.\n  - Total at the end of Year 2: ₹10,500 + ₹525 = ₹11,025.\n  - Notice she earned ₹25 more this year because she earned interest on the previous year's interest.\n\nYear 3:\n  - The new principal is ₹11,025.\n  - Interest earned: 5% of ₹11,025 = ₹551.25.\n  - Total at the end of Year 3: ₹11,025 + ₹551.25 = ₹11,576.25.\n\nAfter 3 years, Priya's ₹10,000 has grown to ₹11,576.25 without her adding any more money. The extra ₹551.25 she earned in the final year is the power of compounding at work.\n\nKey Insight:\nThe longer your money is invested, the more significant the effect of compounding becomes, as your earnings start generating their own earnings.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nPriya is a freelance graphic designer in Mumbai. She wants to buy a new MacBook Pro that costs ₹2,00,000. To reach her goal, she invests her savings in a fixed deposit (FD) that offers 7% annual interest, compounded yearly.\n\nThe Numbers:\n  - Principal (P): ₹50,000 (the initial amount she invests)\n  - Annual Interest Rate (r): 7% or 0.07\n  - Compounding Frequency (n): 1 time per year (since it's compounded annually)\n  - Time (t): 5 years\n\nThe Formula:\n  The formula for compound interest is:\n  A = P(1 + r/n)^(n*t)\n  Where:\n    A = the future value of the investment/loan, including interest\n    P = the principal investment amount (the initial deposit or loan amount)\n    r = the annual interest rate (as a decimal)\n    n = the number of times that interest is compounded per year\n    t = the number of years the money is invested or borrowed for\n\nStep-by-Step Calculation:\n  - Year 1: Amount = 50,000 * (1 + 0.07/1)^(1*1) = 50,000 * 1.07 = ₹53,500\n  - Year 2: Amount = 53,500 * (1 + 0.07/1)^(1*1) = 53,500 * 1.07 = ₹57,245\n    (Notice the new principal is the previous year's total amount)\n  - Year 3: Amount = 57,245 * 1.07 = ₹61,252.15\n  - Year 4: Amount = 61,252.15 * 1.07 = ₹65,539.80\n  - Year 5: Amount = 65,539.8",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept:\nCompound interest is when you earn interest on your initial money (the principal) and also on the interest you have already accumulated. It's often called \"interest on interest,\" which makes your money grow faster over time.\n\nExample:\nPriya, a student in Mumbai, wants to buy a new laptop that costs ₹50,000. Her parents give her ₹10,000 to start a savings account that earns 5% compound interest per year. Let's see how her money grows.\n\nYear 1:\n  - She starts with ₹10,000.\n  - Interest earned: 5% of ₹10,000 = ₹500.\n  - Total at the end of Year 1: ₹10,000 + ₹500 = ₹10,500.\n\nYear 2:\n  - The new principal is now ₹10,500.\n  - Interest earned: 5% of ₹10,500 = ₹525.\n  - Total at the end of Year 2: ₹10,500 + ₹525 = ₹11,025.\n  - Notice she earned ₹25 more this year because she earned interest on the previous year's interest.\n\nYear 3:\n  - The new principal is ₹11,025.\n  - Interest earned: 5% of ₹11,025 = ₹551.25.\n  - Total at the end of Year 3: ₹11,025 + ₹551.25 = ₹11,576.25.\n\nAfter 3 years, Priya's ₹10,000 has grown to ₹11,576.25 without her adding any more money. The extra ₹551.25 she earned in the final year is the power of compounding at work.\n\nKey Insight:\nThe longer your money is invested, the more significant the effect of compounding becomes, as your earnings start generating their own earnings.",
+        "example_id": "ex_6eb6b8535314465f",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Compound Interest\n\nExample:\nPriya, an IT student in Mumbai, wants to buy a new laptop for her programming courses, which costs ₹80,000. She invests ₹20,000 in a savings account that offers 6% annual interest, compounded annually.\n\nWhat happens each year:\n  - Year 1: She earns 6% interest on her initial ₹20,000.\n    - Interest earned: ₹20,000 × 0.06 = ₹1,200\n    - New balance: ₹20,000 + ₹1,200 = ₹21,200\n  - Year 2: She now earns 6% interest on the new balance of ₹21,200.\n    - Interest earned: ₹21,200 × 0.06 = ₹1,272\n    - New balance: ₹21,200 + ₹1,272 = ₹22,472\n  - Year 3: She earns 6% interest on the ₹22,472 balance.\n    - Interest earned: ₹22,472 × 0.06 = ₹1,348.32\n    - Final balance: ₹22,472 + ₹1,348.32 = ₹23,820.32\n\nThe formula for this is: Final Amount = Principal × (1 + Interest Rate)^Time\n  - Final Amount = ₹20,000 × (1 + 0.06)³ = ₹23,820.32\n\nKey Insight:\n  Compound interest accelerates your savings because you start earning interest on the interest you've already accumulated, not just your original amount.",
+        "example_id": "ex_298a7a6a77da4f80"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Compound Interest\n\nExample:\nPriya is a freelance graphic designer in Mumbai. She wants to buy a new MacBook Pro that costs ₹2,00,000. To reach her goal, she invests her savings in a fixed deposit (FD) that offers 7% annual interest, compounded yearly.\n\nThe Numbers:\n  - Principal (P): ₹50,000 (the initial amount she invests)\n  - Annual Interest Rate (r): 7% or 0.07\n  - Compounding Frequency (n): 1 time per year (since it's compounded annually)\n  - Time (t): 5 years\n\nThe Formula:\n  The formula for compound interest is:\n  A = P(1 + r/n)^(n*t)\n  Where:\n    A = the future value of the investment/loan, including interest\n    P = the principal investment amount (the initial deposit or loan amount)\n    r = the annual interest rate (as a decimal)\n    n = the number of times that interest is compounded per year\n    t = the number of years the money is invested or borrowed for\n\nStep-by-Step Calculation:\n  - Year 1: Amount = 50,000 * (1 + 0.07/1)^(1*1) = 50,000 * 1.07 = ₹53,500\n  - Year 2: Amount = 53,500 * (1 + 0.07/1)^(1*1) = 53,500 * 1.07 = ₹57,245\n    (Notice the new principal is the previous year's total amount)\n  - Year 3: Amount = 57,245 * 1.07 = ₹61,252.15\n  - Year 4: Amount = 61,252.15 * 1.07 = ₹65,539.80\n  - Year 5: Amount = 65,539.8",
+        "example_id": "ex_755c4bf4d8394ddb"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:11:12.773628"
+}

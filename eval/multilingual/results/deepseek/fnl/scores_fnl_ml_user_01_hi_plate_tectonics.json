@@ -1,0 +1,116 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "lang_name": "Hindi",
+  "topic": "Plate Tectonics",
+  "topic_str": "प्लेट विवर्तनिकी",
+  "provider": "deepseek",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by mentioning Priya's location, profession, and learning style, integrating her profile into the explanation. The depth of explanation aligns well with a high school student's medium complexity level, providing relevant geological details without excessive technicality. The factual content about plate tectonics, Mumbai's geological context, and related phenomena appears accurate and well-explained. The structure is clear, with a logical flow from concept to real-world application, making it pedagogically effective. The analogies and framing are appropriate for a geology topic, using familiar examples like earthquakes and land shifts in Mumbai, which are domain-relevant.\n\n[PF] PERSONALIZATION FIDELITY — The example references Priya's location, profession, and learning style, making it tailored to her profile.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation matches a medium complexity level suitable for a high school student, with appropriate terminology and depth.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content about plate tectonics, land movement, and seismic activity is accurate and correctly presented.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, with a clear progression from concept to real-world examples, facilitating understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are well-suited for geology, using familiar geographic and seismic phenomena relevant to Mumbai.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "hi",
+    "detected_name": "Hindi",
+    "expected_lang": "hi",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example shifts focus to Mumbai's local geological and urban planning impacts, which aligns more with the user's request for a domain-specific, relevant example. It addresses the critique by making the example more pertinent to the user's field, likely geography or urban planning, rather than a broad or unrelated context. \n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "**अवधारणा:** प्लेट विवर्तनिकी\n\n**उदाहरण:**\nप्रिया, मान लो तुम मुंबई के मरीन ड्राइव पर खड़ी हो, जहाँ अरब सागर का पानी शहर से टकराता है। नीचे, जमीन के बहुत गहराई में, विशाल चट्टानी 'प्लेटें' धीरे-धीरे खिसक रही हैं। मुंबई भारतीय प्लेट पर स्थित है, जो उत्तर की ओर बढ़ते हुए यूरेशियन प्लेट से टकराती है। यह टक्कर हिमालय को ऊपर उठाती है।\n\nमुंबई के संदर्भ में, इसका एक प्रभाव यह है कि हमारा शहर अपेक्षाकृत स्थिर क्षेत्र में है, लेकिन पश्चिम में, अरब सागर के नीचे, एक और सीमा है। वहाँ, अरब सागर के तल पर, भारतीय प्लेट और अफ्रीकी प्लेट एक दूसरे से अलग हो रही हैं (विवर्तनिक सीमा)। इस 'अपसारी' गति के कारण नई चट्टान बनती है और समुद्र तल फैलता है। यह प्रक्रिया हमारे तटीय क्षेत्र की भूवैज्ञानिक स्थिरता को प्रभावित कर सकती है।\n\nयदि ये प्लेटें अचानक तेजी से खिसकें (जैसा कभी-कभी होता है), तो इससे भूकंप आ सकता है। मुंबई में निर्माण करते समय इंजीनियर इसी जोखिम को ध्यान में रखते हैं। शहर की कई ऊँची इमारतों की नींव इस तरह डिज़ाइन की जाती है कि वे हल्के से मध्यम झटकों को सह सकें।\n\n**मूल सिद्धांत:**\nपृथ्वी की सतह कई टुकड़ों (प्लेटों) में बँटी है जो लगातार धीमी गति से चलती रहती हैं। इनकी गति और आपसी टकराहट ही पर्वतों, भूकंपों और हमारे महाद्वीपों के आकार का मुख्य कारण है।",
+    "final_example": "**संकल्पना:** प्लेट विवर्तनिकी\n\n**उदाहरण:**\n\nप्रिया, मुंबई में रहती है और अपने दैनिक जीवन में भूगर्भीय प्रक्रियाओं के प्रभाव को देख सकती है। मुंबई एक तटीय शहर है और यह भारतीय प्लेट पर स्थित है, जो हिमालय की ओर उत्तर में धीरे-धीरे खिसक रही है। इस खिसकने का प्रभाव मुंबई के तटीय इलाकों और उसके आसपास की भूगर्भीय संरचनाओं पर देखा जा सकता है।\n\nमुंबई के तट पर, आप कभी-कभी छोटे-मोटे भूकंपों के झटके महसूस कर सकते हैं। ये झटके प्लेटों के सीमाओं पर होने वाली गतिविधियों का परिणाम हैं। भारतीय प्लेट और यूरेशियन प्लेट के टकराव से हिमालय का निर्माण हुआ है, और इस टकराव के दबाव का प्रभाव देश के अन्य हिस्सों, जैसे मुंबई, तक भी पहुँचता है। यहाँ, प्लेटों की गति तटीय क्षेत्रों में भूगर्भीय तनाव पैदा करती है, जो छोटे भूकंपों का कारण बन सकती है।\n\nमुंबई में निर्माण और शहरी योजना भी प्लेट विवर्तनिकी से प्रभावित होती है। तटीय इलाकों में बनाई गई इमारतों और सड़कों को इस भूगर्भीय गतिविधि के लिए डिज़ाइन किया जाना चाहिए। उदाहरण के लिए, मुंबई के कुछ हिस्सों में ज़मीन का धीरे-धीरे ऊपर उठना (उत्थान) या नीचे धसना (अवतलन) हो सकता है, जो प्लेटों की आंतरिक गतिविधियों से जुड़ा है। इसलिए, इंजीनियर और योजनाकार इन प्रक्रियाओं को ध्यान में रखते हैं ताकि शहर की संरचनाएं सुरक्षित और स्थिर रहें।\n\n**मुख्य सार:**\n\nप्लेट विवर्तनिकी पृथ्वी की सतह के बड़े-बड़े खंडों (प्लेटों) की गति और उनके टकराव या अलग होने की प्रक्रिया है। मुंबई के तटीय और शहरी वातावरण में, यह गति छोटे भूकंपों, ज़मीन के उत्थान-अवतलन, और निर्माण योजना को प्रभावित करती है, जिससे यह प्रक्रिया दैनिक जीवन में प्रासंगिक हो जाती है।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**अवधारणा:** प्लेट विवर्तनिकी\n\n**उदाहरण:**\nप्रिया, मान लो तुम मुंबई के मरीन ड्राइव पर खड़ी हो, जहाँ अरब सागर का पानी शहर से टकराता है। नीचे, जमीन के बहुत गहराई में, विशाल चट्टानी 'प्लेटें' धीरे-धीरे खिसक रही हैं। मुंबई भारतीय प्लेट पर स्थित है, जो उत्तर की ओर बढ़ते हुए यूरेशियन प्लेट से टकराती है। यह टक्कर हिमालय को ऊपर उठाती है।\n\nमुंबई के संदर्भ में, इसका एक प्रभाव यह है कि हमारा शहर अपेक्षाकृत स्थिर क्षेत्र में है, लेकिन पश्चिम में, अरब सागर के नीचे, एक और सीमा है। वहाँ, अरब सागर के तल पर, भारतीय प्लेट और अफ्रीकी प्लेट एक दूसरे से अलग हो रही हैं (विवर्तनिक सीमा)। इस 'अपसारी' गति के कारण नई चट्टान बनती है और समुद्र तल फैलता है। यह प्रक्रिया हमारे तटीय क्षेत्र की भूवैज्ञानिक स्थिरता को प्रभावित कर सकती है।\n\nयदि ये प्लेटें अचानक तेजी से खिसकें (जैसा कभी-कभी होता है), तो इससे भूकंप आ सकता है। मुंबई में निर्माण करते समय इंजीनियर इसी जोखिम को ध्यान में रखते हैं। शहर की कई ऊँची इमारतों की नींव इस तरह डिज़ाइन की जाती है कि वे हल्के से मध्यम झटकों को सह सकें।\n\n**मूल सिद्धांत:**\nपृथ्वी की सतह कई टुकड़ों (प्लेटों) में बँटी है जो लगातार धीमी गति से चलती रहती हैं। इनकी गति और आपसी टकराहट ही पर्वतों, भूकंपों और हमारे महाद्वीपों के आकार का मुख्य कारण है।",
+        "example_id": "ex_bb7e05601f494714",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "यह उदाहरण मेरे क्षेत्र से संबंधित नहीं लगता। क्या आप मेरे डोमेन से कुछ उदाहरण दे सकते हैं?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**संकल्पना:** प्लेट विवर्तनिकी\n\n**उदाहरण:**\n\nप्रिया, मुंबई में रहती है और अपने दैनिक जीवन में भूगर्भीय प्रक्रियाओं के प्रभाव को देख सकती है। मुंबई एक तटीय शहर है और यह भारतीय प्लेट पर स्थित है, जो हिमालय की ओर उत्तर में धीरे-धीरे खिसक रही है। इस खिसकने का प्रभाव मुंबई के तटीय इलाकों और उसके आसपास की भूगर्भीय संरचनाओं पर देखा जा सकता है।\n\nमुंबई के तट पर, आप कभी-कभी छोटे-मोटे भूकंपों के झटके महसूस कर सकते हैं। ये झटके प्लेटों के सीमाओं पर होने वाली गतिविधियों का परिणाम हैं। भारतीय प्लेट और यूरेशियन प्लेट के टकराव से हिमालय का निर्माण हुआ है, और इस टकराव के दबाव का प्रभाव देश के अन्य हिस्सों, जैसे मुंबई, तक भी पहुँचता है। यहाँ, प्लेटों की गति तटीय क्षेत्रों में भूगर्भीय तनाव पैदा करती है, जो छोटे भूकंपों का कारण बन सकती है।\n\nमुंबई में निर्माण और शहरी योजना भी प्लेट विवर्तनिकी से प्रभावित होती है। तटीय इलाकों में बनाई गई इमारतों और सड़कों को इस भूगर्भीय गतिविधि के लिए डिज़ाइन किया जाना चाहिए। उदाहरण के लिए, मुंबई के कुछ हिस्सों में ज़मीन का धीरे-धीरे ऊपर उठना (उत्थान) या नीचे धसना (अवतलन) हो सकता है, जो प्लेटों की आंतरिक गतिविधियों से जुड़ा है। इसलिए, इंजीनियर और योजनाकार इन प्रक्रियाओं को ध्यान में रखते हैं ताकि शहर की संरचनाएं सुरक्षित और स्थिर रहें।\n\n**मुख्य सार:**\n\nप्लेट विवर्तनिकी पृथ्वी की सतह के बड़े-बड़े खंडों (प्लेटों) की गति और उनके टकराव या अलग होने की प्रक्रिया है। मुंबई के तटीय और शहरी वातावरण में, यह गति छोटे भूकंपों, ज़मीन के उत्थान-अवतलन, और निर्माण योजना को प्रभावित करती है, जिससे यह प्रक्रिया दैनिक जीवन में प्रासंगिक हो जाती है।",
+        "example_id": "ex_173949bf958a4f73"
+      },
+      {
+        "round": 2,
+        "feedback_given": "यह बहुत अच्छा है! इस उदाहरण ने मुझे अवधारणा समझने में वास्तव में मदद की।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "मैं हमेशा बेहतर समझता हूँ जब उदाहरण मेरे रोज़मर्रा के जीवन से जुड़े होते हैं।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T17:31:02.543827"
+}

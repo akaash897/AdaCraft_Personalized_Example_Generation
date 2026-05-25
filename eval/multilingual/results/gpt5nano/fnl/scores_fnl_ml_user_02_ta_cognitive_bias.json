@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_02",
+  "lang": "ta",
+  "lang_name": "Tamil",
+  "topic": "Cognitive Bias",
+  "topic_str": "அறிவாற்றல் சார்பு",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example is tailored to the user's profile by mentioning the name Meena, her location Chennai, and her profession as a nurse, which aligns well with her background. The content is presented in Tamil, matching her language preference, and uses a medical scenario relevant to her field, incorporating domain-specific terminology and context, which suits her learning style. The complexity level appears appropriate, discussing cognitive biases in clinical decision-making with sufficient depth for a professional nurse. The factual content about availability bias and diagnostic reasoning is accurate and well-explained, supporting correct scientific understanding. The structure is clear, with a logical flow from scenario to reflection and corrective steps, facilitating learning. The analogies and framing are appropriate for a medical context, making the example domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example effectively incorporates the user's name, location, profession, language, and learning style, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content discusses cognitive biases in clinical diagnosis with appropriate depth, matching a medium complexity level for a professional nurse.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of availability bias and diagnostic reasoning is factually correct, with no evident inaccuracies.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, reflection prompts, and corrective steps, making it conducive to learning.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies, vocabulary, and framing are entirely appropriate for a medical and nursing context.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "ta",
+    "detected_name": "Tamil",
+    "expected_lang": "ta",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "ta",
+    "detected_name": "Tamil",
+    "expected_lang": "ta",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "இந்த உதாரணம் என் துறையுடன் தொடர்பில்லாதது போல் தெரிகிறது. என் தொழில் சார்ந்த உதாரணம் தர முடியுமா?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example shifts the context from a general, somewhat abstract scenario to a medical setting involving a nurse, which aligns better with the user's request for a profession-related example. It also clearly illustrates the availability heuristic through a recent, memorable dengue case, directly addressing the critique about relevance. However, the example could be more explicitly connected to the user's specific profession or field, but overall, it makes a significant effort to relate the concept to a practical, profession-specific scenario.\n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "மருத்துவ உதாரணங்கள் எனக்கு கருத்துகளை புரிந்துகொள்ள எளிதாக இருக்கும்.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that the example should include medical examples that are easier to understand, especially for non-experts. The regenerated example introduces a medical scenario involving chest pain and differential diagnosis, which is more relatable and concrete for medical learners, aligning with the user's request. Therefore, it effectively addresses the critique by making the example more accessible and relevant to medical contexts.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "கருத்து: அறிவாற்றல் சார்பு\nஅறிவாற்றல் சார்பு என்பது நாம் தகவல்களைEvaluating செய்யும்போது, சமீபத்தில் நினைவில் இருக்கும் நிகழ்வுகள் அல்லது எளிதில் நினைவுக்க αφορά செய்திகள் আমাদের முடிவை அதிகம் guiding செய்யும் மனப்பானர். எளிமையான உதாரணமாக, அருகில் வரும் கதைகள், புகார்கள் அல்லது நோய்-நிகழ்வுகள் நம்மில் ஒரு முடிவை எளிதில் உருவாக்கும்.\n\nஉதாரணம்:\nMeena, சென்னை உள்ள ஒரு துட்டப்பட்ட சிறப்பு மருத்துவ பணியாளராக, சமீபத்தில் ஒரு சமூக மீடியா பகுதியில் “குளிர் நோயை 24 மணிக்குள் மறுக்கும் புலனாற்றல் குணத்தூண் எளிய இயற்கை வாயு” என்ற மருந்து பற்றிய பதிவு பார்த்தாள். அப்பொழுது அந்த சோதனையின் வீடியோ மற்றும் பயங்கள் நிறைந்த புகைப்படங்கள் வந்ததால், “இது நிச்சயமாக வேலை செய்யும் போல” என்று நினைக்கத் தொடங்கினார். ஆனால் நிகழ்வுகள் விரைவாக உருவானவை; சில நண்பர்கள் எழுதிய விமர்சனங்களை துடைத்துவிட்டு, பல வழிகாட்டிய authoritative ஆதாரங்களையே பார்த்தல் அவ்வாறு செய்ய வேண்டுமானால் பரிசீலிக்கப்பட வேண்டியது என்று Meena நினைத்தான்.\n\nஅந்த நிலை எந்த அறிவாற்றல் சார்பை காட்டுகிறது?\n- இடல்பைஸ் (availability bias) — சமீபத்தில் நினைவில் வரும் நிகழ்வுகள் அல்லது விசேஷமான கதைகள் அதிகம் நம்பிக்கையைக் கொண்டு தீர்மானிப்பதில் வழிகாட்டுகின்றன.\n\nதெரிவுசெய்யப்பட்ட இரண்டு எளிய debiasing படிகள்:\n1) ஆதாரங்களை பல மையங்களிலிருந்து தேடு: அதிகாரவாய்ந்த மருத்துவ ஆவணங்கள், மருத்துவ மன்றங்கள் அல்லது peer-reviewed ஆய்வுகள் போன்ற பிரத்தியேக ஆதாரங்களைப் பார்க்கவும்; ஒரு சேகரிப்பு.fetchone வழிகளைக் கொண்டுவர வேண்டாம்.\n2) எதிர்காலநிலையில் எதிர்-தகவலை தேடு: இந்தம்மாத்திரமான அறிக்கைகளை வேறு ஆதாரங்களுடன் ஒப்பிட்டு, எதிர்பாராத உண்மைகளைப் பார்க்கவும் (தாக்கு-வாக்கு, மறுப்பு தகவல்கள்) — கண்ணியமான பொருந்தும் நிலைப்பாட்டை உருவாக்க உதவும்.\n\nமுக்கிய அறிவு:\nநீங்கள் நினைத்துப் பார்க்கும் தகவல்களே எல்லாம் உண்மை இல்லை என்றவரை மறக்காமல், பல ஆதாரங்களையும் ஒப்பிடும் வழிமுறை மிகவும் பயனுள்ளது.",
+    "final_example": "Concept: அறிவாற்றல் சார்பு (Availability bias)\n\nExample:\nநைட்-ஷிபில் செல்லும் சேவையாளர்\tMeena (சென்னை, இந்தியா) ஒரு கேட்டில்லாமையா இரவு மாற்றத்தில் பணிபுரிகிறார். தனக்கு பணிக்கு வந்த இரண்டு குழந்தை நோயாளிகளும் chest pain பற்றி வந்தனர்.\n\n- περίπτωση A: 9 வயது குழந்தை – chest pain 45 நிமிடங்களுக்கு முன்புதான் துவங்கியது. இதழில் வேகமாக தைருத்துவம் அதிகமாக உள்ளது; குழந்தை நெஞ்சு பகுதியில் அழுத்தப்படுகின்றதாகவும், வாஸ்தவமாக Heart attack-ஐ நினைத்துக்கொள்ள புலன்களை விட கொள்ள அழுத்தம் உள்ளது. கடந்த வாரம் ஒரு குழந்தையின் chest pain panic attack என்று விவரித்ததாக நினைவுகொண்ட Meena, இது இந்தப் பொழுதின் நிலைமைக்கு Availability bias-ஐ சுட்டுகிறது என்று உணரவில்லை.\n\n- சட்டபடி: மற்றொரு நோயாளி acid reflux என்று இருந்தான். இந்த நினைவு Meena-யின் முடிவை இலகுவாக heart attack-க்கு தாழ்ந்துவைத்து பரிசீலனையை குறைத்து விட்டது என்பதில் அச்சம் அதிகமாகிறது.\n\nநீங்கள் கவனிக்க வேண்டியது:\nAvailability bias என்னவென்றால், சமீபத்தில் நினைவில் வந்த சம்பவங்கள் மற்றும் சிறப்புச்சித்திரங்கள் தீர்மானத்தை அதிகமாக வழிமொழிகின்றன; இருப்பினும் மருத்துவ பரிசோதனைகள், vitals மற்றும் Differential diagnosis பரிசீலனை மையமாக இருக்க வேண்டும்.\n\nBias-உணர்வு சொல்லிக்கொள்கை:\n- உணர்வு: சமீபத்திய நினைவுகள் தீர்மானத்தில் அதிக முக்கியத்துவம் பெறுவது.\n- கட்டமைப்பு: வழமையான நோயாக்கம் பல்வேறு காரணங்களை மறக்க முடியும்.\n\nReflective prompt:\n- கடைசி некалькі நாட்கள் நடந்த chest pain சம்பவங்கள் நினைவில் கொண்டு உங்கள் முடிவுகள் எவ்வாறு biased ஆகிறதென கவனித்தீர்களா? சமீபத்திய நினைவுகள் தீர்மானத்தில் 얼마나 பங்கேற்பு செய்கின்றன என்பதைப் பாருங்கள். தற்போது, நீங்கள் மீண்டும் சொல்ல கீழே உள்ள பயிற்சி எடுத்து பார்க்கவும்.\n\nSingle practical corrective step:\n- எதிர்நோக்கி Differential Diagnosis-ஐ எழுது வைத்துக் கொண்டு, ஒவ்வொரு நோயிற்கும் ஒரு குறுஞ்சட்டிகை (checklist) படிக்கவும்; chest pain case-களுக்கு முன்னர் “AVAILABILITY memory check” சார்ந்த குறிப்பு வைத்து, புதிய பொருத்தங்களை அறிவுசார்ந்தEvidence-ஆக சோதிக்கவும்.\n\nChecklist (சுற்றறை மருத்துவ பரிசோதனைக்கு உட்பட முக்கிய படிகள்):\n- ABC оценனை மற்றும் பாதுகாப்பு: சுவாசம், உரத்த உயிர், தடுப்பு.\n- Chest pain-ஐ விளக்கும் நோய்கள் மற்றும் விளக்கங்கள்: musculoskeletal, reflux, asthma/ pneumonia, anxiety/panic, myocarditis, rare congenital heart conditions.\n- History: onset, duration, character, radiation, triggers, associated symptoms (palpitations, dyspnea, fever).\n- Vital signs: HR, BP, RR, SpO2.\n- Basic investigations: ECG, oxygen saturation, basic labs; red flags இருந்தால் விரைவு_RESPONSE.\n- Differential diagnosis-ஐ எழுதல் மற்றும் ஒவ்வொரு காரணத்தையும் நிரூபிக்கும் குறைந்தது 2 தகவல்கள் சேகரித்து சரிபார்த்தல்.\n- Next steps: appropriate referrals, observation plan, parental counseling.\n\nKey Insight:\nAvailability bias-ம் படைப்பின் தீர்மானத்தை கடந்த நினைவுகளால் பலவீனப்படுத்தும்; ஆனால் பரிசோதனைகள் மற்றும் வழிகாட்டும் Differential-ஐ தாங்கும் போது மருத்துவ முடிவுகள் நியாயமானவையாகும்.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "கருத்து: அறிவாற்றல் சார்பு\nஅறிவாற்றல் சார்பு என்பது நாம் தகவல்களைEvaluating செய்யும்போது, சமீபத்தில் நினைவில் இருக்கும் நிகழ்வுகள் அல்லது எளிதில் நினைவுக்க αφορά செய்திகள் আমাদের முடிவை அதிகம் guiding செய்யும் மனப்பானர். எளிமையான உதாரணமாக, அருகில் வரும் கதைகள், புகார்கள் அல்லது நோய்-நிகழ்வுகள் நம்மில் ஒரு முடிவை எளிதில் உருவாக்கும்.\n\nஉதாரணம்:\nMeena, சென்னை உள்ள ஒரு துட்டப்பட்ட சிறப்பு மருத்துவ பணியாளராக, சமீபத்தில் ஒரு சமூக மீடியா பகுதியில் “குளிர் நோயை 24 மணிக்குள் மறுக்கும் புலனாற்றல் குணத்தூண் எளிய இயற்கை வாயு” என்ற மருந்து பற்றிய பதிவு பார்த்தாள். அப்பொழுது அந்த சோதனையின் வீடியோ மற்றும் பயங்கள் நிறைந்த புகைப்படங்கள் வந்ததால், “இது நிச்சயமாக வேலை செய்யும் போல” என்று நினைக்கத் தொடங்கினார். ஆனால் நிகழ்வுகள் விரைவாக உருவானவை; சில நண்பர்கள் எழுதிய விமர்சனங்களை துடைத்துவிட்டு, பல வழிகாட்டிய authoritative ஆதாரங்களையே பார்த்தல் அவ்வாறு செய்ய வேண்டுமானால் பரிசீலிக்கப்பட வேண்டியது என்று Meena நினைத்தான்.\n\nஅந்த நிலை எந்த அறிவாற்றல் சார்பை காட்டுகிறது?\n- இடல்பைஸ் (availability bias) — சமீபத்தில் நினைவில் வரும் நிகழ்வுகள் அல்லது விசேஷமான கதைகள் அதிகம் நம்பிக்கையைக் கொண்டு தீர்மானிப்பதில் வழிகாட்டுகின்றன.\n\nதெரிவுசெய்யப்பட்ட இரண்டு எளிய debiasing படிகள்:\n1) ஆதாரங்களை பல மையங்களிலிருந்து தேடு: அதிகாரவாய்ந்த மருத்துவ ஆவணங்கள், மருத்துவ மன்றங்கள் அல்லது peer-reviewed ஆய்வுகள் போன்ற பிரத்தியேக ஆதாரங்களைப் பார்க்கவும்; ஒரு சேகரிப்பு.fetchone வழிகளைக் கொண்டுவர வேண்டாம்.\n2) எதிர்காலநிலையில் எதிர்-தகவலை தேடு: இந்தம்மாத்திரமான அறிக்கைகளை வேறு ஆதாரங்களுடன் ஒப்பிட்டு, எதிர்பாராத உண்மைகளைப் பார்க்கவும் (தாக்கு-வாக்கு, மறுப்பு தகவல்கள்) — கண்ணியமான பொருந்தும் நிலைப்பாட்டை உருவாக்க உதவும்.\n\nமுக்கிய அறிவு:\nநீங்கள் நினைத்துப் பார்க்கும் தகவல்களே எல்லாம் உண்மை இல்லை என்றவரை மறக்காமல், பல ஆதாரங்களையும் ஒப்பிடும் வழிமுறை மிகவும் பயனுள்ளது.",
+        "example_id": "ex_699d09bc35ed45c0",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "இந்த உதாரணம் என் துறையுடன் தொடர்பில்லாதது போல் தெரிகிறது. என் தொழில் சார்ந்த உதாரணம் தர முடியுமா?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "கருத்து:\nஅறிவாற்றல் சார்பு என்பது மனதில் உருவாகி வரும் ஒரு நிலை: நாம் சமீபத்தில் நினைவில் இருக்கும் நிகழ்வுகள் அல்லது வழக்கமாகப் பேசப்பட்ட விஷயங்கள் எவ்வாறு நிகழ்கின்றன என்றும் எவ்வளவு சாத்தியமானவையோ என்றும் எளிதாக மருத்துவ முடிவுகளை பாதிக்கவைக்கின்றன. இக் குறைபாடு மருத்துவப் பணி context-ல் தேவைப்பட்ட தேர்வு-தீர்மானங்களை தவறாகக் கடத்தும்.\n\nஉதாரணம்:\nசென்னை ஒன்றில் இருக்கும் மனைவுக்கும் காயங்களுக்கும் பராமரிப்பு அளிக்கும் Meena எனும் நர்சு ward-ல் வேலை करतेார். கடந்த வாரம் சமூக ஊடகங்களில் dengue பற்றி அதிகம் லைவ்ஸ் வந்ததால் fever-ம், தலைவலி-ம் உள்ள நோயாளியை பார்த்தார். dengue-ஐ முன்னருமே அதிக சாத்தியமாக உணர்ந்து, படிப்படியான differential-ஐ மறுக்காமல் dengue-test-ஐ முதலில் வேண்டும் என்று நினைத்தார். பரிதாபமாக dengue-க்கு வராமல், viral fever-ஆல் இறுதியில் நிரூபிக்கப்பட்டது. இந்த நிகழ்வு availability heuristic-ஐ காட்டுகிறது: சமீபத்திய மற்றும் நினைவுகூரும் தகவல்கள் முடிவுகளை வழிநடத்திடுவதில் அதிக பங்கு வகிக்கின்றன.\n\nகேள்வி:\nஇந்த சூழலில் எந்த அறிவாற்றல் சார்பு விளையாடுகிறது என்பதை கண்டுபிடிக்கவும். அதற்கட்ட இரண்டு எளிய debiasing படிகளை அளிக்கவும்: 1) Evidence-based வழிகாட்டிகள் மற்றும் உள்ளூர் பரவல் தரவை பார்க்கவும்; 2) கட்டமைக்கப்பட்ட தீர்மான பட்டியல் (structured decision checklist) பயன்படுத்து fever differential-ஐ சரியாக மையப்படுத்தவும்.\n\nமுக்கிய அறிவுரை:\nஎதிர்பார்ப்பு விழுப்புணர்வு அறிவாற்றல் சார்பான குறைபாடுகளை உருவாக்கும்; வழிகாட்டிகள் மற்றும் தற்போதைய தரவுகளை தயவுசெய்து உறுதிப்படுத்துவது முக்கியம்.",
+        "example_id": "ex_9db108d24850425f"
+      },
+      {
+        "round": 2,
+        "feedback_given": "இது மிகவும் நன்றாக உள்ளது! இந்த உதாரணம் கருத்தை புரிந்துகொள்ள உதவியது.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "மருத்துவ உதாரணங்கள் எனக்கு கருத்துகளை புரிந்துகொள்ள எளிதாக இருக்கும்.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: அறிவாற்றல் சார்பு (Availability bias)\n\nExample:\nநைட்-ஷிபில் செல்லும் சேவையாளர்\tMeena (சென்னை, இந்தியா) ஒரு கேட்டில்லாமையா இரவு மாற்றத்தில் பணிபுரிகிறார். தனக்கு பணிக்கு வந்த இரண்டு குழந்தை நோயாளிகளும் chest pain பற்றி வந்தனர்.\n\n- περίπτωση A: 9 வயது குழந்தை – chest pain 45 நிமிடங்களுக்கு முன்புதான் துவங்கியது. இதழில் வேகமாக தைருத்துவம் அதிகமாக உள்ளது; குழந்தை நெஞ்சு பகுதியில் அழுத்தப்படுகின்றதாகவும், வாஸ்தவமாக Heart attack-ஐ நினைத்துக்கொள்ள புலன்களை விட கொள்ள அழுத்தம் உள்ளது. கடந்த வாரம் ஒரு குழந்தையின் chest pain panic attack என்று விவரித்ததாக நினைவுகொண்ட Meena, இது இந்தப் பொழுதின் நிலைமைக்கு Availability bias-ஐ சுட்டுகிறது என்று உணரவில்லை.\n\n- சட்டபடி: மற்றொரு நோயாளி acid reflux என்று இருந்தான். இந்த நினைவு Meena-யின் முடிவை இலகுவாக heart attack-க்கு தாழ்ந்துவைத்து பரிசீலனையை குறைத்து விட்டது என்பதில் அச்சம் அதிகமாகிறது.\n\nநீங்கள் கவனிக்க வேண்டியது:\nAvailability bias என்னவென்றால், சமீபத்தில் நினைவில் வந்த சம்பவங்கள் மற்றும் சிறப்புச்சித்திரங்கள் தீர்மானத்தை அதிகமாக வழிமொழிகின்றன; இருப்பினும் மருத்துவ பரிசோதனைகள், vitals மற்றும் Differential diagnosis பரிசீலனை மையமாக இருக்க வேண்டும்.\n\nBias-உணர்வு சொல்லிக்கொள்கை:\n- உணர்வு: சமீபத்திய நினைவுகள் தீர்மானத்தில் அதிக முக்கியத்துவம் பெறுவது.\n- கட்டமைப்பு: வழமையான நோயாக்கம் பல்வேறு காரணங்களை மறக்க முடியும்.\n\nReflective prompt:\n- கடைசி некалькі நாட்கள் நடந்த chest pain சம்பவங்கள் நினைவில் கொண்டு உங்கள் முடிவுகள் எவ்வாறு biased ஆகிறதென கவனித்தீர்களா? சமீபத்திய நினைவுகள் தீர்மானத்தில் 얼마나 பங்கேற்பு செய்கின்றன என்பதைப் பாருங்கள். தற்போது, நீங்கள் மீண்டும் சொல்ல கீழே உள்ள பயிற்சி எடுத்து பார்க்கவும்.\n\nSingle practical corrective step:\n- எதிர்நோக்கி Differential Diagnosis-ஐ எழுது வைத்துக் கொண்டு, ஒவ்வொரு நோயிற்கும் ஒரு குறுஞ்சட்டிகை (checklist) படிக்கவும்; chest pain case-களுக்கு முன்னர் “AVAILABILITY memory check” சார்ந்த குறிப்பு வைத்து, புதிய பொருத்தங்களை அறிவுசார்ந்தEvidence-ஆக சோதிக்கவும்.\n\nChecklist (சுற்றறை மருத்துவ பரிசோதனைக்கு உட்பட முக்கிய படிகள்):\n- ABC оценனை மற்றும் பாதுகாப்பு: சுவாசம், உரத்த உயிர், தடுப்பு.\n- Chest pain-ஐ விளக்கும் நோய்கள் மற்றும் விளக்கங்கள்: musculoskeletal, reflux, asthma/ pneumonia, anxiety/panic, myocarditis, rare congenital heart conditions.\n- History: onset, duration, character, radiation, triggers, associated symptoms (palpitations, dyspnea, fever).\n- Vital signs: HR, BP, RR, SpO2.\n- Basic investigations: ECG, oxygen saturation, basic labs; red flags இருந்தால் விரைவு_RESPONSE.\n- Differential diagnosis-ஐ எழுதல் மற்றும் ஒவ்வொரு காரணத்தையும் நிரூபிக்கும் குறைந்தது 2 தகவல்கள் சேகரித்து சரிபார்த்தல்.\n- Next steps: appropriate referrals, observation plan, parental counseling.\n\nKey Insight:\nAvailability bias-ம் படைப்பின் தீர்மானத்தை கடந்த நினைவுகளால் பலவீனப்படுத்தும்; ஆனால் பரிசோதனைகள் மற்றும் வழிகாட்டும் Differential-ஐ தாங்கும் போது மருத்துவ முடிவுகள் நியாயமானவையாகும்.",
+        "example_id": "ex_99c806e51a8a4887"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:34:31.549370"
+}

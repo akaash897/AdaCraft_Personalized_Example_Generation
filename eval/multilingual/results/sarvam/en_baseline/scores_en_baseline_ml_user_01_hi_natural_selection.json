@@ -1,0 +1,63 @@
+{
+  "scenario": "en_baseline",
+  "user_id": "ml_user_01",
+  "lang": "hi",
+  "topic": "Natural Selection",
+  "provider": "sarvam",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 3
+    },
+    "composite": 4.4,
+    "reasoning": "The example uses a classroom scenario to explain natural selection, which is a biological concept, but it frames it through the lens of student behaviors and strategies, making it somewhat relatable but not deeply domain-specific. The language is straightforward and accessible, suitable for a high school student, and the structure clearly guides the learner through the concept. However, the analogy is somewhat generic and could benefit from more biological specificity to enhance domain appropriateness. The personalization is minimal, as it only mentions Priya's location and role, but it does not incorporate her learning style or cultural background, which could make the example more engaging for her.\n\n[PF] PERSONALIZATION FIDELITY — The example mentions Priya's name and location, but the scenario is generic and does not deeply reflect her cultural background or learning style. It uses a school setting, which is appropriate, but the analogy could be more tailored to her context.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION — The explanation is at a medium complexity level, suitable for a high school student, with clear steps and simple language, matching her stated complexity.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The biological principles of variation, differential survival, reproduction, and adaptation are correctly described, aligning well with scientific understanding.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is logical, with each step clearly explained, and the key insight summarizes the concept effectively, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy uses a classroom and student strategies, which are somewhat related to learning but not directly to biological natural selection, making it only partially appropriate for the biological domain.  \nAXIS_SCORE: 3\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "run": {
+    "initial_example": "Concept: Natural Selection\n\nExample:\nDuring Mumbai's monsoon season, puddles form everywhere across the city. Some frogs in these puddles have slightly longer legs than others.\n\nWhat happens:\n  - Frogs with longer legs can jump further between puddles\n  - They escape predators more easily and find more food\n  - These frogs survive longer and have more baby frogs\n  - Baby frogs inherit their parents' longer legs\n\nOver many generations:\n  - The average leg length in the frog population increases\n  - Frogs with shorter legs gradually disappear from the gene pool\n\nWhy this matters:\n  - The environment (puddles and predators) \"selects\" which frogs survive\n  - Traits that help survival become more common in the population\n  - This is natural selection in action - not random, but based on survival advantage\n\nKey Insight:\n  Natural selection is nature's way of favoring traits that help living things survive and reproduce in their specific environment.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine Priya is in a competitive exam coaching class in Mumbai. The \"environment\" is the high-stakes exam that only a few students can top.\n\nStep 1: Variation\nStudents in the class have different study habits. Some are excellent at memorizing formulas, others are fast at solving problems, and some are great at managing their time during practice tests.\n\nStep 2: Differential Survival\nWhen the final exam arrives, the students with the best time-management and problem-solving skills tend to score higher. They \"survive\" the pressure better than those who only memorized but couldn't apply their knowledge quickly.\n\nStep 3: Reproduction\nThe successful students form study groups and share their effective techniques. They teach others how to manage time and approach complex problems, effectively \"reproducing\" their successful strategies within the class.\n\nStep 4: Adaptation\nOver time, the most effective study methods—those that lead to high scores—become the norm for the entire class. The \"population\" of students adapts to the exam's demands by adopting these successful strategies.\n\nKey Insight:\nNatural selection is a process where the traits that work best in a specific environment become more common over time, not because individuals change, but because those with the right traits survive and pass on their methods.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nDuring Mumbai's monsoon season, puddles form everywhere across the city. Some frogs in these puddles have slightly longer legs than others.\n\nWhat happens:\n  - Frogs with longer legs can jump further between puddles\n  - They escape predators more easily and find more food\n  - These frogs survive longer and have more baby frogs\n  - Baby frogs inherit their parents' longer legs\n\nOver many generations:\n  - The average leg length in the frog population increases\n  - Frogs with shorter legs gradually disappear from the gene pool\n\nWhy this matters:\n  - The environment (puddles and predators) \"selects\" which frogs survive\n  - Traits that help survival become more common in the population\n  - This is natural selection in action - not random, but based on survival advantage\n\nKey Insight:\n  Natural selection is nature's way of favoring traits that help living things survive and reproduce in their specific environment.",
+        "example_id": "ex_96095f7ab95143a0",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my professional domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nImagine Priya and her classmates in Mumbai are preparing for a very difficult biology exam. The class has many different students with various study habits.\n\n1.  **Variation:** Some students make detailed, colorful charts. Others prefer to re-read their textbooks multiple times. A few form study groups to quiz each other. These are the different \"traits\" in the population of students.\n\n2.  **Selection:** The exam results come out. The students who made charts and quizzed each other scored much higher. The ones who just re-read the book did poorly. The exam acted as a \"selection pressure,\" favoring the chart-making and group-studying methods.\n\n3.  **Inheritance:** The students who did well share their successful methods. Priya sees her friend's high score and asks how she studied. Her friend shows her the charts. Priya starts making charts too, passing on the \"successful trait\" to a new student.\n\nOver the next few exams, the class's overall performance improves because the most effective study methods have been \"selected\" and are now common practice.\n\nKey Insight:\nNatural selection is the process where traits that help an organism survive and reproduce become more common over time. In this case, the \"organisms\" are the study methods, and the \"environment\" is the exam.",
+        "example_id": "ex_6dee8546b34d4bd5"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples are grounded in my everyday professional scenarios.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nImagine Priya is in a competitive exam coaching class in Mumbai. The \"environment\" is the high-stakes exam that only a few students can top.\n\nStep 1: Variation\nStudents in the class have different study habits. Some are excellent at memorizing formulas, others are fast at solving problems, and some are great at managing their time during practice tests.\n\nStep 2: Differential Survival\nWhen the final exam arrives, the students with the best time-management and problem-solving skills tend to score higher. They \"survive\" the pressure better than those who only memorized but couldn't apply their knowledge quickly.\n\nStep 3: Reproduction\nThe successful students form study groups and share their effective techniques. They teach others how to manage time and approach complex problems, effectively \"reproducing\" their successful strategies within the class.\n\nStep 4: Adaptation\nOver time, the most effective study methods—those that lead to high scores—become the norm for the entire class. The \"population\" of students adapts to the exam's demands by adopting these successful strategies.\n\nKey Insight:\nNatural selection is a process where the traits that work best in a specific environment become more common over time, not because individuals change, but because those with the right traits survive and pass on their methods.",
+        "example_id": "ex_d3fce438645c49bb"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:06:56.786932"
+}

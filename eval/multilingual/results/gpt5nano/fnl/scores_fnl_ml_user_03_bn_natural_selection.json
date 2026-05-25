@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Natural Selection",
+  "topic_str": "প্রাকৃতিক নির্বাচন",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by including the user's name, location, profession, and learning style, and it uses domain-specific terminology and analogies relevant to biology, which aligns well with the user's profile. The complexity appears appropriate, with intermediate-level explanations, calculations, and code snippets that match the user's medium complexity preference. The scientific content is accurate, correctly describing natural selection and allele frequency changes, with proper formulas and calculations. The structure is clear, with a logical flow from concept to example, calculations, and code analogy, facilitating understanding. The analogies and framing are appropriate for a biology topic, using familiar concepts like moths and genetic variation, which are suitable for domain relevance.\n\n[PF] PERSONALIZATION FIDELITY — The example includes the user's name, location, profession, and learning style, and it uses domain-specific terminology, making it well-tailored to the profile.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation involves genetic concepts, calculations, and code snippets at an intermediate level, matching the user's medium complexity preference.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content, including definitions, formulas, and example calculations, is accurate and correctly presented.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from concept to example, calculations, and analogy, making it easy to follow and learn from.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies, vocabulary, and framing are appropriate for a biology topic, with relevant examples and terminology.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique was that the original example was not relevant to their domain, which appears to be software or programming, and requested an example more aligned with their field. The regenerated example indeed shifts from biological concepts to a software context, discussing traits like LowMemory and HighMemory in a project environment, and uses analogous concepts like branches and merges to illustrate inheritance and selection. This directly addresses the critique by providing a domain-specific example. \n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that code-related analogies are clearer than abstract descriptions. The regenerated example incorporates a simplified, pseudo-code style explanation of allele frequency calculations, aligning with the user's preference for code-like clarity. Therefore, it effectively addresses the critique by making the concept more concrete and accessible through code snippets. \n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nপ্রাকৃতিক নির্বাচন হলো পুরো প্রজাতির ওপর উন্মুক্ত একটি ছোট্ট দলের মতো—the পরিবেশ কীভাবে কতজন বেঁচে থাকবে এবং কতজন বংশবৃদ্ধি করবে, সেটি নির্ধারণ করে। এতে ভিন্ন বৈশিষ্ট্যের ব্যক্তিরা ভিন্ন মাত্রায় বাঁচে ও বেশি বংশলাভ করে, ফলে সেই বৈশিষ্ট্যের জিনগুলোর অনুপাত ধীরে ধীরে Population-এ বাড়ে বা কমে।\n\nধাপ-ভিত্তি ব্যাখ্যা (সংক্ষেপে):\n- Variation (ভ্যারিয়েশন): প্রজাতির মধ্যে আলাদা আলাদা বৈশিষ্ট্য দেখা যায়; যেমন রং বা গঠনের পার্থক্য।\n- Heritable traits (আলাদা জিনগত বৈশিষ্ট্য): বেশি অংশ জেনেটিকভাবে নির্ধারিত—পূর্বসূরির বৈশিষ্ট্যগুলো সন্তানের মধ্যে চলমান হয়।\n- Differential survival and reproduction (ভিন্ন সারভাইভাল/প্রজনন): পরিবেশের চাপে কিছু বৈশিষ্ট্য বাঁচতে ও বংশবৃদ্ধি করতে সহায়ক, আবার काही ক্ষেত্রে কম সহায়ক।\n- Allele frequency change (অলিল ঘনত্ব পরিবর্তন): প্রজন্ম ধরে সেই সহায়ক বৈশিষ্ট্যের জিনগুলো population-এর মধ্যে বেশি বা কম হয়।\n\nপেপার্ড মর উদাহরণ (Biston betularia):\nপটভূমি:\nশিল্পায়িত polys pollution-এ গাছের ছাঁয়া ধূসর/অন্ধকার Bark-এ আচ্ছাদিত হলে, অন্ধকার মর ছালার সাথে বেশি মেল খায় এবং আলো-শান্ত মরদের তুলনায় predators থেকে বাঁচার সম্ভাবনা বেশি।\n\nপ্রসঙ্গ-সংক্রান্ত ধাপ:\n- Variation: পেপার্ড মর প্রজাতিতে হালকা রং ও অন্ধকার রং-দুই ধরনের মর আছে।\n- Heritable traits: মরদের রঙ জেনেটিক ভাবে নির্ধারিত, তাই ধারাবাহিক প্রজন্মে বৈশিষ্ট্য স্থানান্তরিত হয়।\n- Differential survival and reproduction: ধূসর Bark-এ অন্ধকার মর camouflage-এ ভাল, তাই অন্ধকার মর বেশি বেঁচে বড় সংখ্যা পায়; light morph-এর ধরে predators আরও বেশি খেয়ে ফেলে।\n- Allele frequency change: একাধিক প্রজন্মে অন্ধকার মরদের জিন-সংস্কৃতি population-এ বেশি ছড়ায়; এতে অন্ধকার-সংবলিত allele-এর ঘনত্ব বাড়ে।\n\nএকটি সরল সংখ্যামূলক উদাহরণ (সংক্ষেপে, এটি একটি সরলীকৃত মডেল):\n- শুরু population: Light = 60 মথ, Dark = 40 মথ (মোট 100)\n- প্রাকৃতিক চাপে Survival-rate: Light-moths-এর survival 25% (15 বেঁচে), Dark-moths-এর survival 75% (30 বেঁচে)\n- Survivors: Light 15, Dark 30 (মোট 45)\n- Dark-এর অংশ: 30/45 = 66.7% → এই ধাপে Dark trait-population-এ বেশি স্থানায়িত হয়\n- ধারণা: যদি trait-টি offspring-এ inheritance-লাগে, তাহলে পরবর্তী প্রজন্মে Dark-ঘনত্ব আরও বাড়ার সম্ভাবনা থাকে\n\nএই উদাহরণটি একটি সরলীকৃত চিত্র দেয়—আসল জিন-গণিত বহুগুণ জটিল (হেরার্ডিটি, dominant/recessive, mating patterns ইত্যাদি) হলেও মূল কথা স্পষ্ট: পরিবেশ বদলে গেলে কোন বৈশিষ্ট্য বেছে নেয়া হয় এবং সেই বেছে নেওয়া trait-গুলো ধারাবাহিক ভাবে Population-এ বেশি হয়।\n\nসংকলন-সাপোর্ট ও বিতর্ক\n- সামঞ্জস্যপূর্ণ প্রমাণ: Industrial melanism-সহ Peppered moth-এ রং-চাহিদা পরিবেশ-চাপের সাথে মেল খায়; বহু দেশে একই ধরনের ছোট প্রাণীর বিভিন্নতা ও বংশবৃদ্ধির ট্রেন্ড দেখা গেছে।\n- সমালোচনামূলক দৃষ্টিভঙ্গি: Kettlewell-র field-পরীক্ষা নিয়ে কিছু সমালোচনা হয়েছে; برخی মূলধারা যুক্তি দেয় যে মিথস্ক্রিয়া ও ডিজাইন-প্রক্রিয়া সীমাবদ্ধতা ছিল; তবে বহু পরে জিনগত তথ্য, দীর্ঘ সময়ের পর্যবেক্ষণ ও অন্যান্য প্রজাতিতে অনুরূপ patterns natural selection-এর টিকে থাকা প্রমাণকে আরও শক্ত করেছে।\n\nপ্রাথমিক প্রেডিকশন চাইলে:\nপ্রেসক্রাইব করুন: “ soot-darkened bark-এ কোন মর অধিক বাঁচবে—আলো নাকি অন্ধকার?” আপনার মতামত লিখে ফেলুন; তারপর এই উদাহরণে দেখুন কীভাবে পরিবেশ-চাপ অনুকূলtrait-কে Populaiton-এ বেশি ছড়িয়ে দেয়।\n\nমূল ভাবনা:\nপ্রাকৃতিক নির্বাচন হলো এমন একটি দীপ্তি-প্রক্রিয়া যেখানে পরিবেশে যে বৈশিষ্ট্যগুলি বাঁচতে সাহায্য করে সেগুলো ধীরে ধীরে প্রজন্ম থেকে প্রজন্মে বেশি হয়ে উঠে; Variation, heritability, ও differential survival — এই তিনয়ের সম্মিলনে allele frequencies পরিবর্তিত হয়।",
+    "final_example": "Concept: প্রাকৃতিক নির্বাচন\n\nExample:\nআর্জুন, কলকাতা-র একজন সফটওয়্যার ইঞ্জিনিয়ার, নিজের কাজে নোটপ্যাডে একটি ছোট জেনেটিক-ভ্যারিয়েশন সিমুলেশন বানালেন যাতে দুই ধরনের আলেল A ও a–কে চলমান প্রকৃতির মতো দেখা যায়। variation মানে হল জেনেটিক বৈচিত্র্য, heredity মানে হল বংশগতভাবে ঐ ভার্সনগুলো বংশধরে উপস্থিত থাকা, আর fitness মানে হলো কোন জেনোটাইপ বেশি সন্তান জন্মাতে সাহায্য করে—এই সময়ে পরিবেশ ঠিক কোন আলেলকে “বেশি ফিট” করে সেটা 결정 করে। classic উদাহরণ হিসেবে peppered moth-র মতো ঘটনার কথা স্মরণ করলে বোঝা যায়, কোন আলেলটা বেশি ফিট হবে, সেই পার্থক্য প্রজন্মে প্রজন্মে allele frequencies বদলে দেয়।\n\nগুরুত্বপূর্ণ শব্দভাণ্ডার:\n- Variation (বৈচিত্র্য): আলেল A আর a–র মতো জেনেটিক সংস্করণ।\n- Heredity (বংশগতি): বৈচিত্র্যের সংস্করণগুলো শিশুদের মধ্যে প্রভাবিতভাবে লম্বা সময় ধরে চলতে পারে।\n- Fitness (ফিটনেস): বাঁচা-লাভের ক্ষমতা, অর্থাৎ কত শতাংশ বাচ্চা offspring বেঁচে সুখে জেনারেশন থেকে জেনারেশনে পৌঁছায়।\n\nসংখ্যাগত উদাহরণ (মাঝারি জটিলতা):\n- allele frequencies: p = 0.60 (A allele), q = 0.40 (a allele)\n- জেনোটাইপ-ফিটনেস: w_AA = 1.0, w_Aa = 0.9, w_aa = 0.8\n\nগণনা 단계:\n- Wbar = p^2*w_AA + 2*p*q*w_Aa + q^2*w_aa\n        = 0.36*1.0 + 2*0.6*0.4*0.9 + 0.16*0.8\n        = 0.36 + 0.432 + 0.128\n        = 0.92\n- p' (নতুন p) = [p^2*w_AA + p*q*w_Aa] / Wbar\n              = (0.36 + 0.216) / 0.92\n              = 0.576 / 0.92 ≈ 0.626\n- q' (নতুন q) = 1 - p' ≈ 0.374\n\nফলাফল:\nএক জেনারেশনের পরে A allele–র ফ্রিকোয়েন্সি বৃদ্ধি পেয়ে ≈ 0.626-এ যায়; অর্থাৎ এই পরিবেশে A allele বেশি ফিট হওয়ায় ধীরে ধীরে বেশি প্রজন্মে ছড়িয়ে পড়ে।\n\nCode-সংগত উপমা (পসুডোকোড/সংক্ষিপ্ত কোড স্নিপেট):\nপূর্ব-মান:\np_old = 0.60\nq_old = 0.40\nw_AA = 1.0\nw_Aa = 0.9\nw_aa = 0.8\n\nচালানো গণনা:\nWbar = p_old*p_old*w_AA + 2*p_old*q_old*w_Aa + q_old*q_old*w_aa\np_new = (p_old*p_old*w_AA + p_old*q_old*w_Aa) / Wbar\nq_new = (p_old*q_old*w_Aa + q_old*q_old*w_aa) / Wbar\n\nআউটপুট (пример):\np_new ≈ 0.626, q_new ≈ 0.374\n\nKey Insight:\nপ্রাকৃতিক নির্বাচন তখন কাজ করে যখন বৈচিত্র্যের ভিন্নতা বংশগতি ধরে রেখে বিবেচিত পরিবেশে কোন আলেল বেশি জীবিত offspring দিতে পারে—এভাবে allele frequencies ধাপে ধাপে বদলে যায়, directional নির্বাচনের যোগে একটি allele বেশি ছড়িয়ে পড়ে।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\nপ্রাকৃতিক নির্বাচন হলো পুরো প্রজাতির ওপর উন্মুক্ত একটি ছোট্ট দলের মতো—the পরিবেশ কীভাবে কতজন বেঁচে থাকবে এবং কতজন বংশবৃদ্ধি করবে, সেটি নির্ধারণ করে। এতে ভিন্ন বৈশিষ্ট্যের ব্যক্তিরা ভিন্ন মাত্রায় বাঁচে ও বেশি বংশলাভ করে, ফলে সেই বৈশিষ্ট্যের জিনগুলোর অনুপাত ধীরে ধীরে Population-এ বাড়ে বা কমে।\n\nধাপ-ভিত্তি ব্যাখ্যা (সংক্ষেপে):\n- Variation (ভ্যারিয়েশন): প্রজাতির মধ্যে আলাদা আলাদা বৈশিষ্ট্য দেখা যায়; যেমন রং বা গঠনের পার্থক্য।\n- Heritable traits (আলাদা জিনগত বৈশিষ্ট্য): বেশি অংশ জেনেটিকভাবে নির্ধারিত—পূর্বসূরির বৈশিষ্ট্যগুলো সন্তানের মধ্যে চলমান হয়।\n- Differential survival and reproduction (ভিন্ন সারভাইভাল/প্রজনন): পরিবেশের চাপে কিছু বৈশিষ্ট্য বাঁচতে ও বংশবৃদ্ধি করতে সহায়ক, আবার काही ক্ষেত্রে কম সহায়ক।\n- Allele frequency change (অলিল ঘনত্ব পরিবর্তন): প্রজন্ম ধরে সেই সহায়ক বৈশিষ্ট্যের জিনগুলো population-এর মধ্যে বেশি বা কম হয়।\n\nপেপার্ড মর উদাহরণ (Biston betularia):\nপটভূমি:\nশিল্পায়িত polys pollution-এ গাছের ছাঁয়া ধূসর/অন্ধকার Bark-এ আচ্ছাদিত হলে, অন্ধকার মর ছালার সাথে বেশি মেল খায় এবং আলো-শান্ত মরদের তুলনায় predators থেকে বাঁচার সম্ভাবনা বেশি।\n\nপ্রসঙ্গ-সংক্রান্ত ধাপ:\n- Variation: পেপার্ড মর প্রজাতিতে হালকা রং ও অন্ধকার রং-দুই ধরনের মর আছে।\n- Heritable traits: মরদের রঙ জেনেটিক ভাবে নির্ধারিত, তাই ধারাবাহিক প্রজন্মে বৈশিষ্ট্য স্থানান্তরিত হয়।\n- Differential survival and reproduction: ধূসর Bark-এ অন্ধকার মর camouflage-এ ভাল, তাই অন্ধকার মর বেশি বেঁচে বড় সংখ্যা পায়; light morph-এর ধরে predators আরও বেশি খেয়ে ফেলে।\n- Allele frequency change: একাধিক প্রজন্মে অন্ধকার মরদের জিন-সংস্কৃতি population-এ বেশি ছড়ায়; এতে অন্ধকার-সংবলিত allele-এর ঘনত্ব বাড়ে।\n\nএকটি সরল সংখ্যামূলক উদাহরণ (সংক্ষেপে, এটি একটি সরলীকৃত মডেল):\n- শুরু population: Light = 60 মথ, Dark = 40 মথ (মোট 100)\n- প্রাকৃতিক চাপে Survival-rate: Light-moths-এর survival 25% (15 বেঁচে), Dark-moths-এর survival 75% (30 বেঁচে)\n- Survivors: Light 15, Dark 30 (মোট 45)\n- Dark-এর অংশ: 30/45 = 66.7% → এই ধাপে Dark trait-population-এ বেশি স্থানায়িত হয়\n- ধারণা: যদি trait-টি offspring-এ inheritance-লাগে, তাহলে পরবর্তী প্রজন্মে Dark-ঘনত্ব আরও বাড়ার সম্ভাবনা থাকে\n\nএই উদাহরণটি একটি সরলীকৃত চিত্র দেয়—আসল জিন-গণিত বহুগুণ জটিল (হেরার্ডিটি, dominant/recessive, mating patterns ইত্যাদি) হলেও মূল কথা স্পষ্ট: পরিবেশ বদলে গেলে কোন বৈশিষ্ট্য বেছে নেয়া হয় এবং সেই বেছে নেওয়া trait-গুলো ধারাবাহিক ভাবে Population-এ বেশি হয়।\n\nসংকলন-সাপোর্ট ও বিতর্ক\n- সামঞ্জস্যপূর্ণ প্রমাণ: Industrial melanism-সহ Peppered moth-এ রং-চাহিদা পরিবেশ-চাপের সাথে মেল খায়; বহু দেশে একই ধরনের ছোট প্রাণীর বিভিন্নতা ও বংশবৃদ্ধির ট্রেন্ড দেখা গেছে।\n- সমালোচনামূলক দৃষ্টিভঙ্গি: Kettlewell-র field-পরীক্ষা নিয়ে কিছু সমালোচনা হয়েছে; برخی মূলধারা যুক্তি দেয় যে মিথস্ক্রিয়া ও ডিজাইন-প্রক্রিয়া সীমাবদ্ধতা ছিল; তবে বহু পরে জিনগত তথ্য, দীর্ঘ সময়ের পর্যবেক্ষণ ও অন্যান্য প্রজাতিতে অনুরূপ patterns natural selection-এর টিকে থাকা প্রমাণকে আরও শক্ত করেছে।\n\nপ্রাথমিক প্রেডিকশন চাইলে:\nপ্রেসক্রাইব করুন: “ soot-darkened bark-এ কোন মর অধিক বাঁচবে—আলো নাকি অন্ধকার?” আপনার মতামত লিখে ফেলুন; তারপর এই উদাহরণে দেখুন কীভাবে পরিবেশ-চাপ অনুকূলtrait-কে Populaiton-এ বেশি ছড়িয়ে দেয়।\n\nমূল ভাবনা:\nপ্রাকৃতিক নির্বাচন হলো এমন একটি দীপ্তি-প্রক্রিয়া যেখানে পরিবেশে যে বৈশিষ্ট্যগুলি বাঁচতে সাহায্য করে সেগুলো ধীরে ধীরে প্রজন্ম থেকে প্রজন্মে বেশি হয়ে উঠে; Variation, heritability, ও differential survival — এই তিনয়ের সম্মিলনে allele frequencies পরিবর্তিত হয়।",
+        "example_id": "ex_170574f1a4284970",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা: প্রাকৃতিক নির্বাচন\n\nউদাহরণ:\n  ধাপ ১ — বৈচিত্র্য ও বংশগত বৈশিষ্ট্য (সফটওয়্যার-প্রেক্ষিত)\n  - একটি বেস প্রোজেক্টে data‑processing ফাংশনের জন্য দুইটি_trait_ বিবেচিত হয়: LowMemory (কম memory footprint) ও HighMemory (বেশি memory)।\n  - এই বৈশিষ্ট্য দুটো software‑এ ধরনগত বৈশিষ্ট্য হিসেবে বিবেচিত; কোডবেসে এগুলো branches/merges-এর মাধ্যমে ধারাবাহিকভাবে বহন হয় (heritable).\n\n  ধাপ ২ — differential survival/reproduction (সংখ্যা সহ)\n  Environment: memory budget 2 GB; latency SLA = 1s;\n  Performance:\n  - HighMemory: 92% সাফল্য, 8% ব্যর্থতা\n  - LowMemory: 99% সাফল্য, 1% ব্যর্থতা\n  ফলাফল: memory চাপ–চালিত পরিবেশে LowMemory trait বেশি কার্যকর হয়, ফলে ট্রাফিকের একটি বড় অংশ LowMemory-এ চলে আসে।\n  Analogy: Peppered moth–এর মতো পরিবেশে একাধিক বৈশিষ্ট্যের জোড়া থেকে চাপ অনুযায়ী একটি trait বেছে নেওয়া হয়।\n\n  ধাপ ৩ — allele frequency变化 ও সংক্ষিপ্ত হিসেব\n  প্রাথমিক frequency p = 0.5 (50% কাজ LowMemory ব্যবহার)\n  Relative fitness: w_LowMemory = 0.99; w_HighMemory = 0.92\n  সূত্র: p' = (p × w_L) / (p × w_L + (1 − p) × w_H)\n  প্রথম চক্রে গণনা: p' ≈ (0.5 × 0.99) / (0.5 × 0.99 + 0.5 × 0.92) ≈ 0.519\n  ব্যাখ্যা: একটি সাইকেলের পরে LowMemory‑এর ব্যবহার 50% থেকে ~51.9% এ ওঠে; চাপ বাড়লে ধারাবাহিকভাবে usage বাড়তে পারে।\n  Mutation/Refactor ও Drift (software-সংক্রান্ত ব্যাখ্যা):\n  - Mutation/Refactor: memory‑more efficient caching‑এর নতুন সংস্করণ যোগ হলে LowMemory‑এর সুবিধা আরও বাড়ে।\n  - Drift: দলের সামান্য পরিবর্তন, যেমন একটি ফিচার ভুলভাবে merged হওয়া, usage‑এ সামান্য ফ্ল্যাকচুয়েশন আনতে পারে।\n\nমূল ধারণা:\nপরিবেশ-চাপে সবচেয়ে কার্যকর বৈশিষ্ট্যগুলো ধাপে ধাপে কোডবেসে বেশি ব্যবহারে প্রকাশ পায়; তাই পারফরম্যান্স‑চাপ ঠিক করলে কোন traits বেশি টিকে থাকে, সেটিও evolution‑এর মতো পরিবর্তিত হয়।",
+        "example_id": "ex_3ccbb3067893475b"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: প্রাকৃতিক নির্বাচন\n\nExample:\nআর্জুন, কলকাতা-র একজন সফটওয়্যার ইঞ্জিনিয়ার, নিজের কাজে নোটপ্যাডে একটি ছোট জেনেটিক-ভ্যারিয়েশন সিমুলেশন বানালেন যাতে দুই ধরনের আলেল A ও a–কে চলমান প্রকৃতির মতো দেখা যায়। variation মানে হল জেনেটিক বৈচিত্র্য, heredity মানে হল বংশগতভাবে ঐ ভার্সনগুলো বংশধরে উপস্থিত থাকা, আর fitness মানে হলো কোন জেনোটাইপ বেশি সন্তান জন্মাতে সাহায্য করে—এই সময়ে পরিবেশ ঠিক কোন আলেলকে “বেশি ফিট” করে সেটা 결정 করে। classic উদাহরণ হিসেবে peppered moth-র মতো ঘটনার কথা স্মরণ করলে বোঝা যায়, কোন আলেলটা বেশি ফিট হবে, সেই পার্থক্য প্রজন্মে প্রজন্মে allele frequencies বদলে দেয়।\n\nগুরুত্বপূর্ণ শব্দভাণ্ডার:\n- Variation (বৈচিত্র্য): আলেল A আর a–র মতো জেনেটিক সংস্করণ।\n- Heredity (বংশগতি): বৈচিত্র্যের সংস্করণগুলো শিশুদের মধ্যে প্রভাবিতভাবে লম্বা সময় ধরে চলতে পারে।\n- Fitness (ফিটনেস): বাঁচা-লাভের ক্ষমতা, অর্থাৎ কত শতাংশ বাচ্চা offspring বেঁচে সুখে জেনারেশন থেকে জেনারেশনে পৌঁছায়।\n\nসংখ্যাগত উদাহরণ (মাঝারি জটিলতা):\n- allele frequencies: p = 0.60 (A allele), q = 0.40 (a allele)\n- জেনোটাইপ-ফিটনেস: w_AA = 1.0, w_Aa = 0.9, w_aa = 0.8\n\nগণনা 단계:\n- Wbar = p^2*w_AA + 2*p*q*w_Aa + q^2*w_aa\n        = 0.36*1.0 + 2*0.6*0.4*0.9 + 0.16*0.8\n        = 0.36 + 0.432 + 0.128\n        = 0.92\n- p' (নতুন p) = [p^2*w_AA + p*q*w_Aa] / Wbar\n              = (0.36 + 0.216) / 0.92\n              = 0.576 / 0.92 ≈ 0.626\n- q' (নতুন q) = 1 - p' ≈ 0.374\n\nফলাফল:\nএক জেনারেশনের পরে A allele–র ফ্রিকোয়েন্সি বৃদ্ধি পেয়ে ≈ 0.626-এ যায়; অর্থাৎ এই পরিবেশে A allele বেশি ফিট হওয়ায় ধীরে ধীরে বেশি প্রজন্মে ছড়িয়ে পড়ে।\n\nCode-সংগত উপমা (পসুডোকোড/সংক্ষিপ্ত কোড স্নিপেট):\nপূর্ব-মান:\np_old = 0.60\nq_old = 0.40\nw_AA = 1.0\nw_Aa = 0.9\nw_aa = 0.8\n\nচালানো গণনা:\nWbar = p_old*p_old*w_AA + 2*p_old*q_old*w_Aa + q_old*q_old*w_aa\np_new = (p_old*p_old*w_AA + p_old*q_old*w_Aa) / Wbar\nq_new = (p_old*q_old*w_Aa + q_old*q_old*w_aa) / Wbar\n\nআউটপুট (пример):\np_new ≈ 0.626, q_new ≈ 0.374\n\nKey Insight:\nপ্রাকৃতিক নির্বাচন তখন কাজ করে যখন বৈচিত্র্যের ভিন্নতা বংশগতি ধরে রেখে বিবেচিত পরিবেশে কোন আলেল বেশি জীবিত offspring দিতে পারে—এভাবে allele frequencies ধাপে ধাপে বদলে যায়, directional নির্বাচনের যোগে একটি allele বেশি ছড়িয়ে পড়ে।",
+        "example_id": "ex_6cd3e3032f0c4232"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T12:50:21.966795"
+}

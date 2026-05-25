@@ -1,0 +1,127 @@
+{
+  "scenario": "fnl",
+  "user_id": "ml_user_03",
+  "lang": "bn",
+  "lang_name": "Bengali",
+  "topic": "Plate Tectonics",
+  "topic_str": "প্লেট টেকটোনিক্স",
+  "provider": "gpt5nano",
+  "start_mode": "cold",
+  "judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the content by addressing Arjun directly, using his location, profession, and learning style, and integrating domain-specific analogies related to software engineering, which aligns well with his background. The complexity appears appropriate, blending conceptual explanations with numerical examples and pseudocode, matching a medium level suitable for an undergraduate engineer. The factual content about plate tectonics is accurate, correctly describing processes like sea-floor spreading and subduction with proper terminology. The structure is clear, with a logical flow from analogy to numerical example to pseudocode, facilitating understanding and retention. The analogies are domain-appropriate, framing geological processes in terms of API contracts and microservices, which resonate with Arjun's software engineering expertise.\n\n[PF] PERSONALIZATION FIDELITY — The example is highly tailored, incorporating Arjun's name, location, profession, and learning style, and uses domain-specific analogies relevant to his background.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content balances conceptual explanations, numerical calculations, and pseudocode, matching a medium complexity level suitable for an undergraduate software engineer.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanations about plate tectonics, sea-floor spreading, and subduction are correct and well-articulated, with no factual errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from analogy to numerical example to pseudocode, making the concepts accessible and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are perfectly aligned with the geological topic, translated into software engineering concepts that are appropriate and effective for the user profile.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "lang_check": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "lang_check_initial": {
+    "detected_lang": "bn",
+    "detected_name": "Bengali",
+    "expected_lang": "bn",
+    "match": true,
+    "score": 1.0
+  },
+  "fcr": [
+    {
+      "round": 1,
+      "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a geophysical explanation to an analogy with microservices architecture, which is more relevant to a software engineer's domain. It directly addresses the user's critique by replacing the original non-domain-specific example with a detailed, domain-appropriate scenario involving software systems, thus resolving the core concern.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes that code-related analogies are clearer than abstract descriptions, and the regenerated example indeed shifts from abstract metaphors to more concrete, code-like pseudocode and explicit data examples, aligning with this preference. Therefore, it effectively addresses the critique by making the analogy more tangible and code-centric.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "lur_triggered": true,
+  "run": {
+    "initial_example": "ধারণা:\nপ্লেট টেকটোনিক্স হলো পৃথিবীর বড় শিলা-স্তর—প্লেটদের ধীরে ধীরে সরে চলা বিজ্ঞান। এদের নড়াচড়া কে যেন আমরা মডুলার সফটওয়্যার সিস্টেমের আলাদা মডিউল/মাইক্রোসার্ভিস হিসেবে ভাবি; প্লেট সীমান্তগুলোকে আমরা fault boundaries বলে থাকি। ম্যান্টল কনভেকশন শক্তি দেয় প্লেটগুলিকে নড়তে, Sea-floor spreading নতুন ক্রাস্ট বানায়, Subduction পুরোনো ক্রাস্টকে পুনরায় মাটির নিচে নিয়ে যায়; এবং এই সব মিলেই ভূগঠনের পরিবর্তন ঘটায়।\n\nউদাহরণ:\nArjun, Kolkata-এ একজন সফটওয়্যার ইঞ্জিনিয়ার হিসেবে ভাবুন একটি মাইক্রোসার্ভিস-আর্কিটেকচারকে। দুটি প্লেট A ও B Divergent boundary-এ আলাদা হয়ে যাচ্ছে, ঠিক যেন দুটো মডিউল আলাদা ডিপ্লয়মেন্টে বিভক্ত হচ্ছে যাতে নতুন সার্ভিস ইনস্ট্যান্স যোগ হয় (Sea-floor spreading-এর অনুকরণ)। Boundary-র মাধ्यमে প্লেটগুলো একে অপরের সাথে ক্রিয়াশীল হয়, যেমন আলাদা সার্ভিসের API-তথ্য আদান-প্রদান। Subduction-এ একটি প্লেট অন্যটির নীচে ঢুকে যায় এবং পুরোনো ক্রাস্ট রিসাইকেল হয়; Mantle convection-ই হলো underlying orchestrator যেটি সব প্লেট-চলাচলকে চালিত করে।\n\nগণনা-উদাহরণ:\n Divergence rate = 5 cm/year। 20 বছরে দূরত্ব = 5 cm/year × 20 year = 100 cm = 1 m. অর্থাৎ 20 বছরে A ও B প্লেট 1 মিটার আলাদা হয়।\n\nVisualization cue:\nচিত্রটি ভাবুন: তিনটি প্লেট A, B, C, boundary-গুলো লাইন হিসেবে and arrows দেখাচ্ছে; নীচে mantle-convection-এর swirl; সামনের দিকে নতুন crust-এর খণ্ড-খণ্ড ব্লক-ভাগ দৃশ্যমান।\n\nসংক্ষিপ্ত প্রশ্ন:\nযদি divergent boundary-rate 10 cm/year হয় এবং ঠিক একই সময়ে 20 বছর যায়, A ও B প্লেট কত দূরে থাকবে?\n\nমূল কথা:\nপ্লেট টেকটোনিক্স Earth-এর ভিতরের শক্তি ও সীমান্ত-চালনার ফল। প্লেটগুলির নড়াচড়া ও সীমান্ত-প্রক্রিয়া ভূগঠনের গতিকে নিয়ন্ত্রিত করে।",
+    "final_example": "Concept: প্লেট টেকটোনিক্স — মাইক্রোসার্ভিস-ভিত্তিক ব্যাখ্যা\n\nExample:\nArjun, কলকাতা-এ কাজ করেন এমন একটি সফটওয়্যার ইঞ্জিনিয়ার হিসেবে ভাবুন দুটি বড় প্লেট আলাদা মাইক্রোসার্ভিস হিসেবে কাজ করে। boundary হলো তাদের মধ্যে API contracts— কোন ডেটা ও কোন ক্রিয়া দুটো প্লেটের মধ্যে অনুমোদিত হবে তা ঠিক করে।\n\nকি মানে boundary contracts:\n- কার্যক্ষেত্রে কোন তথ্য আদান-প্রদান: movement_vector, crust_creation_rate, heat_flow ইত্যাদি\n- অনুমোদিত কার্য: move (লক-চালনা), synchronize (সমন্বয়), release_crust (নতুন ক্রাস্ট জমা)\n\n Sea-floor spreading কে boundary-এ ডেটা initialize করার মতো ভাবুন: boundary এ নতুন ক্রাস্ট “initialize” হয়, দুটো প্লেট একসঙ্গে state আপডেট করে। অর্থাৎ boundary 数据-কে নতুন অবস্থা হিসেবে পুরনো ডেটা ছড়িয়ে দেয়।\n\n Subduction কে rollback/ভালবেসে ডেটা consumption হিসেবে ভাবা যায়: একটি প্লেট পুরোনো ক্রাস্টকে mantle-এ পুনঃপ্রত্যাহার/ড্রপ করে boundary-র ডেটা কমিয়ে নিল।\n\nএকটি সহজ মধ্যম-স্তরের সংখ্যাত্ত্বিক উদাহরণ:\n- ধরে নিন boundary প্রতি প্লেট 2 সেমি/বছর ক্রমবিধে diverge করে (প্রতি প্লেট নিজ নিজ প্লাটফর্ম থেকে); ফলে মোট পৃথকতা প্রতি বছর 4 সেমি হয়।\n- 5 বছর পরে মোট পৃথকতা ≈ 5 বছর × 4 সেমি/বছর = 20 সেমি।\n- ধরে নিন boundary-এ প্রতি প্লেট ক্রাস্ট তৈরি করারRate = 2 সেমি/বছর; সম্পূর্ণ পৃথকতা বাড়ার ক্যালকুলেশনটি উপরে দেখানো সমন্বয় অনুযায়ী।\n\nPseudocode (পসিউডোকোড) — প্লেট-interaction (request/response, synchronization) স্পষ্টভাবে:\n# প্লেট-এ ও প্লেট-বি মডিউল তৈরি\nপ্লেট_A = মডিউল(\"প্লেট-A\")\nপ্লেট_B = মডিউল(\"প্লেট-B\")\n\ndef boundary_spread(plate1, plate2, rate_cm_per_year):\n    # boundary initialization (Sea-floor spreading)\n    req = plate1.অনুরোধ(\"initiate_spread\", {\"rate_cm_per_year\": rate_cm_per_year})\n    ack = plate2.প্রতিক্রিয়া(\"ack_spread\", req)\n    # synchronization (state আপডেট, API contract অনুযায়ী)\n    plate1.হালনাগাদ({\"state\": \"spread\", \"rate_cm_per_year\": rate_cm_per_year})\n    plate2.হালনাগাদ({\"state\": \"spread\", \"rate_cm_per_year\": rate_cm_per_year})\n    return True\n\nyears = 6\nrate = 2  # cm/year per plate\nrelative_separation_cm = rate * 2 * years  # দুই প্লেটের মিলিত ক্রমবৃদ্ধি\nprint(\"মোট পৃথকতা (relative separation):\", relative_separation_cm, \"cm\")\n\nKey Insight:\nপ্লেট-ইন্টারঅ্যাকশনটি বাস্তবে API contracts-এ নির্ধারণ হয়; sea-floor spreading নতুন ডেটা initialize করে ও boundary synchronization-এ প্লেটগুলো ঠিক মতো সমন্বয় হয়—এইভাবেই পৃথিবীর নির্মাণ ও আপডেট হয়।",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "ধারণা:\nপ্লেট টেকটোনিক্স হলো পৃথিবীর বড় শিলা-স্তর—প্লেটদের ধীরে ধীরে সরে চলা বিজ্ঞান। এদের নড়াচড়া কে যেন আমরা মডুলার সফটওয়্যার সিস্টেমের আলাদা মডিউল/মাইক্রোসার্ভিস হিসেবে ভাবি; প্লেট সীমান্তগুলোকে আমরা fault boundaries বলে থাকি। ম্যান্টল কনভেকশন শক্তি দেয় প্লেটগুলিকে নড়তে, Sea-floor spreading নতুন ক্রাস্ট বানায়, Subduction পুরোনো ক্রাস্টকে পুনরায় মাটির নিচে নিয়ে যায়; এবং এই সব মিলেই ভূগঠনের পরিবর্তন ঘটায়।\n\nউদাহরণ:\nArjun, Kolkata-এ একজন সফটওয়্যার ইঞ্জিনিয়ার হিসেবে ভাবুন একটি মাইক্রোসার্ভিস-আর্কিটেকচারকে। দুটি প্লেট A ও B Divergent boundary-এ আলাদা হয়ে যাচ্ছে, ঠিক যেন দুটো মডিউল আলাদা ডিপ্লয়মেন্টে বিভক্ত হচ্ছে যাতে নতুন সার্ভিস ইনস্ট্যান্স যোগ হয় (Sea-floor spreading-এর অনুকরণ)। Boundary-র মাধ्यमে প্লেটগুলো একে অপরের সাথে ক্রিয়াশীল হয়, যেমন আলাদা সার্ভিসের API-তথ্য আদান-প্রদান। Subduction-এ একটি প্লেট অন্যটির নীচে ঢুকে যায় এবং পুরোনো ক্রাস্ট রিসাইকেল হয়; Mantle convection-ই হলো underlying orchestrator যেটি সব প্লেট-চলাচলকে চালিত করে।\n\nগণনা-উদাহরণ:\n Divergence rate = 5 cm/year। 20 বছরে দূরত্ব = 5 cm/year × 20 year = 100 cm = 1 m. অর্থাৎ 20 বছরে A ও B প্লেট 1 মিটার আলাদা হয়।\n\nVisualization cue:\nচিত্রটি ভাবুন: তিনটি প্লেট A, B, C, boundary-গুলো লাইন হিসেবে and arrows দেখাচ্ছে; নীচে mantle-convection-এর swirl; সামনের দিকে নতুন crust-এর খণ্ড-খণ্ড ব্লক-ভাগ দৃশ্যমান।\n\nসংক্ষিপ্ত প্রশ্ন:\nযদি divergent boundary-rate 10 cm/year হয় এবং ঠিক একই সময়ে 20 বছর যায়, A ও B প্লেট কত দূরে থাকবে?\n\nমূল কথা:\nপ্লেট টেকটোনিক্স Earth-এর ভিতরের শক্তি ও সীমান্ত-চালনার ফল। প্লেটগুলির নড়াচড়া ও সীমান্ত-প্রক্রিয়া ভূগঠনের গতিকে নিয়ন্ত্রিত করে।",
+        "example_id": "ex_33845deb57b5480d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "এই উদাহরণটি আমার ক্ষেত্রের সাথে প্রাসঙ্গিক মনে হচ্ছে না। আমার ডোমেন থেকে কিছু উদাহরণ দিতে পারবেন?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "ধারণা:\nপ্লেট টেকটোনিক্সকে যদি আমরা মাইক্রোসার্ভিস-ভিত্তিক সিস্টেমে আনতাল করি, তবে প্লেট মানে আলাদা সার্ভিস (microservice),_boundary_ মানে API contract বা fault boundary, Sea-floor spreading মানে নতুন সার্ভিস ইনস্ট্যান্স deployment/scale-out, Subduction মানে পুরোনো সার্ভিস retire বা migrate করা, এবং Mantle convection মানে orchestration/CI-CD বা infrastructure provisioning। এই মডেলটি দেখাবে কীভাবে একটি ডিস্ট্রিবিউটেড সিস্টেম ধাপে ধাপে তৈরি, আপডেট, এবং সংগঠিত হয়, ঠিক যেমন পৃথিবী ক্রমাগত নিজের ভিতরের প্রক্রিয়াগুলো দিয়ে চলতে থাকে।\n\nউদাহরণ:\nধরা যাক, কলকাতার একজন সফটওয়্যার ইঞ্জিনিয়ার Arjun-এর একটি রিয়্যাল-টাইম analytics প্ল্যাটফর্ম আছে যেখানে Auth-service ও Data-service আলাদা সার্ভিস হিসেবে কাজ করে। উভয় সার্ভিসের মধ্যে API contract ঠিকঠাক থাকলে সার্ভিস-গতি ঠিক থাকে; Boundary-চিহ্নিত কথা-বার্তা ঠিকভাবে চলছে।\n\nসংখ্যা-উদাহরণ (মধ্যম মাত্রায় জটিলতা):\n- বর্তমান অবস্থা: Data-service-এ 4টি ইনস্ট্যান্স আছে; মোট ক্যাপাসিটি প্রায় 800 rps (requests per second) সামলায়; peak সময়ে লেটেন্সি ~350 ms।\n- Sea-floor spreading (নতুন সার্ভিস ইনস্ট্যান্স deployment/scale-out): Data-service-এ 2টি নতুন ইনস্ট্যান্স যোগ করা হয়; মোট ইনস্ট্যান্স 6; ক্যাপাসিটি ~1200 rps, তাই peak traffic-এর সময় লেটেন্সি কয়েকটা ধাপে কমে ~180 ms-এ নেমে আসে।\n- Boundary ও compatibility: API contract-এ সাময়িক backward-compatibility বজায় রেখে v1.1-এ আপডেট করা হয়; পুরোনো ক্লায়েন্টগুলোও চলতে পারে যতক্ষণ না כולם v1.1-এ আপগ্রেড হয়।\n- Subduction (পুরোনো সার্ভিস retire/migrate): Data-service v1 ঠিকঠাক চলছে, তারপর v1-কে ধীরে ধীরে retire করা হয় এবং কার্যকারিতাটি v2-এ migrate করা হয়; boundary আলাদা করে maintain করা হয় যাতে পুরোনো ক্লায়েন্ট ও নতুস্য সার্ভিস দুটোই কাজ করতে পারে।\n- Mantle convection ( orchestration/CI-CD/infrastructure provisioning): ইনফ্রাস্ট্রাকচার provisioning ও সার্ভিস-আর্কিটেকচার orchestration-কে CI/CD pipelines-এ সমর্থন করে, Helm/Kubernetes-এ rolling updates, blue-green বা canary deployment রাখে যাতে সার্ভিস-স্কেল-আপ/স্কেল-ডাউন আর মাইগ্রেশন সিস্টেম-ভিত্তিকভাবে smoothly হয়।\n\nVisualization cue:\nএকটি নেটওয়ার্ক ডায়াগ্রাম ভাবুন যেখানে প্রতিটি সার্ভিস একটি ব্লক, boundary-রেখা আলাদা API contract হিসেবে চিহ্নিত, Sea-floor spreading-এ Data-service-এর পাশে নতুন ব্লক যোগ হচ্ছে (scale-out), Subduction-এ পুরোনো ব্লকটি migrate/ retire-হয়, এবং Mantle convection-এর অংশ হিসেবে পুরো নেটওয়ার্ক চালাক orchestrator/CI-CD-র দ্বারা নিয়মিতভাবে কনফিগার হয়। আর্কিটেকচারটি ডিস্ট্রিবিউটেড হলেও modular এবং iterative ভাবে évolue করে।\n\nএকটি সংক্ষিপ্ত প্রশ্ন:\n- যদি API contract-এ একটি breaking change আসে, আপনি আগে কোন পথে এগোবেন—Backward-compatibility বজায় রেখে একটি versioned contract বানিয়ে নেওয়া নাকি একেবারে migration window খুলে দেওয়া?\n\nমূল ধারণা:\n modular boundary-সহ সিস্টেমটি সহজে scale হয়, তাই Sea-floor spreading-এ নতুন সার্ভিস যোগ করা, Subduction-এ পুরোনো সার্ভিস retire/ migrate করা এবং Mantle convection-এ orchestration/CI-CD দ্বারা পুরো সিস্টেমকে স্থিতিশীল ও আপ-টু-ডেট রাখা বেশি কার্যকর।",
+        "example_id": "ex_35a3c8e81bf94306"
+      },
+      {
+        "round": 2,
+        "feedback_given": "এটা দারুণ! এই উদাহরণটি আমাকে ধারণাটি বুঝতে সত্যিই সাহায্য করেছে।",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "কোড-সংক্রান্ত উপমা আমার কাছে সবসময় বিমূর্ত বর্ণনার চেয়ে বেশি স্পষ্ট হয়।",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: প্লেট টেকটোনিক্স — মাইক্রোসার্ভিস-ভিত্তিক ব্যাখ্যা\n\nExample:\nArjun, কলকাতা-এ কাজ করেন এমন একটি সফটওয়্যার ইঞ্জিনিয়ার হিসেবে ভাবুন দুটি বড় প্লেট আলাদা মাইক্রোসার্ভিস হিসেবে কাজ করে। boundary হলো তাদের মধ্যে API contracts— কোন ডেটা ও কোন ক্রিয়া দুটো প্লেটের মধ্যে অনুমোদিত হবে তা ঠিক করে।\n\nকি মানে boundary contracts:\n- কার্যক্ষেত্রে কোন তথ্য আদান-প্রদান: movement_vector, crust_creation_rate, heat_flow ইত্যাদি\n- অনুমোদিত কার্য: move (লক-চালনা), synchronize (সমন্বয়), release_crust (নতুন ক্রাস্ট জমা)\n\n Sea-floor spreading কে boundary-এ ডেটা initialize করার মতো ভাবুন: boundary এ নতুন ক্রাস্ট “initialize” হয়, দুটো প্লেট একসঙ্গে state আপডেট করে। অর্থাৎ boundary 数据-কে নতুন অবস্থা হিসেবে পুরনো ডেটা ছড়িয়ে দেয়।\n\n Subduction কে rollback/ভালবেসে ডেটা consumption হিসেবে ভাবা যায়: একটি প্লেট পুরোনো ক্রাস্টকে mantle-এ পুনঃপ্রত্যাহার/ড্রপ করে boundary-র ডেটা কমিয়ে নিল।\n\nএকটি সহজ মধ্যম-স্তরের সংখ্যাত্ত্বিক উদাহরণ:\n- ধরে নিন boundary প্রতি প্লেট 2 সেমি/বছর ক্রমবিধে diverge করে (প্রতি প্লেট নিজ নিজ প্লাটফর্ম থেকে); ফলে মোট পৃথকতা প্রতি বছর 4 সেমি হয়।\n- 5 বছর পরে মোট পৃথকতা ≈ 5 বছর × 4 সেমি/বছর = 20 সেমি।\n- ধরে নিন boundary-এ প্রতি প্লেট ক্রাস্ট তৈরি করারRate = 2 সেমি/বছর; সম্পূর্ণ পৃথকতা বাড়ার ক্যালকুলেশনটি উপরে দেখানো সমন্বয় অনুযায়ী।\n\nPseudocode (পসিউডোকোড) — প্লেট-interaction (request/response, synchronization) স্পষ্টভাবে:\n# প্লেট-এ ও প্লেট-বি মডিউল তৈরি\nপ্লেট_A = মডিউল(\"প্লেট-A\")\nপ্লেট_B = মডিউল(\"প্লেট-B\")\n\ndef boundary_spread(plate1, plate2, rate_cm_per_year):\n    # boundary initialization (Sea-floor spreading)\n    req = plate1.অনুরোধ(\"initiate_spread\", {\"rate_cm_per_year\": rate_cm_per_year})\n    ack = plate2.প্রতিক্রিয়া(\"ack_spread\", req)\n    # synchronization (state আপডেট, API contract অনুযায়ী)\n    plate1.হালনাগাদ({\"state\": \"spread\", \"rate_cm_per_year\": rate_cm_per_year})\n    plate2.হালনাগাদ({\"state\": \"spread\", \"rate_cm_per_year\": rate_cm_per_year})\n    return True\n\nyears = 6\nrate = 2  # cm/year per plate\nrelative_separation_cm = rate * 2 * years  # দুই প্লেটের মিলিত ক্রমবৃদ্ধি\nprint(\"মোট পৃথকতা (relative separation):\", relative_separation_cm, \"cm\")\n\nKey Insight:\nপ্লেট-ইন্টারঅ্যাকশনটি বাস্তবে API contracts-এ নির্ধারণ হয়; sea-floor spreading নতুন ডেটা initialize করে ও boundary synchronization-এ প্লেটগুলো ঠিক মতো সমন্বয় হয়—এইভাবেই পৃথিবীর নির্মাণ ও আপডেট হয়।",
+        "example_id": "ex_34c1a77428a44f68"
+      }
+    ]
+  },
+  "timestamp": "2026-04-12T13:04:36.678209"
+}
